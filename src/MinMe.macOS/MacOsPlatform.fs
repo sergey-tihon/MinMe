@@ -3,9 +3,7 @@
 open System
 open System.Threading.Tasks
 open AppKit
-open Foundation
 open Xamarin.Forms
-open Xamarin.Forms.Platform.MacOS
 
 type MacOsPlatform (window:NSWindow) =
     member this.UpdateDock() =

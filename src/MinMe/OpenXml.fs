@@ -21,6 +21,7 @@ type FileContentInfo =
         sprintf "%s; %d images" 
             (printFileSize this.FileSize) 
             this.NumberOfImages
+            
     static member Default = {
         FileName = ""
         FileSize = 0L
