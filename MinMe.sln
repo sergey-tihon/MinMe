@@ -1,11 +1,15 @@
-
+﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.10
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "MinMe", "MinMe\MinMe.fsproj", "{AA6C15E1-74DD-463F-9ECD-90372D2C80AB}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "MinMe", "src\MinMe\MinMe.fsproj", "{AA6C15E1-74DD-463F-9ECD-90372D2C80AB}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "MinMe.macOS", "MinMe.macOS\MinMe.macOS.fsproj", "{DE19AC1B-3FF0-4AF6-B24D-A3868454ECC4}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "MinMe.macOS", "src\MinMe.macOS\MinMe.macOS.fsproj", "{DE19AC1B-3FF0-4AF6-B24D-A3868454ECC4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{40AF0CB3-7BB3-44A3-BFC6-8535CC8E71C0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{8734050A-EAD5-46C0-B36C-FDC7C65B7BE2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -293,5 +297,9 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F6D05029-56B8-4E45-AF2D-0E76295DDBA2}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AA6C15E1-74DD-463F-9ECD-90372D2C80AB} = {40AF0CB3-7BB3-44A3-BFC6-8535CC8E71C0}
+		{DE19AC1B-3FF0-4AF6-B24D-A3868454ECC4} = {40AF0CB3-7BB3-44A3-BFC6-8535CC8E71C0}
 	EndGlobalSection
 EndGlobal

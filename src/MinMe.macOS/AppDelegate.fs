@@ -9,18 +9,16 @@ open Xamarin.Forms.Platform.MacOS
 [<Register("AppDelegate")>]
 type AppDelegate() =
     inherit FormsApplicationDelegate()
-    let  style = NSWindowStyle.Closable ||| NSWindowStyle.Resizable ||| NSWindowStyle.Titled
-
-    let  rect = new CoreGraphics.CGRect(nfloat 200.0, nfloat 1000.0, nfloat 1024.0, nfloat 768.0)
-
-    let window = new NSWindow(rect, style, NSBackingStore.Buffered, false, Title = "Xamarin.Forms on Mac!", TitleVisibility = NSWindowTitleVisibility.Hidden)
+    let  style = NSWindowStyle.Closable ||| NSWindowStyle.Titled ||| NSWindowStyle.Resizable
+    let  rect = new CoreGraphics.CGRect(nfloat 200.0, nfloat 1000.0, nfloat 400.0, nfloat 300.0)
+    let window = new NSWindow(rect, style, NSBackingStore.Buffered, false, Title = "MinMe")
 
     override __.MainWindow = window
 
     override this.DidFinishLaunching(notification: NSNotification) =
         Forms.Init()
-        this.LoadApplication(new MinMe.App())
-
+        let platform = MacOsPlatform(window)
+        this.LoadApplication(new MinMe.App(platform))
         base.DidFinishLaunching(notification)
 
     override __.WillTerminate(notification: NSNotification) =
