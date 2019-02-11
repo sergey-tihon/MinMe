@@ -9,8 +9,8 @@ open Xamarin.Forms.Platform.MacOS
 [<Register("AppDelegate")>]
 type AppDelegate() =
     inherit FormsApplicationDelegate()
-    let  style = NSWindowStyle.Closable ||| NSWindowStyle.Titled ||| NSWindowStyle.Resizable
-    let  rect = new CoreGraphics.CGRect(nfloat 200.0, nfloat 1000.0, nfloat 400.0, nfloat 300.0)
+    let style = NSWindowStyle.Closable ||| NSWindowStyle.Titled ||| NSWindowStyle.Resizable
+    let rect = new CoreGraphics.CGRect(nfloat 200.0, nfloat 300.0, nfloat 600.0, nfloat 500.0)
     let window = new NSWindow(rect, style, NSBackingStore.Buffered, false, Title = "MinMe")
 
     override __.MainWindow = window
@@ -25,7 +25,7 @@ type AppDelegate() =
         // Insert code here to tear down your application
         ()
 
-module EntryClass = 
+module EntryClass =
     [<EntryPoint>]
     let Main(args: string[]) =
         NSApplication.Init() |> ignore

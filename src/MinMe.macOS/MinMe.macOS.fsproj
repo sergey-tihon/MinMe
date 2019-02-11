@@ -11,7 +11,7 @@
     <TemplateGuid>{40ed8a7a-2bf4-42fa-b1a7-b43e1d3b7273}</TemplateGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>MinMe.macOS</RootNamespace>
-    <AssemblyName>MinMe.macOS</AssemblyName>
+    <AssemblyName>MinMe</AssemblyName>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <TargetFrameworkIdentifier>Xamarin.Mac</TargetFrameworkIdentifier>
     <MonoMacResourcePrefix>Resources</MonoMacResourcePrefix>

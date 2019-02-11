@@ -3,9 +3,13 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <EnableDefaultEmbeddedResourceItems>false</EnableDefaultEmbeddedResourceItems>
+    <AssemblyName>MinMe.App</AssemblyName>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="OpenXml.fs" />
+    <Compile Include="Core.fs" />
+    <Compile Include="OpenXml.PowerPoint.fs" />
+    <Compile Include="OpenXml.Word.fs" />
+    <Compile Include="Agents.fs" />
     <Compile Include="MinMe.fs" />
   </ItemGroup>
   <Import Project="..\..\.paket\Paket.Restore.targets" />
