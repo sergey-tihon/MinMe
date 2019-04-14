@@ -1,8 +1,8 @@
-﻿module MinMe.OpenXml.PowerPoint
+module MinMe.OpenXml.PowerPoint
 
 open System.IO
 open DocumentFormat.OpenXml.Packaging
-open MinMe.Core
+open MinMe.Model
 
 let processPowerPointStream (stream:Stream) contentInfo =
     use doc = PresentationDocument.Open(stream, false)
@@ -36,14 +36,14 @@ let processPowerPointStream (stream:Stream) contentInfo =
                             let length =
                                 use stream = vid.DataPart.GetStream()
                                 stream.Length
-                            let msg = sprintf "%s (%s)" (vid.Uri.OriginalString) (printFileSize length)
+                            let msg = sprintf "%s (%s) -video" (vid.Uri.OriginalString) (printFileSize length)
                             Some (length, msg)
-//                        | :? MediaReferenceRelationship as med ->
-//                            let length =
-//                                use stream = med.DataPart.GetStream()
-//                                stream.Length
-//                            let msg = sprintf "%s (%s)" (med.Uri.OriginalString) (printFileSize length)
-//                            Some (length, msg)
+                        | :? MediaReferenceRelationship as med ->
+                            let length =
+                                use stream = med.DataPart.GetStream()
+                                stream.Length
+                            let msg = sprintf "%s (%s) -media" (med.Uri.OriginalString) (printFileSize length)
+                            Some (length, msg)
                         | _ -> None)
                 )
                 |> Seq.sortBy (fun (s,_) -> -s)

@@ -10,7 +10,7 @@ open Xamarin.Forms.Platform.MacOS
 type AppDelegate() =
     inherit FormsApplicationDelegate()
     let style = NSWindowStyle.Closable ||| NSWindowStyle.Titled ||| NSWindowStyle.Resizable
-    let rect = new CoreGraphics.CGRect(nfloat 200.0, nfloat 300.0, nfloat 600.0, nfloat 500.0)
+    let rect = new CoreGraphics.CGRect(nfloat 200.0, nfloat 300.0, nfloat 885.0, nfloat 600.0)
     let window = new NSWindow(rect, style, NSBackingStore.Buffered, false, Title = "MinMe")
 
     override __.MainWindow = window

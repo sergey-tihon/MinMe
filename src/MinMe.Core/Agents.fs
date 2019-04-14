@@ -1,7 +1,7 @@
 module MinMe.Agents
 
 open System.IO
-open MinMe.Core
+open MinMe.Model
 open MinMe.OpenXml
 
 type Message =
@@ -33,3 +33,8 @@ let agent = new MailboxProcessor<Message>(fun inbox ->
     loop())
 
 agent.Start()
+
+
+let analyze fileName=
+    agent.PostAndAsyncReply(fun reply -> Analyze(fileName, reply))
+    |> Async.StartAsTask

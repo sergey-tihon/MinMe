@@ -1,5 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\..\packages\Xamarin.Forms\build\Xamarin.Forms.props" Condition="Exists('..\..\packages\Xamarin.Forms\build\Xamarin.Forms.props')" Label="Paket" />
   <Import Project="..\..\packages\Xamarin.Forms\build\netstandard2.0\Xamarin.Forms.props" Condition="Exists('..\..\packages\Xamarin.Forms\build\netstandard2.0\Xamarin.Forms.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
@@ -34,20 +33,16 @@
     <UseSGen>true</UseSGen>
     <UseRefCounting>true</UseRefCounting>
     <Profiling>true</Profiling>
-    <HttpClientHandler>
-    </HttpClientHandler>
-    <LinkMode>
-    </LinkMode>
-    <XamMacArch>
-    </XamMacArch>
+    <HttpClientHandler></HttpClientHandler>
+    <LinkMode></LinkMode>
+    <XamMacArch></XamMacArch>
     <AOTMode>None</AOTMode>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release</OutputPath>
-    <DefineConstants>
-    </DefineConstants>
+    <DefineConstants></DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <EnableCodeSigning>false</EnableCodeSigning>
@@ -57,10 +52,8 @@
     <UseSGen>true</UseSGen>
     <UseRefCounting>true</UseRefCounting>
     <LinkMode>SdkOnly</LinkMode>
-    <HttpClientHandler>
-    </HttpClientHandler>
-    <XamMacArch>
-    </XamMacArch>
+    <HttpClientHandler></HttpClientHandler>
+    <XamMacArch></XamMacArch>
     <AOTMode>None</AOTMode>
   </PropertyGroup>
   <ItemGroup>
@@ -91,11 +84,14 @@
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
     <None Include="paket.references" />
+    <Compile Include="FabulousApp.fs" />
     <Compile Include="MacOsPlatform.fs" />
     <Compile Include="AppDelegate.fs" />
-    <ProjectReference Include="..\MinMe\MinMe.fsproj">
-      <Project>{AA6C15E1-74DD-463F-9ECD-90372D2C80AB}</Project>
-      <Name>MinMe</Name>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MinMe.Core\MinMe.Core.fsproj">
+      <Project>{DA0EC6D1-CB81-47F0-9350-775BB1C4E1AD}</Project>
+      <Name>MinMe.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="..\..\packages\Xamarin.Forms\build\netstandard2.0\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms\build\netstandard2.0\Xamarin.Forms.targets')" />

@@ -1,4 +1,4 @@
-module MinMe.Core
+module MinMe.Model
 
 let printFileSize (size:int64) =
     let rec loop size suffixes =

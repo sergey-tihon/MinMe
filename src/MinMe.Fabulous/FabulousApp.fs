@@ -1,12 +1,10 @@
-﻿// Copyright 2018 Fabulous contributors. See LICENSE.md for license.
+// Copyright 2018 Fabulous contributors. See LICENSE.md for license.
 namespace MinMe
 
 open System
 open Fabulous.Core
 open Fabulous.DynamicViews
 open Xamarin.Forms
-
-open Core
 
 module App =
 
@@ -18,7 +16,7 @@ module App =
 
     type FileData = {
         Icon: ImageSource
-        ContentInfo: Core.FileContentInfo
+        ContentInfo: Model.FileContentInfo
     }
 
     type Model =
@@ -28,13 +26,15 @@ module App =
     type Msg =
         | OpenFileDialog
         | ChooseFile of fileName:string
-        | SetContentInfo of contentInfo:Core.FileContentInfo
+        | SetContentInfo of contentInfo:Model.FileContentInfo
 
     let initModel = NoFileSelected
 
     let init () =
-        //initModel, Cmd.ofMsg msg
-        initModel, Cmd.none
+        //let msg = ChooseFile "/Users/sergey/Downloads/Arks_SEC_Keynote_2018-Final.pptx"
+        let msg  = ChooseFile "/Users/sergey/Downloads/SEC_DEEP.FINAL_002.pptx"
+        initModel, Cmd.ofMsg msg
+        //initModel, Cmd.none
 
     let update (platform:IPlatformContract) msg model =
         match msg with
