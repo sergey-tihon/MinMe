@@ -6,12 +6,12 @@ NUGET
       System.IO.Packaging (>= 4.5)
       System.Runtime.Serialization.Xml (>= 4.3)
     Fabulous.Core (0.33.2)
-      Fabulous.CustomControls (>= 0.33.2) - restriction: || (== netstandard2.0) (&& (== xamarinmac) (>= netstandard2.0))
-      FSharp.Core (>= 4.5.2) - restriction: || (== netstandard2.0) (&& (== xamarinmac) (>= netstandard2.0))
-      Xamarin.Forms (>= 3.4.0.1009999) - restriction: || (== netstandard2.0) (&& (== xamarinmac) (>= netstandard2.0))
-    Fabulous.CustomControls (0.33.2) - restriction: || (== netstandard2.0) (&& (== xamarinmac) (>= netstandard2.0))
-      FSharp.Core (>= 4.5.2) - restriction: || (== netstandard2.0) (&& (== xamarinmac) (>= netstandard2.0))
-      Xamarin.Forms (>= 3.4.0.1009999) - restriction: || (== netstandard2.0) (&& (== xamarinmac) (>= netstandard2.0))
+      Fabulous.CustomControls (>= 0.33.2)
+      FSharp.Core (>= 4.5.2)
+      Xamarin.Forms (>= 3.4.0.1009999)
+    Fabulous.CustomControls (0.33.2)
+      FSharp.Core (>= 4.5.2)
+      Xamarin.Forms (>= 3.4.0.1009999)
     FSharp.Core (4.6.2)
       System.Collections (>= 4.0.11) - restriction: == xamarinmac
       System.Console (>= 4.0) - restriction: == xamarinmac
