@@ -6,8 +6,4 @@ open MinMe.Model
 
 let processWordStream (stream:Stream) contentInfo =
     use doc = WordprocessingDocument.Open(stream, false)
-    {
-        contentInfo with
-            NumberOfImages =
-                doc.MainDocumentPart.ImageParts |> Seq.length
-    }
+    contentInfo

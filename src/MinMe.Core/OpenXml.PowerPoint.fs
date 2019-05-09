@@ -4,51 +4,52 @@ open System.IO
 open DocumentFormat.OpenXml.Packaging
 open MinMe.Model
 
+
+let getPartSize (part:OpenXmlPart) =
+    use stream = part.GetStream()
+    stream.Length
+let getDataPartSize (part:DataPart) =
+    use stream = part.GetStream()
+    stream.Length
+
 let processPowerPointStream (stream:Stream) contentInfo =
+    let visitedParts = System.Collections.Generic.HashSet<_>()
+    let rec processOpenXmlPart (root:OpenXmlPart) =
+        let key = root.Uri.OriginalString
+        if visitedParts.Contains key
+        then Seq.empty
+        else 
+            visitedParts.Add key |> ignore
+            seq {
+                yield {
+                    Name = key
+                    PartType = root.GetType().Name
+                    ContentType = root.ContentType
+                    Size = getPartSize root
+                }
+                for ref in root.DataPartReferenceRelationships do
+                    let dataPart = ref.DataPart
+                    let dataPartKey = dataPart.Uri.OriginalString
+                    if not <| visitedParts.Contains dataPartKey then
+                        visitedParts.Add dataPartKey |> ignore
+                        yield {
+                            Name = dataPartKey
+                            PartType = dataPart.GetType().Name
+                            ContentType = dataPart.ContentType
+                            Size = getDataPartSize dataPart
+                        }
+
+                for pair in root.Parts do
+                    yield! processOpenXmlPart pair.OpenXmlPart
+            }
+
     use doc = PresentationDocument.Open(stream, false)
     {
         contentInfo with
-            NumberOfImages =
-                doc.PresentationPart.SlideParts
-                |> Seq.sumBy (fun s -> s.ImageParts |> Seq.length)
-            Images  =
-                doc.PresentationPart.SlideParts
-                |> Seq.collect (fun s ->
-                    s.ImageParts
-                    |> Seq.map (fun x ->
-                        let length =
-                            use stream = x.GetStream()
-                            stream.Length
-                        x.ContentType, length))
-                |> Seq.groupBy (fst)
-                |> Seq.map (fun (k,s) ->
-                    let size = s |> Seq.sumBy snd
-                    k, Seq.length s, size)
-                |> Seq.sortBy (fun (_,_,s) -> -s)
-                |> Seq.map (fun (cTy, cnt, size) -> sprintf "%s (%d images, %s)" cTy cnt (printFileSize size))
-                |> List.ofSeq
-            Videos =
-                doc.PresentationPart.SlideParts
-                |> Seq.collect (fun slide ->
-                    slide.DataPartReferenceRelationships
-                    |> Seq.choose (function
-                        | :? VideoReferenceRelationship as vid ->
-                            let length =
-                                use stream = vid.DataPart.GetStream()
-                                stream.Length
-                            let msg = sprintf "%s (%s) -video" (vid.Uri.OriginalString) (printFileSize length)
-                            Some (length, msg)
-                        | :? MediaReferenceRelationship as med ->
-                            let length =
-                                use stream = med.DataPart.GetStream()
-                                stream.Length
-                            let msg = sprintf "%s (%s) -media" (med.Uri.OriginalString) (printFileSize length)
-                            Some (length, msg)
-                        | _ -> None)
-                )
-                |> Seq.sortBy (fun (s,_) -> -s)
-                |> Seq.distinct
-                |> Seq.map (snd)
-                |> List.ofSeq
+            Parts =
+                doc.Parts
+                |> Seq.collect (fun pair -> processOpenXmlPart pair.OpenXmlPart)
+                |> Seq.sortBy (fun x -> x.PartType)
+                |> Seq.toList
     }
 

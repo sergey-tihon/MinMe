@@ -99,16 +99,16 @@ module App =
                                     detail = file.ContentInfo.ToString()
                                 )
                             ])
-                            if file.ContentInfo.Videos.Length > 0 then
-                                yield (sprintf "Videos (%d)" file.ContentInfo.Videos.Length, [
-                                    for text in file.ContentInfo.Videos ->
+                            if file.ContentInfo.Parts.Length > 0 then
+                                yield (sprintf "Videos (%d)" file.ContentInfo.Parts.Length, [
+                                    for text in file.ContentInfo.Parts ->
                                         View.TextCell(text = text)
                                 ])
-                            if file.ContentInfo.Images.Length > 0 then
-                                yield (sprintf "Images (%d)" file.ContentInfo.Images.Length, [
-                                    for text in file.ContentInfo.Images ->
-                                        View.TextCell(text = text)
-                                ])
+//                            if file.ContentInfo.Images.Length > 0 then
+//                                yield (sprintf "Images (%d)" file.ContentInfo.Images.Length, [
+//                                    for text in file.ContentInfo.Images ->
+//                                        View.TextCell(text = text)
+//                                ])
                         ]
                       )//.FlexGrow(1.0)
                   )

@@ -2,6 +2,7 @@ using System;
 
 using AppKit;
 using Foundation;
+using MinMe.macOS.cs.Data;
 
 namespace MinMe.macOS.cs
 {
@@ -11,20 +12,22 @@ namespace MinMe.macOS.cs
         {
         }
 
-        private int numberOfTimesClicked = 0;
 
-        partial void ClickedButton(Foundation.NSObject sender)
+        public void InitializeView (Model.FileContentInfo model)
         {
-            // Update counter and label
-            ClickedLabel.StringValue = string.Format("The button has been clicked {0} time{1}.", ++numberOfTimesClicked, (numberOfTimesClicked < 2) ? "" : "s");
+            FileName.StringValue = System.IO.Path.GetFileName(model.FileName);
+            FileSize.StringValue = Model.printFileSize(model.FileSize);
+
+            var partsSource = new ImageListDataSource(model.Parts);
+            PartsTable.DataSource = partsSource;
+            PartsTable.Delegate = new ImageListDelegate(partsSource);
         }
+
 
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-
             // Do any additional setup after loading the view.
-            ClickedLabel.StringValue = "Button has not been clicked yet.";
         }
 
         public override NSObject RepresentedObject

@@ -1,0 +1,130 @@
+﻿using System;
+using System.Collections.Generic;
+using AppKit;
+using Foundation;
+
+namespace MinMe.macOS.cs.Data
+{
+    public class ImageListDataSource : NSTableViewDataSource
+    {
+        public ImageListDataSource(IEnumerable<Model.PartInfo> items)
+        {
+            Items.AddRange(items);
+        }
+
+        public readonly List<Model.PartInfo> Items = new List<Model.PartInfo>();
+
+        public override nint GetRowCount(NSTableView tableView)
+        {
+            return Items.Count;
+        }
+
+        public void Sort(string key, bool ascending)
+        {
+
+            // Take action based on key
+            switch (key)
+            {
+                case "Name":
+                    if (ascending)
+                        Items.Sort((x, y) => string.Compare(x.Name, y.Name, StringComparison.InvariantCultureIgnoreCase));
+                    else
+                        Items.Sort((x, y) => -1 * string.Compare(x.Name, y.Name, StringComparison.InvariantCultureIgnoreCase));
+                    break;
+                case "Type":
+                    if (ascending)
+                        Items.Sort((x, y) => string.Compare(x.PartType, y.PartType, StringComparison.InvariantCultureIgnoreCase));
+                    else
+                        Items.Sort((x, y) => -1 * string.Compare(x.PartType, y.PartType, StringComparison.InvariantCultureIgnoreCase));
+                    break;
+                case "ContentType":
+                    if (ascending)
+                        Items.Sort((x, y) => string.Compare(x.ContentType, y.ContentType, StringComparison.InvariantCultureIgnoreCase));
+                    else
+                        Items.Sort((x, y) => -1 * string.Compare(x.ContentType, y.ContentType, StringComparison.InvariantCultureIgnoreCase));
+                    break;
+                case "Size":
+                    if (ascending)
+                        Items.Sort((x, y) => x.Size.CompareTo(y.Size));
+                    else
+                        Items.Sort((x, y) => -1 * x.Size.CompareTo(y.Size));
+                    break;
+            }
+
+        }
+
+        public override void SortDescriptorsChanged(NSTableView tableView, NSSortDescriptor[] oldDescriptors)
+        {
+            // Sort the data
+            //if (oldDescriptors.Length > 0)
+            //{
+            //    // Update sort
+            //    Sort(oldDescriptors[0].Key, oldDescriptors[0].Ascending);
+            //}
+            //else
+            {
+                // Grab current descriptors and update sort
+                NSSortDescriptor[] tbSort = tableView.SortDescriptors;
+                Sort(tbSort[0].Key, tbSort[0].Ascending);
+            }
+
+            // Refresh table
+            tableView.ReloadData();
+        }
+    }
+
+    public class ImageListDelegate : NSTableViewDelegate 
+    {
+        private const string CellIdentifier = "ImagePartCell";
+        private readonly ImageListDataSource _dataSource;
+
+        public ImageListDelegate(ImageListDataSource dataSource)
+        {
+            _dataSource = dataSource;
+        }
+
+        public override NSView GetViewForItem(NSTableView tableView, NSTableColumn tableColumn, nint row)
+        {
+            // This pattern allows you reuse existing views when they are no-longer in use.
+            // If the returned view is null, you instance up a new view.
+            // If a non-null view is returned, you modify it enough to reflect the new data.
+            var view = (NSTextField) tableView.MakeView(CellIdentifier, this)
+                       ?? new NSTextField {Identifier = CellIdentifier};
+
+            view.BackgroundColor = NSColor.Clear;
+            view.TextColor = NSColor.Black;
+            view.Bordered = false;
+            view.Selectable = false;
+            view.Editable = false;
+
+            // Set up view based on the column and row
+            var item = _dataSource.Items[(int) row];
+            switch (tableColumn.Title)
+            {
+                case "Name":
+                    view.StringValue = item.Name;
+                    break;
+                case "Type":
+                    if (item.PartType == "ExtendedPart")
+                    {
+                        // Type="http://schemas.microsoft.com/office/2007/relationships/hdphoto" Target="media/hdphoto1.wdp"
+                        view.TextColor = NSColor.Red;
+                    }
+                    view.StringValue = item.PartType;
+                    break;
+                case "Content Type":
+                    view.StringValue = item.ContentType;
+                    break;
+                case "Size":
+                    if (item.Size > 1_000_000)
+                    {
+                        view.TextColor = NSColor.Red;
+                    }
+                    view.StringValue = Model.printFileSize(item.Size);
+                    break;
+            }
+
+            return view;
+        }
+    }
+}

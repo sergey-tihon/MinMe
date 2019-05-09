@@ -7,23 +7,25 @@ let printFileSize (size:int64) =
         else loop (size/1024.0) (List.tail suffixes)
     loop (double size) ["bytes"; "kB"; "MB"; "GB"; "TB"]
 
+type PartInfo =
+    {
+        Name : string
+        PartType : string
+        ContentType : string
+        Size : int64
+    }
+
 type FileContentInfo =
     {
         FileName : string
         FileSize : int64
-        NumberOfImages : int
-        Images : string list
-        Videos: string list
+        Parts : PartInfo list
     }
     override this.ToString() =
-        sprintf "%s; %d images"
-            (printFileSize this.FileSize)
-            this.NumberOfImages
+        sprintf "%s" (printFileSize this.FileSize)
 
     static member Default = {
         FileName = ""
         FileSize = 0L
-        NumberOfImages = 0
-        Images = []
-        Videos = []
+        Parts = []
     }

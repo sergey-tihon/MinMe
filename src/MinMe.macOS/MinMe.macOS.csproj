@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -91,6 +91,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="Data\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -108,6 +109,7 @@
     <Compile Include="WindowController.designer.cs">
       <DependentUpon>WindowController.cs</DependentUpon>
     </Compile>
+    <Compile Include="Data\MediaInfoTable.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Main.storyboard" />
@@ -117,6 +119,9 @@
       <Project>{DA0EC6D1-CB81-47F0-9350-775BB1C4E1AD}</Project>
       <Name>MinMe.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\.DS_Store" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.CSharp.targets" />
   <Choose>
@@ -143,15 +148,6 @@
         <Reference Include="FSharp.Core">
           <HintPath>..\..\packages\FSharp.Core\lib\netstandard1.6\FSharp.Core.dll</HintPath>
           <Private>True</Private>
-          <Paket>True</Paket>
-        </Reference>
-      </ItemGroup>
-    </When>
-  </Choose>
-  <Choose>
-    <When Condition="$(TargetFrameworkIdentifier) == 'Xamarin.Mac'">
-      <ItemGroup>
-        <Reference Include="Microsoft.CSharp">
           <Paket>True</Paket>
         </Reference>
       </ItemGroup>
@@ -213,6 +209,28 @@
   <Choose>
     <When Condition="$(TargetFrameworkIdentifier) == '.NETStandard' And $(TargetFrameworkVersion) == 'v2.0'">
       <ItemGroup>
+        <Reference Include="System.Diagnostics.Tools">
+          <HintPath>..\..\packages\System.Diagnostics.Tools\ref\netstandard1.0\System.Diagnostics.Tools.dll</HintPath>
+          <Private>False</Private>
+          <Paket>True</Paket>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Choose>
+    <When Condition="$(TargetFrameworkIdentifier) == '.NETStandard' And $(TargetFrameworkVersion) == 'v2.0'">
+      <ItemGroup>
+        <Reference Include="System.Diagnostics.Tracing">
+          <HintPath>..\..\packages\System.Diagnostics.Tracing\ref\netstandard1.5\System.Diagnostics.Tracing.dll</HintPath>
+          <Private>False</Private>
+          <Paket>True</Paket>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Choose>
+    <When Condition="$(TargetFrameworkIdentifier) == '.NETStandard' And $(TargetFrameworkVersion) == 'v2.0'">
+      <ItemGroup>
         <Reference Include="System.Globalization">
           <HintPath>..\..\packages\System.Globalization\ref\netstandard1.3\System.Globalization.dll</HintPath>
           <Private>False</Private>
@@ -233,9 +251,31 @@
     </When>
   </Choose>
   <Choose>
-    <When Condition="$(TargetFrameworkIdentifier) == 'Xamarin.Mac'">
+    <When Condition="$(TargetFrameworkIdentifier) == '.NETStandard' And $(TargetFrameworkVersion) == 'v2.0'">
       <ItemGroup>
-        <Reference Include="System.IO.Compression">
+        <Reference Include="System.IO.FileSystem">
+          <HintPath>..\..\packages\System.IO.FileSystem\ref\netstandard1.3\System.IO.FileSystem.dll</HintPath>
+          <Private>False</Private>
+          <Paket>True</Paket>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Choose>
+    <When Condition="$(TargetFrameworkIdentifier) == '.NETStandard' And $(TargetFrameworkVersion) == 'v2.0'">
+      <ItemGroup>
+        <Reference Include="System.IO.FileSystem.Primitives">
+          <HintPath>..\..\packages\System.IO.FileSystem.Primitives\lib\netstandard1.3\System.IO.FileSystem.Primitives.dll</HintPath>
+          <Private>True</Private>
+          <Paket>True</Paket>
+        </Reference>
+      </ItemGroup>
+    </When>
+    <When Condition="$(TargetFrameworkIdentifier) == '.NETStandard' And $(TargetFrameworkVersion) == 'v2.0'">
+      <ItemGroup>
+        <Reference Include="System.IO.FileSystem.Primitives">
+          <HintPath>..\..\packages\System.IO.FileSystem.Primitives\ref\netstandard1.3\System.IO.FileSystem.Primitives.dll</HintPath>
+          <Private>False</Private>
           <Paket>True</Paket>
         </Reference>
       </ItemGroup>
@@ -276,15 +316,6 @@
         <Reference Include="System.Linq">
           <HintPath>..\..\packages\System.Linq\ref\netstandard1.6\System.Linq.dll</HintPath>
           <Private>False</Private>
-          <Paket>True</Paket>
-        </Reference>
-      </ItemGroup>
-    </When>
-  </Choose>
-  <Choose>
-    <When Condition="$(TargetFrameworkIdentifier) == 'Xamarin.Mac'">
-      <ItemGroup>
-        <Reference Include="System.Net.Http">
           <Paket>True</Paket>
         </Reference>
       </ItemGroup>
@@ -439,8 +470,50 @@
   <Choose>
     <When Condition="$(TargetFrameworkIdentifier) == '.NETStandard' And $(TargetFrameworkVersion) == 'v2.0'">
       <ItemGroup>
+        <Reference Include="System.Runtime.CompilerServices.Unsafe">
+          <HintPath>..\..\packages\System.Runtime.CompilerServices.Unsafe\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+          <Private>True</Private>
+          <Paket>True</Paket>
+        </Reference>
+      </ItemGroup>
+    </When>
+    <When Condition="$(TargetFrameworkIdentifier) == '.NETStandard' And $(TargetFrameworkVersion) == 'v2.0'">
+      <ItemGroup>
+        <Reference Include="System.Runtime.CompilerServices.Unsafe">
+          <HintPath>..\..\packages\System.Runtime.CompilerServices.Unsafe\ref\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+          <Private>False</Private>
+          <Paket>True</Paket>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Choose>
+    <When Condition="$(TargetFrameworkIdentifier) == '.NETStandard' And $(TargetFrameworkVersion) == 'v2.0'">
+      <ItemGroup>
         <Reference Include="System.Runtime.Extensions">
           <HintPath>..\..\packages\System.Runtime.Extensions\ref\netstandard1.5\System.Runtime.Extensions.dll</HintPath>
+          <Private>False</Private>
+          <Paket>True</Paket>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Choose>
+    <When Condition="$(TargetFrameworkIdentifier) == '.NETStandard' And $(TargetFrameworkVersion) == 'v2.0'">
+      <ItemGroup>
+        <Reference Include="System.Runtime.Handles">
+          <HintPath>..\..\packages\System.Runtime.Handles\ref\netstandard1.3\System.Runtime.Handles.dll</HintPath>
+          <Private>False</Private>
+          <Paket>True</Paket>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Choose>
+    <When Condition="$(TargetFrameworkIdentifier) == '.NETStandard' And $(TargetFrameworkVersion) == 'v2.0'">
+      <ItemGroup>
+        <Reference Include="System.Runtime.InteropServices">
+          <HintPath>..\..\packages\System.Runtime.InteropServices\ref\netstandard1.5\System.Runtime.InteropServices.dll</HintPath>
           <Private>False</Private>
           <Paket>True</Paket>
         </Reference>
@@ -555,6 +628,17 @@
         <Reference Include="System.Threading.Tasks">
           <HintPath>..\..\packages\System.Threading.Tasks\ref\netstandard1.3\System.Threading.Tasks.dll</HintPath>
           <Private>False</Private>
+          <Paket>True</Paket>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Choose>
+    <When Condition="$(TargetFrameworkIdentifier) == '.NETStandard' And $(TargetFrameworkVersion) == 'v2.0'">
+      <ItemGroup>
+        <Reference Include="System.Threading.Tasks.Extensions">
+          <HintPath>..\..\packages\System.Threading.Tasks.Extensions\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+          <Private>True</Private>
           <Paket>True</Paket>
         </Reference>
       </ItemGroup>

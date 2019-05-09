@@ -13,16 +13,32 @@ namespace MinMe.macOS.cs
 	partial class ViewController
 	{
 		[Outlet]
-		AppKit.NSTextField ClickedLabel { get; set; }
+		AppKit.NSTextField FileName { get; set; }
+
+		[Outlet]
+		AppKit.NSTextField FileSize { get; set; }
+
+		[Outlet]
+		AppKit.NSTableView PartsTable { get; set; }
 
 		[Action ("ClickedButton:")]
 		partial void ClickedButton (Foundation.NSObject sender);
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (ClickedLabel != null) {
-				ClickedLabel.Dispose ();
-				ClickedLabel = null;
+			if (FileName != null) {
+				FileName.Dispose ();
+				FileName = null;
+			}
+
+			if (FileSize != null) {
+				FileSize.Dispose ();
+				FileSize = null;
+			}
+
+			if (PartsTable != null) {
+				PartsTable.Dispose ();
+				PartsTable = null;
 			}
 		}
 	}

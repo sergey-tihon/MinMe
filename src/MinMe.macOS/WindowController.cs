@@ -32,7 +32,8 @@ namespace MinMe.macOS.cs
 
                 var file = dlg.Urls[0].Path;
                 var result = await Agents.analyze(file);
-                Console.WriteLine(result);
+                var c = this.ContentViewController as ViewController;
+                c?.InitializeView(result);
             });
         }
 
