@@ -11,16 +11,25 @@ namespace MinMe.macOS.Data
 {
     public class ImageListDataSource : NSTableViewDataSource
     {
-        public ImageListDataSource(IEnumerable<Model.PartInfo> items)
+        public ImageListDataSource(IEnumerable<Model.PartInfo> items, Model.FileContentInfo model)
         {
+            _model = model;
             Items.AddRange(items);
         }
 
+        private readonly Model.FileContentInfo _model;
         public readonly List<Model.PartInfo> Items = new List<Model.PartInfo>();
 
         public override nint GetRowCount(NSTableView tableView)
         {
             return Items.Count;
+        }
+
+        public List<Model.PartUsageInfo> GetUsage(Model.PartInfo info)
+        {
+            if (_model.PartUsages.TryGetValue(info.Name, out var usage))
+                return usage;
+            return null;
         }
 
         public void Sort(string key, bool ascending)
@@ -96,7 +105,7 @@ namespace MinMe.macOS.Data
                        ?? new NSTextField {Identifier = CellIdentifier};
 
             view.BackgroundColor = NSColor.Clear;
-            view.TextColor = NSColor.Black;
+            view.TextColor = NSColor.Text;
             view.Bordered = false;
             view.Selectable = false;
             view.Editable = false;
@@ -125,6 +134,17 @@ namespace MinMe.macOS.Data
                         view.TextColor = NSColor.Red;
                     }
                     view.StringValue = Helpers.printFileSize(item.Size);
+                    break;
+                case "Used":
+                    var data = "";
+                    var usage = _dataSource.GetUsage(item);
+                    if (usage != null)
+                    {
+                        data = (usage.Count > 1)
+                            ? $"Yes ({usage.Count})"
+                            : $"Yes";
+                    }
+                    view.StringValue = data;
                     break;
             }
 

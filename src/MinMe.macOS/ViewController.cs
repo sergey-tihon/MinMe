@@ -21,7 +21,7 @@ namespace MinMe.macOS
             FileName.StringValue = System.IO.Path.GetFileName(model.FileName);
             FileSize.StringValue = Helpers.printFileSize(model.FileSize);
 
-            var partsSource = new ImageListDataSource(model.Parts);
+            var partsSource = new ImageListDataSource(model.Parts, model);
             PartsTable.DataSource = partsSource;
             PartsTable.Delegate = new ImageListDelegate(partsSource);
         }

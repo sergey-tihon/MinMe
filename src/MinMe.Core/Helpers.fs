@@ -19,3 +19,10 @@ module Helpers =
     let getDataPartSize (part:DataPart) =
         use stream = part.GetStream()
         stream.Length
+
+[<RequireQualifiedAccess>]
+module Option =
+    open DocumentFormat.OpenXml
+
+    let ofStringValue (obj:StringValue) =
+        if obj.HasValue then obj.Value |> Option.ofObj else None
