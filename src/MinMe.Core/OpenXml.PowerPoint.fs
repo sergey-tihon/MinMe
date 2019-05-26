@@ -6,6 +6,7 @@ open System.IO
 open System.Collections.Generic
 open DocumentFormat.OpenXml
 open DocumentFormat.OpenXml.Packaging
+open DocumentFormat.OpenXml.Packaging
 open DocumentFormat.OpenXml.Presentation
 open MinMe.Core
 open MinMe.Core.Model
@@ -66,6 +67,12 @@ let private getPartUsageData (doc:PresentationDocument) :Map<string, List<PartUs
         | None -> () // this is strange
         | Some(part) ->
             addUsage part.Uri (Rerefence presentation.Uri)
+            let slide = part :?> SlidePart
+            let layout = slide.SlideLayoutPart
+            let master = layout.SlideMasterPart
+            addUsage (layout.Uri) (Rerefence slide.Uri)
+            addUsage (master.Uri) (Rerefence layout.Uri)
+
 
     dict
     |> Seq.map (fun x -> x.Key, x.Value)

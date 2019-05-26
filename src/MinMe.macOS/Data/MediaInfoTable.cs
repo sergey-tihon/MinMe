@@ -62,6 +62,15 @@ namespace MinMe.macOS.Data
                     else
                         Items.Sort((x, y) => -1 * x.Size.CompareTo(y.Size));
                     break;
+                case "Used":
+                    Items.Sort((x, y) =>
+                    {
+                        var xx = GetUsage(x)?.Count ?? 0;
+                        var yy = GetUsage(y)?.Count ?? 0;
+                        var cmp = xx.CompareTo(yy);
+                        return ascending ? cmp : -cmp;
+                    });
+                    break;
             }
 
         }
@@ -142,7 +151,7 @@ namespace MinMe.macOS.Data
                     {
                         data = (usage.Count > 1)
                             ? $"Yes ({usage.Count})"
-                            : $"Yes";
+                            : "Yes";
                     }
                     view.StringValue = data;
                     break;

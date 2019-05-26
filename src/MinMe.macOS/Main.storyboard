@@ -822,7 +822,7 @@
                                                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                         </textFieldCell>
-                                                                        <sortDescriptor key="sortDescriptorPrototype" selector="compare:" sortKey="Size"/>
+                                                                        <sortDescriptor key="sortDescriptorPrototype" selector="compare:" sortKey="Used"/>
                                                                         <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                                         <prototypeCellViews>
                                                                             <tableCellView id="4UW-G2-IUr">
