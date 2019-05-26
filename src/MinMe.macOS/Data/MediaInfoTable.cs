@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using AppKit;
 using Foundation;
+using MinMe.Core;
 
 namespace MinMe.macOS.cs.Data
 {
@@ -120,7 +121,7 @@ namespace MinMe.macOS.cs.Data
                     {
                         view.TextColor = NSColor.Red;
                     }
-                    view.StringValue = Model.printFileSize(item.Size);
+                    view.StringValue = Helpers.printFileSize(item.Size);
                     break;
             }
 

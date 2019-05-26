@@ -1,8 +1,8 @@
-module MinMe.Agents
+module MinMe.Core.Agents
 
 open System.IO
-open MinMe.Model
-open MinMe.OpenXml
+open MinMe.Core.Model
+open MinMe.Core.OpenXml
 
 type Message =
     | Analyze of fileName:string * AsyncReplyChannel<FileContentInfo>

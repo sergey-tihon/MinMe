@@ -4,7 +4,7 @@ using System;
 
 using Foundation;
 using AppKit;
-using System.Threading.Tasks;
+using MinMe.Core;
 
 namespace MinMe.macOS.cs
 {

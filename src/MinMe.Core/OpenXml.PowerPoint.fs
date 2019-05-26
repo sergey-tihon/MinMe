@@ -1,8 +1,8 @@
-module MinMe.OpenXml.PowerPoint
+module MinMe.Core.OpenXml.PowerPoint
 
 open System.IO
 open DocumentFormat.OpenXml.Packaging
-open MinMe.Model
+open MinMe.Core.Model
 
 
 let getPartSize (part:OpenXmlPart) =
@@ -18,7 +18,7 @@ let processPowerPointStream (stream:Stream) contentInfo =
         let key = root.Uri.OriginalString
         if visitedParts.Contains key
         then Seq.empty
-        else 
+        else
             visitedParts.Add key |> ignore
             seq {
                 yield {
