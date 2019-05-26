@@ -6,6 +6,3 @@ nuget NETStandard.Library restriction: >= xamarinmac
 
 nuget Newtonsoft.Json
 nuget DocumentFormat.OpenXml
-
-nuget Fabulous.Core
-nuget Xamarin.Forms
