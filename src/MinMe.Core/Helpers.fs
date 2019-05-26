@@ -9,3 +9,13 @@ module Helpers =
             then sprintf "%.1f %s" size (List.head suffixes)
             else loop (size/1024.0) (List.tail suffixes)
         loop (double size) ["bytes"; "kB"; "MB"; "GB"; "TB"]
+
+    open DocumentFormat.OpenXml.Packaging
+
+    let getPartSize (part:OpenXmlPart) =
+        use stream = part.GetStream()
+        stream.Length
+
+    let getDataPartSize (part:DataPart) =
+        use stream = part.GetStream()
+        stream.Length

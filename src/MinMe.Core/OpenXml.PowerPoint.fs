@@ -2,17 +2,10 @@ module MinMe.Core.OpenXml.PowerPoint
 
 open System.IO
 open DocumentFormat.OpenXml.Packaging
+open MinMe.Core
 open MinMe.Core.Model
 
-
-let getPartSize (part:OpenXmlPart) =
-    use stream = part.GetStream()
-    stream.Length
-let getDataPartSize (part:DataPart) =
-    use stream = part.GetStream()
-    stream.Length
-
-let processPowerPointStream (stream:Stream) contentInfo =
+let private enumerateAllParts (doc:PresentationDocument) =
     let visitedParts = System.Collections.Generic.HashSet<_>()
     let rec processOpenXmlPart (root:OpenXmlPart) =
         let key = root.Uri.OriginalString
@@ -43,13 +36,15 @@ let processPowerPointStream (stream:Stream) contentInfo =
                     yield! processOpenXmlPart pair.OpenXmlPart
             }
 
+    doc.Parts
+    |> Seq.collect (fun pair -> processOpenXmlPart pair.OpenXmlPart)
+    |> Seq.sortBy (fun x -> x.PartType)
+    |> Seq.toList
+
+let processPowerPointStream (stream:Stream) contentInfo =
     use doc = PresentationDocument.Open(stream, false)
     {
         contentInfo with
-            Parts =
-                doc.Parts
-                |> Seq.collect (fun pair -> processOpenXmlPart pair.OpenXmlPart)
-                |> Seq.sortBy (fun x -> x.PartType)
-                |> Seq.toList
+            Parts = enumerateAllParts doc
     }
 

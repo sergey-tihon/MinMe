@@ -127,5 +127,15 @@ namespace MinMe.macOS.cs.Data
 
             return view;
         }
+
+        private NSData GetFileIcon(string fileType)
+        {
+            var icon = NSWorkspace.SharedWorkspace.IconForFileType(fileType);
+            var data = icon.AsTiff();
+            return data;
+            //var bytes = new int[data.Length];
+            //System.Runtime.InteropServices.Marshal.Copy(data.Bytes, bytes, 0, Convert.ToInt32(data.Length));
+            //return ImageSource.FromStream(() => new IO.MemoryStream(bytes));
+        }
     }
 }

@@ -92,6 +92,7 @@
   <ItemGroup>
     <Folder Include="Resources\" />
     <Folder Include="Data\" />
+    <Folder Include="Views\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -110,6 +111,7 @@
       <DependentUpon>WindowController.cs</DependentUpon>
     </Compile>
     <Compile Include="Data\MediaInfoTable.cs" />
+    <Compile Include="Views\ProgressAlert.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Main.storyboard" />
