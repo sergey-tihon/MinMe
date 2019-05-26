@@ -1,7 +1,6 @@
-﻿using System;
-using AppKit;
+﻿using AppKit;
 
-namespace MinMe.macOS.cs.Views
+namespace MinMe.macOS.Views
 {
     public class ProgressAlert : NSAlert
     {

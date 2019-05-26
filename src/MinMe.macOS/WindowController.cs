@@ -2,12 +2,12 @@
 
 using System;
 
-using Foundation;
 using AppKit;
-using MinMe.Core;
-using MinMe.macOS.cs.Views;
 
-namespace MinMe.macOS.cs
+using MinMe.Core;
+using MinMe.macOS.Views;
+
+namespace MinMe.macOS
 {
 	public partial class WindowController : NSWindowController
 	{

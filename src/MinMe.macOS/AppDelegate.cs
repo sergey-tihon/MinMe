@@ -1,7 +1,8 @@
 ﻿using AppKit;
+
 using Foundation;
 
-namespace MinMe.macOS.cs
+namespace MinMe.macOS
 {
     [Register("AppDelegate")]
     public class AppDelegate : NSApplicationDelegate

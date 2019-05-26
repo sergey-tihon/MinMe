@@ -1,11 +1,13 @@
 using System;
 
 using AppKit;
-using Foundation;
-using MinMe.Core;
-using MinMe.macOS.cs.Data;
 
-namespace MinMe.macOS.cs
+using Foundation;
+
+using MinMe.Core;
+using MinMe.macOS.Data;
+
+namespace MinMe.macOS
 {
     public partial class ViewController : NSViewController
     {

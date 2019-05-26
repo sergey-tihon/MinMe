@@ -1,6 +1,6 @@
 ﻿using AppKit;
 
-namespace MinMe.macOS.cs
+namespace MinMe.macOS
 {
     static class MainClass
     {
