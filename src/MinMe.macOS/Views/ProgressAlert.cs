@@ -2,7 +2,7 @@
 
 namespace MinMe.macOS.Views
 {
-    public class ProgressAlert : NSAlert
+    public sealed class ProgressAlert : NSAlert
     {
         public ProgressAlert()
         {

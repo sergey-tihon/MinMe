@@ -5,6 +5,7 @@ using AppKit;
 using Foundation;
 
 using MinMe.Core;
+using MinMe.Core.Model;
 using MinMe.macOS.Data;
 
 namespace MinMe.macOS
@@ -16,10 +17,10 @@ namespace MinMe.macOS
         }
 
 
-        public void InitializeView (Model.FileContentInfo model)
+        public void InitializeView (FileContentInfo model)
         {
             FileName.StringValue = System.IO.Path.GetFileName(model.FileName);
-            FileSize.StringValue = Helpers.printFileSize(model.FileSize);
+            FileSize.StringValue = Helpers.PrintFileSize(model.FileSize);
 
             var partsSource = new ImageListDataSource(model.Parts, model);
             PartsTable.DataSource = partsSource;

@@ -1,8 +1,5 @@
 source https://api.nuget.org/v3/index.json
 framework: xamarinmac, netstandard2
 
-nuget FSharp.Core
-nuget NETStandard.Library restriction: >= xamarinmac
-
-nuget Newtonsoft.Json
 nuget DocumentFormat.OpenXml
+nuget NETStandard.Library restriction: >= xamarinmac

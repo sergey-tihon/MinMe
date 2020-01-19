@@ -6,31 +6,28 @@ using AppKit;
 using Foundation;
 
 using MinMe.Core;
+using MinMe.Core.Model;
 
 namespace MinMe.macOS.Data
 {
     public class ImageListDataSource : NSTableViewDataSource
     {
-        public ImageListDataSource(IEnumerable<Model.PartInfo> items, Model.FileContentInfo model)
+        public ImageListDataSource(IEnumerable<PartInfo> items, FileContentInfo model)
         {
             _model = model;
             Items.AddRange(items);
         }
 
-        private readonly Model.FileContentInfo _model;
-        public readonly List<Model.PartInfo> Items = new List<Model.PartInfo>();
+        private readonly FileContentInfo _model;
+        public readonly List<PartInfo> Items = new List<PartInfo>();
 
         public override nint GetRowCount(NSTableView tableView)
         {
             return Items.Count;
         }
 
-        public List<Model.PartUsageInfo> GetUsage(Model.PartInfo info)
-        {
-            if (_model.PartUsages.TryGetValue(info.Name, out var usage))
-                return usage;
-            return null;
-        }
+        public List<PartUsageInfo> GetUsage(PartInfo info)
+            => _model.PartUsages.TryGetValue(info.Name, out var usage) ? usage : null;
 
         public void Sort(string key, bool ascending)
         {
@@ -142,7 +139,7 @@ namespace MinMe.macOS.Data
                     {
                         view.TextColor = NSColor.Red;
                     }
-                    view.StringValue = Helpers.printFileSize(item.Size);
+                    view.StringValue = Helpers.PrintFileSize(item.Size);
                     break;
                 case "Used":
                     var data = "";
