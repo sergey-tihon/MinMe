@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15705"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -677,9 +677,14 @@
                                         </buttonCell>
                                     </button>
                                 </toolbarItem>
-                                <toolbarItem implicitItemIdentifier="3FA831E8-7851-4062-BEEE-F85C7F4362C9" label="Start" paletteLabel="Start Optimize" toolTip="Start Encoding" tag="-1" image="encode" id="0n1-Dt-vHJ">
+                                <toolbarItem implicitItemIdentifier="3FA831E8-7851-4062-BEEE-F85C7F4362C9" label="Optimize" paletteLabel="Optimize" toolTip="Start Encoding" tag="-1" image="encode" id="0n1-Dt-vHJ">
                                     <connections>
                                         <action selector="Optimize:" target="B8D-0N-5wS" id="4Tt-1l-9uY"/>
+                                    </connections>
+                                </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="AB50A02C-0DDE-4942-AEE7-BEF2EF07EFCB" label="Publish slides" paletteLabel="Publish" toolTip="Start Encoding" tag="-1" image="encode" id="nN7-ZY-zwE">
+                                    <connections>
+                                        <action selector="Publish:" target="B8D-0N-5wS" id="ydh-uY-zK3"/>
                                     </connections>
                                 </toolbarItem>
                             </allowedToolbarItems>
@@ -688,6 +693,7 @@
                                 <toolbarItem reference="zrf-oE-DLt"/>
                                 <toolbarItem reference="zrf-oE-DLt"/>
                                 <toolbarItem reference="0n1-Dt-vHJ"/>
+                                <toolbarItem reference="nN7-ZY-zwE"/>
                                 <toolbarItem reference="JJG-kt-qJi"/>
                                 <toolbarItem reference="Czq-Ox-bXq"/>
                             </defaultToolbarItems>
@@ -719,13 +725,13 @@
                                 <font key="font" metaFont="system"/>
                                 <tabViewItems>
                                     <tabViewItem label="Summary" identifier="" id="Lkj-72-kic">
-                                        <view key="view" id="bpH-7R-sgm">
+                                        <view key="view" ambiguous="YES" id="bpH-7R-sgm">
                                             <rect key="frame" x="10" y="33" width="780" height="524"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         </view>
                                     </tabViewItem>
                                     <tabViewItem label="Parts" identifier="" id="WjX-sb-wrb" userLabel="Parts">
-                                        <view key="view" ambiguous="YES" id="164-Zp-Ms6">
+                                        <view key="view" id="164-Zp-Ms6">
                                             <rect key="frame" x="10" y="33" width="780" height="524"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
@@ -734,18 +740,18 @@
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <clipView key="contentView" ambiguous="YES" id="0Ec-eK-1qO">
                                                         <rect key="frame" x="1" y="0.0" width="778" height="523"/>
-                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
-                                                            <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="firstColumnOnly" alternatingRowBackgroundColors="YES" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="eGy-fd-BcH" viewBased="YES" id="kJo-kF-DAm" userLabel="Parts Table">
+                                                            <tableView verticalHuggingPriority="750" ambiguous="YES" allowsExpansionToolTips="YES" columnAutoresizingStyle="firstColumnOnly" alternatingRowBackgroundColors="YES" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="eGy-fd-BcH" viewBased="YES" id="kJo-kF-DAm" userLabel="Parts Table">
                                                                 <rect key="frame" x="0.0" y="0.0" width="778" height="498"/>
-                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <size key="intercellSpacing" width="3" height="2"/>
                                                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                                                 <tableColumns>
                                                                     <tableColumn width="120" minWidth="40" maxWidth="1000" id="ztV-qg-Cft">
                                                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Name">
-                                                                            <font key="font" metaFont="smallSystem"/>
+                                                                            <font key="font" metaFont="menu" size="11"/>
                                                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                             <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                                         </tableHeaderCell>
@@ -779,7 +785,7 @@
                                                                     </tableColumn>
                                                                     <tableColumn width="124" minWidth="40" maxWidth="1000" id="eWj-ii-00w">
                                                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Type">
-                                                                            <font key="font" metaFont="smallSystem"/>
+                                                                            <font key="font" metaFont="menu" size="11"/>
                                                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                             <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                                         </tableHeaderCell>
@@ -813,7 +819,7 @@
                                                                     </tableColumn>
                                                                     <tableColumn width="102" minWidth="40" maxWidth="1000" id="2qa-9L-g3D" userLabel="Used">
                                                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Used">
-                                                                            <font key="font" metaFont="smallSystem"/>
+                                                                            <font key="font" metaFont="menu" size="11"/>
                                                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                             <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                                         </tableHeaderCell>
@@ -847,7 +853,7 @@
                                                                     </tableColumn>
                                                                     <tableColumn width="100" minWidth="40" maxWidth="1000" id="ak1-pI-Ic6">
                                                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Size">
-                                                                            <font key="font" metaFont="smallSystem"/>
+                                                                            <font key="font" metaFont="menu" size="11"/>
                                                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                             <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                                         </tableHeaderCell>
@@ -881,7 +887,7 @@
                                                                     </tableColumn>
                                                                     <tableColumn width="120" minWidth="40" maxWidth="1000" id="Yzd-Th-dgt">
                                                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Content Type">
-                                                                            <font key="font" metaFont="smallSystem"/>
+                                                                            <font key="font" metaFont="menu" size="11"/>
                                                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                             <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                                         </tableHeaderCell>
@@ -959,7 +965,7 @@
                             <textField identifier="fileName" toolTip="Source file name." verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" ambiguous="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J09-Ge-Wdi">
                                 <rect key="frame" x="0.0" y="567" width="800" height="14"/>
                                 <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" alignment="left" usesSingleLineMode="YES" id="r8c-mX-TDb">
-                                    <font key="font" metaFont="smallSystem"/>
+                                    <font key="font" metaFont="menu" size="11"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </textFieldCell>
@@ -970,7 +976,7 @@
                                     <constraint firstAttribute="width" constant="100" id="BAX-la-ccv"/>
                                 </constraints>
                                 <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" alignment="left" usesSingleLineMode="YES" id="2mL-5n-R50">
-                                    <font key="font" metaFont="smallSystem"/>
+                                    <font key="font" metaFont="menu" size="11"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </textFieldCell>

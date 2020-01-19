@@ -138,6 +138,17 @@
   <Choose>
     <When Condition="($(TargetFrameworkIdentifier) == '.NETStandard' And $(TargetFrameworkVersion) == 'v2.0') Or ($(TargetFrameworkIdentifier) == 'Xamarin.Mac')">
       <ItemGroup>
+        <Reference Include="Clippit">
+          <HintPath>..\..\packages\Clippit\lib\netstandard2.0\Clippit.dll</HintPath>
+          <Private>True</Private>
+          <Paket>True</Paket>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Choose>
+    <When Condition="($(TargetFrameworkIdentifier) == '.NETStandard' And $(TargetFrameworkVersion) == 'v2.0') Or ($(TargetFrameworkIdentifier) == 'Xamarin.Mac')">
+      <ItemGroup>
         <Reference Include="DocumentFormat.OpenXml">
           <HintPath>..\..\packages\DocumentFormat.OpenXml\lib\netstandard2.0\DocumentFormat.OpenXml.dll</HintPath>
           <Private>True</Private>

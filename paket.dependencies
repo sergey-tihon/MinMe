@@ -1,5 +1,6 @@
 source https://api.nuget.org/v3/index.json
 framework: xamarinmac, netstandard2
 
-nuget DocumentFormat.OpenXml
 nuget NETStandard.Library restriction: >= xamarinmac
+nuget DocumentFormat.OpenXml
+nuget Clippit
