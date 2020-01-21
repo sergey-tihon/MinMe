@@ -157,6 +157,15 @@ $RECYCLE.BIN/
 # Mac desktop service store files
 .DS_Store
 
+# MSBuild Binary and Structured Log
+*.binlog
+
+# NVidia Nsight GPU debugger configuration file
+*.nvuser
+
+# MFractors (Xamarin productivity tool) working folder 
+.mfractor/
+
 # ===================================================
 # Exclude F# project specific directories and files
 # ===================================================
