@@ -15,5 +15,17 @@
     </AvaloniaResource>
     <AvaloniaResource Include="Assets\**" />
   </ItemGroup>
-  <Import Project="..\..\.paket\Paket.Restore.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\MinMe.Core\MinMe.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="DocumentFormat.OpenXml" Version="2.10.0" />
+    <PackageReference Include="Clippit" Version="1.1.4" />
+    <PackageReference Include="Avalonia" Version="0.9.2" />
+    <PackageReference Include="Avalonia.Desktop" Version="0.9.2" />
+    <PackageReference Include="Avalonia.ReactiveUI" Version="0.9.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="paket.references" />
+  </ItemGroup>
 </Project>

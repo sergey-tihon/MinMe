@@ -15,6 +15,8 @@ namespace MinMe.Avalonia
 
         public override void OnFrameworkInitializationCompleted()
         {
+            base.OnFrameworkInitializationCompleted();
+
             if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
             {
                 desktop.MainWindow = new MainWindow
@@ -22,8 +24,6 @@ namespace MinMe.Avalonia
                     DataContext = new MainWindowViewModel(),
                 };
             }
-
-            base.OnFrameworkInitializationCompleted();
         }
     }
 }

@@ -3,7 +3,9 @@
         xmlns:vm="clr-namespace:MinMe.Avalonia.ViewModels;assembly=MinMe.Avalonia"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:views="clr-namespace:MinMe.Avalonia.Views;assembly=MinMe.Avalonia"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        Width="400" Height="200"
         x:Class="MinMe.Avalonia.Views.MainWindow"
         Icon="/Assets/minme-logo.ico"
         Title="MinMe">
@@ -12,6 +14,9 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    <Grid RowDefinitions="*,Auto">
+        <views:PowerPointView ></views:PowerPointView>
+        <views:DragAndDropPage Grid.Row="1"></views:DragAndDropPage>
+    </Grid>
 
 </Window>

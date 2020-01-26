@@ -62,6 +62,8 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.Mac" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
@@ -100,7 +102,7 @@
   <ItemGroup>
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
-    <None Include="paket.references" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
@@ -140,7 +142,7 @@
     <When Condition="($(TargetFrameworkIdentifier) == '.NETCoreApp' And $(TargetFrameworkVersion) == 'v3.1') Or ($(TargetFrameworkIdentifier) == '.NETStandard' And $(TargetFrameworkVersion) == 'v2.0') Or ($(TargetFrameworkIdentifier) == 'Xamarin.Mac')">
       <ItemGroup>
         <Reference Include="Clippit">
-          <HintPath>..\..\packages\Clippit\lib\netstandard2.0\Clippit.dll</HintPath>
+          <HintPath>..\..\packages\Clippit.1.1.4\lib\netstandard2.0\Clippit.dll</HintPath>
           <Private>True</Private>
           <Paket>True</Paket>
         </Reference>
@@ -151,7 +153,7 @@
     <When Condition="($(TargetFrameworkIdentifier) == '.NETCoreApp' And $(TargetFrameworkVersion) == 'v3.1') Or ($(TargetFrameworkIdentifier) == '.NETStandard' And $(TargetFrameworkVersion) == 'v2.0') Or ($(TargetFrameworkIdentifier) == 'Xamarin.Mac')">
       <ItemGroup>
         <Reference Include="DocumentFormat.OpenXml">
-          <HintPath>..\..\packages\DocumentFormat.OpenXml\lib\netstandard2.0\DocumentFormat.OpenXml.dll</HintPath>
+          <HintPath>..\..\packages\DocumentFormat.OpenXml.2.10.0\lib\netstandard2.0\DocumentFormat.OpenXml.dll</HintPath>
           <Private>True</Private>
           <Paket>True</Paket>
         </Reference>
@@ -162,7 +164,7 @@
     <When Condition="($(TargetFrameworkIdentifier) == '.NETCoreApp' And $(TargetFrameworkVersion) == 'v3.1') Or ($(TargetFrameworkIdentifier) == '.NETStandard' And $(TargetFrameworkVersion) == 'v2.0') Or ($(TargetFrameworkIdentifier) == 'Xamarin.Mac')">
       <ItemGroup>
         <Reference Include="System.IO.Packaging">
-          <HintPath>..\..\packages\System.IO.Packaging\lib\netstandard2.0\System.IO.Packaging.dll</HintPath>
+          <HintPath>..\..\packages\System.IO.Packaging.4.7.0\lib\netstandard2.0\System.IO.Packaging.dll</HintPath>
           <Private>True</Private>
           <Paket>True</Paket>
         </Reference>
