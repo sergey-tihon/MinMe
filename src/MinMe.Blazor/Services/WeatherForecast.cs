@@ -1,6 +1,6 @@
 using System;
 
-namespace MinMe.Blazor.Data
+namespace MinMe.Blazor.Services
 {
     public class WeatherForecast
     {

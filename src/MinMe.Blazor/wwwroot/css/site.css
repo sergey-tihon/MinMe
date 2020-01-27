@@ -54,6 +54,12 @@ app {
         background-color: rgba(0,0,0,0.4);
     }
 
+    .sidebar .logo {
+        position: absolute;
+        bottom: 20px;
+        left: 61px;
+    }
+
     .sidebar .navbar-brand {
         font-size: 1.1rem;
     }

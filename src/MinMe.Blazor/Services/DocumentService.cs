@@ -7,7 +7,7 @@ using Clippit.PowerPoint;
 using ElectronNET.API;
 using ElectronNET.API.Entities;
 
-namespace MinMe.Blazor.Data
+namespace MinMe.Blazor.Services
 {
     public class DocumentService
     {

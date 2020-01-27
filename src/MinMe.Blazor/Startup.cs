@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using MinMe.Blazor.Data;
+using MinMe.Blazor.Services;
 using ElectronNET.API;
 using Blazored.Toast;
 using MinMe.Blazor.ViewModels;
@@ -32,10 +32,14 @@ namespace MinMe.Blazor
             services.AddServerSideBlazor();
             services.AddBlazoredToast();
 
+            // Services
             services.AddSingleton<WeatherForecastService>();
             services.AddSingleton<DocumentService>();
             services.AddScoped<NotificationService>();
+
+            // ViewModels
             services.AddScoped<CounterViewModel>();
+            services.AddScoped<PublishSlidesViewModel>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

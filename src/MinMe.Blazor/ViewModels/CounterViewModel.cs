@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Reactive;
 using System.Threading.Tasks;
-using MinMe.Blazor.Data;
+using MinMe.Blazor.Services;
 using ReactiveUI;
 
 namespace MinMe.Blazor.ViewModels
@@ -37,7 +37,7 @@ namespace MinMe.Blazor.ViewModels
 
         private void ShowErrorImpl()
         {
-            _notificationService.ShowError("Error message.");
+            _notificationService.ShowError("Error", "Error message.");
         }
     }
 }
