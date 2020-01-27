@@ -1,25 +1,27 @@
 ﻿@page "/counter"
-@using MinMe.Blazor.Services
-@inject NotificationService notificationService
+@using MinMe.Blazor.Data
+@implements IViewFor<CounterViewModel>
+
 
 <h1>Counter</h1>
 
-<p>Current count: @currentCount</p>
+<p>Current count: @ViewModel.CurrentCount</p>
 
 <button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
 <button class="btn btn-secondary" @onclick="ShowErrorDialog">Error dialog</button>
 
 
 @code {
-    private int currentCount = 0;
 
-    private void IncrementCount()
+    [Inject]
+    public CounterViewModel ViewModel { get; set; }
+
+    object IViewFor.ViewModel
     {
-        currentCount++;
+        get => ViewModel;
+        set => ViewModel = (CounterViewModel)value;
     }
 
-    private void ShowErrorDialog()
-    {
-        notificationService.ShowError("Demonstrating an error message.");
-    }
+    private Task IncrementCount() => ViewModel.Increment.Execute().ToTask();
+    private Task ShowErrorDialog() => ViewModel.ShowError.Execute().ToTask();
 }

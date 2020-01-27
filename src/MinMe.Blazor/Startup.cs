@@ -11,7 +11,7 @@ using Microsoft.Extensions.Hosting;
 using MinMe.Blazor.Data;
 using ElectronNET.API;
 using Blazored.Toast;
-using MinMe.Blazor.Services;
+using MinMe.Blazor.ViewModels;
 
 namespace MinMe.Blazor
 {
@@ -33,7 +33,9 @@ namespace MinMe.Blazor
             services.AddBlazoredToast();
 
             services.AddSingleton<WeatherForecastService>();
+            services.AddSingleton<DocumentService>();
             services.AddScoped<NotificationService>();
+            services.AddScoped<CounterViewModel>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

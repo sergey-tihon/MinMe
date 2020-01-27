@@ -1,5 +1,39 @@
 ﻿@page "/"
+@inject DocumentService documentService
+<h1>Open PowerPoint file</h1>
 
-<h1>Hello, world!</h1>
+<button class="btn btn-primary" @onclick="OpenFile">Open</button>
 
-Welcome to your new app.
+@if (currentFile is { })
+{
+    <h4>Selected file:</h4>
+    <p>@currentFile</p>
+    <button class="btn btn-primary" @onclick="PublishSlides">Publish Slides</button>
+    @if (publishResult is { })
+    {
+        <p>Extracted @publishResult slides</p>
+    }
+}
+
+@code {
+    private string? currentFile = null;
+    private string? publishResult = null;
+
+    private async Task OpenFile()
+    {
+        currentFile = await documentService.OpenFile();
+        publishResult = null;
+        StateHasChanged();
+    }
+
+    private async Task PublishSlides()
+    {
+        await Task.Run(() =>
+        {
+            var count = documentService.PublishSlides(currentFile);
+            publishResult = count.ToString();
+        });
+
+        StateHasChanged();
+    }
+}

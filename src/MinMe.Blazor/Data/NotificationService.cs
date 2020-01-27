@@ -2,7 +2,7 @@
 using Blazored.Toast.Services;
 using ElectronNET.API;
 
-namespace MinMe.Blazor.Services
+namespace MinMe.Blazor.Data
 {
     public class NotificationService
     {
