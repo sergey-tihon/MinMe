@@ -1,10 +1,13 @@
 ﻿using System;
+using Blazor.Fluxor;
+
 namespace MinMe.Blazor.Store.Document
 {
-    public class DocumentFeature
+    public class DocumentFeature : Feature<DocumentState>
     {
-        public DocumentFeature()
-        {
-        }
+        public override string GetName() => "Document";
+
+        protected override DocumentState GetInitialState()
+            => new DocumentState(null);
     }
 }

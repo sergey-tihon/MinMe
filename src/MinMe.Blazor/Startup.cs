@@ -11,7 +11,6 @@ using Microsoft.Extensions.Hosting;
 using MinMe.Blazor.Services;
 using ElectronNET.API;
 using Blazored.Toast;
-using MinMe.Blazor.ViewModels;
 using global::Blazor.Fluxor;
 
 namespace MinMe.Blazor
@@ -37,9 +36,6 @@ namespace MinMe.Blazor
             services.AddSingleton<WeatherForecastService>();
             services.AddSingleton<DocumentService>();
             services.AddScoped<NotificationService>();
-
-            // ViewModels
-            services.AddScoped<PublishSlidesViewModel>();
 
             services.AddFluxor(options => {
                 options.UseDependencyInjection(typeof(Startup).Assembly);

@@ -1,5 +1,11 @@
-﻿<h3>Component1</h3>
+﻿@page "/slides"
+@inherits global::Blazor.Fluxor.Components.FluxorComponent
+@using global::Blazor.Fluxor
+@using global::MinMe.Blazor.Store.Document
+@inject IDispatcher Dispatcher
+@inject IState<DocumentState> DocumentState
+
+<h1>Slides</h1>
 
 @code {
-
 }

@@ -1,10 +1,8 @@
 ﻿using System;
 namespace MinMe.Blazor.Store.Document
 {
-    public class Actions
+    public class OpenFileAction
     {
-        public Actions()
-        {
-        }
+        public string FileName { get; set; } = string.Empty;
     }
 }

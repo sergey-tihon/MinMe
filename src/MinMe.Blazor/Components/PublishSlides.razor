@@ -1,25 +1,31 @@
-﻿@implements IViewFor<PublishSlidesViewModel>
+﻿@inherits FluxorComponent
+@using global::MinMe.Blazor.Store.Document
+
+@inject IDispatcher Dispatcher
+@inject IState<DocumentState> DocumentState
+@inject DocumentService DocumentService
+@inject NotificationService NotificationService
 
 <div class="container-fluid">
     <h1>Choose PowerPoint file:</h1>
     <div class="row">
         <div class="col-md-auto">
             <button class="btn btn-info"
-                    @onclick="ChooseFile">
+                    @onclick="OpenFile">
                 Open File
             </button>
         </div>
         <div class="col">
             <div class="form-group">
                 <input id="name" type="text" class="form-control"
-                        placeholder="@ViewModel.Placeholder"
-                        disabled="@ElectronNET.API.HybridSupport.IsElectronActive"
-                        @bind-value="ViewModel.FileName"
-                        @bind-value:event="oninput" />
+                       placeholder="@Placeholder"
+                       disabled="@ElectronNET.API.HybridSupport.IsElectronActive"
+                       @bind-value="FileName"
+                       @bind-value:event="oninput" />
             </div>
         </div>
     </div>
-    @if (ViewModel.FileContentInfo is { } fileInfo)
+    @if (DocumentState.Value.FileContentInfo is { } fileInfo)
     {
         <div class="row">
             <div class="col-md-auto">
@@ -31,20 +37,20 @@
             <div class="col">
                 <b>File size : @fileInfo.FileSize.ToString("#,##0") bytes</b>
                 <ul>
-                @foreach (var partInfo in fileInfo.Parts.OrderBy(x=>x.Name))
-                {
-                    <li>
-                        @partInfo.Name contains @partInfo.Size.ToString("#,##0") bytes
-                        @if (partInfo.Size > 10_000_000)
-                        {
-                            <span class="badge badge-danger">Danger</span>
-                        }
-                        else if (partInfo.Size > 1_000_000)
-                        {
-                            <span class="badge badge-warning">Warning</span>
-                        }
-                    </li>
-                }
+                    @foreach (var partInfo in fileInfo.Parts.OrderBy(x => x.Name))
+                    {
+                        <li>
+                            @partInfo.Name contains @partInfo.Size.ToString("#,##0") bytes
+                            @if (partInfo.Size > 10_000_000)
+                            {
+                                <span class="badge badge-danger">Danger</span>
+                            }
+                            else if (partInfo.Size > 1_000_000)
+                            {
+                                <span class="badge badge-warning">Warning</span>
+                            }
+                        </li>
+                    }
                 </ul>
             </div>
         </div>
@@ -53,15 +59,37 @@
 
 
 @code {
-    [Inject]
-    public PublishSlidesViewModel ViewModel { get; set; }
-    object IViewFor.ViewModel
+    public string FileName { get; set; } = string.Empty;
+    public string Placeholder =
+        ElectronNET.API.HybridSupport.IsElectronActive
+            ? "Current file" : "Drop file here";
+
+    protected override void OnInitialized()
     {
-        get => ViewModel;
-        set => ViewModel = (PublishSlidesViewModel)value;
+        base.OnInitialized();
+        FileName = DocumentState.Value.FileContentInfo?.FileName ?? string.Empty;
     }
 
-    public Task ChooseFile() => ViewModel.ChooseFile.Execute().ToTask();
-    public Task Publish() => ViewModel.PublishSlides.Execute().ToTask();
+    public async Task OpenFile() {
+        if (ElectronNET.API.HybridSupport.IsElectronActive)
+        {
+            FileName = await DocumentService.OpenFile();
+        }
 
+        if (!System.IO.File.Exists(FileName))
+        {
+            NotificationService.ShowError("File not found", FileName);
+        }
+        else
+        {
+            Dispatcher.Dispatch(new OpenFileAction() { FileName = FileName });
+        }
+    }
+
+    public void Publish()
+    {
+        var fileName = DocumentState.Value.FileContentInfo?.FileName;
+        var count = DocumentService.PublishSlides(fileName);
+        NotificationService.ShowSuccess("Success", $"Extracted {count} slide");
+    }
 }

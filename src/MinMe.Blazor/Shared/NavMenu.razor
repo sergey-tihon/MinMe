@@ -1,4 +1,11 @@
-﻿<div class="top-row pl-4 navbar navbar-dark">
+﻿@inherits global::Blazor.Fluxor.Components.FluxorComponent
+@using global::Blazor.Fluxor
+@using global::MinMe.Blazor.Store.Document
+
+@inject IDispatcher Dispatcher
+@inject IState<DocumentState> DocumentState
+
+<div class="top-row pl-4 navbar navbar-dark">
     <a class="navbar-brand" href="">MinMe.Blazor</a>
     <button class="navbar-toggler" @onclick="ToggleNavMenu">
         <span class="navbar-toggler-icon"></span>
@@ -12,6 +19,19 @@
                 <span class="oi oi-home" aria-hidden="true"></span> Home
             </NavLink>
         </li>
+        @if (DocumentState.Value.FileContentInfo is { } fileContent)
+        {
+            <li class="nav-item px-3">
+                <NavLink class="nav-link" href="parts">
+                    <span class="oi oi-puzzle-piece" aria-hidden="true"></span> Parts (@fileContent.Parts.Count)
+                </NavLink>
+            </li>
+            <li class="nav-item px-3">
+                <NavLink class="nav-link" href="slides">
+                    <span class="oi oi-spreadsheet" aria-hidden="true"></span> Slides
+                </NavLink>
+            </li>
+        }
         <li class="nav-item px-3">
             <NavLink class="nav-link" href="counter">
                 <span class="oi oi-plus" aria-hidden="true"></span> Counter

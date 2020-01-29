@@ -1,10 +1,16 @@
 ﻿using System;
+using Blazor.Fluxor;
+using MinMe.Core.PowerPoint;
+
 namespace MinMe.Blazor.Store.Document
 {
-    public class Reducers
+    public class OpenFileReducer : Reducer<DocumentState, OpenFileAction>
     {
-        public Reducers()
+        public override DocumentState Reduce(DocumentState state, OpenFileAction action)
         {
+            using var analyzer = new PowerPointAnalyzer(action.FileName);
+            var fileContentInfo = analyzer.Analyze();
+            return new DocumentState(fileContentInfo);
         }
     }
 }
