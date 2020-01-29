@@ -12,6 +12,7 @@ using MinMe.Blazor.Services;
 using ElectronNET.API;
 using Blazored.Toast;
 using MinMe.Blazor.ViewModels;
+using global::Blazor.Fluxor;
 
 namespace MinMe.Blazor
 {
@@ -38,8 +39,11 @@ namespace MinMe.Blazor
             services.AddScoped<NotificationService>();
 
             // ViewModels
-            services.AddScoped<CounterViewModel>();
             services.AddScoped<PublishSlidesViewModel>();
+
+            services.AddFluxor(options => {
+                options.UseDependencyInjection(typeof(Startup).Assembly);
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

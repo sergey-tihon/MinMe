@@ -1,3 +1,6 @@
+@inject global::Blazor.Fluxor.IStore Store
+@Store.Initialize()
+
 <Router AppAssembly="@typeof(Program).Assembly">
     <Found Context="routeData">
         <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
