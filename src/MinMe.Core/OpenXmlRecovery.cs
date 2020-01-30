@@ -21,7 +21,7 @@ namespace MinMe.Core
                 if (!entry.Name.EndsWith(".rels"))
                     continue;
                 var replaceEntry = false;
-                XDocument entryXDoc = null;
+                XDocument? entryXDoc = null;
                 using (var entryStream = entry.Open())
                 {
                     try

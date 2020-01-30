@@ -41,11 +41,11 @@
                     {
                         <li>
                             @partInfo.Name contains @partInfo.Size.ToString("#,##0") bytes
-                            @if (partInfo.Size > 10_000_000)
+                            @if (partInfo.Size > 5_000_000)
                             {
                                 <span class="badge badge-danger">Danger</span>
                             }
-                            else if (partInfo.Size > 1_000_000)
+                            else if (partInfo.Size > 100_000)
                             {
                                 <span class="badge badge-warning">Warning</span>
                             }
@@ -88,7 +88,7 @@
 
     public void Publish()
     {
-        var fileName = DocumentState.Value.FileContentInfo?.FileName;
+        var fileName = DocumentState.Value.FileContentInfo!.FileName;
         var count = DocumentService.PublishSlides(fileName);
         NotificationService.ShowSuccess("Success", $"Extracted {count} slide");
     }

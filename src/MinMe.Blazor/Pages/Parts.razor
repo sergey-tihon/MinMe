@@ -1,11 +1,55 @@
 ﻿@page "/parts"
 @inherits global::Blazor.Fluxor.Components.FluxorComponent
-@using global::Blazor.Fluxor
-@using global::MinMe.Blazor.Store.Document
-@inject IDispatcher Dispatcher
-@inject IState<DocumentState> DocumentState
+@using Microsoft.Extensions.Primitives
+@using MinMe.Core.Model
+@inject OpenXmlPartsService openXmlPartsService
 
 <h1>Parts</h1>
 
-@code {
+@if (_task?.IsCompleted == true)
+{
+    <GridComponent T="PartInfo" Grid="@_grid"></GridComponent>
+}
+else
+{
+    <p><em>Loading...</em></p>
+}
+
+@code
+{
+    private CGrid<PartInfo>? _grid;
+    private Task? _task;
+
+    protected override async Task OnParametersSetAsync()
+    {
+        Action<IGridColumnCollection<PartInfo>> columns = c =>
+        {
+            c.Add(o => o.Name);
+            //c.Add(o => o.OrderDate, "OrderCustomDate").Format("{0:yyyy-MM-dd}");
+            c.Add(o => o.PartType);
+            c.Add(o => o.ContentType);
+            c.Add(o => o.Size);
+        };
+
+        var query = new QueryDictionary<StringValues>();
+        //query.Add("grid-page", "2");
+
+        var client = new GridClient<PartInfo>(q => openXmlPartsService.GetOrdersGridRows(columns, q), query, false, "partsGrid", columns)
+            .Sortable()
+            .Groupable()
+            .SetStriped(true)
+            .WithGridItemsCount()
+            .SetRowCssClasses(item => {
+                if (item.Size > 5_000_000)
+                    return "row-danger";
+                else if (item.Size > 100_000)
+                    return "row-warning";
+                else return string.Empty;
+            });
+        _grid = client.Grid;
+
+        // Set new items to grid
+        _task = client.UpdateGrid();
+        await _task;
+    }
 }

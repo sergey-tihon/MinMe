@@ -187,3 +187,11 @@ app {
         display: block;
     }
 }
+
+.row-danger {
+    background: rgba(220, 53, 69, 0.75) !important;
+}
+
+.row-warning {
+    background: rgba(255, 193, 7, 0.75) !important;
+}

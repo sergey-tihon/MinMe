@@ -36,6 +36,8 @@ namespace MinMe.Blazor
             services.AddSingleton<WeatherForecastService>();
             services.AddSingleton<DocumentService>();
             services.AddScoped<NotificationService>();
+            services.AddScoped<OpenXmlPartsService>();
+
 
             services.AddFluxor(options => {
                 options.UseDependencyInjection(typeof(Startup).Assembly);
