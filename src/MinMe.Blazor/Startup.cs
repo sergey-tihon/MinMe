@@ -11,6 +11,11 @@ using Microsoft.Extensions.Hosting;
 using MinMe.Blazor.Services;
 using ElectronNET.API;
 using Blazored.Toast;
+
+using DocumentFormat.OpenXml.Drawing.Diagrams;
+
+using ElectronNET.API.Entities;
+
 using global::Blazor.Fluxor;
 
 namespace MinMe.Blazor
@@ -33,11 +38,9 @@ namespace MinMe.Blazor
             services.AddBlazoredToast();
 
             // Services
-            services.AddSingleton<WeatherForecastService>();
             services.AddSingleton<DocumentService>();
             services.AddScoped<NotificationService>();
-            services.AddScoped<OpenXmlPartsService>();
-
+            services.AddScoped<PartsGridService>();
 
             services.AddFluxor(options => {
                 options.UseDependencyInjection(typeof(Startup).Assembly);
@@ -66,7 +69,39 @@ namespace MinMe.Blazor
                 endpoints.MapFallbackToPage("/_Host");
             });
 
-            Task.Run(async () => await Electron.WindowManager.CreateWindowAsync());
+            Task.Run(async () => await  Bootstrap());
+        }
+
+        private async Task Bootstrap()
+        {
+            var options = new BrowserWindowOptions
+            {
+                WebPreferences = new WebPreferences
+                {
+                    NodeIntegration = false
+                },
+                Show = false
+            };
+            var mainWindow = await Electron.WindowManager.CreateWindowAsync(options);
+            mainWindow.OnReadyToShow += () => mainWindow.Show();
+            mainWindow.OnClosed += () => Electron.App.Exit();
+
+            var menu = new[]
+            {
+                new MenuItem
+                {
+                    Label = "File",
+                    Submenu = new[]
+                    {
+                        new MenuItem
+                        {
+                            Label = "Exit",
+                            Click = () => Electron.App.Exit()
+                        }
+                    }
+                },
+            };
+            //Electron.Menu.SetApplicationMenu(menu);
         }
     }
 }

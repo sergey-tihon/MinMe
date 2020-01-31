@@ -13,6 +13,7 @@ namespace MinMe.Core.Model
 
             Parts = new List<PartInfo>();
             PartUsages = new Dictionary<string, List<PartUsageInfo>>();
+            Slides = new List<SlideInfo>();
         }
 
         public string FileName { get; }
@@ -20,6 +21,9 @@ namespace MinMe.Core.Model
 
         public List<PartInfo> Parts { get; set; }
         public Dictionary<string, List<PartUsageInfo>> PartUsages { get; set; }
+
+        // TODO: Refactor
+        public List<SlideInfo> Slides { get; set; }
 
         public override string ToString()
             => Helpers.PrintFileSize(FileSize);

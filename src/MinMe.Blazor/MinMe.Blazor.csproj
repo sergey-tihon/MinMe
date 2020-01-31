@@ -25,7 +25,6 @@
     <Folder Include="Components\" />
     <Folder Include="wwwroot\images\" />
     <Folder Include="Store\" />
-    <Folder Include="Store\Counter\" />
     <Folder Include="Store\Document\" />
   </ItemGroup>
   <ItemGroup>

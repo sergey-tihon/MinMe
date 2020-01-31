@@ -4,8 +4,47 @@
 @using global::MinMe.Blazor.Store.Document
 @inject IDispatcher Dispatcher
 @inject IState<DocumentState> DocumentState
+@inject DocumentService DocumentService
+@inject NotificationService NotificationService
 
 <h1>Slides</h1>
 
+@if (DocumentState.Value.FileContentInfo?.Slides is {} slides)
+{
+    <button class="btn btn-info"
+            @onclick="Publish">
+        Publish Slides
+    </button>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Number</th>
+                <th>Path</th>
+                <th>Title</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var slide in slides)
+            {
+                <tr>
+                    <td>@slide.Number.ToString()</td>
+                    <td>@slide.FileName</td>
+                    <td>@slide.Title</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p><em>There is no slides inside this Presentation</em></p>
+}
+
 @code {
+    public void Publish()
+    {
+        var fileName = DocumentState.Value.FileContentInfo!.FileName;
+        var count = DocumentService.PublishSlides(fileName);
+        NotificationService.ShowSuccess("Success", $"Extracted {count} slide");
+    }
 }

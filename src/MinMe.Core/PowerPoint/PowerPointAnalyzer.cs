@@ -2,11 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text;
 
 using DocumentFormat.OpenXml;
-using DocumentFormat.OpenXml.Drawing.Diagrams;
 using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Presentation;
+using Presentation = DocumentFormat.OpenXml.Presentation;
+using Drawing = DocumentFormat.OpenXml.Drawing;
 
 using MinMe.Core.Model;
 
@@ -52,7 +53,8 @@ namespace MinMe.Core.PowerPoint
             => new FileContentInfo(_fileName, _fileStream.Length)
             {
                 Parts = EnumerateAllParts(),
-                PartUsages = GetPartUsageData()
+                PartUsages = GetPartUsageData(),
+                Slides = GetSlidesData().ToList()
             };
 
         private List<PartInfo> EnumerateAllParts()
@@ -125,10 +127,10 @@ namespace MinMe.Core.PowerPoint
                     AddUsage(uri, new ImageUsage(usage));
                 }
                 // Analyze background images
-                foreach (var commonSlideData in slide.RootElement.Descendants<CommonSlideData>())
+                foreach (var commonSlideData in slide.RootElement.Descendants<Presentation.CommonSlideData>())
                 {
                     var blipFill = commonSlideData?.Background?.BackgroundProperties
-                        ?.Descendants<BlipFill>()?.FirstOrDefault();
+                        ?.Descendants<Presentation.BlipFill>()?.FirstOrDefault();
                     var srcRec = blipFill?.SourceRectangle;
                     var relId = blipFill?.Blip?.Embed?.Value;
                     if (relId is null || srcRec is null)
@@ -140,7 +142,7 @@ namespace MinMe.Core.PowerPoint
                 }
             }
 
-            foreach (var slideId in presentation.Presentation.SlideIdList.ChildElements.OfType<SlideId>())
+            foreach (var slideId in presentation.Presentation.SlideIdList.ChildElements.OfType<Presentation.SlideId>())
             {
                 var slide = GetPart(slideId.RelationshipId) as SlidePart;
                 if (slide is null)
@@ -155,6 +157,55 @@ namespace MinMe.Core.PowerPoint
             }
 
             return usages;
+        }
+
+        private IEnumerable<SlideInfo> GetSlidesData()
+        {
+            var presentationPart = _document.PresentationPart;
+            var slideIdList = presentationPart.Presentation.SlideIdList;
+
+            var number = 1;
+            foreach (var slideId in slideIdList.Cast<Presentation.SlideId>())
+            {
+                var part = presentationPart.GetPartById(slideId.RelationshipId);
+                var title = GetSlideTitle((SlidePart) part);
+                yield return new SlideInfo(number++, part.Uri.OriginalString, title);
+            }
+        }
+
+        // Code from Clippit
+        private static string GetSlideTitle(SlidePart slidePart)
+        {
+            var titleShapes =
+                slidePart.Slide.CommonSlideData.ShapeTree
+                    .Descendants<Presentation.Shape>()
+                    .Where(shape =>
+                        shape.NonVisualShapeProperties
+                                ?.ApplicationNonVisualDrawingProperties
+                                ?.PlaceholderShape?.Type?.Value switch
+                            {
+                                Presentation.PlaceholderValues.Title => true,
+                                Presentation.PlaceholderValues.CenteredTitle => true,
+                                _ => false
+                            })
+                    .ToList();
+
+            var paragraphText = new StringBuilder();
+            foreach (var shape in titleShapes)
+            {
+                // Get the text in each paragraph in this shape.
+                foreach (var paragraph in shape.TextBody.Descendants<Drawing.Paragraph>())
+                {
+                    foreach (var text in paragraph.Descendants<Drawing.Text>())
+                    {
+                        paragraphText.Append(text.Text);
+                    }
+                    //if (paragraphText.Length > 0)
+                    //    paragraphText.Append(Environment.NewLine);
+                }
+            }
+
+            return paragraphText.ToString().Trim();
         }
     }
 }

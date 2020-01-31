@@ -11,15 +11,15 @@ using MinMe.Blazor.Store.Document;
 
 namespace MinMe.Blazor.Services
 {
-    public class OpenXmlPartsService
+    public class PartsGridService
     {
         public IState<DocumentState> DocumentState { get; }
 
-        public OpenXmlPartsService(IState<DocumentState> state)
+        public PartsGridService(IState<DocumentState> state)
         {
             DocumentState = state;
         }
- 
+
         public ItemsDTO<PartInfo> GetOrdersGridRows(
             Action<IGridColumnCollection<PartInfo>> columns,
             QueryDictionary<StringValues> query)

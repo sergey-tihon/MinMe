@@ -20,14 +20,14 @@ namespace MinMe.Blazor.Services
             var mainWindow = Electron.WindowManager.BrowserWindows.First();
             var options = new OpenDialogOptions
             {
-                Properties = new OpenDialogProperty[] {
+                Properties = new[] {
                     OpenDialogProperty.openFile
                 },
-                Filters = new FileFilter[]
+                Filters = new[]
                 {
                     new FileFilter {
                         Name = "PowerPoint",
-                        Extensions = new string[] {"pptx" }
+                        Extensions = new[] {"pptx" }
                     }
                 }
             };

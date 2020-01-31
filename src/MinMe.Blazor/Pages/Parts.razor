@@ -1,10 +1,14 @@
 ﻿@page "/parts"
 @inherits global::Blazor.Fluxor.Components.FluxorComponent
+@using global::Blazor.Fluxor
+@using global::MinMe.Blazor.Store.Document
 @using Microsoft.Extensions.Primitives
 @using MinMe.Core.Model
-@inject OpenXmlPartsService openXmlPartsService
+@inject PartsGridService PartsGridService
+@inject IState<DocumentState> DocumentState
 
 <h1>Parts</h1>
+<b>Total size : @DocumentState.Value.FileContentInfo?.FileSize.ToString("#,##0") bytes</b>
 
 @if (_task?.IsCompleted == true)
 {
@@ -27,24 +31,25 @@ else
             c.Add(o => o.Name);
             //c.Add(o => o.OrderDate, "OrderCustomDate").Format("{0:yyyy-MM-dd}");
             c.Add(o => o.PartType);
-            c.Add(o => o.ContentType);
+            //c.Add(o => o.ContentType);
             c.Add(o => o.Size);
         };
 
         var query = new QueryDictionary<StringValues>();
         //query.Add("grid-page", "2");
 
-        var client = new GridClient<PartInfo>(q => openXmlPartsService.GetOrdersGridRows(columns, q), query, false, "partsGrid", columns)
+        var client = new GridClient<PartInfo>(q => PartsGridService.GetOrdersGridRows(columns, q), query, false, "partsGrid", columns)
             .Sortable()
             .Groupable()
             .SetStriped(true)
             .WithGridItemsCount()
-            .SetRowCssClasses(item => {
+            .SetRowCssClasses(item =>
+            {
                 if (item.Size > 5_000_000)
                     return "row-danger";
-                else if (item.Size > 100_000)
+                if (item.Size > 100_000)
                     return "row-warning";
-                else return string.Empty;
+                return string.Empty;
             });
         _grid = client.Grid;
 

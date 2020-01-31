@@ -1,4 +1,5 @@
-﻿@inherits FluxorComponent
+﻿@inherits global::Blazor.Fluxor.Components.FluxorComponent
+@using global::Blazor.Fluxor
 @using global::MinMe.Blazor.Store.Document
 
 @inject IDispatcher Dispatcher
@@ -28,6 +29,9 @@
     @if (DocumentState.Value.FileContentInfo is { } fileInfo)
     {
         <div class="row">
+            <h3>Quick action</h3>
+        </div>
+        <div class="row">
             <div class="col-md-auto">
                 <button class="btn btn-info"
                         @onclick="Publish">
@@ -35,23 +39,7 @@
                 </button>
             </div>
             <div class="col">
-                <b>File size : @fileInfo.FileSize.ToString("#,##0") bytes</b>
-                <ul>
-                    @foreach (var partInfo in fileInfo.Parts.OrderBy(x => x.Name))
-                    {
-                        <li>
-                            @partInfo.Name contains @partInfo.Size.ToString("#,##0") bytes
-                            @if (partInfo.Size > 5_000_000)
-                            {
-                                <span class="badge badge-danger">Danger</span>
-                            }
-                            else if (partInfo.Size > 100_000)
-                            {
-                                <span class="badge badge-warning">Warning</span>
-                            }
-                        </li>
-                    }
-                </ul>
+                Split presentation into individual slides
             </div>
         </div>
     }
@@ -59,8 +47,9 @@
 
 
 @code {
-    public string FileName { get; set; } = string.Empty;
-    public string Placeholder =
+    private string FileName { get; set; } = string.Empty;
+
+    private readonly string Placeholder =
         ElectronNET.API.HybridSupport.IsElectronActive
             ? "Current file" : "Drop file here";
 
@@ -82,7 +71,7 @@
         }
         else
         {
-            Dispatcher.Dispatch(new OpenFileAction() { FileName = FileName });
+            Dispatcher.Dispatch(new OpenFileAction { FileName = FileName });
         }
     }
 
