@@ -1,21 +1,16 @@
 using System;
 using System.IO;
-using System.IO.Compression;
-using System.Linq;
 using System.Reactive;
-using System.Reactive.Subjects;
 using System.Threading.Tasks;
 
 using Avalonia;
 using Avalonia.Controls;
-using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Media.Imaging;
 using Avalonia.Platform;
 using Clippit;
 using Clippit.PowerPoint;
 
 using MinMe.Core.Model;
-using MinMe.Core.PowerPoint;
 
 using ReactiveUI;
 
@@ -48,7 +43,15 @@ namespace MinMe.Avalonia.ViewModels
         public ReactiveCommand<Unit, Unit> PublishCommand { get; }
 
         public FileContentInfo FileContentInfo { get; }
-        public string FileName => Path.GetFileName(FileContentInfo.FileName);
+
+        public string FileName => Path.GetFileNameWithoutExtension(FileContentInfo.FileName);
+        public string PublishActionName {
+            get {
+                var count = FileContentInfo.Slides?.Count ?? 0;
+                return count <= 1 ? "Publish Slides" : $"Publish Slides ({count})";
+            }
+        }
+
         public Bitmap Thumbnail { get; }
 
         private async Task PublishSlides()

@@ -16,7 +16,7 @@
                 Command="{Binding $parent[Window].DataContext.OpenFile}">Change File</Button>
         <StackPanel Margin="5,10,5,0">
           <Button Command="{Binding OptimizeCommand}" IsEnabled="False">Optimize</Button>
-          <Button Command="{Binding PublishCommand}">Publish Slides</Button>
+          <Button Command="{Binding PublishCommand}" Content="{Binding PublishActionName}"></Button>
         </StackPanel>
       </DockPanel>
       <Grid Grid.Column="1" Margin="5,10,5,10" RowDefinitions="Auto,*">
