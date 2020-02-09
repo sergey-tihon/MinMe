@@ -5,7 +5,7 @@
 @inject IDispatcher Dispatcher
 @inject IState<DocumentState> DocumentState
 @inject DocumentService DocumentService
-@inject NotificationService NotificationService
+@inject IToastService ToastService
 
 <h1>Slides</h1>
 
@@ -45,6 +45,6 @@ else
     {
         var fileName = DocumentState.Value.FileContentInfo!.FileName;
         var count = DocumentService.PublishSlides(fileName);
-        NotificationService.ShowSuccess("Success", $"Extracted {count} slide");
+        ToastService.ShowSuccess($"Extracted {count} slide", "Success");
     }
 }

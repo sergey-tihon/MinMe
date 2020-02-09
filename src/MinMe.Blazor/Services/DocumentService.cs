@@ -4,8 +4,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using Clippit;
 using Clippit.PowerPoint;
-using ElectronNET.API;
-using ElectronNET.API.Entities;
 
 namespace MinMe.Blazor.Services
 {
@@ -13,28 +11,6 @@ namespace MinMe.Blazor.Services
     {
         public DocumentService()
         {
-        }
-
-        public async Task<string> OpenFile()
-        {
-            var mainWindow = Electron.WindowManager.BrowserWindows.First();
-            var options = new OpenDialogOptions
-            {
-                Properties = new[] {
-                    OpenDialogProperty.openFile
-                },
-                Filters = new[]
-                {
-                    new FileFilter {
-                        Name = "PowerPoint",
-                        Extensions = new[] {"pptx" }
-                    }
-                }
-            };
-
-            var files = await Electron.Dialog.ShowOpenDialogAsync(mainWindow, options);
-            return files.FirstOrDefault();
-            //Electron.IpcMain.Send(mainWindow, "select-directory-reply", files);
         }
 
         public int PublishSlides(string fileName)

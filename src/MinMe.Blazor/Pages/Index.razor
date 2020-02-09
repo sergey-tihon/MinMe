@@ -1,7 +1,46 @@
 ﻿@page "/"
+@using System.Diagnostics
+@using System.IO
 
 <PublishSlides/>
 
-@code {
+<h3>Upload control Demo:</h3>
+<div class="drag-drop-zone">
+    <InputFile OnChange="ViewFile" />
+    @_status
+</div>
 
+@if (_fileName != null)
+{
+    <h4>@_fileName</h4>
+    <pre>@_fileTextContents</pre>
+}
+
+
+@code {
+    const string DefaultStatus = "Drop a text file here to view it, or click to choose a file";
+    string _status = DefaultStatus;
+
+    string _fileName;
+    string _fileTextContents;
+
+    async Task ViewFile(IFileListEntry[] files)
+    {
+        var file = files.FirstOrDefault();
+        if (file == null)
+            return;
+
+        _status = "Loading...";
+
+        var sw = new Stopwatch();
+        sw.Start();
+        using var reader = new StreamReader(file.Data);
+        var content = await reader.ReadToEndAsync();
+        sw.Stop();
+
+        _fileName = file.Name;
+        _fileTextContents = $"Upload of {content.Length} took {sw.Elapsed}";
+
+        _status = DefaultStatus;
+    }
 }

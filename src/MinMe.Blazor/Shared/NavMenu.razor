@@ -35,9 +35,12 @@
     </ul>
 </div>
 
-<div class="@NavMenuCssClass logo" @onclick="ToggleNavMenu">
-    <img src="/images/logo.png" />
-</div>
+@if (collapseNavMenu)
+{
+    <div class="@NavMenuCssClass logo">
+        <img src="/images/logo.png"/>
+    </div>
+}
 
 @code {
     private bool collapseNavMenu = true;

@@ -5,13 +5,13 @@
 @inject IDispatcher Dispatcher
 @inject IState<DocumentState> DocumentState
 @inject DocumentService DocumentService
-@inject NotificationService NotificationService
+@inject IToastService ToastService
 
 <div class="container-fluid">
     <div class="row">
-        <div class="row">
-            <h3>Choose PowerPoint file:</h3>
-        </div>
+        <h3>Choose PowerPoint file:</h3>
+    </div>
+    <div class="row">
         <div class="col-md-auto">
             <button class="btn btn-info"
                     @onclick="OpenFile">
@@ -22,7 +22,6 @@
             <div class="form-group">
                 <input id="name" type="text" class="form-control"
                        placeholder="@Placeholder"
-                       disabled="@ElectronNET.API.HybridSupport.IsElectronActive"
                        @bind-value="FileName"
                        @bind-value:event="oninput" />
             </div>
@@ -51,9 +50,7 @@
 @code {
     private string FileName { get; set; } = string.Empty;
 
-    private readonly string Placeholder =
-        ElectronNET.API.HybridSupport.IsElectronActive
-            ? "Current file" : "Drop file here";
+    private readonly string Placeholder = "Drop file here";
 
     protected override void OnInitialized()
     {
@@ -61,15 +58,10 @@
         FileName = DocumentState.Value.FileContentInfo?.FileName ?? string.Empty;
     }
 
-    public async Task OpenFile() {
-        if (ElectronNET.API.HybridSupport.IsElectronActive)
-        {
-            FileName = await DocumentService.OpenFile();
-        }
-
+    public void OpenFile() {
         if (!System.IO.File.Exists(FileName))
         {
-            NotificationService.ShowError("File not found", FileName);
+            ToastService.ShowError(FileName, "File not found");
         }
         else
         {
@@ -81,6 +73,6 @@
     {
         var fileName = DocumentState.Value.FileContentInfo!.FileName;
         var count = DocumentService.PublishSlides(fileName);
-        NotificationService.ShowSuccess("Success", $"Extracted {count} slide");
+        ToastService.ShowSuccess($"Extracted {count} slide", "Success");
     }
 }
