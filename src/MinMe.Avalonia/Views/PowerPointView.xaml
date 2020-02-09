@@ -2,24 +2,26 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="MinMe.Avalonia.Views.PowerPointView"
-             DataContext="{Binding PowerPoint}">
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="500"
+             x:Class="MinMe.Avalonia.Views.PowerPointView">
     <UserControl.Styles>
         <Style Selector="Button">
             <Setter Property="Padding" Value="5"/>
             <Setter Property="Margin" Value="2"/>
         </Style>
     </UserControl.Styles>
-    <DockPanel>
-        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
-            <Button Command="{Binding OpenCommand}">Open</Button>
-            <Button Command="{Binding OptimizeCommand}">Optimize</Button>
-            <Button Command="{Binding PublishCommand}">Publish Slides</Button>
+    <Grid ColumnDefinitions="150,*">
+      <DockPanel Grid.Column="0" Background="Gainsboro">
+        <Button DockPanel.Dock="Bottom" Margin="5,0,5,10"
+                Command="{Binding $parent[Window].DataContext.OpenFile}">Change File</Button>
+        <StackPanel Margin="5,10,5,0">
+          <Button Command="{Binding OptimizeCommand}" IsEnabled="False">Optimize</Button>
+          <Button Command="{Binding PublishCommand}">Publish Slides</Button>
         </StackPanel>
-        <Border Padding="16">
-            <TextBlock Text="{Binding FileName}"></TextBlock>
-            <!-- <TextBlock Text="{Binding FileContentInfo.FileSize}"></TextBlock> -->
-        </Border>
-    </DockPanel>
+      </DockPanel>
+      <Grid Grid.Column="1" Margin="5,10,5,10" RowDefinitions="Auto,*">
+        <TextBlock Grid.Row="0" FontSize="18" FontWeight="Bold" Text="{Binding FileName}"></TextBlock>
+        <Image Grid.Row="1" Source="{Binding Thumbnail}"></Image>
+      </Grid>
+    </Grid>
 </UserControl>

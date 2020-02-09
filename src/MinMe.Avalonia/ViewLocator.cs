@@ -14,7 +14,11 @@ namespace MinMe.Avalonia
 
         public IControl Build(object data)
         {
-            var name = data.GetType().FullName.Replace("ViewModel", "View");
+            var fullName = data.GetType().FullName;
+            if (fullName is null)
+                throw new Exception("Data Type.FullName is null");
+
+            var name = fullName.Replace("ViewModel", "View");
             var type = Type.GetType(name);
 
             if (type is null)
@@ -24,8 +28,6 @@ namespace MinMe.Avalonia
         }
 
         public bool Match(object data)
-        {
-            return data is ViewModelBase;
-        }
+            => data is ViewModelBase;
     }
 }

@@ -1,13 +1,16 @@
 using System;
 using System.IO;
+using System.IO.Compression;
 using System.Linq;
 using System.Reactive;
+using System.Reactive.Subjects;
 using System.Threading.Tasks;
 
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Controls.ApplicationLifetimes;
-
+using Avalonia.Media.Imaging;
+using Avalonia.Platform;
 using Clippit;
 using Clippit.PowerPoint;
 
@@ -20,58 +23,62 @@ namespace MinMe.Avalonia.ViewModels
 {
     public class PowerPointViewModel : ViewModelBase
     {
-        public PowerPointViewModel()
+        public PowerPointViewModel(FileContentInfo fileContentInfo, Stream? thumbnail)
         {
-            FileName = "Please open file";
-            OpenCommand = ReactiveCommand.CreateFromTask(OpenFile);
+            FileContentInfo = fileContentInfo;
 
-            IObservable<bool> actionsEnabled = this.WhenAnyValue(
-                x => x.FileContentInfo,
-                (FileContentInfo x) => x != null);
-            OptimizeCommand = ReactiveCommand.Create(() => { }, actionsEnabled);
-            PublishCommand = ReactiveCommand.Create(PublishSlides, actionsEnabled);
+            if (thumbnail is { }) {
+                Thumbnail = new Bitmap(thumbnail);
+            }
+            else
+            {
+                var assets = AvaloniaLocator.Current.GetService<IAssetLoader>();
+                var uri = new Uri("avares://MinMe.Avalonia/Assets/PowerPoint.png");
+                Thumbnail = new Bitmap(assets.Open(uri));
+            }
+
+            OptimizeCommand = ReactiveCommand.Create(() => { });
+
+            var moreThanOneSlide = this.WhenAnyValue(x => x.FileContentInfo,
+                (FileContentInfo x) => x.Slides?.Count > 1);
+            PublishCommand = ReactiveCommand.CreateFromTask(PublishSlides, moreThanOneSlide);
         }
 
-        public ReactiveCommand<Unit, Unit> OpenCommand { get; }
         public ReactiveCommand<Unit, Unit> OptimizeCommand { get; }
         public ReactiveCommand<Unit, Unit> PublishCommand { get; }
 
-        private string _fileName;
-        public string FileName
+        public FileContentInfo FileContentInfo { get; }
+        public string FileName => Path.GetFileName(FileContentInfo.FileName);
+        public Bitmap Thumbnail { get; }
+
+        private async Task PublishSlides()
         {
-            get => _fileName;
-            set => this.RaiseAndSetIfChanged(ref _fileName, value);
-        }
-
-        private FileContentInfo _fileContentInfo;
-        public FileContentInfo FileContentInfo
-        {
-            get => _fileContentInfo;
-            set => this.RaiseAndSetIfChanged(ref _fileContentInfo, value);
-        }
-
-        private async Task OpenFile()
-        {
-            var openFileDialog = new OpenFileDialog();
-            var applicationLifetime = Application.Current.ApplicationLifetime as IClassicDesktopStyleApplicationLifetime;
-            var dialogResult =  await openFileDialog.ShowAsync(applicationLifetime.MainWindow);
-            FileName = dialogResult.FirstOrDefault();
-
-            using var analyzer = new PowerPointAnalyzer(FileName);
-            FileContentInfo = analyzer.Analyze();
-        }
-
-        private void PublishSlides()
-        {
-            var fileName = FileName;
-            var presentation = new PmlDocument(fileName);
-            var slides = PresentationBuilder.PublishSlides(presentation);
-
-            var targetDir = new FileInfo(fileName).DirectoryName;
-            foreach (var slide in slides)
+            var openFileDialog = new OpenFolderDialog
             {
-                var targetPath = Path.Combine(targetDir, Path.GetFileName(slide.FileName));
-                slide.SaveAs(targetPath);
+                Title = "Select folder",
+                //Directory = new FileInfo(FileContentInfo.FileName).DirectoryName,
+            };
+
+            var applicationLifetime = Application.Current.ApplicationLifetime as IClassicDesktopStyleApplicationLifetime;
+            var targetDir = await openFileDialog.ShowAsync(applicationLifetime.MainWindow);
+
+            if (targetDir is { })
+            {
+                var presentation = new PmlDocument(FileContentInfo.FileName);
+                var slides = PresentationBuilder.PublishSlides(presentation);
+                var count = 0;
+                foreach (var slide in slides)
+                {
+                    var targetPath = Path.Combine(targetDir, Path.GetFileName(slide.FileName));
+                    slide.SaveAs(targetPath);
+                    count++;
+                }
+
+                var wnd = MessageBox.Avalonia.MessageBoxManager.GetMessageBoxStandardWindow(
+                    "Slides Published", $"Successfully published {count} slides.",
+                    icon: MessageBox.Avalonia.Enums.Icon.Success,
+                    style: MessageBox.Avalonia.Enums.Style.Windows);
+                await wnd.ShowDialog(applicationLifetime.MainWindow);
             }
         }
     }

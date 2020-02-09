@@ -207,5 +207,17 @@ namespace MinMe.Core.PowerPoint
 
             return paragraphText.ToString().Trim();
         }
+
+        public Stream? GetThumbnail()
+        {
+            if (_document.ThumbnailPart is null)
+                return null;
+
+            var ms = new MemoryStream();
+            using var stream = _document.ThumbnailPart.GetStream();
+            stream.CopyTo(ms);
+            ms.Position = 0;
+            return ms;
+        }
     }
 }
