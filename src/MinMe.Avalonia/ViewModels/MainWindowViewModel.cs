@@ -44,8 +44,7 @@ namespace MinMe.Avalonia.ViewModels
                 }
             };
 
-            var applicationLifetime = Application.Current.ApplicationLifetime as IClassicDesktopStyleApplicationLifetime;
-            var dialogResult = await openFileDialog.ShowAsync(applicationLifetime.MainWindow);
+            var dialogResult = await openFileDialog.ShowAsync(GetWindow());
 
             var fileName = dialogResult.FirstOrDefault();
             if (fileName is { })

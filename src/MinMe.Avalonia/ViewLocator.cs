@@ -24,7 +24,12 @@ namespace MinMe.Avalonia
             if (type is null)
                 return new TextBlock {Text = "Not Found: " + name};
 
-            return (Control)Activator.CreateInstance(type);
+            var instance = Activator.CreateInstance(type);
+            return instance switch
+            {
+                Control control => control,
+                _ => throw new Exception($"Unexpected instance type {instance?.GetType().Name}")
+            };
         }
 
         public bool Match(object data)

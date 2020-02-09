@@ -59,8 +59,8 @@ namespace MinMe.Avalonia.ViewModels
                 //Directory = new FileInfo(FileContentInfo.FileName).DirectoryName,
             };
 
-            var applicationLifetime = Application.Current.ApplicationLifetime as IClassicDesktopStyleApplicationLifetime;
-            var targetDir = await openFileDialog.ShowAsync(applicationLifetime.MainWindow);
+            var window = GetWindow();
+            var targetDir = await openFileDialog.ShowAsync(window);
 
             if (targetDir is { })
             {
@@ -78,7 +78,7 @@ namespace MinMe.Avalonia.ViewModels
                     "Slides Published", $"Successfully published {count} slides.",
                     icon: MessageBox.Avalonia.Enums.Icon.Success,
                     style: MessageBox.Avalonia.Enums.Style.Windows);
-                await wnd.ShowDialog(applicationLifetime.MainWindow);
+                await wnd.ShowDialog(window);
             }
         }
     }
