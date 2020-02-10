@@ -34,8 +34,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MinMe.Core\MinMe.Core.csproj">
-      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
-    </ProjectReference>
+    <ProjectReference Include="..\MinMe\MinMe.csproj" />
   </ItemGroup>
 </Project>

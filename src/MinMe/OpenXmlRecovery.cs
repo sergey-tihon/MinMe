@@ -5,7 +5,7 @@ using System.Linq;
 using System.Xml;
 using System.Xml.Linq;
 
-namespace MinMe.Core
+namespace MinMe
 {
     public static class OpenXmlRecovery
     {

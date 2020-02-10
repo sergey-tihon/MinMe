@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.26730.10
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinMe.macOS", "src\MinMe.macOS\MinMe.macOS.csproj", "{6399BB10-EC01-478B-AACB-FF8FD969E500}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinMe.Core", "src\MinMe.Core\MinMe.Core.csproj", "{546ADF3D-76B3-4A50-B346-F1508D0B9E84}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinMe", "src\MinMe\MinMe.csproj", "{546ADF3D-76B3-4A50-B346-F1508D0B9E84}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinMe.Blazor", "src\MinMe.Blazor\MinMe.Blazor.csproj", "{8108CB0E-5135-4327-9616-89C4C001B8B0}"
 EndProject

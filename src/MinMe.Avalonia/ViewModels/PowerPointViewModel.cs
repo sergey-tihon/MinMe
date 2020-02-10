@@ -10,7 +10,7 @@ using Avalonia.Platform;
 using Clippit;
 using Clippit.PowerPoint;
 
-using MinMe.Core.Model;
+using MinMe.Analyzers.Model;
 
 using ReactiveUI;
 

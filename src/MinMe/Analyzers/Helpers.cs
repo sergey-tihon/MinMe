@@ -1,8 +1,6 @@
-using System;
-
 using DocumentFormat.OpenXml.Packaging;
 
-namespace MinMe.Core
+namespace MinMe.Analyzers
 {
     public static class Helpers
     {

@@ -1,6 +1,6 @@
 using System;
 
-namespace MinMe.Core.Model
+namespace MinMe.Analyzers.Model
 {
     public class PartUsageInfo
     {

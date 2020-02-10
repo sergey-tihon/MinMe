@@ -1,11 +1,13 @@
 ﻿using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Controls.ApplicationLifetimes;
-using MinMe.Core.PowerPoint;
+
 using ReactiveUI;
 using System.Linq;
 using System.Reactive;
 using System.Threading.Tasks;
+
+using MinMe.Analyzers;
 
 namespace MinMe.Avalonia.ViewModels
 {

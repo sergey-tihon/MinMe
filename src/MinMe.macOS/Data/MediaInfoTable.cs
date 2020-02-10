@@ -5,8 +5,8 @@ using AppKit;
 
 using Foundation;
 
-using MinMe.Core;
-using MinMe.Core.Model;
+using MinMe.Analyzers;
+using MinMe.Analyzers.Model;
 
 namespace MinMe.macOS.Data
 {

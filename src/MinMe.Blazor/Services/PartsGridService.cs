@@ -6,7 +6,8 @@ using Blazor.Fluxor;
 using GridShared;
 using GridShared.Utility;
 using GridMvc.Server;
-using MinMe.Core.Model;
+
+using MinMe.Analyzers.Model;
 using MinMe.Blazor.Store.Document;
 
 namespace MinMe.Blazor.Services

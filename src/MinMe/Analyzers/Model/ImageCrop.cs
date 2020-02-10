@@ -1,7 +1,6 @@
-using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 
-namespace MinMe.Core.Model
+namespace MinMe.Analyzers.Model
 {
     public class ImageCrop
     {

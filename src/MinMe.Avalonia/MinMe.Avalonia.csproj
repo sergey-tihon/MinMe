@@ -24,9 +24,6 @@
     <AvaloniaResource Remove="Views\ChooseFileView.xaml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MinMe.Core\MinMe.Core.csproj" />
-  </ItemGroup>
-  <ItemGroup>
     <PackageReference Include="DocumentFormat.OpenXml" Version="2.10.0" />
     <PackageReference Include="Clippit" Version="1.1.4" />
     <PackageReference Include="Avalonia" Version="0.9.3" />
@@ -42,5 +39,8 @@
     <EmbeddedResource Include="Views\ChooseFileView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MinMe\MinMe.csproj" />
   </ItemGroup>
 </Project>

@@ -1,4 +1,4 @@
-namespace MinMe.Core.Model
+namespace MinMe.Analyzers.Model
 {
     public class PartInfo
     {

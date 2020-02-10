@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 using AppKit;
 using Clippit;
 using Clippit.PowerPoint;
-using MinMe.Core.PowerPoint;
+
+using MinMe.Analyzers;
 using MinMe.macOS.Views;
 
 namespace MinMe.macOS

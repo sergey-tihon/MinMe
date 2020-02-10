@@ -6,16 +6,17 @@ using System.Text;
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Packaging;
+
+using MinMe.Analyzers.Model;
+
 using Presentation = DocumentFormat.OpenXml.Presentation;
 using Drawing = DocumentFormat.OpenXml.Drawing;
-
-using MinMe.Core.Model;
 
 using static System.String;
 
 using Picture = DocumentFormat.OpenXml.Drawing.Picture;
 
-namespace MinMe.Core.PowerPoint
+namespace MinMe.Analyzers
 {
     public class PowerPointAnalyzer : IDisposable
     {

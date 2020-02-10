@@ -1,5 +1,6 @@
 ﻿using System;
-using MinMe.Core.Model;
+
+using MinMe.Analyzers.Model;
 
 namespace MinMe.Blazor.Store.Document
 {

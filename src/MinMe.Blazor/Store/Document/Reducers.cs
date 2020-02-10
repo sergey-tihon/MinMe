@@ -1,6 +1,7 @@
 ﻿using System;
 using Blazor.Fluxor;
-using MinMe.Core.PowerPoint;
+
+using MinMe.Analyzers;
 
 namespace MinMe.Blazor.Store.Document
 {

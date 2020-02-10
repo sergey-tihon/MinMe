@@ -125,9 +125,9 @@
     <BundleResource Include="Resources\.DS_Store" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MinMe.Core\MinMe.Core.csproj">
+    <ProjectReference Include="..\MinMe\MinMe.csproj">
       <Project>{546adf3d-76b3-4a50-b346-f1508d0b9e84}</Project>
-      <Name>MinMe.Core</Name>
+      <Name>MinMe</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.CSharp.targets" />
