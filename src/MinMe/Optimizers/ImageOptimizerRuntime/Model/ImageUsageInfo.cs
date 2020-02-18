@@ -140,7 +140,7 @@ namespace MinMe.Optimizers.ImageOptimizerRuntime.Model
 
         public string? GetImageUri()
         {
-            if (Part == null || string.IsNullOrWhiteSpace(RelId))
+            if (Part is null || string.IsNullOrWhiteSpace(RelId))
                 return null;
             try
             {

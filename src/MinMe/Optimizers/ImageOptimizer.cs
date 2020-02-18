@@ -5,6 +5,8 @@ using System.Threading;
 
 using DocumentFormat.OpenXml.Packaging;
 
+using Microsoft.IO;
+
 using MinMe.Optimizers.ImageOptimizerRuntime;
 
 using NLog;
@@ -13,6 +15,7 @@ namespace MinMe.Optimizers
 {
     public class ImageOptimizer
     {
+        private static readonly RecyclableMemoryStreamManager Manager = new RecyclableMemoryStreamManager();
         private readonly Logger _log = LogManager.GetCurrentClassLogger();
 
         public Stream Transform(string fileType, Stream stream, CancellationToken? token = null)
@@ -20,7 +23,7 @@ namespace MinMe.Optimizers
             var cancellationToken = token ?? CancellationToken.None;
 
             // Copy of the original stream that will be modified in-place
-            using var memoryStream = new MemoryStream();
+            using var memoryStream = Manager.GetStream();
             stream.CopyTo(memoryStream);
 
             switch (fileType.ToLower())
@@ -52,7 +55,7 @@ namespace MinMe.Optimizers
         private void TransformDocxStream(Stream stream, CancellationToken token)
         {
             using var document = WordprocessingDocument.Open(stream, true);
-            var transformation = new OptimizerWord();
+            var transformation = new OptimizerWord(Manager);
             transformation.Transform(document, token);
 
             foreach (var part in document.MainDocumentPart.EmbeddedPackageParts)
@@ -65,7 +68,7 @@ namespace MinMe.Optimizers
         private void TransformPptxStream(Stream stream, CancellationToken token)
         {
             using var document = PresentationDocument.Open(stream, true);
-            var transformation = new OptimizerPowerPoint();
+            var transformation = new OptimizerPowerPoint(Manager);
             transformation.Transform(document, token);
 
             foreach (var slide in document.PresentationPart.SlideParts)
@@ -102,7 +105,7 @@ namespace MinMe.Optimizers
         {
             using var zip = new ZipArchive(stream, ZipArchiveMode.Read);
 
-            var packedStream = new MemoryStream();
+            var packedStream = Manager.GetStream();
             using (var newZip = new ZipArchive(packedStream, ZipArchiveMode.Create, true))
             {
                 try

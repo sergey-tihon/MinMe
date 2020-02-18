@@ -5,6 +5,8 @@ using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Vml;
 using DocumentFormat.OpenXml.Wordprocessing;
 
+using Microsoft.IO;
+
 using MinMe.Optimizers.ImageOptimizerRuntime.Model;
 using MinMe.Optimizers.ImageOptimizerRuntime.Utils;
 
@@ -14,6 +16,10 @@ namespace MinMe.Optimizers.ImageOptimizerRuntime
 {
     internal class OptimizerWord: OptimizerBase<WordprocessingDocument>
     {
+        public OptimizerWord(RecyclableMemoryStreamManager manager) : base(manager)
+        {
+        }
+
         protected override void RemoveUnusedPieces(WordprocessingDocument document)
         {
         }

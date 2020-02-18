@@ -6,6 +6,8 @@ using System.Linq;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Presentation;
 
+using Microsoft.IO;
+
 using MinMe.Optimizers.ImageOptimizerRuntime.Model;
 using MinMe.Optimizers.ImageOptimizerRuntime.Utils;
 
@@ -13,6 +15,10 @@ namespace MinMe.Optimizers.ImageOptimizerRuntime
 {
     internal class OptimizerPowerPoint : OptimizerBase<PresentationDocument>
     {
+        public OptimizerPowerPoint(RecyclableMemoryStreamManager manager) : base(manager)
+        {
+        }
+
         protected override void RemoveUnusedPieces(PresentationDocument document)
         {
             var presentationPart = document.PresentationPart;

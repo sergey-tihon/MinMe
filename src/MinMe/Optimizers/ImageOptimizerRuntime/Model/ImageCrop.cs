@@ -7,7 +7,7 @@ using Rectangle = System.Drawing.Rectangle;
 
 namespace MinMe.Optimizers.ImageOptimizerRuntime.Model
 {
-    public class ImageCrop: IEquatable<ImageCrop>
+    internal class ImageCrop: IEquatable<ImageCrop>
     {
         public long Left { get; }
         public long Right { get; }
@@ -23,18 +23,11 @@ namespace MinMe.Optimizers.ImageOptimizerRuntime.Model
         {
             SourceRectangle = sourceRectangle;
             ImageData = imageData;
-
-            Left = left;
-            Right = right;
-            Top = top;
-            Bottom = bottom;
+            (Left, Right, Top, Bottom) = (left, right, top, bottom);
         }
 
-        public bool Equals(ImageCrop other) =>
-            Left == other?.Left
-            && Right == other.Right
-            && Top == other.Top
-            && Bottom == other.Bottom;
+        public bool Equals(ImageCrop? other) =>
+            (Left, Right, Top, Bottom) == (other?.Left, other?.Right, other?.Top, other?.Bottom);
 
         public override int GetHashCode() =>
             Left.GetHashCode() ^ Right.GetHashCode() ^ Top.GetHashCode() ^ Bottom.GetHashCode();

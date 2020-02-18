@@ -4,10 +4,11 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Threading;
 
 using DocumentFormat.OpenXml.Packaging;
+
+using Microsoft.IO;
 
 using MinMe.Optimizers.ImageOptimizerRuntime.Model;
 using MinMe.Optimizers.ImageOptimizerRuntime.Utils;
@@ -18,7 +19,10 @@ namespace MinMe.Optimizers.ImageOptimizerRuntime
 {
     internal abstract class OptimizerBase<TDocument>
     {
+        private readonly RecyclableMemoryStreamManager _manager;
         private readonly Logger _log = LogManager.GetCurrentClassLogger();
+
+        protected OptimizerBase(RecyclableMemoryStreamManager manager) => _manager = manager;
 
         public void Transform(TDocument document, CancellationToken token)
         {
@@ -153,18 +157,35 @@ namespace MinMe.Optimizers.ImageOptimizerRuntime
                     : ImageUtils.ResizeImage(srcImage, newSize);
 
 
-            var isJpegAllowed = ImageUtils.FormatConverter(srcImage, true).Equals(ImageFormat.Jpeg);
-            var jpegFileSize = isJpegAllowed ? CalculateFileSize(newImage, SaveToJpeg) : long.MaxValue;
-            var pngFileSize = CalculateFileSize(newImage, SaveToPng);
-            var minFileSize = Math.Min(pngFileSize, jpegFileSize);
+            using var newImageStream = _manager.GetStream();
+            newImage.Save(newImageStream, ImageFormat.Png);
 
-            // We have to save image back after cropping (because markup was edited)
-            if (minFileSize < sourceFileSize || meta.IsCropped)
+            var isJpegAllowed = ImageUtils.FormatConverter(srcImage, true).Equals(ImageFormat.Jpeg);
+            if (isJpegAllowed)
             {
-                if (minFileSize == jpegFileSize)
-                    SaveImage(meta, newImage, SaveToJpeg);
-                else // save to png if cropped
-                    SaveImage(meta, newImage, SaveToPng);
+                var jpegCodec = ImageCodecInfo.GetImageEncoders()
+                    .FirstOrDefault(t => t.MimeType == "image/jpeg");
+                var encoderParams = new EncoderParameters(1)
+                    {Param = {[0] = new EncoderParameter(Encoder.Quality, 80L)}};
+
+                using var jpegImageStream = _manager.GetStream();
+                newImage.Save(jpegImageStream, jpegCodec, encoderParams);
+
+                if (jpegImageStream.Length < newImageStream.Length)
+                {
+                    newImageStream.SetLength(0);
+                    newImageStream.Position = 0;
+
+                    jpegImageStream.Position = 0;
+                    jpegImageStream.CopyTo(newImageStream);
+                }
+            }
+
+            if (newImageStream.Length < sourceFileSize || meta.IsCropped)
+            {
+                using var stream = meta.ImagePart.GetStream(FileMode.Create, FileAccess.Write);
+                newImageStream.Position = 0;
+                newImageStream.CopyTo(stream);
             }
         }
 
@@ -183,41 +204,6 @@ namespace MinMe.Optimizers.ImageOptimizerRuntime
             {
                 throw new FormatException("Image corrupted.", exception);
             }
-        }
-
-        private static void SaveToPng(Bitmap image, Stream stream)
-            => image.Save(stream, ImageFormat.Png);
-
-        private static void SaveToJpeg(Bitmap image, Stream stream)
-        {
-            var codecs = ImageCodecInfo.GetImageEncoders();
-            var jpegCodec = codecs.FirstOrDefault(t => t.MimeType == "image/jpeg");
-
-            var qualityParam = new EncoderParameter(System.Drawing.Imaging.Encoder.Quality, 80L);
-            var encoderParams = new EncoderParameters(1) {Param = {[0] = qualityParam}};
-
-            image.Save(stream, jpegCodec, encoderParams);
-        }
-
-        /// <summary>
-        /// Calculate image file size after format conversion
-        /// </summary>
-        private static long CalculateFileSize(Bitmap image, Action<Bitmap, Stream> saveImageFunc)
-        {
-            using var stream = new MemoryStream();
-            saveImageFunc(image, stream);
-            stream.Flush();
-            return stream.Length;
-        }
-
-        /// <summary>
-        /// Save image into ImagePart
-        /// </summary>
-        private static void SaveImage(ImageMetadata meta, Bitmap image, Action<Bitmap, Stream> saveImageFunc)
-        {
-            using var stream = meta.ImagePart.GetStream(FileMode.Create, FileAccess.Write);
-            saveImageFunc(image, stream);
-            stream.Flush();
         }
     }
 }
