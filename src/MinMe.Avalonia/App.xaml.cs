@@ -1,5 +1,6 @@
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
+using Avalonia.Controls.Notifications;
 using Avalonia.Markup.Xaml;
 using MinMe.Avalonia.ViewModels;
 using MinMe.Avalonia.Views;
@@ -19,10 +20,13 @@ namespace MinMe.Avalonia
 
             if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
             {
-                desktop.MainWindow = new MainWindow
+                desktop.MainWindow = new MainWindow();
+                var notificationArea = new WindowNotificationManager(desktop.MainWindow)
                 {
-                    DataContext = new MainWindowViewModel(),
+                    Position = NotificationPosition.TopRight,
+                    MaxItems = 3
                 };
+                desktop.MainWindow.DataContext = new MainWindowViewModel(notificationArea);
             }
         }
     }

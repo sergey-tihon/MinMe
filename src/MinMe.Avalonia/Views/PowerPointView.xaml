@@ -15,7 +15,7 @@
         <Button DockPanel.Dock="Bottom" Margin="5,0,5,10"
                 Command="{Binding $parent[Window].DataContext.OpenFile}">Change File</Button>
         <StackPanel Margin="5,10,5,0">
-          <Button Command="{Binding OptimizeCommand}" IsEnabled="False">Optimize</Button>
+          <Button Command="{Binding OptimizeCommand}">Optimize</Button>
           <Button Command="{Binding PublishCommand}" Content="{Binding PublishActionName}"></Button>
         </StackPanel>
       </DockPanel>

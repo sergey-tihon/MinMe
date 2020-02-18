@@ -7,16 +7,20 @@ using System.Linq;
 using System.Reactive;
 using System.Threading.Tasks;
 
+using Avalonia.Controls.Notifications;
+
 using MinMe.Analyzers;
 
 namespace MinMe.Avalonia.ViewModels
 {
     public class MainWindowViewModel : ViewModelBase
     {
-        ViewModelBase _content;
-        public MainWindowViewModel()
+        private INotificationManager _notificationManager;
+        private ViewModelBase _content;
+        public MainWindowViewModel(INotificationManager notificationManager)
         {
             _content = Content = new ChooseFileViewModel();
+            _notificationManager = notificationManager;
 
             OpenCommand = ReactiveCommand.CreateFromTask(OpenFile);
 
@@ -40,7 +44,7 @@ namespace MinMe.Avalonia.ViewModels
                 AllowMultiple = false,
                 Filters = {
                     new FileDialogFilter() {
-                        Name = "PowePoint files (*.pptx)",
+                        Name = "PowerPoint files (*.pptx)",
                         Extensions = {"pptx"}
                     }
                 }
@@ -54,7 +58,7 @@ namespace MinMe.Avalonia.ViewModels
                 using var analyzer = new PowerPointAnalyzer(fileName);
                 var fileContentInfo = analyzer.Analyze();
                 var stream = analyzer.GetThumbnail();
-                Content = new PowerPointViewModel(fileContentInfo, stream);
+                Content = new PowerPointViewModel(_notificationManager, fileContentInfo, stream);
             }
         }
     }
