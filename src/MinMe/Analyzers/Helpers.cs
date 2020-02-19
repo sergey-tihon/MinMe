@@ -6,7 +6,7 @@ namespace MinMe.Analyzers
     {
         private static readonly string[] FileSizeOrders = { "B", "KB", "MB", "GB", "TB" };
 
-        public static string PrintFileSize(long size)
+        public static string PrintFileSize(double size)
         {
             var order = 0;
             while (size >= 1024 && order < FileSizeOrders.Length - 1) {
@@ -27,6 +27,5 @@ namespace MinMe.Analyzers
             using var stream = part.GetStream();
             return stream.Length;
         }
-
     }
 }

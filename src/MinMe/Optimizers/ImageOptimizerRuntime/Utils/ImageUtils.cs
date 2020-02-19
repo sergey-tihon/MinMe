@@ -4,8 +4,6 @@ using System.Drawing.Imaging;
 
 using MinMe.Optimizers.ImageOptimizerRuntime.Model;
 
-using NLog;
-
 namespace MinMe.Optimizers.ImageOptimizerRuntime.Utils
 {
     internal static class ImageUtils
@@ -23,10 +21,9 @@ namespace MinMe.Optimizers.ImageOptimizerRuntime.Utils
 
                 return new Bitmap(source, destWidth, destHeight);
             }
-            catch (Exception exception)
+            catch (Exception)
             {
-                var log = LogManager.GetCurrentClassLogger();
-                log.Error(exception, "ResizeImage Exception");
+                //var msg = "ResizeImage Exception";
                 return new Bitmap(source);
             }
         }

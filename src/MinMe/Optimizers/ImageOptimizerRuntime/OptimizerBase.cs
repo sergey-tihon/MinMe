@@ -12,15 +12,11 @@ using Microsoft.IO;
 
 using MinMe.Optimizers.ImageOptimizerRuntime.Model;
 using MinMe.Optimizers.ImageOptimizerRuntime.Utils;
-
-using NLog;
-
 namespace MinMe.Optimizers.ImageOptimizerRuntime
 {
     internal abstract class OptimizerBase<TDocument>
     {
         private readonly RecyclableMemoryStreamManager _manager;
-        private readonly Logger _log = LogManager.GetCurrentClassLogger();
 
         protected OptimizerBase(RecyclableMemoryStreamManager manager) => _manager = manager;
 
@@ -50,7 +46,7 @@ namespace MinMe.Optimizers.ImageOptimizerRuntime
 
                 if (!imagesMetadata.ContainsKey(uri))
                 {
-                    _log.Warn($"Found usage of unknown image '{uri}'");
+                    var msg = $"Found usage of unknown image '{uri}'";
                     continue;
                 }
 
@@ -95,9 +91,9 @@ namespace MinMe.Optimizers.ImageOptimizerRuntime
                     token.ThrowIfCancellationRequested();
                     ResizeImage(pair.Value);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
-                    _log.Warn(e, $"Cannot resize image {pair.Key}");
+                    //var msg = $"Cannot resize image {pair.Key}";
                 }
             }
         }
@@ -132,7 +128,7 @@ namespace MinMe.Optimizers.ImageOptimizerRuntime
                 }
                 else
                 {
-                    _log.Warn($"Unsupported image crop L/T/R/B={crop.Left}/{crop.Top}/{crop.Right}/{crop.Bottom}");
+                    var msg = $"Unsupported image crop L/T/R/B={crop.Left}/{crop.Top}/{crop.Right}/{crop.Bottom}";
                 }
             }
 

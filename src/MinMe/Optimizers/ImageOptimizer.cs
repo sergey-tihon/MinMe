@@ -4,26 +4,23 @@ using System.IO.Compression;
 using System.Threading;
 
 using DocumentFormat.OpenXml.Packaging;
-
 using Microsoft.IO;
 
 using MinMe.Optimizers.ImageOptimizerRuntime;
 
-using NLog;
 
 namespace MinMe.Optimizers
 {
     public class ImageOptimizer
     {
-        private static readonly RecyclableMemoryStreamManager Manager = new RecyclableMemoryStreamManager();
-        private readonly Logger _log = LogManager.GetCurrentClassLogger();
+        private readonly RecyclableMemoryStreamManager _manager = new RecyclableMemoryStreamManager();
 
         public Stream Transform(string fileType, Stream stream, CancellationToken? token = null)
         {
             var cancellationToken = token ?? CancellationToken.None;
 
             // Copy of the original stream that will be modified in-place
-            using var memoryStream = Manager.GetStream();
+            using var memoryStream = _manager.GetStream();
             stream.CopyTo(memoryStream);
 
             switch (fileType.ToLower())
@@ -37,7 +34,7 @@ namespace MinMe.Optimizers
                     TransformDocxStream(memoryStream, cancellationToken);
                     break;
                 default:
-                    _log.Warn($"ImageOptimizer cannnot process {fileType}.");
+                    var msg = $"ImageOptimizer cannot process {fileType}.";
                     break;
             }
 
@@ -55,7 +52,7 @@ namespace MinMe.Optimizers
         private void TransformDocxStream(Stream stream, CancellationToken token)
         {
             using var document = WordprocessingDocument.Open(stream, true);
-            var transformation = new OptimizerWord(Manager);
+            var transformation = new OptimizerWord(_manager);
             transformation.Transform(document, token);
 
             foreach (var part in document.MainDocumentPart.EmbeddedPackageParts)
@@ -68,7 +65,7 @@ namespace MinMe.Optimizers
         private void TransformPptxStream(Stream stream, CancellationToken token)
         {
             using var document = PresentationDocument.Open(stream, true);
-            var transformation = new OptimizerPowerPoint(Manager);
+            var transformation = new OptimizerPowerPoint(_manager);
             transformation.Transform(document, token);
 
             foreach (var slide in document.PresentationPart.SlideParts)
@@ -92,7 +89,7 @@ namespace MinMe.Optimizers
 
             if (fileType is null)
             {
-                _log.Info($"Unsupported embedding type {part.ContentType}");
+                var msg = $"Unsupported embedding type {part.ContentType}";
                 return;
             }
 
@@ -105,26 +102,18 @@ namespace MinMe.Optimizers
         {
             using var zip = new ZipArchive(stream, ZipArchiveMode.Read);
 
-            var packedStream = Manager.GetStream();
+            var packedStream = _manager.GetStream();
             using (var newZip = new ZipArchive(packedStream, ZipArchiveMode.Create, true))
             {
-                try
+                foreach (var entry in zip.Entries)
                 {
-                    foreach (var entry in zip.Entries)
-                    {
-                        token.ThrowIfCancellationRequested();
+                    token.ThrowIfCancellationRequested();
 
-                        var newEntry = newZip.CreateEntry(entry.FullName, CompressionLevel.Optimal);
+                    var newEntry = newZip.CreateEntry(entry.FullName, CompressionLevel.Optimal);
 
-                        using var srcStream = entry.Open();
-                        using var dstStream = newEntry.Open();
-                        srcStream.CopyTo(dstStream);
-                    }
-                }
-                catch (OperationCanceledException cancellationException)
-                {
-                    _log.Warn(cancellationException, cancellationException.Message);
-                    throw;
+                    using var srcStream = entry.Open();
+                    using var dstStream = newEntry.Open();
+                    srcStream.CopyTo(dstStream);
                 }
             }
             packedStream.Position = 0;
