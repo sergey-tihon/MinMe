@@ -2,14 +2,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:mm="clr-namespace:MinMe.Avalonia.Views"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600"
-             x:Class="MinMe.Avalonia.Views.PowerPointView">
+             x:Class="MinMe.Avalonia.Views.MainView">
     <UserControl.Styles>
-      <Style Selector="Button">
-          <Setter Property="Padding" Value="5"/>
-          <Setter Property="Margin" Value="2"/>
-      </Style>
-
       <Style Selector="TabControl">
         <Setter Property="Background" Value="#F0F0F0"/>
       </Style>
@@ -50,13 +46,8 @@
       </Style>
     </UserControl.Styles>
     <Grid RowDefinitions="50,*">
-      <StackPanel Orientation="Horizontal">
-          <Button DockPanel.Dock="Left" Command="{Binding OpenCommand}">Open File</Button>
-          <Separator Width="30"></Separator>
-          <Button Command="{Binding OptimizeCommand}">Optimize</Button>
-          <Button Command="{Binding PublishCommand}">Publish Slides</Button>
-      </StackPanel>
-      <TabControl Grid.Row="1" Margin="0,5,0,0">
+      <mm:ActionsPanelView DataContext="{Binding ActionsPanelViewModel}"></mm:ActionsPanelView>
+      <TabControl Grid.Row="1" Margin="0,2,0,0">
         <TabItem Header="Overview">
           <Grid Margin="5" RowDefinitions="Auto,*">
             <TextBlock Grid.Row="0" FontSize="18" FontWeight="Bold" Text="{Binding FileName}"></TextBlock>

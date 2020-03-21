@@ -4,9 +4,9 @@ using Avalonia.Markup.Xaml;
 
 namespace MinMe.Avalonia.Views
 {
-    public class PowerPointView : UserControl
+    public class MainView : UserControl
     {
-        public PowerPointView()
+        public MainView()
         {
             InitializeComponent();
         }
