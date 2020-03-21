@@ -6,9 +6,7 @@ namespace MinMe.Analyzers.Model
     {
         public FileContentInfo(string fileName, long fileSize)
         {
-            FileName = fileName;
-            FileSize = fileSize;
-
+            (FileName, FileSize) = (fileName, fileSize);
             Parts = new List<PartInfo>();
             PartUsages = new Dictionary<string, List<PartUsageInfo>>();
             Slides = new List<SlideInfo>();

@@ -2,26 +2,92 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="500"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600"
              x:Class="MinMe.Avalonia.Views.PowerPointView">
     <UserControl.Styles>
-        <Style Selector="Button">
-            <Setter Property="Padding" Value="5"/>
-            <Setter Property="Margin" Value="2"/>
-        </Style>
+      <Style Selector="Button">
+          <Setter Property="Padding" Value="5"/>
+          <Setter Property="Margin" Value="2"/>
+      </Style>
+
+      <Style Selector="TabControl">
+        <Setter Property="Background" Value="#F0F0F0"/>
+      </Style>
+      <Style Selector="TabControl WrapPanel">
+        <Setter Property="Background" Value="#2B579A"/>
+      </Style>
+
+      <Style Selector="TabItem">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Height" Value="34"/>
+        <!--<Setter Property="VerticalAlignment" Value="Center"/>-->
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Background" Value="#2B579A"/>
+        <Setter Property="Foreground" Value="#F0F0F0"/>
+        <Setter Property="Margin" Value="0 0 0 0"/>
+        <Setter Property="Padding" Value="10 0"/>
+      </Style>
+      <Style Selector="TabItem:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="Background" Value="#124078"/>
+      </Style>
+
+      <Style Selector="TabItem:focus">
+        <Setter Property="Foreground" Value="#2B579A"/>
+        <Setter Property="Margin" Value="0 0 0 0"/>
+        <Setter Property="Padding" Value="10 0"/>
+      </Style>
+      <Style Selector="TabItem:focus /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="Background" Value="#f0f0f0"/>
+      </Style>
+
+      <Style Selector="TabItem:selected">
+        <Setter Property="Foreground" Value="#2B579A"/>
+        <Setter Property="Margin" Value="0 0 0 0"/>
+        <Setter Property="Padding" Value="10 0"/>
+      </Style>
+      <Style Selector="TabItem:selected /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="Background" Value="#f0f0f0"/>
+      </Style>
     </UserControl.Styles>
-    <Grid ColumnDefinitions="150,*">
-      <DockPanel Grid.Column="0" Background="Gainsboro">
-        <Button DockPanel.Dock="Bottom" Margin="5,0,5,10"
-                Command="{Binding $parent[Window].DataContext.OpenFile}">Change File</Button>
-        <StackPanel Margin="5,10,5,0">
+    <Grid RowDefinitions="50,*">
+      <StackPanel Orientation="Horizontal">
+          <Button DockPanel.Dock="Left" Command="{Binding OpenCommand}">Open File</Button>
+          <Separator Width="30"></Separator>
           <Button Command="{Binding OptimizeCommand}">Optimize</Button>
-          <Button Command="{Binding PublishCommand}" Content="{Binding PublishActionName}"></Button>
-        </StackPanel>
-      </DockPanel>
-      <Grid Grid.Column="1" Margin="5,10,5,10" RowDefinitions="Auto,*">
-        <TextBlock Grid.Row="0" FontSize="18" FontWeight="Bold" Text="{Binding FileName}"></TextBlock>
-        <Image Grid.Row="1" Source="{Binding Thumbnail}"></Image>
-      </Grid>
+          <Button Command="{Binding PublishCommand}">Publish Slides</Button>
+      </StackPanel>
+      <TabControl Grid.Row="1" Margin="0,5,0,0">
+        <TabItem Header="Overview">
+          <Grid Margin="5" RowDefinitions="Auto,*">
+            <TextBlock Grid.Row="0" FontSize="18" FontWeight="Bold" Text="{Binding FileName}"></TextBlock>
+            <Image Grid.Row="1" Source="{Binding Thumbnail}"></Image>
+          </Grid>
+        </TabItem>
+        <TabItem>
+          <TabItem.Header>
+            <TextBlock Text="{Binding FileContentInfo.Slides.Count, StringFormat=Slides ({0:D})}"></TextBlock>
+          </TabItem.Header>
+          <DataGrid Margin="10" Items="{Binding SlideTitles}">
+            <DataGrid.Columns>
+              <DataGridTextColumn Header="#" Binding="{Binding Number}" Width="Auto"/>
+              <DataGridTextColumn Header="Title" Binding="{Binding Title}" Width="*"/>
+              <DataGridTextColumn Header="Part Name" Binding="{Binding FileName}" Width="Auto"/>
+            </DataGrid.Columns>
+          </DataGrid>
+        </TabItem>
+        <TabItem>
+          <TabItem.Header>
+            <TextBlock Text="{Binding FileContentInfo.Parts.Count, StringFormat=Parts ({0:D})}"></TextBlock>
+          </TabItem.Header>
+          <DataGrid Margin="10" Items="{Binding Parts}">
+            <DataGrid.Columns>
+              <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="Auto"/>
+              <DataGridTextColumn Header="Size" Binding="{Binding Size}" Width="Auto"/>
+              <DataGridTextColumn Header="Type" Binding="{Binding PartType}" Width="*"/>
+              <DataGridTextColumn Header="Content Type" Binding="{Binding ContentType}" Width="Auto"/>
+            </DataGrid.Columns>
+          </DataGrid>
+        </TabItem>
+      </TabControl>
     </Grid>
 </UserControl>

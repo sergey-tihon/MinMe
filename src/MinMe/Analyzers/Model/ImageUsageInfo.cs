@@ -4,12 +4,8 @@ namespace MinMe.Analyzers.Model
 {
     public class ImageUsageInfo
     {
-        public ImageUsageInfo(long width, long height, ImageCrop? crop)
-        {
-            Width = width;
-            Height = height;
-            Crop = crop;
-        }
+        public ImageUsageInfo(long width, long height, ImageCrop? crop) =>
+            (Width, Height, Crop) = (width, height, crop);
 
         public long Width { get; }
         public long Height { get; }

@@ -46,8 +46,8 @@ namespace MinMe.Analyzers
 
         public void Dispose()
         {
-            _document?.Dispose();
-            _fileStream?.Dispose();
+            _document.Dispose();
+            _fileStream.Dispose();
         }
 
         public FileContentInfo Analyze()

@@ -4,13 +4,8 @@ namespace MinMe.Analyzers.Model
 {
     public class ImageCrop
     {
-        public ImageCrop(int left, int right, int top, int bottom)
-        {
-            Left = left;
-            Right = right;
-            Top = top;
-            Bottom = bottom;
-        }
+        private ImageCrop(int left, int right, int top, int bottom) =>
+            (Left, Right, Top, Bottom) = (left, right, top, bottom);
 
         public int Left { get; }
         public int Right { get; }
