@@ -58,19 +58,13 @@
           <TabItem.Header>
             <TextBlock Text="{Binding FileContentInfo.Slides.Count, StringFormat=Slides ({0:D})}"></TextBlock>
           </TabItem.Header>
-          <DataGrid Margin="10" Items="{Binding SlideTitles}">
-            <DataGrid.Columns>
-              <DataGridTextColumn Header="#" Binding="{Binding Number}" Width="Auto"/>
-              <DataGridTextColumn Header="Title" Binding="{Binding Title}" Width="*"/>
-              <DataGridTextColumn Header="Part Name" Binding="{Binding FileName}" Width="Auto"/>
-            </DataGrid.Columns>
-          </DataGrid>
+          <view:SlidesInfoView DataContext="{Binding SlidesInfoViewModel}" />
         </TabItem>
         <TabItem>
           <TabItem.Header>
             <TextBlock Text="{Binding FileContentInfo.Parts.Count, StringFormat=Parts ({0:D})}"></TextBlock>
           </TabItem.Header>
-          <view:PartsInfoView DataContext="{Binding PartsInfoViewModel}"></view:PartsInfoView>
+          <view:PartsInfoView DataContext="{Binding PartsInfoViewModel}" />
         </TabItem>
       </TabControl>
     </Grid>

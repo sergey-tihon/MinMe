@@ -8,24 +8,29 @@ using System.Text;
 
 namespace MinMe.Avalonia.Views.Converters
 {
-    class PartInfoRowSizeConverter : IValueConverter
+    class InfoRowSizeConverter : IValueConverter
     {
         private static IBrush DangerBrush = new SolidColorBrush(Colors.IndianRed, 0.4);
         private static IBrush WarningBrush = new SolidColorBrush(Colors.Yellow, 0.4);
 
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            var partInfo = value as PartInfoRow;
-            if (partInfo is null)
+            long? size = value switch
+            {
+                SlideInfoRow slideInfo => slideInfo.Size,
+                PartInfoRow partInfo => partInfo.Size,
+                _ => null,
+            };
+            if (size is null)
                 return value;
 
             var cell = new TextBlock {
-                Text = partInfo.Size.ToString("0,0")
+                Text = size.Value.ToString("0,0")
             };
 
-            if (partInfo.Size > 5_000_000)
+            if (size > 5_000_000)
                 cell.Background = DangerBrush;
-            else if (partInfo.Size > 100_000)
+            else if (size > 200_000)
                 cell.Background = WarningBrush;
 
             return cell;

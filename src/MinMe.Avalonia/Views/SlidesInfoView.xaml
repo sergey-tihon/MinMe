@@ -4,14 +4,15 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:converter="clr-namespace:MinMe.Avalonia.Views.Converters;assembly=MinMe.Avalonia"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="MinMe.Avalonia.Views.PartsInfoView">
+             x:Class="MinMe.Avalonia.Views.SlidesInfoView">
   <UserControl.Resources>
     <converter:InfoRowSizeConverter x:Key="sizeConverter" />
   </UserControl.Resources>
-  <DataGrid Margin="10" Items="{Binding Parts}">
+  <DataGrid Margin="10" Items="{Binding Slides}">
     <DataGrid.Columns>
-      <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="Auto"/>
-      <DataGridTemplateColumn Header="Size (bytes)" Width="Auto" SortMemberPath="Size">
+      <DataGridTextColumn Header="#" Binding="{Binding Number}" Width="Auto"/>
+      <DataGridTextColumn Header="Title" Binding="{Binding Title}" Width="*"/>
+      <DataGridTemplateColumn Header="Expected Size (bytes)" Width="Auto" SortMemberPath="Size">
         <DataGridTemplateColumn.CellTemplate>
           <DataTemplate >
             <ContentControl Content="{Binding Converter={StaticResource sizeConverter}}"
@@ -19,8 +20,7 @@
           </DataTemplate>
         </DataGridTemplateColumn.CellTemplate>
       </DataGridTemplateColumn>
-      <DataGridTextColumn Header="Used from" Binding="{Binding Usage}" Width="*"/>
-      <DataGridTextColumn Header="Content Type" Binding="{Binding ContentType}" Width="Auto"/>
+      <DataGridTextColumn Header="Part Name" Binding="{Binding FileName}" Width="Auto"/>
     </DataGrid.Columns>
   </DataGrid>
 </UserControl>

@@ -55,8 +55,8 @@ namespace MinMe.Avalonia.ViewModels
             }
 
             var view = new DataGridCollectionView(rows);
-            view.GroupDescriptions.Add(new DataGridPathGroupDescription(nameof(PartInfo.PartType)));
-            view.SortDescriptions.Add(DataGridSortDescription.FromPath(nameof(PartInfo.Size), true));
+            view.GroupDescriptions.Add(new DataGridPathGroupDescription(nameof(PartInfoRow.PartType)));
+            view.SortDescriptions.Add(DataGridSortDescription.FromPath(nameof(PartInfoRow.Size), true));
             return view;
         }
     }

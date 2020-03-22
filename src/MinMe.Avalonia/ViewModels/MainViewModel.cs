@@ -15,9 +15,11 @@ namespace MinMe.Avalonia.ViewModels
     {
         public MainViewModel(StateService stateService,
             ActionsPanelViewModel actionsPanelViewModel,
+            SlidesInfoViewModel slideInfoViewModel,
             PartsInfoViewModel partsInfoViewModel)
         {
             ActionsPanelViewModel = actionsPanelViewModel;
+            SlidesInfoViewModel = slideInfoViewModel;
             PartsInfoViewModel = partsInfoViewModel;
 
             _fileContentInfo = stateService.FileContentInfo
@@ -26,13 +28,10 @@ namespace MinMe.Avalonia.ViewModels
             _fileName = stateService.FileContentInfo
                 .Select(x => x is null ? "" : Path.GetFileNameWithoutExtension(x.FileName))
                 .ToProperty(this, nameof(FileName), "", deferSubscription: true);
-
-            _slideTitles = stateService.FileContentInfo
-                .Select(x => new DataGridCollectionView(x?.Slides ?? new List<SlideInfo>()))
-                .ToProperty(this, nameof(SlideTitles), deferSubscription: true);
         }
 
         public ActionsPanelViewModel ActionsPanelViewModel { get; }
+        public SlidesInfoViewModel SlidesInfoViewModel { get; }
         public PartsInfoViewModel PartsInfoViewModel { get; }
 
         private readonly ObservableAsPropertyHelper<FileContentInfo?> _fileContentInfo;
@@ -47,8 +46,5 @@ namespace MinMe.Avalonia.ViewModels
 
         private readonly ObservableAsPropertyHelper<string> _fileName;
         public string FileName => _fileName.Value;
-
-        private readonly ObservableAsPropertyHelper<DataGridCollectionView?> _slideTitles;
-        public DataGridCollectionView? SlideTitles => _slideTitles.Value;
     }
 }

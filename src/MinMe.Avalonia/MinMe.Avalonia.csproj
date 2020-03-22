@@ -20,9 +20,6 @@
     <AvaloniaResource Include="Assets\**" />
   </ItemGroup>
   <ItemGroup>
-    <AvaloniaResource Remove="Views\PartsInfoView.xaml" />
-  </ItemGroup>
-  <ItemGroup>
     <PackageReference Include="Avalonia.Controls.DataGrid" Version="0.9.4" />
     <PackageReference Include="DocumentFormat.OpenXml" Version="2.10.1" />
     <PackageReference Include="Clippit" Version="1.2.0" />
@@ -33,12 +30,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="paket.references" />
-    <None Remove="Views\PartsInfoView.xaml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Views\PartsInfoView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MinMe\MinMe.csproj" />

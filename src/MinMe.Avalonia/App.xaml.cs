@@ -71,6 +71,7 @@ namespace MinMe.Avalonia
                     // ViewModels
                     services.AddSingleton<MainViewModel>();
                     services.AddSingleton<ActionsPanelViewModel>();
+                    services.AddSingleton<SlidesInfoViewModel>();
                     services.AddSingleton<PartsInfoViewModel>();
                 })
                 .ConfigureLogging(logging =>
