@@ -1,4 +1,4 @@
-using DocumentFormat.OpenXml.Drawing;
+using DocumentFormat.OpenXml.Presentation;
 
 namespace MinMe.Analyzers.Model
 {

@@ -12,9 +12,10 @@ namespace MinMe.Analyzers.Model
         public Uri From { get; }
     }
 
-    public class ImageUsage : PartUsageInfo
+    public class ImageUsage : Reference
     {
-        public ImageUsage(ImageUsageInfo imageUsageInfo) => ImageUsageInfo = imageUsageInfo;
+        public ImageUsage(ImageUsageInfo imageUsageInfo, Uri from) : base(from)
+            => ImageUsageInfo = imageUsageInfo;
         public ImageUsageInfo ImageUsageInfo { get; }
     }
 }

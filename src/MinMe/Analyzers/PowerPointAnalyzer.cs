@@ -14,7 +14,7 @@ using Drawing = DocumentFormat.OpenXml.Drawing;
 
 using static System.String;
 
-using Picture = DocumentFormat.OpenXml.Drawing.Picture;
+using Picture = DocumentFormat.OpenXml.Presentation.Picture;
 
 namespace MinMe.Analyzers
 {
@@ -101,7 +101,7 @@ namespace MinMe.Analyzers
 
         private Dictionary<string, List<PartUsageInfo>> GetPartUsageData()
         {
-            var usages = new Dictionary<string, List<PartUsageInfo>>();
+            var usages = new Dictionary<string, List<PartUsageInfo>>(StringComparer.InvariantCultureIgnoreCase);
             void AddUsage(Uri uri, PartUsageInfo usage)
             {
                 var key = uri.OriginalString;
@@ -115,7 +115,7 @@ namespace MinMe.Analyzers
             OpenXmlPart? GetPart(StringValue relId)
                 => relId?.HasValue == true ? presentation.GetPartById(relId.Value) : null;
 
-            void ProcessImages(SlidePart slide)
+            void ProcessImages(OpenXmlPart slide)
             {
                 // Analyze single and grouped images
                 foreach (var pic in slide.RootElement.Descendants<Picture>())
@@ -125,7 +125,7 @@ namespace MinMe.Analyzers
                         continue;
                     var uri = slide.GetPartById(relId).Uri;
                     var usage = ImageUsageInfo.FromPict(pic);
-                    AddUsage(uri, new ImageUsage(usage));
+                    AddUsage(uri, new ImageUsage(usage, slide.Uri));
                 }
                 // Analyze background images
                 foreach (var commonSlideData in slide.RootElement.Descendants<Presentation.CommonSlideData>())
@@ -139,7 +139,7 @@ namespace MinMe.Analyzers
 
                     var uri = slide.GetPartById(relId).Uri;
                     var usage = new ImageUsageInfo(-1, -1, ImageCrop.FromSourceRect(srcRec));
-                    AddUsage(uri, new ImageUsage(usage));
+                    AddUsage(uri, new ImageUsage(usage, slide.Uri));
                 }
             }
 

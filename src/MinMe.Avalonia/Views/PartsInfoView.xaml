@@ -1,0 +1,26 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:converter="clr-namespace:MinMe.Avalonia.Views.Converters;assembly=MinMe.Avalonia"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="MinMe.Avalonia.Views.PartsInfoView">
+  <UserControl.Resources>
+    <converter:PartInfoRowSizeConverter x:Key="sizeConverter" />
+  </UserControl.Resources>
+  <DataGrid Margin="10" Items="{Binding Parts}">
+    <DataGrid.Columns>
+      <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="Auto"/>
+      <DataGridTemplateColumn Header="Size (bytes)" Width="Auto" >
+        <DataGridTemplateColumn.CellTemplate>
+          <DataTemplate >
+            <ContentControl Content="{Binding Converter={StaticResource sizeConverter}}"
+                HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" />
+          </DataTemplate>
+        </DataGridTemplateColumn.CellTemplate>
+      </DataGridTemplateColumn>
+      <DataGridTextColumn Header="Used from" Binding="{Binding Usage}" Width="*"/>
+      <DataGridTextColumn Header="Content Type" Binding="{Binding ContentType}" Width="Auto"/>
+    </DataGrid.Columns>
+  </DataGrid>
+</UserControl>

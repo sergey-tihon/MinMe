@@ -13,9 +13,12 @@ namespace MinMe.Avalonia.ViewModels
 {
     class MainViewModel : ViewModelBase
     {
-        public MainViewModel(StateService stateService, ActionsPanelViewModel actionsPanelViewModel)
+        public MainViewModel(StateService stateService,
+            ActionsPanelViewModel actionsPanelViewModel,
+            PartsInfoViewModel partsInfoViewModel)
         {
             ActionsPanelViewModel = actionsPanelViewModel;
+            PartsInfoViewModel = partsInfoViewModel;
 
             _fileContentInfo = stateService.FileContentInfo
                 .ToProperty(this, nameof(FileContentInfo), deferSubscription: true);
@@ -27,18 +30,10 @@ namespace MinMe.Avalonia.ViewModels
             _slideTitles = stateService.FileContentInfo
                 .Select(x => new DataGridCollectionView(x?.Slides ?? new List<SlideInfo>()))
                 .ToProperty(this, nameof(SlideTitles), deferSubscription: true);
-
-            _parts = stateService.FileContentInfo
-                .Select(x => {
-                    var view = new DataGridCollectionView(x?.Parts ?? new List<PartInfo>());
-                    view.GroupDescriptions.Add(new DataGridPathGroupDescription(nameof(PartInfo.PartType)));
-                    view.SortDescriptions.Add(DataGridSortDescription.FromPath(nameof(PartInfo.Size), true));
-                    return view;
-                })
-                .ToProperty(this, nameof(Parts), deferSubscription: true);
         }
 
         public ActionsPanelViewModel ActionsPanelViewModel { get; }
+        public PartsInfoViewModel PartsInfoViewModel { get; }
 
         private readonly ObservableAsPropertyHelper<FileContentInfo?> _fileContentInfo;
         public FileContentInfo? FileContentInfo => _fileContentInfo.Value;
@@ -55,8 +50,5 @@ namespace MinMe.Avalonia.ViewModels
 
         private readonly ObservableAsPropertyHelper<DataGridCollectionView?> _slideTitles;
         public DataGridCollectionView? SlideTitles => _slideTitles.Value;
-
-        private readonly ObservableAsPropertyHelper<DataGridCollectionView?> _parts;
-        public DataGridCollectionView? Parts => _parts.Value;
     }
 }
