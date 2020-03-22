@@ -22,6 +22,8 @@ namespace MinMe.Avalonia.ViewModels
             SlidesInfoViewModel = slideInfoViewModel;
             PartsInfoViewModel = partsInfoViewModel;
 
+            _isBusy = stateService.IsBusy
+                .ToProperty(this, nameof(IsBusy), deferSubscription: true);
             _fileContentInfo = stateService.FileContentInfo
                 .ToProperty(this, nameof(FileContentInfo), deferSubscription: true);
 
@@ -34,8 +36,13 @@ namespace MinMe.Avalonia.ViewModels
         public SlidesInfoViewModel SlidesInfoViewModel { get; }
         public PartsInfoViewModel PartsInfoViewModel { get; }
 
+        private readonly ObservableAsPropertyHelper<bool> _isBusy;
+        public bool IsBusy => _isBusy.Value;
+
         private readonly ObservableAsPropertyHelper<FileContentInfo?> _fileContentInfo;
         public FileContentInfo? FileContentInfo => _fileContentInfo.Value;
+
+
 
         private Bitmap? _thumbnail;
         public Bitmap? Thumbnail

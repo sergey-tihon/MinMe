@@ -45,7 +45,7 @@
         <Setter Property="Background" Value="#f0f0f0"/>
       </Style>
     </UserControl.Styles>
-    <Grid RowDefinitions="50,*">
+    <Grid RowDefinitions="50,*,Auto" IsEnabled="{Binding !IsBusy}">
       <view:ActionsPanelView DataContext="{Binding ActionsPanelViewModel}"></view:ActionsPanelView>
       <TabControl Grid.Row="1" Margin="0,2,0,0">
         <TabItem Header="Overview">
@@ -67,5 +67,6 @@
           <view:PartsInfoView DataContext="{Binding PartsInfoViewModel}" />
         </TabItem>
       </TabControl>
+      <ProgressBar Grid.Row="2" IsIndeterminate="true" IsVisible="{Binding IsBusy}"/>
     </Grid>
 </UserControl>

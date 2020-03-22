@@ -69,9 +69,15 @@ namespace MinMe.Avalonia.ViewModels
             var fileName = dialogResult.FirstOrDefault();
             if (fileName is { })
             {
-                using var analyzer = new PowerPointAnalyzer(fileName);
-                _stateService.ChangeState(analyzer.Analyze());
-                //AssignThumbnail(analyzer.GetThumbnail());
+                FileContentInfo? state = null;
+                await _stateService.RunTask(async () =>
+                {
+                    using var analyzer = new PowerPointAnalyzer(fileName);
+                    state = analyzer.Analyze();
+                    //AssignThumbnail(analyzer.GetThumbnail());
+                });
+                if (state is { })
+                    _stateService.SetState(state);
             }
         }
 
@@ -111,16 +117,18 @@ namespace MinMe.Avalonia.ViewModels
             var targetDir = await openFileDialog.ShowAsync(GetWindow());
             if (!string.IsNullOrEmpty(targetDir))
             {
-                var presentation = new PmlDocument(FileContentInfo.FileName);
-                var slides = PresentationBuilder.PublishSlides(presentation);
                 var count = 0;
-                foreach (var slide in slides)
+                await _stateService.RunTask(async () =>
                 {
-                    var targetPath = Path.Combine(targetDir, Path.GetFileName(slide.FileName));
-                    slide.SaveAs(targetPath);
-                    count++;
-                }
-
+                    var presentation = new PmlDocument(FileContentInfo.FileName);
+                    var slides = PresentationBuilder.PublishSlides(presentation);
+                    foreach (var slide in slides)
+                    {
+                        var targetPath = Path.Combine(targetDir, Path.GetFileName(slide.FileName));
+                        slide.SaveAs(targetPath);
+                        count++;
+                    }
+                });
                 _notificationManager.Show(new Notification("Slides are published", $"Successfully published {count} slides."));
             }
         }
@@ -151,17 +159,20 @@ namespace MinMe.Avalonia.ViewModels
             if (resultFileName is null)
                 return;
 
-            await using (var originalStream = new FileStream(FileContentInfo.FileName, FileMode.Open, FileAccess.Read))
+            await _stateService.RunTask(async () =>
             {
-                var extension = Path.GetExtension(FileContentInfo.FileName);
-                await using var transformedStream = new ImageOptimizer().Transform(extension, originalStream);
-
-                if (transformedStream is { })
+                await using (var originalStream = new FileStream(FileContentInfo.FileName, FileMode.Open, FileAccess.Read))
                 {
-                    await using var targetFile = File.Create(resultFileName);
-                    transformedStream.CopyTo(targetFile);
+                    var extension = Path.GetExtension(FileContentInfo.FileName);
+                    await using var transformedStream = new ImageOptimizer().Transform(extension, originalStream);
+
+                    if (transformedStream is { })
+                    {
+                        await using var targetFile = File.Create(resultFileName);
+                        transformedStream.CopyTo(targetFile);
+                    }
                 }
-            }
+            });
 
             var initialFileSize = sourceFileInfo.Length;
             var resultFileSize = new FileInfo(resultFileName).Length;
