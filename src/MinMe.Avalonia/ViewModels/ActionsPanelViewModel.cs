@@ -74,31 +74,11 @@ namespace MinMe.Avalonia.ViewModels
                 {
                     using var analyzer = new PowerPointAnalyzer(fileName);
                     state = analyzer.Analyze();
-                    //AssignThumbnail(analyzer.GetThumbnail());
                 });
                 if (state is { })
                     _stateService.SetState(state);
             }
         }
-
-        //private Bitmap? DefaultThumbnail;
-        //private void AssignThumbnail(Stream? thumbnail)
-        //{
-        //    if (thumbnail is { })
-        //    {
-        //        Thumbnail = new Bitmap(thumbnail);
-        //    }
-        //    else
-        //    {
-        //        if (DefaultThumbnail is null)
-        //        {
-        //            var assets = AvaloniaLocator.Current.GetService<IAssetLoader>();
-        //            var uri = new Uri("avares://MinMe.Avalonia/Assets/PowerPoint.png");
-        //            DefaultThumbnail = new Bitmap(assets.Open(uri));
-        //        }
-        //        Thumbnail = DefaultThumbnail;
-        //    }
-        //}
 
         private async Task PublishSlides()
         {

@@ -2,8 +2,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reactive.Linq;
-using Avalonia.Collections;
-using Avalonia.Media.Imaging;
 using MinMe.Analyzers.Model;
 using MinMe.Avalonia.Services;
 
@@ -15,10 +13,12 @@ namespace MinMe.Avalonia.ViewModels
     {
         public MainViewModel(StateService stateService,
             ActionsPanelViewModel actionsPanelViewModel,
+            OverviewViewModel overviewViewModel,
             SlidesInfoViewModel slideInfoViewModel,
             PartsInfoViewModel partsInfoViewModel)
         {
             ActionsPanelViewModel = actionsPanelViewModel;
+            OverviewViewModel = overviewViewModel;
             SlidesInfoViewModel = slideInfoViewModel;
             PartsInfoViewModel = partsInfoViewModel;
 
@@ -26,13 +26,10 @@ namespace MinMe.Avalonia.ViewModels
                 .ToProperty(this, nameof(IsBusy), deferSubscription: true);
             _fileContentInfo = stateService.FileContentInfo
                 .ToProperty(this, nameof(FileContentInfo), deferSubscription: true);
-
-            _fileName = stateService.FileContentInfo
-                .Select(x => x is null ? "" : Path.GetFileNameWithoutExtension(x.FileName))
-                .ToProperty(this, nameof(FileName), "", deferSubscription: true);
         }
 
         public ActionsPanelViewModel ActionsPanelViewModel { get; }
+        public OverviewViewModel OverviewViewModel { get; }
         public SlidesInfoViewModel SlidesInfoViewModel { get; }
         public PartsInfoViewModel PartsInfoViewModel { get; }
 
@@ -41,17 +38,5 @@ namespace MinMe.Avalonia.ViewModels
 
         private readonly ObservableAsPropertyHelper<FileContentInfo?> _fileContentInfo;
         public FileContentInfo? FileContentInfo => _fileContentInfo.Value;
-
-
-
-        private Bitmap? _thumbnail;
-        public Bitmap? Thumbnail
-        {
-            get => _thumbnail;
-            private set => this.RaiseAndSetIfChanged(ref _thumbnail, value);
-        }
-
-        private readonly ObservableAsPropertyHelper<string> _fileName;
-        public string FileName => _fileName.Value;
     }
 }

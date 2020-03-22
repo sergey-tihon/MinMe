@@ -70,6 +70,7 @@ namespace MinMe.Avalonia
                     services.AddSingleton<StateService>();
                     // ViewModels
                     services.AddSingleton<MainViewModel>();
+                    services.AddSingleton<OverviewViewModel>();
                     services.AddSingleton<ActionsPanelViewModel>();
                     services.AddSingleton<SlidesInfoViewModel>();
                     services.AddSingleton<PartsInfoViewModel>();

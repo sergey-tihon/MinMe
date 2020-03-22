@@ -49,10 +49,7 @@
       <view:ActionsPanelView DataContext="{Binding ActionsPanelViewModel}"></view:ActionsPanelView>
       <TabControl Grid.Row="1" Margin="0,2,0,0">
         <TabItem Header="Overview">
-          <Grid Margin="5" RowDefinitions="Auto,*">
-            <TextBlock Grid.Row="0" FontSize="18" FontWeight="Bold" Text="{Binding FileName}"></TextBlock>
-            <Image Grid.Row="1" Source="{Binding Thumbnail}"></Image>
-          </Grid>
+          <view:OverviewView DataContext="{Binding OverviewViewModel}" />
         </TabItem>
         <TabItem>
           <TabItem.Header>
