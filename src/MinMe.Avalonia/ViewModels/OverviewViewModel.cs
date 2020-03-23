@@ -26,8 +26,10 @@ namespace MinMe.Avalonia.ViewModels
             _thumbnail = stateService.FileContentInfo.Select(GetThumbnail)
                 .ToProperty(this, nameof(Thumbnail), defaultThumbnail, deferSubscription: true);
 
-            Bitmap GetThumbnail(Analyzers.Model.FileContentInfo x)
+            Bitmap GetThumbnail(Analyzers.Model.FileContentInfo? x)
             {
+                if (x is null)
+                    return defaultThumbnail;
                 try
                 {
                     using var fileStream = File.Open(x.FileName, FileMode.Open);

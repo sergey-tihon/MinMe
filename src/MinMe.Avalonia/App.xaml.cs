@@ -34,10 +34,6 @@ namespace MinMe.Avalonia
 
                 desktop.MainWindow = Host.Services.GetService<MainWindow>();
                 desktop.MainWindow.Content = Host.Services.GetService<MainViewModel>();
-
-                // Open file dialog directly after app start
-                var vm = Host.Services.GetService<ActionsPanelViewModel>();
-                vm.OpenCommand.Execute().Subscribe();
             }
         }
 

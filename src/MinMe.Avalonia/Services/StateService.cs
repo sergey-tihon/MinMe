@@ -34,5 +34,18 @@ namespace MinMe.Avalonia.Services
                 IsBusySubject.OnNext(false);
             }
         }
+
+        public async Task Run(Action action)
+        {
+            try
+            {
+                IsBusySubject.OnNext(true);
+                await Task.Run(action);
+            }
+            finally
+            {
+                IsBusySubject.OnNext(false);
+            }
+        }
     }
 }

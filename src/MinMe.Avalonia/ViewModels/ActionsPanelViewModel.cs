@@ -57,7 +57,7 @@ namespace MinMe.Avalonia.ViewModels
                 Title = "Choose File",
                 AllowMultiple = false,
                 Filters = {
-                    new FileDialogFilter() {
+                    new FileDialogFilter {
                         Name = "PowerPoint files (*.pptx)",
                         Extensions = {"pptx"}
                     }
@@ -70,7 +70,7 @@ namespace MinMe.Avalonia.ViewModels
             if (fileName is { })
             {
                 FileContentInfo? state = null;
-                await _stateService.RunTask(async () =>
+                await _stateService.Run(() =>
                 {
                     using var analyzer = new PowerPointAnalyzer(fileName);
                     state = analyzer.Analyze();
@@ -84,7 +84,7 @@ namespace MinMe.Avalonia.ViewModels
         {
             if (FileContentInfo is null)
             {
-                _logger.LogError("FileContentInfo shoud not be null");
+                _logger.LogError("FileContentInfo should not be null");
                 return;
             }
 
@@ -98,7 +98,7 @@ namespace MinMe.Avalonia.ViewModels
             if (!string.IsNullOrEmpty(targetDir))
             {
                 var count = 0;
-                await _stateService.RunTask(async () =>
+                await _stateService.Run(() =>
                 {
                     var presentation = new PmlDocument(FileContentInfo.FileName);
                     var slides = PresentationBuilder.PublishSlides(presentation);
@@ -117,7 +117,7 @@ namespace MinMe.Avalonia.ViewModels
         {
             if (FileContentInfo is null)
             {
-                _logger.LogError("FileContentInfo shoud not be null");
+                _logger.LogError("FileContentInfo should not be null");
                 return;
             }
 
@@ -141,16 +141,14 @@ namespace MinMe.Avalonia.ViewModels
 
             await _stateService.RunTask(async () =>
             {
-                await using (var originalStream = new FileStream(FileContentInfo.FileName, FileMode.Open, FileAccess.Read))
-                {
-                    var extension = Path.GetExtension(FileContentInfo.FileName);
-                    await using var transformedStream = new ImageOptimizer().Transform(extension, originalStream);
+                await using var originalStream = new FileStream(FileContentInfo.FileName, FileMode.Open, FileAccess.Read);
+                var extension = Path.GetExtension(FileContentInfo.FileName);
+                await using var transformedStream = new ImageOptimizer().Transform(extension, originalStream);
 
-                    if (transformedStream is { })
-                    {
-                        await using var targetFile = File.Create(resultFileName);
-                        transformedStream.CopyTo(targetFile);
-                    }
+                if (transformedStream is { })
+                {
+                    await using var targetFile = File.Create(resultFileName);
+                    transformedStream.CopyTo(targetFile);
                 }
             });
 
