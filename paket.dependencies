@@ -1,0 +1,13 @@
+source https://api.nuget.org/v3/index.json
+
+nuget DocumentFormat.OpenXml
+nuget System.Drawing.Common
+nuget System.IO.Compression
+nuget Microsoft.IO.RecyclableMemoryStream
+
+nuget Avalonia
+nuget Avalonia.Controls.DataGrid
+nuget Avalonia.Desktop
+nuget Avalonia.ReactiveUI
+nuget Microsoft.Extensions.Hosting
+nuget Clippit

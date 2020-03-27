@@ -1,0 +1,28 @@
+type file
+id
+    MinMe
+owners
+    Sergey Tihon
+authors
+    Sergey Tihon
+projectUrl
+    https://github.com/sergey-tihon/MinMe
+licenseUrl
+    https://github.com/sergey-tihon/MinMe/LICENSE
+requireLicenseAcceptance
+    false
+copyright
+    Copyright 2020
+tags
+    OpenXML PowerPoint Optimize
+description
+    MinMe helps Office documents to lose extra weight
+files
+    bin/Release/netstandard2.0/MinMe.dll ==> lib/netstandard2.0
+
+dependencies
+    framework: netstandard20
+        DocumentFormat.OpenXml >= LOCKEDVERSION
+        System.IO.Compression >= LOCKEDVERSION
+        Microsoft.IO.RecyclableMemoryStream >= LOCKEDVERSION
+        System.Drawing.Common >= LOCKEDVERSION
