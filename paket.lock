@@ -1,7 +1,7 @@
 NUGET
   remote: https://api.nuget.org/v3/index.json
-    Avalonia (0.9.4)
-      Avalonia.Remote.Protocol (>= 0.9.4) - restriction: || (>= net461) (>= netstandard2.0)
+    Avalonia (0.9.6)
+      Avalonia.Remote.Protocol (>= 0.9.6) - restriction: || (>= net461) (>= netstandard2.0)
       JetBrains.Annotations (>= 10.3) - restriction: || (>= net461) (>= netstandard2.0)
       Serilog (>= 2.5) - restriction: || (>= net461) (>= netstandard2.0)
       Serilog.Sinks.Debug (>= 1.0) - restriction: || (>= net461) (>= netstandard2.0)
@@ -13,52 +13,52 @@ NUGET
       System.Runtime.CompilerServices.Unsafe (>= 4.6) - restriction: || (>= net461) (>= netstandard2.0)
       System.Runtime.InteropServices.RuntimeInformation (>= 4.3) - restriction: >= net461
       System.ValueTuple (>= 4.5) - restriction: || (>= net461) (>= netstandard2.0)
-    Avalonia.Controls.DataGrid (0.9.4)
-      Avalonia (>= 0.9.4) - restriction: >= netstandard2.0
-      Avalonia.Remote.Protocol (>= 0.9.4) - restriction: >= netstandard2.0
+    Avalonia.Controls.DataGrid (0.9.6)
+      Avalonia (>= 0.9.6) - restriction: >= netstandard2.0
+      Avalonia.Remote.Protocol (>= 0.9.6) - restriction: >= netstandard2.0
       JetBrains.Annotations (>= 10.3) - restriction: >= netstandard2.0
       System.Reactive (>= 4.1.6) - restriction: >= netstandard2.0
-    Avalonia.Desktop (0.9.4)
-      Avalonia (>= 0.9.4) - restriction: >= netstandard2.0
-      Avalonia.Direct2D1 (>= 0.9.4) - restriction: >= netstandard2.0
-      Avalonia.Native (>= 0.9.4) - restriction: >= netstandard2.0
-      Avalonia.Skia (>= 0.9.4) - restriction: >= netstandard2.0
-      Avalonia.Win32 (>= 0.9.4) - restriction: >= netstandard2.0
-      Avalonia.X11 (>= 0.9.4) - restriction: >= netstandard2.0
-    Avalonia.Direct2D1 (0.9.4) - restriction: >= netstandard2.0
-      Avalonia (>= 0.9.4) - restriction: >= netstandard2.0
+    Avalonia.Desktop (0.9.6)
+      Avalonia (>= 0.9.6) - restriction: >= netstandard2.0
+      Avalonia.Direct2D1 (>= 0.9.6) - restriction: >= netstandard2.0
+      Avalonia.Native (>= 0.9.6) - restriction: >= netstandard2.0
+      Avalonia.Skia (>= 0.9.6) - restriction: >= netstandard2.0
+      Avalonia.Win32 (>= 0.9.6) - restriction: >= netstandard2.0
+      Avalonia.X11 (>= 0.9.6) - restriction: >= netstandard2.0
+    Avalonia.Direct2D1 (0.9.6) - restriction: >= netstandard2.0
+      Avalonia (>= 0.9.6) - restriction: >= netstandard2.0
       JetBrains.Annotations (>= 10.3) - restriction: >= netstandard2.0
       SharpDX (>= 4.0.1) - restriction: >= netstandard2.0
       SharpDX.Direct2D1 (>= 4.0.1) - restriction: >= netstandard2.0
       SharpDX.Direct3D11 (>= 4.0.1) - restriction: >= netstandard2.0
       SharpDX.DXGI (>= 4.0.1) - restriction: >= netstandard2.0
       System.Reactive (>= 4.1.6) - restriction: >= netstandard2.0
-    Avalonia.FreeDesktop (0.9.4) - restriction: >= netstandard2.0
-      Avalonia (>= 0.9.4) - restriction: >= netstandard2.0
+    Avalonia.FreeDesktop (0.9.6) - restriction: >= netstandard2.0
+      Avalonia (>= 0.9.6) - restriction: >= netstandard2.0
       Tmds.DBus (>= 0.7) - restriction: >= netstandard2.0
-    Avalonia.Native (0.9.4) - restriction: >= netstandard2.0
-      Avalonia (>= 0.9.4) - restriction: >= netstandard2.0
+    Avalonia.Native (0.9.6) - restriction: >= netstandard2.0
+      Avalonia (>= 0.9.6) - restriction: >= netstandard2.0
       SharpGen.Runtime (>= 1.2.1) - restriction: >= netstandard2.0
       SharpGen.Runtime.COM (>= 1.2) - restriction: >= netstandard2.0
-    Avalonia.ReactiveUI (0.9.4)
-      Avalonia (>= 0.9.4) - restriction: >= netstandard2.0
+    Avalonia.ReactiveUI (0.9.6)
+      Avalonia (>= 0.9.6) - restriction: >= netstandard2.0
       ReactiveUI (>= 10.3.6) - restriction: >= netstandard2.0
       System.Reactive (>= 4.1.6) - restriction: >= netstandard2.0
-    Avalonia.Remote.Protocol (0.9.4) - restriction: || (>= net461) (>= netstandard2.0)
-    Avalonia.Skia (0.9.4) - restriction: >= netstandard2.0
-      Avalonia (>= 0.9.4) - restriction: >= netstandard2.0
+    Avalonia.Remote.Protocol (0.9.6) - restriction: || (>= net461) (>= netstandard2.0)
+    Avalonia.Skia (0.9.6) - restriction: >= netstandard2.0
+      Avalonia (>= 0.9.6) - restriction: >= netstandard2.0
       Avalonia.Skia.Linux.Natives (>= 1.68.0.2) - restriction: >= netstandard2.0
       SkiaSharp (>= 1.68) - restriction: >= netstandard2.0
     Avalonia.Skia.Linux.Natives (1.68.0.2) - restriction: >= netstandard2.0
       Microsoft.NETCore.Platforms (>= 1.0.1) - restriction: >= netstandard1.0
       SkiaSharp (1.68) - restriction: >= netstandard1.0
-    Avalonia.Win32 (0.9.4) - restriction: >= netstandard2.0
-      Avalonia (>= 0.9.4) - restriction: >= netstandard2.0
+    Avalonia.Win32 (0.9.6) - restriction: >= netstandard2.0
+      Avalonia (>= 0.9.6) - restriction: >= netstandard2.0
       System.Drawing.Common (>= 4.5) - restriction: >= netstandard2.0
-    Avalonia.X11 (0.9.4) - restriction: >= netstandard2.0
-      Avalonia (>= 0.9.4) - restriction: >= netstandard2.0
-      Avalonia.FreeDesktop (>= 0.9.4) - restriction: >= netstandard2.0
-      Avalonia.Skia (>= 0.9.4) - restriction: >= netstandard2.0
+    Avalonia.X11 (0.9.6) - restriction: >= netstandard2.0
+      Avalonia (>= 0.9.6) - restriction: >= netstandard2.0
+      Avalonia.FreeDesktop (>= 0.9.6) - restriction: >= netstandard2.0
+      Avalonia.Skia (>= 0.9.6) - restriction: >= netstandard2.0
     Clippit (1.2)
       DocumentFormat.OpenXml (>= 2.10.1) - restriction: >= netstandard2.0
     DocumentFormat.OpenXml (2.10.1)

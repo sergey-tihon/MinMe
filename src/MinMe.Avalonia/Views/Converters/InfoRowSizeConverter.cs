@@ -1,5 +1,6 @@
 ﻿using Avalonia.Controls;
 using Avalonia.Data.Converters;
+using Avalonia.Layout;
 using Avalonia.Media;
 using MinMe.Avalonia.Models;
 using System;
@@ -25,7 +26,8 @@ namespace MinMe.Avalonia.Views.Converters
                 return value;
 
             var cell = new TextBlock {
-                Text = size.Value.ToString("0,0")
+                Text = size.Value.ToString("0,0"),
+                VerticalAlignment = VerticalAlignment.Center
             };
 
             if (size > 5_000_000)
