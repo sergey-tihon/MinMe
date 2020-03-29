@@ -67,7 +67,13 @@ Target.create "RestoreData" (fun _ ->
 ) 
 
 Target.create "RunTests" (fun _ ->
-    DotNet.test id "tests/MinMe.Tests/"
+    DotNet.test (fun options -> 
+        { options with 
+            Common = {
+                options.Common with
+                    Verbosity = Some <| DotNet.Verbosity.Normal
+            }
+        }) "tests/MinMe.Tests/"
 )
 
 Target.create "NuGet" (fun _ ->
