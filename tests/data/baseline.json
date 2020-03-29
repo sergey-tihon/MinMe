@@ -1,0 +1,1388 @@
+[
+  {
+    "FileName": "dl-tutorials/ppts/Week3d Logistic regression.pptx",
+    "FileSizeBefore": 46105715,
+    "FileSizeAfter": 4726570,
+    "Compression": 89.74840754557216
+  },
+  {
+    "FileName": "dsyme-fsharp/2011-03-10-sigcse/fsharp-sigcse.pptx",
+    "FileSizeBefore": 3395905,
+    "FileSizeAfter": 411366,
+    "Compression": 87.88641024999227
+  },
+  {
+    "FileName": "dl-tutorials/ppts/Week4c Multi-layer perceptron (mlp_mnist_simple).pptx",
+    "FileSizeBefore": 28501201,
+    "FileSizeAfter": 4840898,
+    "Compression": 83.01510873173379
+  },
+  {
+    "FileName": "dotNETConf/2019/Technical/Durable Functions 2.0 \u2013 Stateful functions and orchestrations.pptx",
+    "FileSizeBefore": 7883865,
+    "FileSizeAfter": 2253024,
+    "Compression": 71.42234170676439
+  },
+  {
+    "FileName": "dl-tutorials/ppts/Week9a Basics of RNN.pptx",
+    "FileSizeBefore": 5777159,
+    "FileSizeAfter": 1656260,
+    "Compression": 71.33089118717349
+  },
+  {
+    "FileName": "dl-tutorials/ppts/Week6c Implementing DAE and DCAE.pptx",
+    "FileSizeBefore": 14985598,
+    "FileSizeAfter": 5843160,
+    "Compression": 61.00816263722008
+  },
+  {
+    "FileName": "dl-tutorials/ppts/Week2a Terminologies.pptx",
+    "FileSizeBefore": 12241195,
+    "FileSizeAfter": 4808413,
+    "Compression": 60.71941505710839
+  },
+  {
+    "FileName": "dotNETConf/2018/Technical/Decks/dotNETConf2018-KEYNOTE.pptx",
+    "FileSizeBefore": 78164067,
+    "FileSizeAfter": 31123487,
+    "Compression": 60.18184800952079
+  },
+  {
+    "FileName": "dotNETConf/2019/Technical/Increase your .NET Productivity with Visual Studio 2019.pptx",
+    "FileSizeBefore": 2663569,
+    "FileSizeAfter": 1242929,
+    "Compression": 53.3359563803303
+  },
+  {
+    "FileName": "dotNETConf/2019/Technical/Get Started with DevOps for .NET Windows Desktop Apps and Visual Studio App Center.pptx",
+    "FileSizeBefore": 2673160,
+    "FileSizeAfter": 1250248,
+    "Compression": 53.229585958191805
+  },
+  {
+    "FileName": "dotNETConf/2019/Technical/DotnetConf2019_PresentationTemplate.pptx",
+    "FileSizeBefore": 2760734,
+    "FileSizeAfter": 1339875,
+    "Compression": 51.466711389072614
+  },
+  {
+    "FileName": "dotNETConf/2019/Technical/Entity Framework Core 3.0 and beyond.pptx",
+    "FileSizeBefore": 2768483,
+    "FileSizeAfter": 1347489,
+    "Compression": 51.327532081649046
+  },
+  {
+    "FileName": "dotNETConf/2019/Technical/What\u0027s new in C# 8 - Part 2.pptx",
+    "FileSizeBefore": 2764655,
+    "FileSizeAfter": 1346827,
+    "Compression": 51.28408427091264
+  },
+  {
+    "FileName": "dotNETConf/2019/Technical/Orchard Core - DotNetConf.pptx",
+    "FileSizeBefore": 2768039,
+    "FileSizeAfter": 1350152,
+    "Compression": 51.22351961081473
+  },
+  {
+    "FileName": "dotNETConf/2019/Technical/Versioning-DotNetConf.pptx",
+    "FileSizeBefore": 2783907,
+    "FileSizeAfter": 1362662,
+    "Compression": 51.05217236064279
+  },
+  {
+    "FileName": "dotNETConf/2019/Technical/Move your Web Forms app to .NET Core without rewriting everything.pptx",
+    "FileSizeBefore": 2788012,
+    "FileSizeAfter": 1367626,
+    "Compression": 50.94619391882101
+  },
+  {
+    "FileName": "dotNETConf/2019/Technical/Modernizing with .NET Core - Beyond the Basics.pptx",
+    "FileSizeBefore": 2789562,
+    "FileSizeAfter": 1368394,
+    "Compression": 50.945919108447846
+  },
+  {
+    "FileName": "dotNETConf/2019/Technical/Publish or perish - tricks to successfully ship your .NET Core 3 app.pptx",
+    "FileSizeBefore": 2787217,
+    "FileSizeAfter": 1369021,
+    "Compression": 50.88215234048874
+  },
+  {
+    "FileName": "dotNETConf/2019/Technical/Cryptography 101 with .NET Core.pptx",
+    "FileSizeBefore": 2821840,
+    "FileSizeAfter": 1399512,
+    "Compression": 50.4042752246761
+  },
+  {
+    "FileName": "dotNETConf/2019/Technical/Building Cloud Native Apps with .NET Core 3.0 and Kubernetes.pptx",
+    "FileSizeBefore": 2828920,
+    "FileSizeAfter": 1407100,
+    "Compression": 50.26016995885355
+  },
+  {
+    "FileName": "dotNETConf/2019/Technical/Tips for moving to Core.pptx",
+    "FileSizeBefore": 2833285,
+    "FileSizeAfter": 1410436,
+    "Compression": 50.21905667802569
+  },
+  {
+    "FileName": "dotNETConf/2019/Technical/Introduction to GraphQL with .NET Core.pptx",
+    "FileSizeBefore": 2888665,
+    "FileSizeAfter": 1450428,
+    "Compression": 49.78898556945855
+  },
+  {
+    "FileName": "dotNETConf/2019/Technical/Why you should create your next library using .NET Standard.pptx",
+    "FileSizeBefore": 2923655,
+    "FileSizeAfter": 1472867,
+    "Compression": 49.62240756860847
+  },
+  {
+    "FileName": "dotNETConf/2018/Technical/Decks/5 Azure Services Every .NET Developer Needs to Know.pptx",
+    "FileSizeBefore": 2965201,
+    "FileSizeAfter": 1508582,
+    "Compression": 49.123786212131996
+  },
+  {
+    "FileName": "dotNETConf/2019/Technical/Async Streams in the Real World.pptx",
+    "FileSizeBefore": 2900902,
+    "FileSizeAfter": 1475933,
+    "Compression": 49.12158356262983
+  },
+  {
+    "FileName": "dotNETConf/2018/Technical/Decks/What\u0027s new with F# 4.5.pptx",
+    "FileSizeBefore": 2963144,
+    "FileSizeAfter": 1525028,
+    "Compression": 48.53344960622906
+  },
+  {
+    "FileName": "dotNETConf/2019/Technical/PlayFab \u002B Azure Functions \u002B Visual Studio Code = Crazy Awesome Games!.pptx",
+    "FileSizeBefore": 2963316,
+    "FileSizeAfter": 1528569,
+    "Compression": 48.41694237131646
+  },
+  {
+    "FileName": "dotNETConf/2018/Technical/DotnetConf2018_PresentationTemplate.pptx",
+    "FileSizeBefore": 2993737,
+    "FileSizeAfter": 1549120,
+    "Compression": 48.25463960261038
+  },
+  {
+    "FileName": "dotNETConf/2018/Technical/Decks/Entity Framework Core 2.2 and beyond.pptx",
+    "FileSizeBefore": 3031543,
+    "FileSizeAfter": 1586344,
+    "Compression": 47.67206006974006
+  },
+  {
+    "FileName": "dotNETConf/2019/Technical/Azure Services Every .NET Developer Needs to Know.pptx",
+    "FileSizeBefore": 4182563,
+    "FileSizeAfter": 2213236,
+    "Compression": 47.08421606560379
+  },
+  {
+    "FileName": "dotNETConf/2019/Technical/Diagnostics Improvements in .NET Core 3.0.pptx",
+    "FileSizeBefore": 3066913,
+    "FileSizeAfter": 1624761,
+    "Compression": 47.022918485134724
+  },
+  {
+    "FileName": "dotNETConf/2018/Technical/Decks/What\u0027s new in ASP.NET Core.pptx",
+    "FileSizeBefore": 3122390,
+    "FileSizeAfter": 1659612,
+    "Compression": 46.84802346920148
+  },
+  {
+    "FileName": "dotNETConf/2018/Technical/Decks/Blazor_Modern Web development with .NET and WebAssembly.pptx",
+    "FileSizeBefore": 3186823,
+    "FileSizeAfter": 1700730,
+    "Compression": 46.632429852552214
+  },
+  {
+    "FileName": "dotNETConf/2018/Technical/Decks/Building resilient microservices with .NET on Azure Service Fabric.pptx",
+    "FileSizeBefore": 3145185,
+    "FileSizeAfter": 1679956,
+    "Compression": 46.58641701521532
+  },
+  {
+    "FileName": "dotNETConf/2019/Technical/Modernizing .NET Desktop Applications with .NET Core.pptx",
+    "FileSizeBefore": 3094506,
+    "FileSizeAfter": 1657360,
+    "Compression": 46.441855339753744
+  },
+  {
+    "FileName": "dotNETConf/2019/Technical/How To Integrate ML.NET with a Chat Bot.pptx",
+    "FileSizeBefore": 3128672,
+    "FileSizeAfter": 1681401,
+    "Compression": 46.25831662762987
+  },
+  {
+    "FileName": "dsyme-fsharp/2011-01-25-padl-async/Async-v3.pptx",
+    "FileSizeBefore": 7062852,
+    "FileSizeAfter": 3843925,
+    "Compression": 45.57545592063943
+  },
+  {
+    "FileName": "dotNETConf/2018/Technical/Decks/Whats Coming to Csharp.pptx",
+    "FileSizeBefore": 3268850,
+    "FileSizeAfter": 1789453,
+    "Compression": 45.257414687122385
+  },
+  {
+    "FileName": "dotNETConf/2019/Technical/Death to SQL Server! Long live SQL Server! How containerized SQL Server makes development easier.pptx",
+    "FileSizeBefore": 3249811,
+    "FileSizeAfter": 1793396,
+    "Compression": 44.81537541721657
+  },
+  {
+    "FileName": "dotNETConf/2018/Technical/Decks/Build Great Libraries using .NET Standard.pptx",
+    "FileSizeBefore": 3290616,
+    "FileSizeAfter": 1817787,
+    "Compression": 44.758458598633204
+  },
+  {
+    "FileName": "dotNETConf/2020/FocusOnBlazor/Technical/Fritz-BlazorForWebForms.pptx",
+    "FileSizeBefore": 3397643,
+    "FileSizeAfter": 1881598,
+    "Compression": 44.62049132295535
+  },
+  {
+    "FileName": "dl-tutorials/ppts/Week9f Word2Vec.pptx",
+    "FileSizeBefore": 2579901,
+    "FileSizeAfter": 1448640,
+    "Compression": 43.84900815961543
+  },
+  {
+    "FileName": "dotNETConf/2019/Technical/What\u0027s New in SignalR with .NET Core 3.0.pptx",
+    "FileSizeBefore": 3435372,
+    "FileSizeAfter": 1947033,
+    "Compression": 43.32395443637545
+  },
+  {
+    "FileName": "dotNETConf/2019/Technical/Awesome games with .NET, Visual Studio 2019 and Unity 2019.pptx",
+    "FileSizeBefore": 3538830,
+    "FileSizeAfter": 2042531,
+    "Compression": 42.28230799445014
+  },
+  {
+    "FileName": "dotNETConf/2019/Technical/Tour around XAML tools in VS 2019 for WPF and UWP.pptx",
+    "FileSizeBefore": 3580318,
+    "FileSizeAfter": 2086302,
+    "Compression": 41.72858388556547
+  },
+  {
+    "FileName": "dotNETConf/2018/Technical/Decks/Make Games with .NET using Visual Studio, Unity, and PlayFab.pptx",
+    "FileSizeBefore": 3675360,
+    "FileSizeAfter": 2154709,
+    "Compression": 41.374205520003486
+  },
+  {
+    "FileName": "dotNETConf/2018/Technical/Decks/Visual Studio for Mac Tips \u0026 Tricks.pptx",
+    "FileSizeBefore": 3635151,
+    "FileSizeAfter": 2140295,
+    "Compression": 41.122253243400344
+  },
+  {
+    "FileName": "dotNETConf/2019/Technical/What\u0027s New in F#.pptx",
+    "FileSizeBefore": 3630706,
+    "FileSizeAfter": 2150909,
+    "Compression": 40.757830570693415
+  },
+  {
+    "FileName": "dotNETConf/2018/Technical/Decks/DotNetDevOps.pptx",
+    "FileSizeBefore": 14964636,
+    "FileSizeAfter": 8936843,
+    "Compression": 40.28025138733745
+  },
+  {
+    "FileName": "dotNETConf/2019/Technical/ASP.NET Core Health Checks.pptx",
+    "FileSizeBefore": 3967395,
+    "FileSizeAfter": 2396625,
+    "Compression": 39.59197407870908
+  },
+  {
+    "FileName": "dotNETConf/2019/Technical/Indexing and searching NuGet.org with Azure Functions and Search.pptx",
+    "FileSizeBefore": 3924559,
+    "FileSizeAfter": 2415813,
+    "Compression": 38.44370794272681
+  },
+  {
+    "FileName": "dotNETConf/2019/Technical/Blazor and Azure Functions for Serverless Websites.pptx",
+    "FileSizeBefore": 4338025,
+    "FileSizeAfter": 2709434,
+    "Compression": 37.542222555195046
+  },
+  {
+    "FileName": "dotNETConf/2019/Technical/Overview On Apriori Machine Learning Algorithm.pptx",
+    "FileSizeBefore": 3870069,
+    "FileSizeAfter": 2424135,
+    "Compression": 37.36196951527221
+  },
+  {
+    "FileName": "dotNETConf/2019/Technical/Tips and Tricks for .NET Debugging in Visual Studio.pptx",
+    "FileSizeBefore": 4618627,
+    "FileSizeAfter": 3033868,
+    "Compression": 34.31234000927115
+  },
+  {
+    "FileName": "dsyme-fsharp/2011-09-15-build/SAC-904T_Syme.pptx",
+    "FileSizeBefore": 2885593,
+    "FileSizeAfter": 1915342,
+    "Compression": 33.623972611522134
+  },
+  {
+    "FileName": "dotNETConf/2019/Technical/Bringing Big Data Analytics through Apache Spark to .NET.pptx",
+    "FileSizeBefore": 4916927,
+    "FileSizeAfter": 3269501,
+    "Compression": 33.50519541982218
+  },
+  {
+    "FileName": "dotNETConf/2019/Technical/dotNETConf2019_Keynote.pptx",
+    "FileSizeBefore": 5214663,
+    "FileSizeAfter": 3479443,
+    "Compression": 33.27578407271956
+  },
+  {
+    "FileName": "dotNETConf/2019/Technical/Build Amazing Cloud Connected Apps With Xamarin, Azure, and App Center.pptx",
+    "FileSizeBefore": 6897512,
+    "FileSizeAfter": 4647007,
+    "Compression": 32.62777940799523
+  },
+  {
+    "FileName": "dotNETConf/2019/Technical/The Future of Blazor on the Client.pptx",
+    "FileSizeBefore": 4590470,
+    "FileSizeAfter": 3144567,
+    "Compression": 31.497929405921397
+  },
+  {
+    "FileName": "dotNETConf/2019/Technical/ABP.IO Open Source Web Application Framework for ASP.NET Core 3.0.pptx",
+    "FileSizeBefore": 6060594,
+    "FileSizeAfter": 4411677,
+    "Compression": 27.207184642297438
+  },
+  {
+    "FileName": "dotNETConf/2018/Technical/Decks/A lap around docs.microsoft.com.pptx",
+    "FileSizeBefore": 6436299,
+    "FileSizeAfter": 4707650,
+    "Compression": 26.85781067660157
+  },
+  {
+    "FileName": "dotNETConf/2018/Technical/Decks/.NET Core Microservice Development Made Easy with Azure Dev Spaces.pptx",
+    "FileSizeBefore": 5507273,
+    "FileSizeAfter": 4044835,
+    "Compression": 26.55466689230768
+  },
+  {
+    "FileName": "dotNETConf/2018/Technical/Decks/Complete Awesomeness for Mobile .NET Developers.pptx",
+    "FileSizeBefore": 16236376,
+    "FileSizeAfter": 11931967,
+    "Compression": 26.510897505699546
+  },
+  {
+    "FileName": "dl-tutorials/ppts/Week3b AlphaGo.pptx",
+    "FileSizeBefore": 9079692,
+    "FileSizeAfter": 6799229,
+    "Compression": 25.11608323277926
+  },
+  {
+    "FileName": "dotNETConf/2019/Technical/DotNet conf InnerSourcing and Opensourcing.pptx",
+    "FileSizeBefore": 20836851,
+    "FileSizeAfter": 15649906,
+    "Compression": 24.893132844305505
+  },
+  {
+    "FileName": "dsyme-fsharp/2007-07-06-dublin/APGAdCenter.pptx",
+    "FileSizeBefore": 1457603,
+    "FileSizeAfter": 1125659,
+    "Compression": 22.773279143909555
+  },
+  {
+    "FileName": "dl-tutorials/ppts/Week6a Residual Networks and Analysis.pptx",
+    "FileSizeBefore": 6259336,
+    "FileSizeAfter": 4859253,
+    "Compression": 22.36791570224062
+  },
+  {
+    "FileName": "dsyme-fsharp/2015-11-11-future-decoded/fsharp-community-cloud-v3.pptx",
+    "FileSizeBefore": 16772724,
+    "FileSizeAfter": 13111521,
+    "Compression": 21.828314828289074
+  },
+  {
+    "FileName": "dl-tutorials/ppts/Week4a Optimizaiton methods.pptx",
+    "FileSizeBefore": 15002134,
+    "FileSizeAfter": 11744409,
+    "Compression": 21.715077334997808
+  },
+  {
+    "FileName": "dsyme-fsharp/2016-01-14-ndclondon/fsharp-community-cloud-v3.pptx",
+    "FileSizeBefore": 17662180,
+    "FileSizeAfter": 13901872,
+    "Compression": 21.290169163715916
+  },
+  {
+    "FileName": "dotNETConf/2019/Technical/AppInsights-.NET Conf.pptx",
+    "FileSizeBefore": 8797737,
+    "FileSizeAfter": 6952332,
+    "Compression": 20.975905508427907
+  },
+  {
+    "FileName": "dotNETConf/2019/Technical/DevOps for the .NET Developer.pptx",
+    "FileSizeBefore": 8369447,
+    "FileSizeAfter": 6642605,
+    "Compression": 20.632689352116095
+  },
+  {
+    "FileName": "dotNETConf/2018/Technical/Decks/Latest Productivity Updates in VS 2017 Update 15.8.pptx",
+    "FileSizeBefore": 44063513,
+    "FileSizeAfter": 35083072,
+    "Compression": 20.3806741418915
+  },
+  {
+    "FileName": "dsyme-fsharp/2016-07-11-fringe/fsharp-relaxation-given.pptx",
+    "FileSizeBefore": 19646522,
+    "FileSizeAfter": 15648644,
+    "Compression": 20.349036842246175
+  },
+  {
+    "FileName": "dotNETConf/2020/FocusOnBlazor/Technical/Roth-Welcome-to-Blazor.pptx",
+    "FileSizeBefore": 8862827,
+    "FileSizeAfter": 7121718,
+    "Compression": 19.64507487283685
+  },
+  {
+    "FileName": "dotNETConf/2018/Technical/Decks/Azure Durable Functions for Serverless .NET Orchestration.pptx",
+    "FileSizeBefore": 11489689,
+    "FileSizeAfter": 9251143,
+    "Compression": 19.483086095715908
+  },
+  {
+    "FileName": "dsyme-fsharp/2007-09-18-nextgen/fsharp-v2.pptx",
+    "FileSizeBefore": 2004288,
+    "FileSizeAfter": 1627897,
+    "Compression": 18.779287208225565
+  },
+  {
+    "FileName": "dotNETConf/2019/Technical/Building Full-stack C# Web Apps with Blazor in .NET Core 3.0.pptx",
+    "FileSizeBefore": 9177278,
+    "FileSizeAfter": 7519904,
+    "Compression": 18.059537915272916
+  },
+  {
+    "FileName": "dsyme-fsharp/2010-03-04-csharp-design/EST-Intro.pptx",
+    "FileSizeBefore": 291783,
+    "FileSizeAfter": 243915,
+    "Compression": 16.405342326317847
+  },
+  {
+    "FileName": "dsyme-fsharp/2009-11-11-teched-europe/DEV306_TechEd09_Europe-given-redist.pptx",
+    "FileSizeBefore": 736641,
+    "FileSizeAfter": 616317,
+    "Compression": 16.334143768810044
+  },
+  {
+    "FileName": "dsyme-fsharp/2011-10-25-iswc/iswc-v1.pptx",
+    "FileSizeBefore": 2909145,
+    "FileSizeAfter": 2442395,
+    "Compression": 16.044232927544005
+  },
+  {
+    "FileName": "dl-tutorials/ppts/Week2d MNIST (basic_mnist).pptx",
+    "FileSizeBefore": 1504241,
+    "FileSizeAfter": 1270708,
+    "Compression": 15.524972394716006
+  },
+  {
+    "FileName": "dsyme-fsharp/2011-10-14-fpday/fsharp-fpday-4.pptx",
+    "FileSizeBefore": 3704987,
+    "FileSizeAfter": 3184554,
+    "Compression": 14.046823915981351
+  },
+  {
+    "FileName": "dotNETConf/2019/Technical/Whats new in ML.NET (.NET Conf 2019).pptx",
+    "FileSizeBefore": 18087375,
+    "FileSizeAfter": 15608986,
+    "Compression": 13.702314459671456
+  },
+  {
+    "FileName": "dl-tutorials/ppts/Week6b Weakly supervised localization.pptx",
+    "FileSizeBefore": 37566765,
+    "FileSizeAfter": 32461124,
+    "Compression": 13.590845525293433
+  },
+  {
+    "FileName": "dl-tutorials/ppts/Week1e Introduction to CNNs (AlexNet).pptx",
+    "FileSizeBefore": 13438078,
+    "FileSizeAfter": 11629080,
+    "Compression": 13.461731655375122
+  },
+  {
+    "FileName": "dl-tutorials/ppts/Week2b Modern CNNs.pptx",
+    "FileSizeBefore": 13464491,
+    "FileSizeAfter": 11664181,
+    "Compression": 13.3707987921712
+  },
+  {
+    "FileName": "dsyme-fsharp/2012-06-26-screencasts/screencast-2.pptx",
+    "FileSizeBefore": 5302888,
+    "FileSizeAfter": 4598299,
+    "Compression": 13.286891972826883
+  },
+  {
+    "FileName": "dl-tutorials/ppts/Week8b Deep reinforcement learning.pptx",
+    "FileSizeBefore": 6267336,
+    "FileSizeAfter": 5439711,
+    "Compression": 13.205371468834604
+  },
+  {
+    "FileName": "dsyme-fsharp/2010-01-26-berkeley/FSharp-berkeley-redist.pptx",
+    "FileSizeBefore": 518970,
+    "FileSizeAfter": 451554,
+    "Compression": 12.990346262789757
+  },
+  {
+    "FileName": "dsyme-fsharp/2007-10-01-icfp/apats-icfp-v3.pptx",
+    "FileSizeBefore": 149800,
+    "FileSizeAfter": 130426,
+    "Compression": 12.93324432576769
+  },
+  {
+    "FileName": "dsyme-fsharp/2011-06-28-ucl-algo/fsharp-ucl-algo-redist-v2.pptx",
+    "FileSizeBefore": 4503099,
+    "FileSizeAfter": 3925071,
+    "Compression": 12.836226785153958
+  },
+  {
+    "FileName": "dl-tutorials/ppts/Week1f Basics of Python (basic_python).pptx",
+    "FileSizeBefore": 3525937,
+    "FileSizeAfter": 3079116,
+    "Compression": 12.672404526796706
+  },
+  {
+    "FileName": "dsyme-fsharp/2007-03-23-epfl-apats/apats-epfl.pptx",
+    "FileSizeBefore": 155276,
+    "FileSizeAfter": 136025,
+    "Compression": 12.397923697158609
+  },
+  {
+    "FileName": "dsyme-fsharp/2012-11-15-facebook/fsharp-3.0-information-rich.pptx",
+    "FileSizeBefore": 8681708,
+    "FileSizeAfter": 7619588,
+    "Compression": 12.233998194825258
+  },
+  {
+    "FileName": "dsyme-fsharp/2012-11-16-google/fsharp-3.0-information-rich.pptx",
+    "FileSizeBefore": 8670463,
+    "FileSizeAfter": 7615697,
+    "Compression": 12.165048164094582
+  },
+  {
+    "FileName": "dsyme-fsharp/2012-10-18-monkeyspace/fsharp-3.0-information-rich.pptx",
+    "FileSizeBefore": 8811811,
+    "FileSizeAfter": 7743601,
+    "Compression": 12.12247970366137
+  },
+  {
+    "FileName": "dl-tutorials/ppts/Week8d Implementing RNN in TF1-0-1.pptx",
+    "FileSizeBefore": 10127631,
+    "FileSizeAfter": 8933974,
+    "Compression": 11.786142287372043
+  },
+  {
+    "FileName": "dotNETConf/2019/Technical/What\u2019s New in C#8.0  Part 1 Nullable Reference Types.pptx",
+    "FileSizeBefore": 12123320,
+    "FileSizeAfter": 10701378,
+    "Compression": 11.728981830059753
+  },
+  {
+    "FileName": "dl-tutorials/ppts/Week10e Implementing DCGAN.pptx",
+    "FileSizeBefore": 899182,
+    "FileSizeAfter": 794615,
+    "Compression": 11.629125138181147
+  },
+  {
+    "FileName": "dsyme-fsharp/2011-11-15-dutch-ict/dutch-ict-v2.pptx",
+    "FileSizeBefore": 4168627,
+    "FileSizeAfter": 3686121,
+    "Compression": 11.574698335926913
+  },
+  {
+    "FileName": "dsyme-fsharp/2012-04-22-quant-workshop/fp-success-v2-redist.pptx",
+    "FileSizeBefore": 6800604,
+    "FileSizeAfter": 6030290,
+    "Compression": 11.3271409421869
+  },
+  {
+    "FileName": "dsyme-fsharp/2012-07-16-faculty-summit/slides-v1.pptx",
+    "FileSizeBefore": 6272979,
+    "FileSizeAfter": 5569395,
+    "Compression": 11.216106414512147
+  },
+  {
+    "FileName": "dsyme-fsharp/2012-05-03-inf-rich-workshop/inf-rich-workshop-dsyme-redist.pptx",
+    "FileSizeBefore": 5528816,
+    "FileSizeAfter": 4917667,
+    "Compression": 11.053885678235629
+  },
+  {
+    "FileName": "dsyme-fsharp/2012-11-01-prog-fsharp/fp-success-v3.pptx",
+    "FileSizeBefore": 7149934,
+    "FileSizeAfter": 6365128,
+    "Compression": 10.976409013006274
+  },
+  {
+    "FileName": "dsyme-fsharp/2012-05-28-net-tutorials/fp-success-v3.pptx",
+    "FileSizeBefore": 8363180,
+    "FileSizeAfter": 7448571,
+    "Compression": 10.936139124113076
+  },
+  {
+    "FileName": "dsyme-fsharp/2012-06-28-pisa/fp-success-v3-redist.pptx",
+    "FileSizeBefore": 8791968,
+    "FileSizeAfter": 7830984,
+    "Compression": 10.93024906369086
+  },
+  {
+    "FileName": "dsyme-fsharp/2009-10-05-jaoo-session/FSharp Intro redist.pptx",
+    "FileSizeBefore": 765184,
+    "FileSizeAfter": 682521,
+    "Compression": 10.803022540983607
+  },
+  {
+    "FileName": "dsyme-fsharp/2016-03-04-fsharpconf/fsharpconf-intro-mini.pptx",
+    "FileSizeBefore": 9970020,
+    "FileSizeAfter": 8899619,
+    "Compression": 10.73619711896265
+  },
+  {
+    "FileName": "dl-tutorials/ppts/Week3c TensorFlow101 (basic_tensorflow).pptx",
+    "FileSizeBefore": 1798747,
+    "FileSizeAfter": 1605932,
+    "Compression": 10.719406342303838
+  },
+  {
+    "FileName": "dsyme-fsharp/2012-06-05-new-york/fp-success-v3-redist.pptx",
+    "FileSizeBefore": 7668394,
+    "FileSizeAfter": 6848673,
+    "Compression": 10.689604629078788
+  },
+  {
+    "FileName": "dl-tutorials/ppts/Week4d Generate your own dataset (basic_gendataset).pptx",
+    "FileSizeBefore": 2650672,
+    "FileSizeAfter": 2367430,
+    "Compression": 10.68566763447156
+  },
+  {
+    "FileName": "dsyme-fsharp/2011-03-29-techdays-sweden/fsharp-techdays-sweden-don-dsyme-redist.pptx",
+    "FileSizeBefore": 8803045,
+    "FileSizeAfter": 7890668,
+    "Compression": 10.364334159373263
+  },
+  {
+    "FileName": "dsyme-fsharp/2012-10-02-sap-research/sap-v2-redist.pptx",
+    "FileSizeBefore": 6401651,
+    "FileSizeAfter": 5743057,
+    "Compression": 10.287877299152985
+  },
+  {
+    "FileName": "dsyme-fsharp/2012-03-23-nicta/nicta-v4-redist.pptx",
+    "FileSizeBefore": 6128062,
+    "FileSizeAfter": 5500375,
+    "Compression": 10.242830441336919
+  },
+  {
+    "FileName": "dl-tutorials/ppts/Week4b Restricted Boltzmann machine.pptx",
+    "FileSizeBefore": 5102255,
+    "FileSizeAfter": 4595369,
+    "Compression": 9.93454854765197
+  },
+  {
+    "FileName": "dl-tutorials/ppts/Week9e Implementing Hangul-RNN.pptx",
+    "FileSizeBefore": 5627040,
+    "FileSizeAfter": 5070029,
+    "Compression": 9.898827802894594
+  },
+  {
+    "FileName": "dsyme-fsharp/2008-05-28-jaoo-brisbane/FSharp Intro v2 redist.pptx",
+    "FileSizeBefore": 1084996,
+    "FileSizeAfter": 978422,
+    "Compression": 9.822524691335268
+  },
+  {
+    "FileName": "dsyme-fsharp/2008-06-18-wg28/talk-v4.pptx",
+    "FileSizeBefore": 302106,
+    "FileSizeAfter": 273035,
+    "Compression": 9.622781407850225
+  },
+  {
+    "FileName": "dotNETConf/2018/Technical/Decks/Artificial Intelligence and Machine Learning for Every .NET Developer.pptx",
+    "FileSizeBefore": 23284287,
+    "FileSizeAfter": 21060405,
+    "Compression": 9.55099892043076
+  },
+  {
+    "FileName": "dsyme-fsharp/2010-10-29-pdc10/type-providers-one-minute.pptx",
+    "FileSizeBefore": 3779702,
+    "FileSizeAfter": 3424009,
+    "Compression": 9.41060961948852
+  },
+  {
+    "FileName": "dsyme-fsharp/2007-07-06-dublin/fsharp-at-dublin.pptx",
+    "FileSizeBefore": 2514702,
+    "FileSizeAfter": 2287508,
+    "Compression": 9.034629152877757
+  },
+  {
+    "FileName": "dsyme-fsharp/2010-03-17-sdc-sweden/FSharp-sdc.pptx",
+    "FileSizeBefore": 2153077,
+    "FileSizeAfter": 1959623,
+    "Compression": 8.985001465344714
+  },
+  {
+    "FileName": "dotNETConf/2019/Technical/My House Runs .NET.pptx",
+    "FileSizeBefore": 34745627,
+    "FileSizeAfter": 31684610,
+    "Compression": 8.809790653655494
+  },
+  {
+    "FileName": "dsyme-fsharp/2010-03-10-qcon-london/FSharp-qcon-redist.pptx",
+    "FileSizeBefore": 2126841,
+    "FileSizeAfter": 1941290,
+    "Compression": 8.724253482042146
+  },
+  {
+    "FileName": "dl-tutorials/ppts/Week5b Implementing CNN.pptx",
+    "FileSizeBefore": 6329404,
+    "FileSizeAfter": 5781229,
+    "Compression": 8.660768059678288
+  },
+  {
+    "FileName": "dsyme-fsharp/2010-02-24-imperial/FSharp-imperial-redist.pptx",
+    "FileSizeBefore": 886399,
+    "FileSizeAfter": 809800,
+    "Compression": 8.641593684108399
+  },
+  {
+    "FileName": "dl-tutorials/ppts/Week1d What we will learn.pptx",
+    "FileSizeBefore": 34904668,
+    "FileSizeAfter": 31916042,
+    "Compression": 8.562253048789922
+  },
+  {
+    "FileName": "dsyme-fsharp/2010-06-07-msrc-tab-async/AsyncRecap-v3.pptx",
+    "FileSizeBefore": 2739821,
+    "FileSizeAfter": 2517382,
+    "Compression": 8.118742063806359
+  },
+  {
+    "FileName": "dsyme-fsharp/2010-10-29-pdc10/PDC_FT_55_Syme_TypeProviders-v2.pptx",
+    "FileSizeBefore": 5085649,
+    "FileSizeAfter": 4676372,
+    "Compression": 8.047684769436506
+  },
+  {
+    "FileName": "dsyme-fsharp/2010-06-10-erlang-factory/FSharp-ef.pptx",
+    "FileSizeBefore": 1928149,
+    "FileSizeAfter": 1775220,
+    "Compression": 7.931389119824246
+  },
+  {
+    "FileName": "dsyme-fsharp/2010-11-09-berlin/DEV304_Syme.pptx",
+    "FileSizeBefore": 9354449,
+    "FileSizeAfter": 8625540,
+    "Compression": 7.792110470643434
+  },
+  {
+    "FileName": "dl-tutorials/ppts/Week5d Implementing Modern CNN.pptx",
+    "FileSizeBefore": 2902020,
+    "FileSizeAfter": 2686288,
+    "Compression": 7.433856417254188
+  },
+  {
+    "FileName": "dsyme-fsharp/2013-01-22-ddfp/themes-and-meditations.pptx",
+    "FileSizeBefore": 5408476,
+    "FileSizeAfter": 5023205,
+    "Compression": 7.12346694336815
+  },
+  {
+    "FileName": "dsyme-fsharp/2012-11-13-msr-svc/slides-v1.pptx",
+    "FileSizeBefore": 5527476,
+    "FileSizeAfter": 5136713,
+    "Compression": 7.06946534005756
+  },
+  {
+    "FileName": "dsyme-fsharp/2012-10-18-boston-fsug/slides-v1.pptx",
+    "FileSizeBefore": 5527476,
+    "FileSizeAfter": 5136713,
+    "Compression": 7.06946534005756
+  },
+  {
+    "FileName": "dl-tutorials/ppts/Week9d Implementing Word2Vec 2.pptx",
+    "FileSizeBefore": 4851777,
+    "FileSizeAfter": 4508946,
+    "Compression": 7.06609145473916
+  },
+  {
+    "FileName": "dsyme-fsharp/2013-06-12-ndc-oslo/fp-success-v3.pptx",
+    "FileSizeBefore": 12534114,
+    "FileSizeAfter": 11655832,
+    "Compression": 7.007132694022091
+  },
+  {
+    "FileName": "dsyme-fsharp/2009-03-28-york/FSharp-LOP-v2.pptx",
+    "FileSizeBefore": 1663680,
+    "FileSizeAfter": 1553286,
+    "Compression": 6.635530871321408
+  },
+  {
+    "FileName": "dl-tutorials/ppts/Week7c Using a custom dataset (git@sjchoi86-face_recognition).pptx",
+    "FileSizeBefore": 4784097,
+    "FileSizeAfter": 4475569,
+    "Compression": 6.449033119520779
+  },
+  {
+    "FileName": "dl-tutorials/ppts/Week8c Implementing RNN (rnn_mnist_simple).pptx",
+    "FileSizeBefore": 3179027,
+    "FileSizeAfter": 2974728,
+    "Compression": 6.426463191410454
+  },
+  {
+    "FileName": "dl-tutorials/ppts/Week5c Using Custom Dataset.pptx",
+    "FileSizeBefore": 4471101,
+    "FileSizeAfter": 4184543,
+    "Compression": 6.409114891388049
+  },
+  {
+    "FileName": "dsyme-fsharp/2008-05-28-jaoo-brisbane/FSharp Async Parallel.pptx",
+    "FileSizeBefore": 427272,
+    "FileSizeAfter": 399944,
+    "Compression": 6.3959257802992004
+  },
+  {
+    "FileName": "dsyme-fsharp/2010-06-21-lqg/FSharp-lqg.pptx",
+    "FileSizeBefore": 2200670,
+    "FileSizeAfter": 2062528,
+    "Compression": 6.277270104104659
+  },
+  {
+    "FileName": "dsyme-fsharp/2014-03-23-ucl-fp-workshop/workshop-fp-v1-redist.pptx",
+    "FileSizeBefore": 9776681,
+    "FileSizeAfter": 9177509,
+    "Compression": 6.12858290047512
+  },
+  {
+    "FileName": "dsyme-fsharp/2014-03-23-ucl-fp-workshop/workshop-fp-v1.pptx",
+    "FileSizeBefore": 9779735,
+    "FileSizeAfter": 9180558,
+    "Compression": 6.126720202541275
+  },
+  {
+    "FileName": "dsyme-fsharp/2009-03-24-chalmers/FSharp Impromptu.pptx",
+    "FileSizeBefore": 1554201,
+    "FileSizeAfter": 1459901,
+    "Compression": 6.067426285274556
+  },
+  {
+    "FileName": "dsyme-fsharp/2010-09-09-meetup/FSharp-meetup-2010-redist.pptx",
+    "FileSizeBefore": 4087384,
+    "FileSizeAfter": 3844850,
+    "Compression": 5.9337219111294655
+  },
+  {
+    "FileName": "dsyme-fsharp/2013-09-18-nyc-tutorials/fsharp-compiler-tutorial.pptx",
+    "FileSizeBefore": 2041827,
+    "FileSizeAfter": 1927194,
+    "Compression": 5.6142366615780865
+  },
+  {
+    "FileName": "dsyme-fsharp/2013-10-16-wg28/wg28-strongly-typed-scalable-information-given.pptx",
+    "FileSizeBefore": 4011440,
+    "FileSizeAfter": 3787994,
+    "Compression": 5.570219173164749
+  },
+  {
+    "FileName": "dsyme-fsharp/2007-11-09-teched/TLA405_Parallel and Asynchronous Functional Programming on NET with FSharp-v4.pptx",
+    "FileSizeBefore": 1994248,
+    "FileSizeAfter": 1884464,
+    "Compression": 5.50503247339348
+  },
+  {
+    "FileName": "dl-tutorials/ppts/Week10d CNN finetune with VGG (use_vgg, cnn_finetune_vgg).pptx",
+    "FileSizeBefore": 13453042,
+    "FileSizeAfter": 12720860,
+    "Compression": 5.442501406001706
+  },
+  {
+    "FileName": "dsyme-fsharp/2009-03-24-sdc2009/FSharp Intro v1.pptx",
+    "FileSizeBefore": 2120087,
+    "FileSizeAfter": 2010663,
+    "Compression": 5.16129762599365
+  },
+  {
+    "FileName": "dsyme-fsharp/2009-03-25-mdcc/FSharp Intro v1.pptx",
+    "FileSizeBefore": 2113776,
+    "FileSizeAfter": 2005283,
+    "Compression": 5.132663063635882
+  },
+  {
+    "FileName": "dsyme-fsharp/2016-12-11-ctos/data-programming-cloud-nirvana-v1.pptx",
+    "FileSizeBefore": 15626170,
+    "FileSizeAfter": 14837638,
+    "Compression": 5.046226938526843
+  },
+  {
+    "FileName": "dsyme-fsharp/2009-03-25-aarhus/FSharp Overview.pptx",
+    "FileSizeBefore": 2175338,
+    "FileSizeAfter": 2068169,
+    "Compression": 4.926544748448287
+  },
+  {
+    "FileName": "dsyme-fsharp/2009-11-18-edinburgh/FSharp-DL.pptx",
+    "FileSizeBefore": 2053302,
+    "FileSizeAfter": 1958767,
+    "Compression": 4.604047529296714
+  },
+  {
+    "FileName": "dsyme-fsharp/2019-10-15-girl-geek-sydney/fsharp-community.pptx",
+    "FileSizeBefore": 4591276,
+    "FileSizeAfter": 4388877,
+    "Compression": 4.408338771182565
+  },
+  {
+    "FileName": "dotNETConf/2019/Technical/2019_09_23_DotnetConf2019_XamarinProductiveBeautiful.pptx",
+    "FileSizeBefore": 90412517,
+    "FileSizeAfter": 86482803,
+    "Compression": 4.346426944401957
+  },
+  {
+    "FileName": "dl-tutorials/ppts/Week2c ImgHandling (basic_imgprocess).pptx",
+    "FileSizeBefore": 6044277,
+    "FileSizeAfter": 5781765,
+    "Compression": 4.34314972659261
+  },
+  {
+    "FileName": "dl-tutorials/ppts/Week5a Semantic segmentations.pptx",
+    "FileSizeBefore": 19183176,
+    "FileSizeAfter": 18351485,
+    "Compression": 4.33552296032732
+  },
+  {
+    "FileName": "dl-tutorials/ppts/Week6d Implementing CAM.pptx",
+    "FileSizeBefore": 5292150,
+    "FileSizeAfter": 5063905,
+    "Compression": 4.312897404646504
+  },
+  {
+    "FileName": "dsyme-fsharp/2013-12-04-ndclondon/data-type-providers-fsharp.pptx",
+    "FileSizeBefore": 12315191,
+    "FileSizeAfter": 11799323,
+    "Compression": 4.1888753491521165
+  },
+  {
+    "FileName": "dsyme-fsharp/2014-03-28-CIFEr/finance-data-v2-redist.pptx",
+    "FileSizeBefore": 14949605,
+    "FileSizeAfter": 14329238,
+    "Compression": 4.149721681609648
+  },
+  {
+    "FileName": "dsyme-fsharp/2014-03-18-royalh/rh-strongly-typed-scalable-information-v2.pptx",
+    "FileSizeBefore": 6830211,
+    "FileSizeAfter": 6551987,
+    "Compression": 4.073431992071694
+  },
+  {
+    "FileName": "dsyme-fsharp/2014-01-29-ucl/finance-data-v2-redist.pptx",
+    "FileSizeBefore": 12220054,
+    "FileSizeAfter": 11729957,
+    "Compression": 4.010596025189414
+  },
+  {
+    "FileName": "dsyme-fsharp/2010-10-20-splash/FSharp-splash-redist.pptx",
+    "FileSizeBefore": 3566321,
+    "FileSizeAfter": 3424024,
+    "Compression": 3.9900222105637715
+  },
+  {
+    "FileName": "dsyme-fsharp/2013-10-16-wg28/wg28-strongly-typed-scalable-information.pptx",
+    "FileSizeBefore": 10903424,
+    "FileSizeAfter": 10474452,
+    "Compression": 3.934287064320346
+  },
+  {
+    "FileName": "dsyme-fsharp/2013-05-15-ucam-seminar/ucam-strongly-typed-scalable-information.pptx",
+    "FileSizeBefore": 10847797,
+    "FileSizeAfter": 10421722,
+    "Compression": 3.927756022720558
+  },
+  {
+    "FileName": "dsyme-fsharp/2015-06-22-pisa-seminar/fsharp-relaxation-given.pptx",
+    "FileSizeBefore": 8203820,
+    "FileSizeAfter": 7894427,
+    "Compression": 3.77132847868432
+  },
+  {
+    "FileName": "dsyme-fsharp/2015-06-19-keynote/fsharp-relaxation-given.pptx",
+    "FileSizeBefore": 8204485,
+    "FileSizeAfter": 7895090,
+    "Compression": 3.7710471772451286
+  },
+  {
+    "FileName": "dsyme-fsharp/2013-11-25-fsharp-in-finance/fp-success-v4.pptx",
+    "FileSizeBefore": 8562783,
+    "FileSizeAfter": 8244046,
+    "Compression": 3.722352884570355
+  },
+  {
+    "FileName": "dsyme-fsharp/2014-01-29-ucl/finance-data-v2.pptx",
+    "FileSizeBefore": 14750484,
+    "FileSizeAfter": 14202211,
+    "Compression": 3.716983117299744
+  },
+  {
+    "FileName": "dsyme-fsharp/2017-10-oxford/fsharp-relaxation-given.pptx",
+    "FileSizeBefore": 8904158,
+    "FileSizeAfter": 8576603,
+    "Compression": 3.67867461471371
+  },
+  {
+    "FileName": "dsyme-fsharp/2015-07-08-summer-school/summer-school-1.pptx",
+    "FileSizeBefore": 12093165,
+    "FileSizeAfter": 11657453,
+    "Compression": 3.6029608460646987
+  },
+  {
+    "FileName": "dl-tutorials/ppts/Week9b Handwrting Generation.pptx",
+    "FileSizeBefore": 1599564,
+    "FileSizeAfter": 1543358,
+    "Compression": 3.513832519361526
+  },
+  {
+    "FileName": "dsyme-fsharp/2019-10-18-ndc-sydney/fsharp-code-i-love-ndc-sydney.pptx",
+    "FileSizeBefore": 18283001,
+    "FileSizeAfter": 17648434,
+    "Compression": 3.470803288803627
+  },
+  {
+    "FileName": "dsyme-fsharp/2018-09-05-exf-meetup/exf-meetup.pptx",
+    "FileSizeBefore": 6500551,
+    "FileSizeAfter": 6276732,
+    "Compression": 3.4430773637496266
+  },
+  {
+    "FileName": "dsyme-fsharp/2019-02-20-lambdadays/fsharp-code-i-love-lambdadays-given.pptx",
+    "FileSizeBefore": 18705563,
+    "FileSizeAfter": 18071620,
+    "Compression": 3.3890613182826947
+  },
+  {
+    "FileName": "dsyme-fsharp/2018-09-27-openfsharp-code-I-love/fsharp-code-i-love-openfsharp.pptx",
+    "FileSizeBefore": 17174317,
+    "FileSizeAfter": 16593006,
+    "Compression": 3.3847692458454097
+  },
+  {
+    "FileName": "dsyme-fsharp/2018-05-05-code-i-love/fsharp-code-i-love.pptx",
+    "FileSizeBefore": 11902632,
+    "FileSizeAfter": 11504690,
+    "Compression": 3.343310958450198
+  },
+  {
+    "FileName": "dsyme-fsharp/2018-11-08-codemesh/fsharp-code-i-love-codemesh.pptx",
+    "FileSizeBefore": 17649477,
+    "FileSizeAfter": 17060814,
+    "Compression": 3.335299963845954
+  },
+  {
+    "FileName": "dsyme-fsharp/2014-03-18-royalh/rh-strongly-typed-scalable-information.pptx",
+    "FileSizeBefore": 12620420,
+    "FileSizeAfter": 12200347,
+    "Compression": 3.3285183852835325
+  },
+  {
+    "FileName": "dotNETConf/2020/FocusOnXamarin/Technical/SweekySatpathy-XamarinPerformant.pptx",
+    "FileSizeBefore": 50831218,
+    "FileSizeAfter": 49157221,
+    "Compression": 3.293245894678345
+  },
+  {
+    "FileName": "dsyme-fsharp/2014-03-28-CIFEr/finance-data-v2.pptx",
+    "FileSizeBefore": 16236340,
+    "FileSizeAfter": 15704673,
+    "Compression": 3.274549559814589
+  },
+  {
+    "FileName": "dsyme-fsharp/2018-09-27-openfsharp-code-I-love/fsharp-code-i-love.pptx",
+    "FileSizeBefore": 11781485,
+    "FileSizeAfter": 11396574,
+    "Compression": 3.267083903260073
+  },
+  {
+    "FileName": "dsyme-fsharp/2018-04-05-fsharpx/fsharp-code-i-love-given.pptx",
+    "FileSizeBefore": 11602818,
+    "FileSizeAfter": 11227905,
+    "Compression": 3.231223656184213
+  },
+  {
+    "FileName": "dsyme-fsharp/2018-05-25-malaga/fsharp-relaxation.pptx",
+    "FileSizeBefore": 12611044,
+    "FileSizeAfter": 12217089,
+    "Compression": 3.1238888707390124
+  },
+  {
+    "FileName": "dsyme-fsharp/2018-11-29-imperial/fsharp-relaxation.pptx",
+    "FileSizeBefore": 12653084,
+    "FileSizeAfter": 12258721,
+    "Compression": 3.116734228588066
+  },
+  {
+    "FileName": "dl-tutorials/ppts/Week1b Course introduction.pptx",
+    "FileSizeBefore": 14405355,
+    "FileSizeAfter": 13957585,
+    "Compression": 3.1083579682694387
+  },
+  {
+    "FileName": "dsyme-fsharp/2013-04-13-data-hackathon/fsharp-data-science-redist.pptx",
+    "FileSizeBefore": 9782131,
+    "FileSizeAfter": 9479345,
+    "Compression": 3.0952969245658233
+  },
+  {
+    "FileName": "dsyme-fsharp/2013-04-13-data-hackathon/fsharp-data-science-given.pptx",
+    "FileSizeBefore": 9786378,
+    "FileSizeAfter": 9484376,
+    "Compression": 3.0859425213291374
+  },
+  {
+    "FileName": "dsyme-fsharp/2013-03-15-fp-exchange/fsharp-open-source-world-given.pptx",
+    "FileSizeBefore": 10088853,
+    "FileSizeAfter": 9782852,
+    "Compression": 3.033060348882078
+  },
+  {
+    "FileName": "dsyme-fsharp/2013-06-12-ndc-oslo/fsharp-open-source-world-given.pptx",
+    "FileSizeBefore": 10088853,
+    "FileSizeAfter": 9782852,
+    "Compression": 3.033060348882078
+  },
+  {
+    "FileName": "dsyme-fsharp/2013-09-22-ml-workshop/fsharp-open-source-world.pptx",
+    "FileSizeBefore": 9943230,
+    "FileSizeAfter": 9641869,
+    "Compression": 3.0308159421033207
+  },
+  {
+    "FileName": "dsyme-fsharp/2013-09-18-nyc-tutorials/fsharp-open-source-world.pptx",
+    "FileSizeBefore": 10497668,
+    "FileSizeAfter": 10180565,
+    "Compression": 3.020699454393109
+  },
+  {
+    "FileName": "dsyme-fsharp/2015-01-06-sydney/fsharp-relaxation.pptx",
+    "FileSizeBefore": 12570532,
+    "FileSizeAfter": 12192148,
+    "Compression": 3.010087401233297
+  },
+  {
+    "FileName": "dsyme-fsharp/2014-12-01-codemesh/fsharp-relaxation.pptx",
+    "FileSizeBefore": 12570532,
+    "FileSizeAfter": 12192148,
+    "Compression": 3.010087401233297
+  },
+  {
+    "FileName": "dsyme-fsharp/2015-04-12-plang-workshop/fsharp-relaxation-trim-given.pptx",
+    "FileSizeBefore": 14454745,
+    "FileSizeAfter": 14025435,
+    "Compression": 2.9700281810575007
+  },
+  {
+    "FileName": "dsyme-fsharp/2019-07-16-curryon-fabulous/fabulous.pptx",
+    "FileSizeBefore": 36903619,
+    "FileSizeAfter": 35844574,
+    "Compression": 2.8697591962457665
+  },
+  {
+    "FileName": "dsyme-fsharp/2019-04-05-fsharp-exchange/fsharp-exchange.pptx",
+    "FileSizeBefore": 13148123,
+    "FileSizeAfter": 12780255,
+    "Compression": 2.797874647202494
+  },
+  {
+    "FileName": "dsyme-fsharp/2019-11-19-buildstuff-kiev/functional-uis.pptx",
+    "FileSizeBefore": 38227296,
+    "FileSizeAfter": 37176184,
+    "Compression": 2.7496373272124712
+  },
+  {
+    "FileName": "dsyme-fsharp/2019-11-13-buildstuff-functional-uis/functional-uis.pptx",
+    "FileSizeBefore": 38308330,
+    "FileSizeAfter": 37256453,
+    "Compression": 2.745817946122945
+  },
+  {
+    "FileName": "dsyme-fsharp/2015-03-26-fsharp-meetup-redmond/fsharp.pptx",
+    "FileSizeBefore": 8901000,
+    "FileSizeAfter": 8659646,
+    "Compression": 2.711538029434895
+  },
+  {
+    "FileName": "dl-tutorials/ppts/Week10c Neural Style Code.pptx",
+    "FileSizeBefore": 7459914,
+    "FileSizeAfter": 7261140,
+    "Compression": 2.664561548564769
+  },
+  {
+    "FileName": "dsyme-fsharp/2015-03-11-scale/fsharp-scale-out.pptx",
+    "FileSizeBefore": 8811834,
+    "FileSizeAfter": 8579767,
+    "Compression": 2.6335834288299123
+  },
+  {
+    "FileName": "dsyme-fsharp/2015-03-25-azure-net-sdk/fsharp-scale-out.pptx",
+    "FileSizeBefore": 8816465,
+    "FileSizeAfter": 8584343,
+    "Compression": 2.632823926596431
+  },
+  {
+    "FileName": "dsyme-fsharp/2013-12-11-fsharp-in-finance/fp-success-v4-redist.pptx",
+    "FileSizeBefore": 9874133,
+    "FileSizeAfter": 9614204,
+    "Compression": 2.632423525184439
+  },
+  {
+    "FileName": "dl-tutorials/ppts/Week7a Image detection (RCNN, SPPnet, FastRCNN, FasterRCNN).pptx",
+    "FileSizeBefore": 26812277,
+    "FileSizeAfter": 26107794,
+    "Compression": 2.6274642769056875
+  },
+  {
+    "FileName": "dsyme-fsharp/2014-11-25-cph-campus-days/fsharp-magic-v1.pptx",
+    "FileSizeBefore": 13354132,
+    "FileSizeAfter": 13007696,
+    "Compression": 2.5942232711193807
+  },
+  {
+    "FileName": "dsyme-fsharp/2014-07-09-iverson/iverson-strongly-typed-scalable-information-v2.pptx",
+    "FileSizeBefore": 12368169,
+    "FileSizeAfter": 12053412,
+    "Compression": 2.544895691512624
+  },
+  {
+    "FileName": "dsyme-fsharp/2015-07-22-prez/azure-programmability-thoughts-given.pptx",
+    "FileSizeBefore": 9926544,
+    "FileSizeAfter": 9676914,
+    "Compression": 2.5147725129712817
+  },
+  {
+    "FileName": "dsyme-fsharp/2013-11-25-fsharp-in-finance/fp-success-v4-redist.pptx",
+    "FileSizeBefore": 7873384,
+    "FileSizeAfter": 7681233,
+    "Compression": 2.440513507279716
+  },
+  {
+    "FileName": "dsyme-fsharp/2011-08-20-jackhu/DEV217.pptx",
+    "FileSizeBefore": 8317344,
+    "FileSizeAfter": 8120683,
+    "Compression": 2.36446875348669
+  },
+  {
+    "FileName": "dl-tutorials/ppts/Week1a Ubuntu in VirtualBox.pptx",
+    "FileSizeBefore": 9737099,
+    "FileSizeAfter": 9512010,
+    "Compression": 2.311663874425021
+  },
+  {
+    "FileName": "dsyme-fsharp/2015-07-08-summer-school/summer-school-2.pptx",
+    "FileSizeBefore": 8722561,
+    "FileSizeAfter": 8527982,
+    "Compression": 2.230755393972023
+  },
+  {
+    "FileName": "dl-tutorials/ppts/Week3a Regulaziation.pptx",
+    "FileSizeBefore": 5261859,
+    "FileSizeAfter": 5144951,
+    "Compression": 2.221800318100504
+  },
+  {
+    "FileName": "dl-tutorials/ppts/Week9c Image Captioning.pptx",
+    "FileSizeBefore": 37656746,
+    "FileSizeAfter": 36852677,
+    "Compression": 2.1352588457855597
+  },
+  {
+    "FileName": "dsyme-fsharp/2014-04-29-copenhagen/fp-success-v4-given.pptx",
+    "FileSizeBefore": 11653074,
+    "FileSizeAfter": 11406953,
+    "Compression": 2.1120693132129773
+  },
+  {
+    "FileName": "dsyme-fsharp/2014-04-29-copenhagen/fp-success-v4.pptx",
+    "FileSizeBefore": 11660793,
+    "FileSizeAfter": 11414635,
+    "Compression": 2.110988506527815
+  },
+  {
+    "FileName": "dsyme-fsharp/2015-03-18-dotnetconf/fsharp-data-nirvana.pptx",
+    "FileSizeBefore": 8803962,
+    "FileSizeAfter": 8621314,
+    "Compression": 2.0746114079093028
+  },
+  {
+    "FileName": "dsyme-fsharp/2019-06-20-ndc-oslo-fabulous/fabulous.pptx",
+    "FileSizeBefore": 55710731,
+    "FileSizeAfter": 54601326,
+    "Compression": 1.9913667978975182
+  },
+  {
+    "FileName": "dsyme-fsharp/2019-09-27-openfsharp/lightning.pptx",
+    "FileSizeBefore": 2018509,
+    "FileSizeAfter": 1981759,
+    "Compression": 1.8206507872890336
+  },
+  {
+    "FileName": "dsyme-fsharp/2015-03-13-thessolonika/fp-success-v4-given.pptx",
+    "FileSizeBefore": 6379900,
+    "FileSizeAfter": 6275456,
+    "Compression": 1.637078951080738
+  },
+  {
+    "FileName": "dl-tutorials/ppts/Week8a Visual QnA.pptx",
+    "FileSizeBefore": 32803221,
+    "FileSizeAfter": 32366283,
+    "Compression": 1.3319972450266393
+  },
+  {
+    "FileName": "dl-tutorials/ppts/Week7b Other dections (YOLO, SSD, AttentionNet).pptx",
+    "FileSizeBefore": 48863069,
+    "FileSizeAfter": 48250279,
+    "Compression": 1.2540964219828272
+  },
+  {
+    "FileName": "dl-tutorials/ppts/Week10c Little More on GAN.pptx",
+    "FileSizeBefore": 15696800,
+    "FileSizeAfter": 15550388,
+    "Compression": 0.9327506243310738
+  },
+  {
+    "FileName": "dsyme-fsharp/2008-01-leon-bambrick/fsharp_leonb.pptx",
+    "FileSizeBefore": 2881539,
+    "FileSizeAfter": 2857850,
+    "Compression": 0.8220954149848397
+  },
+  {
+    "FileName": "dl-tutorials/ppts/Week10b Generative Adversarial Network.pptx",
+    "FileSizeBefore": 46823904,
+    "FileSizeAfter": 46467498,
+    "Compression": 0.7611625036647948
+  },
+  {
+    "FileName": "dl-tutorials/ppts/Week10a Neural Style.pptx",
+    "FileSizeBefore": 12264320,
+    "FileSizeAfter": 12183696,
+    "Compression": 0.6573866304858321
+  },
+  {
+    "FileName": "dl-tutorials/ppts/Week1c Brief Intro to deep learning and tools.pptx",
+    "FileSizeBefore": 5417017,
+    "FileSizeAfter": 5385056,
+    "Compression": 0.5900110706685986
+  }
+]

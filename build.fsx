@@ -5,7 +5,9 @@ nuget Fake.Core.Target
 nuget Fake.Core.ReleaseNotes
 nuget Fake.DotNet.Paket
 nuget Fake.DotNet.AssemblyInfoFile
-nuget Fake.DotNet.Cli //"
+nuget Fake.DotNet.Cli
+nuget Fake.Tools.Git
+nuget Fake.Api.GitHub //"
 
 #if !FAKE
 #load "./.fake/build.fsx/intellisense.fsx"
@@ -23,6 +25,8 @@ open Fake.Core.TargetOperators
 open Fake.DotNet
 open Fake.IO
 open Fake.IO.Globbing.Operators
+open Fake.Tools
+open Fake.Tools.Git
 
 let gitName = "MinMe"
 let description = "MinMe helps Office documents to lose extra weight"
@@ -48,14 +52,27 @@ Target.create "Build" (fun _ ->
     DotNet.exec id "build" "MinMe.sln -c Release" |> ignore
 )
 
+Target.create "RestoreData" (fun _ ->
+    let rootDataDir = "tests/data/"
+    [
+        "dotNETConf", "git@github.com:dotnet-presentations/dotNETConf.git"
+        "dsyme-fsharp", "git@github.com:dsyme/fsharp-presentations.git"
+        "dl-tutorials", "git@github.com:sjchoi86/dl_tutorials_10weeks.git"
+    ] 
+    |> List.iter (fun (repo, cloneUrl) ->
+        let dataDir = Path.combine rootDataDir repo
+        if not <| System.IO.Directory.Exists dataDir
+        then Repository.cloneSingleBranch "" cloneUrl "master" dataDir
+    )
+) 
+
 Target.create "RunTests" (fun _ ->
-    DotNet.test id "src/MinMe.Tests/"
+    DotNet.test id "tests/MinMe.Tests/"
 )
 
 Target.create "NuGet" (fun _ ->
     Paket.pack(fun p ->
         { p with
-
             ToolType = ToolType.CreateLocalTool()
             OutputPath = "bin"
             Version = release.NugetVersion
@@ -100,7 +117,8 @@ Target.create "All" ignore
 "Clean"
   //==> "AssemblyInfo"
   ==> "Build"
-  //==> "RunTests"
+  ==> "RestoreData"
+  ==> "RunTests"
   ==> "NuGet"
   ==> "PublishWin"
   ==> "PublishMac"
