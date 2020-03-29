@@ -55,9 +55,9 @@ Target.create "Build" (fun _ ->
 Target.create "RestoreData" (fun _ ->
     let rootDataDir = "tests/data/"
     [
-        "dotNETConf", "git@github.com:dotnet-presentations/dotNETConf.git"
-        "dsyme-fsharp", "git@github.com:dsyme/fsharp-presentations.git"
-        "dl-tutorials", "git@github.com:sjchoi86/dl_tutorials_10weeks.git"
+        "dotNETConf", "https://github.com/dotnet-presentations/dotNETConf.git"
+        "dsyme-fsharp", "https://github.com/dsyme/fsharp-presentations.git"
+        "dl-tutorials", "https://github.com/sjchoi86/dl_tutorials_10weeks.git"
     ] 
     |> List.iter (fun (repo, cloneUrl) ->
         let dataDir = Path.combine rootDataDir repo
