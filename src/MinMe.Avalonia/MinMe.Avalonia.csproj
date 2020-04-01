@@ -6,8 +6,8 @@
     <LangVersion>8</LangVersion>
     <Nullable>enable</Nullable>
     <ApplicationIcon>Assets/minme-logo.ico</ApplicationIcon>
-    <!-- <PublishTrimmed>true</PublishTrimmed>
-    <PublishReadyToRun>true</PublishReadyToRun>
+    <PublishTrimmed>true</PublishTrimmed>
+    <!-- <PublishReadyToRun>true</PublishReadyToRun>
     <PublishSingleFile>true</PublishSingleFile> -->
   </PropertyGroup>
   <ItemGroup>
