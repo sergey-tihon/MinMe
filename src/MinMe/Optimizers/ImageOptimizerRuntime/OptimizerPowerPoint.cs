@@ -15,7 +15,8 @@ namespace MinMe.Optimizers.ImageOptimizerRuntime
 {
     internal class OptimizerPowerPoint : OptimizerBase<PresentationDocument>
     {
-        public OptimizerPowerPoint(RecyclableMemoryStreamManager manager) : base(manager)
+        public OptimizerPowerPoint(RecyclableMemoryStreamManager manager, ImageOptimizerOptions options)
+            : base(manager, options)
         {
         }
 
@@ -57,15 +58,10 @@ namespace MinMe.Optimizers.ImageOptimizerRuntime
 
         protected override double GetScaleRatio(PresentationDocument document)
         {
-            var slideSize =
-                document.PresentationPart.RootElement
-                    .GetFirstChild<SlideSize>();
-            return
-                Math.Min(
-                    ImageUsageInfo.ExpectedScreenSize.Width
-                        / Converters.EmuToPt(slideSize.Cx.Value),
-                    ImageUsageInfo.ExpectedScreenSize.Height
-                        / Converters.EmuToPt(slideSize.Cy.Value));
+            var slideSize = document.PresentationPart.RootElement.GetFirstChild<SlideSize>();
+            return Math.Min(
+                Options.ExpectedScreenSize.Width / Converters.EmuToPt(slideSize.Cx.Value),
+                Options.ExpectedScreenSize.Height / Converters.EmuToPt(slideSize.Cy.Value));
         }
 
         protected override IEnumerable<ImageUsageInfo> GetImageUsageInfo(PresentationDocument document)

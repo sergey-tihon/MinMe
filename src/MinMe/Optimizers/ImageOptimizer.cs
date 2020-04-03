@@ -15,8 +15,9 @@ namespace MinMe.Optimizers
     {
         private readonly RecyclableMemoryStreamManager _manager = new RecyclableMemoryStreamManager();
 
-        public Stream Transform(string fileType, Stream stream, CancellationToken? token = null)
+        public Stream Transform(string fileType, Stream stream, ImageOptimizerOptions? options = null, CancellationToken? token = null)
         {
+            options ??= new ImageOptimizerOptions();
             var cancellationToken = token ?? CancellationToken.None;
 
             // Copy of the original stream that will be modified in-place
@@ -27,11 +28,11 @@ namespace MinMe.Optimizers
             {
                 case ".pptx":
                     memoryStream.Position = 0;
-                    TransformPptxStream(memoryStream, cancellationToken);
+                    TransformPptxStream(memoryStream, options, cancellationToken);
                     break;
                 case ".docx":
                     memoryStream.Position = 0;
-                    TransformDocxStream(memoryStream, cancellationToken);
+                    TransformDocxStream(memoryStream, options, cancellationToken);
                     break;
                 default:
                     var msg = $"ImageOptimizer cannot process {fileType}.";
@@ -49,34 +50,34 @@ namespace MinMe.Optimizers
             }
         }
 
-        private void TransformDocxStream(Stream stream, CancellationToken token)
+        private void TransformDocxStream(Stream stream, ImageOptimizerOptions options, CancellationToken token)
         {
             using var document = WordprocessingDocument.Open(stream, true);
-            var transformation = new OptimizerWord(_manager);
+            var transformation = new OptimizerWord(_manager, options);
             transformation.Transform(document, token);
 
             foreach (var part in document.MainDocumentPart.EmbeddedPackageParts)
             {
                 token.ThrowIfCancellationRequested();
-                TransformEmbeddedPart(part, token);
+                TransformEmbeddedPart(part, options, token);
             }
         }
 
-        private void TransformPptxStream(Stream stream, CancellationToken token)
+        private void TransformPptxStream(Stream stream, ImageOptimizerOptions options, CancellationToken token)
         {
             using var document = PresentationDocument.Open(stream, true);
-            var transformation = new OptimizerPowerPoint(_manager);
+            var transformation = new OptimizerPowerPoint(_manager, options);
             transformation.Transform(document, token);
 
             foreach (var slide in document.PresentationPart.SlideParts)
             foreach (var part in slide.EmbeddedPackageParts)
             {
                 token.ThrowIfCancellationRequested();
-                TransformEmbeddedPart(part, token);
+                TransformEmbeddedPart(part, options, token);
             }
         }
 
-        private void TransformEmbeddedPart(EmbeddedPackagePart part, CancellationToken token)
+        private void TransformEmbeddedPart(EmbeddedPackagePart part, ImageOptimizerOptions options, CancellationToken token)
         {
             // Read mode about office mime types: http://filext.com/faq/office_mime_types.php
             var fileType = part.ContentType
@@ -93,7 +94,7 @@ namespace MinMe.Optimizers
                 return;
             }
 
-            using var result = Transform(fileType, part.GetStream(), token);
+            using var result = Transform(fileType, part.GetStream(), options, token);
             result.Position = 0;
             part.FeedData(result);
         }

@@ -13,9 +13,6 @@ namespace MinMe.Optimizers.ImageOptimizerRuntime.Model
 {
     internal class ImageUsageInfo
     {
-        // TODO: Should be configurable
-        public static Size ExpectedScreenSize { get; } = new Size(1920, 1080);
-
         public ImageCrop? Crop { get; }
         private OpenXmlPart? Part { get; }
         private string? RelId { get; }

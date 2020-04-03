@@ -17,12 +17,17 @@ namespace MinMe.Optimizers.ImageOptimizerRuntime
     internal abstract class OptimizerBase<TDocument>
     {
         private readonly RecyclableMemoryStreamManager _manager;
+        protected readonly ImageOptimizerOptions Options;
 
-        protected OptimizerBase(RecyclableMemoryStreamManager manager) => _manager = manager;
+        protected OptimizerBase(RecyclableMemoryStreamManager manager, ImageOptimizerOptions options)
+            => (_manager, Options) = (manager, options);
 
         public void Transform(TDocument document, CancellationToken token)
         {
-            RemoveUnusedPieces(document);
+            if (Options.RemoveUnusedParts)
+            {
+                RemoveUnusedPieces(document);
+            }
 
             // Create metadata object for each image inside OpenXmlPackage
             var imagesMetadata = new Dictionary<string, ImageMetadata>();
@@ -103,7 +108,7 @@ namespace MinMe.Optimizers.ImageOptimizerRuntime
             var srcImage = LoadImage(meta.ImagePart, out var sourceFileSize);
 
             // No sense to optimize small images, it does not add much compression but can corrupt image quality
-            if (sourceFileSize <= 5 * 1024)
+            if (sourceFileSize <= Options.MinImageSizeForTransformation)
                 return;
 
             // Don't optimize image metafile
@@ -137,7 +142,7 @@ namespace MinMe.Optimizers.ImageOptimizerRuntime
                 meta.Sizes
                     .Aggregate(new Size(), Converters.Expand)
                     .Restrict(srcImage.Size) // New images cannot be larger than source one
-                    .Restrict(ImageUsageInfo.ExpectedScreenSize); // New image cannot be large than target screen size
+                    .Restrict(Options.ExpectedScreenSize); // New image cannot be large than target screen size
 
             // If we do not know image size - keep it as is
             if (newSize.Width == 0 || newSize.Height == 0)

@@ -153,6 +153,8 @@ namespace MinMe.Analyzers
                 AddUsage(layout.Uri, new Reference(slide.Uri));
                 var master = layout.SlideMasterPart;
                 AddUsage(master.Uri, new Reference(layout.Uri));
+                var theme = master.ThemePart;
+                AddUsage(theme.Uri, new Reference(master.Uri));
 
                 ProcessImages(slide);
             }
@@ -207,18 +209,6 @@ namespace MinMe.Analyzers
             }
 
             return paragraphText.ToString().Trim();
-        }
-
-        public Stream? GetThumbnail()
-        {
-            if (_document.ThumbnailPart is null)
-                return null;
-
-            var ms = new MemoryStream();
-            using var stream = _document.ThumbnailPart.GetStream();
-            stream.CopyTo(ms);
-            ms.Position = 0;
-            return ms;
         }
     }
 }

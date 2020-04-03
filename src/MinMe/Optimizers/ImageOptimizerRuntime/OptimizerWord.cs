@@ -16,7 +16,8 @@ namespace MinMe.Optimizers.ImageOptimizerRuntime
 {
     internal class OptimizerWord: OptimizerBase<WordprocessingDocument>
     {
-        public OptimizerWord(RecyclableMemoryStreamManager manager) : base(manager)
+        public OptimizerWord(RecyclableMemoryStreamManager manager, ImageOptimizerOptions options)
+            : base(manager, options)
         {
         }
 
@@ -33,10 +34,10 @@ namespace MinMe.Optimizers.ImageOptimizerRuntime
                 document.MainDocumentPart
                     .RootElement.Descendants<PageSize>()
                     .Select(size => Converters.TwipToPt((int) size.Width.Value))
-                    .Concat(new double[] {ImageUsageInfo.ExpectedScreenSize.Width})
+                    .Concat(new double[] {Options.ExpectedScreenSize.Width})
                     .Min();
 
-            return ImageUsageInfo.ExpectedScreenSize.Width / width;
+            return Options.ExpectedScreenSize.Width / width;
         }
 
         protected override IEnumerable<ImageUsageInfo> GetImageUsageInfo(WordprocessingDocument document)
