@@ -20,9 +20,6 @@
     <AvaloniaResource Include="Assets\**" />
   </ItemGroup>
   <ItemGroup>
-    <None Remove="paket.references" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\MinMe\MinMe.csproj" />
   </ItemGroup>
   <Import Project="..\..\.paket\Paket.Restore.targets" />

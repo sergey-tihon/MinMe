@@ -14,6 +14,8 @@ using Avalonia.Controls.Notifications;
 using MinMe.Optimizers;
 using Notification = Avalonia.Controls.Notifications.Notification;
 using Microsoft.Extensions.Logging;
+using System.Collections.ObjectModel;
+using System.Drawing;
 
 namespace MinMe.Avalonia.ViewModels
 {
@@ -40,10 +42,42 @@ namespace MinMe.Avalonia.ViewModels
 
             var moreThanOneSlide = _stateService.FileContentInfo.Select(x => x?.Slides?.Count > 1);
             PublishCommand = ReactiveCommand.CreateFromTask(PublishSlides, moreThanOneSlide);
+
+            PublishModes = new ObservableCollection<PublishMode> {
+                new PublishMode("2160p (4K)", new ImageOptimizerOptions() {
+                    ExpectedScreenSize = new Size(3840, 2160)
+                }),
+                new PublishMode("1080p (Full HD)", new ImageOptimizerOptions() {
+                    ExpectedScreenSize = new Size(1920, 1080)
+                }),
+                new PublishMode("720p (HD ready)", new ImageOptimizerOptions() {
+                    ExpectedScreenSize = new Size(1280, 720)
+                }),
+            };
+            SelectedMode = PublishModes[1];
+        }
+
+        public class PublishMode
+        {
+            public PublishMode(string name, ImageOptimizerOptions options) =>
+                (Name, Options) = (name, options);
+            public string Name { get; }
+            public ImageOptimizerOptions Options { get; }
+
+            public override string ToString() => Name;
         }
 
         private readonly ObservableAsPropertyHelper<FileContentInfo?> _fileContentInfo;
         public FileContentInfo? FileContentInfo => _fileContentInfo.Value;
+
+        public ObservableCollection<PublishMode> PublishModes { get; }
+
+        private PublishMode _selectedMode;
+        public PublishMode SelectedMode
+        {
+            get => _selectedMode;
+            set => this.RaiseAndSetIfChanged(ref _selectedMode, value);
+        }
 
         public ReactiveCommand<Unit, Unit> OpenCommand { get; }
         public ReactiveCommand<Unit, Unit> OptimizeCommand { get; }
@@ -143,7 +177,8 @@ namespace MinMe.Avalonia.ViewModels
             {
                 await using var originalStream = new FileStream(FileContentInfo.FileName, FileMode.Open, FileAccess.Read);
                 var extension = Path.GetExtension(FileContentInfo.FileName);
-                await using var transformedStream = new ImageOptimizer().Transform(extension, originalStream);
+                await using var transformedStream = new ImageOptimizer()
+                    .Transform(extension, originalStream, SelectedMode.Options);
 
                 if (transformedStream is { })
                 {

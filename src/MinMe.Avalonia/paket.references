@@ -5,3 +5,4 @@ Avalonia
 Avalonia.Desktop
 Avalonia.ReactiveUI
 Microsoft.Extensions.Hosting
+System.Drawing.Common
