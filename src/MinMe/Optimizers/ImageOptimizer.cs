@@ -21,7 +21,7 @@ namespace MinMe.Optimizers
             var cancellationToken = token ?? CancellationToken.None;
 
             // Copy of the original stream that will be modified in-place
-            using var memoryStream = _manager.GetStream();
+            var memoryStream = _manager.GetStream();
             stream.CopyTo(memoryStream);
 
             switch (fileType.ToLower())
@@ -42,7 +42,9 @@ namespace MinMe.Optimizers
             memoryStream.Position = 0;
             try
             {
-                return ReCompress(memoryStream, cancellationToken);
+                return options.ReZipAfterOptimization
+                    ? ReZip(memoryStream, cancellationToken)
+                    : memoryStream;
             }
             catch
             {
@@ -99,26 +101,30 @@ namespace MinMe.Optimizers
             part.FeedData(result);
         }
 
-        private Stream ReCompress(Stream stream, CancellationToken token)
+        private Stream ReZip(Stream stream, CancellationToken token)
         {
-            using var zip = new ZipArchive(stream, ZipArchiveMode.Read);
-
-            var packedStream = _manager.GetStream();
-            using (var newZip = new ZipArchive(packedStream, ZipArchiveMode.Create, true))
+            using (stream)
             {
-                foreach (var entry in zip.Entries)
+                using var zip = new ZipArchive(stream, ZipArchiveMode.Read, false);
+
+                var packedStream = _manager.GetStream();
+                using (var newZip = new ZipArchive(packedStream, ZipArchiveMode.Create, true))
                 {
-                    token.ThrowIfCancellationRequested();
+                    foreach (var entry in zip.Entries)
+                    {
+                        token.ThrowIfCancellationRequested();
 
-                    var newEntry = newZip.CreateEntry(entry.FullName, CompressionLevel.Optimal);
+                        var newEntry = newZip.CreateEntry(entry.FullName, CompressionLevel.Optimal);
 
-                    using var srcStream = entry.Open();
-                    using var dstStream = newEntry.Open();
-                    srcStream.CopyTo(dstStream);
+                        using var srcStream = entry.Open();
+                        using var dstStream = newEntry.Open();
+                        srcStream.CopyTo(dstStream);
+                    }
                 }
+
+                packedStream.Position = 0;
+                return packedStream;
             }
-            packedStream.Position = 0;
-            return packedStream;
         }
     }
 }

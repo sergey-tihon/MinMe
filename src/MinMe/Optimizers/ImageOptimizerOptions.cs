@@ -13,5 +13,7 @@ namespace MinMe.Optimizers
         public bool RemoveUnusedParts { get; set; } = true;
 
         public bool OpenXmlUriAutoRecovery { get; set; } = true;
+
+        public bool ReZipAfterOptimization { get; set; } = true;
     }
 }

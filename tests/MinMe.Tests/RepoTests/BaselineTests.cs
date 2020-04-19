@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 using MinMe.Optimizers;
 
 using NUnit.Framework;
-using NUnit.Framework.Interfaces;
 
 
 namespace MinMe.Tests.RepoTests
@@ -19,6 +18,10 @@ namespace MinMe.Tests.RepoTests
         public BaselineTests()
         {
             _imageOptimizer = new ImageOptimizer();
+            _options = new ImageOptimizerOptions
+            {
+                ReZipAfterOptimization = false
+            };
         }
 
         private const string Root = "../../../../data/";
@@ -35,6 +38,7 @@ namespace MinMe.Tests.RepoTests
             });
 
         private readonly ImageOptimizer _imageOptimizer;
+        private readonly ImageOptimizerOptions _options;
 
 
         private static List<string> GetAllPptx()
@@ -63,7 +67,7 @@ namespace MinMe.Tests.RepoTests
 
                     try
                     {
-                        await using var dstStream = _imageOptimizer.Transform(".pptx", srcStream);
+                        await using var dstStream = _imageOptimizer.Transform(".pptx", srcStream, _options);
                         result.FileSizeAfter = dstStream.Length;
                         result.Compression = 100.0 * (srcStream.Length - dstStream.Length) / srcStream.Length;
                     }
@@ -141,7 +145,7 @@ namespace MinMe.Tests.RepoTests
         public async Task OptimizeBaseline(string file, long expectedSize)
         {
             await using var srcStream = new FileStream(file, FileMode.Open, FileAccess.Read);
-            await using var dstStream = _imageOptimizer.Transform(".pptx", srcStream);
+            await using var dstStream = _imageOptimizer.Transform(".pptx", srcStream, _options);
 
             await TestContext.Out.WriteLineAsync($"Compression difference {expectedSize-dstStream.Length:0,0}, new size {dstStream.Length:0,0} bytes");
             Assert.LessOrEqual(dstStream.Length, expectedSize);
