@@ -7,17 +7,16 @@ using System.Threading.Tasks;
 
 using MinMe.Optimizers;
 
-using Xunit;
-using Xunit.Abstractions;
+using NUnit.Framework;
+
 
 namespace MinMe.Tests.RepoTests
 {
+    [TestFixture]
     public class BaselineTests
     {
-        private readonly ITestOutputHelper _log;
-        public BaselineTests(ITestOutputHelper testOutputHelper)
+        public BaselineTests()
         {
-            _log = testOutputHelper;
             _imageOptimizer = new ImageOptimizer();
 
             var json = File.ReadAllText(BaselineFile);
@@ -42,11 +41,11 @@ namespace MinMe.Tests.RepoTests
         private static string GetPath(string file)
             => Path.GetRelativePath(Root, file);
 
-        [Fact(Skip = "Manual run")]
+        [Test, Explicit]
         public async Task GenerateBaseline()
         {
-            var tasks = GetAllPptx()
-                .Select(async file =>
+            var results = await GetAllPptx()
+                .ExecuteInParallel(async file =>
                 {
                     await using var srcStream = new FileStream(file, FileMode.Open, FileAccess.Read);
                     var result = new OptimizeResult
@@ -65,14 +64,13 @@ namespace MinMe.Tests.RepoTests
                     }
                     catch (Exception e)
                     {
-                        _log.WriteLine($"{e.Message} on file {file}");
+                        await TestContext.Out.WriteLineAsync($"{e.Message} on file {file}");
                     }
 
                     return result;
-                }).ToList();
+                }, Environment.ProcessorCount);
 
-            var results = (await Task.WhenAll(tasks))
-                .OrderBy(x => x.FileName).ToList();
+            results = results.OrderBy(x => x.FileName).ToList();
 
             await using var fs = File.Create(BaselineFile);
             await JsonSerializer.SerializeAsync(fs, results, new JsonSerializerOptions
@@ -81,31 +79,43 @@ namespace MinMe.Tests.RepoTests
             });
         }
 
-        [Fact]
+        [Test]
         public void BaselineStats()
         {
+            var log = TestContext.Out;
             var results = _baseline.Values.ToList();
 
-            _log.WriteLine($"Number of files {results.Count}");
+            log.WriteLine($"Number of files {results.Count}");
 
             var totalSizeBefore = results.Sum(x => x.FileSizeBefore);
-            _log.WriteLine($"Total size before {totalSizeBefore:0,0} bytes");
+            log.WriteLine($"Total size before {totalSizeBefore:0,0} bytes");
 
             var totalSizeAfter = results.Sum(x => x.FileSizeAfter);
-            _log.WriteLine($"Total size after {totalSizeAfter:0,0} bytes (-{totalSizeBefore - totalSizeAfter:0,0} bytes)");
+            log.WriteLine($"Total size after {totalSizeAfter:0,0} bytes (-{totalSizeBefore - totalSizeAfter:0,0} bytes)");
 
             var totalCompression = 100.0 * (totalSizeBefore - totalSizeAfter) / totalSizeBefore;
-            _log.WriteLine($"Total compression {totalCompression:F2}%");;
+            log.WriteLine($"Total compression {totalCompression:F2}%");
 
             var averageCompression = results.Average(x => x.Compression);
-            _log.WriteLine($"Average compression {averageCompression:F2}%");;
+            log.WriteLine($"Average compression {averageCompression:F2}%");
+
+            log.WriteLine("Top 10 docs by compression:");
+            foreach (var x in results.OrderByDescending(x=>x.Compression).Take(10))
+            {
+                log.WriteLine($"\t[{x.Compression:0.00}] {x.FileName}");
+            }
+
+            log.WriteLine("Top 10 docs by saved space:");
+            foreach (var x in results.OrderByDescending(x=>x.FileSizeBefore-x.FileSizeAfter).Take(10))
+            {
+                log.WriteLine($"\t[{x.Compression:0.00}] {x.FileName}");
+            }
         }
 
         public static IEnumerable<object[]> TestCases()
             => GetAllPptx().Select(file => new object[] {file});
 
-        [Theory]
-        [MemberData(nameof(TestCases))]
+        [TestCaseSource(nameof(TestCases)), Parallelizable(ParallelScope.Children)]
         public async Task OptimizeBaseline(string file)
         {
             var expectedSize = new FileInfo(file).Length;
@@ -117,8 +127,8 @@ namespace MinMe.Tests.RepoTests
             await using var srcStream = new FileStream(file, FileMode.Open, FileAccess.Read);
             await using var dstStream = _imageOptimizer.Transform(".pptx", srcStream);
 
-            //Assert.InRange(dstStream.Length, 0, expectedSize);
-            Assert.Equal(expectedSize, dstStream.Length);
+            //Assert.Less(dstStream.Length, expectedSize);
+            Assert.AreEqual(expectedSize, dstStream.Length);
         }
     }
 }
