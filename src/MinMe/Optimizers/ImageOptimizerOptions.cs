@@ -11,5 +11,7 @@ namespace MinMe.Optimizers
         public int MinImageSizeForTransformation { get; set; } = 5 * 1024;
 
         public bool RemoveUnusedParts { get; set; } = true;
+
+        public bool OpenXmlUriAutoRecovery { get; set; } = true;
     }
 }

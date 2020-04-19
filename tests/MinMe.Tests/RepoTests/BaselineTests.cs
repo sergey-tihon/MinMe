@@ -36,6 +36,7 @@ namespace MinMe.Tests.RepoTests
         private static List<string> GetAllPptx()
             => Directory.GetFiles(Root, "*.pptx", SearchOption.AllDirectories)
                 .Where(file => file.IndexOf("~$", StringComparison.Ordinal) < 0)
+                .OrderBy(x=>x)
                 .ToList();
 
         private static string GetPath(string file)
@@ -71,7 +72,7 @@ namespace MinMe.Tests.RepoTests
                 }).ToList();
 
             var results = (await Task.WhenAll(tasks))
-                .OrderByDescending(x => x.Compression).ToList();
+                .OrderBy(x => x.FileName).ToList();
 
             await using var fs = File.Create(BaselineFile);
             await JsonSerializer.SerializeAsync(fs, results, new JsonSerializerOptions
@@ -116,7 +117,8 @@ namespace MinMe.Tests.RepoTests
             await using var srcStream = new FileStream(file, FileMode.Open, FileAccess.Read);
             await using var dstStream = _imageOptimizer.Transform(".pptx", srcStream);
 
-            Assert.InRange(dstStream.Length, 0, expectedSize);
+            //Assert.InRange(dstStream.Length, 0, expectedSize);
+            Assert.Equal(expectedSize, dstStream.Length);
         }
     }
 }

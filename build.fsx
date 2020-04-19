@@ -58,17 +58,17 @@ Target.create "RestoreData" (fun _ ->
         "dotNETConf", "https://github.com/dotnet-presentations/dotNETConf.git"
         "dsyme-fsharp", "https://github.com/dsyme/fsharp-presentations.git"
         "dl-tutorials", "https://github.com/sjchoi86/dl_tutorials_10weeks.git"
-    ] 
+    ]
     |> List.iter (fun (repo, cloneUrl) ->
         let dataDir = Path.combine rootDataDir repo
         if not <| System.IO.Directory.Exists dataDir
         then Repository.cloneSingleBranch "" cloneUrl "master" dataDir
     )
-) 
+)
 
 Target.create "RunTests" (fun _ ->
-    DotNet.test (fun options -> 
-        { options with 
+    DotNet.test (fun options ->
+        { options with
             Common = {
                 options.Common with
                     Verbosity = Some <| DotNet.Verbosity.Normal

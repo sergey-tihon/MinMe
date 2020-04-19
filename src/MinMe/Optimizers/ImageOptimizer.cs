@@ -52,7 +52,7 @@ namespace MinMe.Optimizers
 
         private void TransformDocxStream(Stream stream, ImageOptimizerOptions options, CancellationToken token)
         {
-            using var document = WordprocessingDocument.Open(stream, true);
+            using var document = OpenXmlFactory.OpenWord(stream, true, options.OpenXmlUriAutoRecovery);
             var transformation = new OptimizerWord(_manager, options);
             transformation.Transform(document, token);
 
@@ -65,7 +65,7 @@ namespace MinMe.Optimizers
 
         private void TransformPptxStream(Stream stream, ImageOptimizerOptions options, CancellationToken token)
         {
-            using var document = PresentationDocument.Open(stream, true);
+            using var document = OpenXmlFactory.OpenPowerPoint(stream, true, options.OpenXmlUriAutoRecovery);
             var transformation = new OptimizerPowerPoint(_manager, options);
             transformation.Transform(document, token);
 

@@ -24,20 +24,7 @@ namespace MinMe.Analyzers
         {
             _fileName = fileName;
             _fileStream = File.Open(fileName, FileMode.Open);
-
-            var openSettings = new OpenSettings {AutoSave = false};
-            try
-            {
-                _document = PresentationDocument.Open(_fileStream, false, openSettings);
-            }
-            catch (OpenXmlPackageException e)
-            {
-                if (!e.ToString().Contains("Invalid Hyperlink"))
-                    throw;
-
-                OpenXmlRecovery.FixInvalidUri(_fileStream);
-                _document =  PresentationDocument.Open(_fileStream, true, openSettings);
-            }
+            _document = OpenXmlFactory.OpenPowerPoint(_fileStream, false, true);
         }
 
         private readonly string _fileName;

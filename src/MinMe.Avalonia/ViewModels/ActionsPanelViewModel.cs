@@ -54,7 +54,7 @@ namespace MinMe.Avalonia.ViewModels
                     ExpectedScreenSize = new Size(1280, 720)
                 }),
             };
-            SelectedMode = PublishModes[1];
+            _selectedMode = PublishModes[1];
         }
 
         public class PublishMode

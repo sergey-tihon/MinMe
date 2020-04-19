@@ -5,12 +5,49 @@ using System.Linq;
 using System.Xml;
 using System.Xml.Linq;
 
+using DocumentFormat.OpenXml.Packaging;
+
 namespace MinMe
 {
-    public static class OpenXmlRecovery
+    public static class OpenXmlFactory
     {
+        public static PresentationDocument OpenPowerPoint(Stream stream, bool isEditable = false, bool autoRecovery = false)
+        {
+            var openSettings = new OpenSettings {AutoSave = isEditable};
+            try
+            {
+                return PresentationDocument.Open(stream, isEditable, openSettings);
+            }
+            catch (OpenXmlPackageException e)
+            {
+                if (!autoRecovery || !e.ToString().Contains("Invalid Hyperlink"))
+                    throw;
+
+                FixInvalidUri(stream);
+                return PresentationDocument.Open(stream, isEditable, openSettings);
+            }
+        }
+
+        public static WordprocessingDocument OpenWord(Stream stream, bool isEditable = false, bool autoRecovery = false)
+        {
+            var openSettings = new OpenSettings {AutoSave = isEditable};
+            try
+            {
+                return WordprocessingDocument.Open(stream, isEditable, openSettings);
+            }
+            catch (OpenXmlPackageException e)
+            {
+                if (!autoRecovery || !e.ToString().Contains("Invalid Hyperlink"))
+                    throw;
+
+                FixInvalidUri(stream);
+                return WordprocessingDocument.Open(stream, isEditable, openSettings);
+            }
+        }
+
+
         // http://ericwhite.com/blog/handling-invalid-hyperlinks-openxmlpackageexception-in-the-open-xml-sdk/
-        public static void FixInvalidUri(Stream fs)
+        private static void FixInvalidUri(Stream fs)
         {
             var uriPlaceholder = "https://invalid.uri.com";
 
