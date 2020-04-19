@@ -102,14 +102,17 @@ namespace MinMe.Tests.RepoTests
             log.WriteLine("Top 10 docs by compression:");
             foreach (var x in results.OrderByDescending(x=>x.Compression).Take(10))
             {
-                log.WriteLine($"\t[{x.Compression:0.00}] {x.FileName}");
+                Print(x);
             }
 
             log.WriteLine("Top 10 docs by saved space:");
             foreach (var x in results.OrderByDescending(x=>x.FileSizeBefore-x.FileSizeAfter).Take(10))
             {
-                log.WriteLine($"\t[{x.Compression:0.00}] {x.FileName}");
+                Print(x);
             }
+
+            void Print(OptimizeResult x) =>
+                log.WriteLine($"\t[{x.Compression:0.00}%] {x.FileName} from {x.FileSizeBefore:0,0} to {x.FileSizeAfter:0,0} (optimized {x.FileSizeBefore-x.FileSizeAfter:0,0} bytes)");
         }
 
         public static IEnumerable<object[]> TestCases()
@@ -119,7 +122,9 @@ namespace MinMe.Tests.RepoTests
         public async Task OptimizeBaseline(string file)
         {
             var expectedSize = new FileInfo(file).Length;
-            if (_baseline.TryGetValue(GetPath(file), out var result))
+
+            var key = GetPath(file).Replace('\\', '/');
+            if (_baseline.TryGetValue(key, out var result))
                 expectedSize = result.FileSizeAfter;
             if (expectedSize < 0)
                 return;
