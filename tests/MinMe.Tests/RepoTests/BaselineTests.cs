@@ -143,6 +143,7 @@ namespace MinMe.Tests.RepoTests
             await using var srcStream = new FileStream(file, FileMode.Open, FileAccess.Read);
             await using var dstStream = _imageOptimizer.Transform(".pptx", srcStream);
 
+            await TestContext.Out.WriteLineAsync($"Compression difference {expectedSize-dstStream.Length:0,0}, new size {dstStream.Length:0,0} bytes");
             Assert.LessOrEqual(dstStream.Length, expectedSize);
             //Assert.AreEqual(expectedSize, dstStream.Length);
         }
