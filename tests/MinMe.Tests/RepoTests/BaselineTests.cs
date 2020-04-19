@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using MinMe.Optimizers;
 
 using NUnit.Framework;
+using NUnit.Framework.Interfaces;
 
 
 namespace MinMe.Tests.RepoTests
@@ -18,19 +19,23 @@ namespace MinMe.Tests.RepoTests
         public BaselineTests()
         {
             _imageOptimizer = new ImageOptimizer();
-
-            var json = File.ReadAllText(BaselineFile);
-            _baseline =
-                JsonSerializer.Deserialize<OptimizeResult[]>(json)
-                    .ToDictionary(x => x.FileName, x => x,
-                        StringComparer.InvariantCultureIgnoreCase);
         }
 
         private const string Root = "../../../../data/";
         private const string BaselineFile = Root + "baseline.json";
 
+        private static readonly Lazy<Dictionary<string, OptimizeResult>> _baseline =
+            new Lazy<Dictionary<string, OptimizeResult>>(() =>
+            {
+                var json = File.ReadAllText(BaselineFile);
+                return
+                    JsonSerializer.Deserialize<OptimizeResult[]>(json)
+                        .ToDictionary(x => x.FileName, x => x,
+                            StringComparer.InvariantCultureIgnoreCase);
+            });
+
         private readonly ImageOptimizer _imageOptimizer;
-        private readonly Dictionary<string, OptimizeResult> _baseline;
+
 
         private static List<string> GetAllPptx()
             => Directory.GetFiles(Root, "*.pptx", SearchOption.AllDirectories)
@@ -83,7 +88,7 @@ namespace MinMe.Tests.RepoTests
         public void BaselineStats()
         {
             var log = TestContext.Out;
-            var results = _baseline.Values.ToList();
+            var results = _baseline.Value.Values.ToList();
 
             log.WriteLine($"Number of files {results.Count}");
 
@@ -115,25 +120,31 @@ namespace MinMe.Tests.RepoTests
                 log.WriteLine($"\t[{x.Compression:0.00}%] {x.FileName} from {x.FileSizeBefore:0,0} to {x.FileSizeAfter:0,0} (optimized {x.FileSizeBefore-x.FileSizeAfter:0,0} bytes)");
         }
 
-        public static IEnumerable<object[]> TestCases()
-            => GetAllPptx().Select(file => new object[] {file});
+        public static IEnumerable<TestCaseData> TestCases()
+            => GetAllPptx().Select(file =>
+            {
+                long? expectedSize = null;
+
+                var key = GetPath(file).Replace('\\', '/');
+                if (_baseline.Value.TryGetValue(key, out var result))
+                    expectedSize = result.FileSizeAfter;
+
+                var test = new TestCaseData(new object[] {file, expectedSize ?? 0})
+                    .SetName("baseline/" + key);
+                if (expectedSize is null)
+                    test = test.Ignore("Unknown file");
+
+                return test;
+            });
 
         [TestCaseSource(nameof(TestCases)), Parallelizable(ParallelScope.Children)]
-        public async Task OptimizeBaseline(string file)
+        public async Task OptimizeBaseline(string file, long expectedSize)
         {
-            var expectedSize = new FileInfo(file).Length;
-
-            var key = GetPath(file).Replace('\\', '/');
-            if (_baseline.TryGetValue(key, out var result))
-                expectedSize = result.FileSizeAfter;
-            if (expectedSize < 0)
-                return;
-
             await using var srcStream = new FileStream(file, FileMode.Open, FileAccess.Read);
             await using var dstStream = _imageOptimizer.Transform(".pptx", srcStream);
 
-            //Assert.Less(dstStream.Length, expectedSize);
-            Assert.AreEqual(expectedSize, dstStream.Length);
+            Assert.LessOrEqual(dstStream.Length, expectedSize);
+            //Assert.AreEqual(expectedSize, dstStream.Length);
         }
     }
 }
