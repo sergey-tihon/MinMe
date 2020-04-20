@@ -24,6 +24,7 @@ namespace MinMe.Optimizers.ImageOptimizerRuntime
         {
             Options = options;
             _imageEngineBase = new SystemDrawingEngine(manager);
+            //_imageEngineBase = new ImageSharpEngine(manager);
             //_imageEngineBase = new ChooseBestImageEngine(new ImageSharpEngine(manager), new SystemDrawingEngine(manager));
         }
 
@@ -94,7 +95,7 @@ namespace MinMe.Optimizers.ImageOptimizerRuntime
 
         private void ResizeImages(Dictionary<string, ImageMetadata> imagesMetadata, CancellationToken token)
         {
-            foreach (var pair in imagesMetadata)
+            imagesMetadata.ExecuteInParallel(pair =>
             {
                 try
                 {
@@ -105,7 +106,7 @@ namespace MinMe.Optimizers.ImageOptimizerRuntime
                 {
                     //var msg = $"Cannot resize image {pair.Key}";
                 }
-            }
+            }, Options.DegreeOfParallelism);
         }
 
         private void ResizeImage(ImageMetadata meta)

@@ -15,5 +15,7 @@ namespace MinMe.Optimizers
         public bool OpenXmlUriAutoRecovery { get; set; } = true;
 
         public bool ReZipAfterOptimization { get; set; } = true;
+
+        public int DegreeOfParallelism { get; set; } = 1;
     }
 }

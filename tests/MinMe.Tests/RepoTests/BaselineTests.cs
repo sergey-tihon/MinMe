@@ -7,6 +7,7 @@ using System.Text.Json;
 using System.Threading.Tasks;
 
 using MinMe.Optimizers;
+using MinMe.Optimizers.ImageOptimizerRuntime.Utils;
 
 using NUnit.Framework;
 

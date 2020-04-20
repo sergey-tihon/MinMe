@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MinMe.Tests.RepoTests
+namespace MinMe.Optimizers.ImageOptimizerRuntime.Utils
 {
     public static class TplHelpers
     {
@@ -26,5 +26,16 @@ namespace MinMe.Tests.RepoTests
                 result.Add(await processor(item)));
             return result.ToList();
         }
+
+        public static Task ExecuteInParallel<T>(this IEnumerable<T> collection,
+                                                Func<T, Task> processor, int degreeOfParallelism)
+            => collection.ForEachAsync(degreeOfParallelism, processor);
+
+        public static void ExecuteInParallel<T1>(this IEnumerable<T1> collection, Action<T1> processor, int degreeOfParallelism) =>
+            collection.ForEachAsync(degreeOfParallelism, item =>
+            {
+                processor(item);
+                return Task.CompletedTask;
+            }).GetAwaiter().GetResult();
     }
 }

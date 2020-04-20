@@ -1,4 +1,6 @@
-﻿using Clippit;
+﻿using System;
+
+using Clippit;
 using Clippit.PowerPoint;
 using MinMe.Analyzers;
 using MinMe.Analyzers.Model;
@@ -44,14 +46,17 @@ namespace MinMe.Avalonia.ViewModels
             PublishCommand = ReactiveCommand.CreateFromTask(PublishSlides, moreThanOneSlide);
 
             PublishModes = new ObservableCollection<PublishMode> {
-                new PublishMode("2160p (4K)", new ImageOptimizerOptions() {
-                    ExpectedScreenSize = new Size(3840, 2160)
+                new PublishMode("2160p (4K)", new ImageOptimizerOptions {
+                    ExpectedScreenSize = new Size(3840, 2160),
+                    //DegreeOfParallelism = Environment.ProcessorCount
                 }),
-                new PublishMode("1080p (Full HD)", new ImageOptimizerOptions() {
-                    ExpectedScreenSize = new Size(1920, 1080)
+                new PublishMode("1080p (Full HD)", new ImageOptimizerOptions {
+                    ExpectedScreenSize = new Size(1920, 1080),
+                    //DegreeOfParallelism = Environment.ProcessorCount
                 }),
-                new PublishMode("720p (HD ready)", new ImageOptimizerOptions() {
-                    ExpectedScreenSize = new Size(1280, 720)
+                new PublishMode("720p (HD ready)", new ImageOptimizerOptions {
+                    ExpectedScreenSize = new Size(1280, 720),
+                    //DegreeOfParallelism = Environment.ProcessorCount
                 }),
             };
             _selectedMode = PublishModes[1];
