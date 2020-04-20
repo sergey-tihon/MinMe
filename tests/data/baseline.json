@@ -242,8 +242,8 @@
   {
     "FileName": "dl-tutorials/ppts/Week9b Handwrting Generation.pptx",
     "FileSizeBefore": 1599564,
-    "FileSizeAfter": 1192725,
-    "Compression": 25.434368365379566
+    "FileSizeAfter": 1195520,
+    "Compression": 25.25963325006064
   },
   {
     "FileName": "dl-tutorials/ppts/Week9c Image Captioning.pptx",
@@ -320,8 +320,8 @@
   {
     "FileName": "dotNETConf/2018/Technical/Decks/Complete Awesomeness for Mobile .NET Developers.pptx",
     "FileSizeBefore": 16236376,
-    "FileSizeAfter": 7866684,
-    "Compression": 51.54901561777086
+    "FileSizeAfter": 7877793,
+    "Compression": 51.48059517715037
   },
   {
     "FileName": "dotNETConf/2018/Technical/Decks/dotNETConf2018-KEYNOTE.pptx",
@@ -332,8 +332,8 @@
   {
     "FileName": "dotNETConf/2018/Technical/Decks/DotNetDevOps.pptx",
     "FileSizeBefore": 14964636,
-    "FileSizeAfter": 5569127,
-    "Compression": 62.78474798852441
+    "FileSizeAfter": 5651786,
+    "Compression": 62.232385739285604
   },
   {
     "FileName": "dotNETConf/2018/Technical/Decks/Entity Framework Core 2.2 and beyond.pptx",
@@ -362,8 +362,8 @@
   {
     "FileName": "dotNETConf/2018/Technical/Decks/What\u0027s new in ASP.NET Core.pptx",
     "FileSizeBefore": 3122390,
-    "FileSizeAfter": 1634953,
-    "Compression": 47.637771066394656
+    "FileSizeAfter": 1638035,
+    "Compression": 47.53906462677628
   },
   {
     "FileName": "dotNETConf/2018/Technical/Decks/What\u0027s new with F# 4.5.pptx",
@@ -674,14 +674,14 @@
   {
     "FileName": "dsyme-fsharp/2007-07-06-dublin/APGAdCenter.pptx",
     "FileSizeBefore": 1457603,
-    "FileSizeAfter": 957290,
-    "Compression": 34.32436678574344
+    "FileSizeAfter": 958363,
+    "Compression": 34.250752776990716
   },
   {
     "FileName": "dsyme-fsharp/2007-07-06-dublin/fsharp-at-dublin.pptx",
     "FileSizeBefore": 2514702,
-    "FileSizeAfter": 1352310,
-    "Compression": 46.22384680172839
+    "FileSizeAfter": 1353383,
+    "Compression": 46.18117773000539
   },
   {
     "FileName": "dsyme-fsharp/2007-09-18-nextgen/fsharp-v2.pptx",
@@ -836,14 +836,14 @@
   {
     "FileName": "dsyme-fsharp/2010-10-29-pdc10/PDC_FT_55_Syme_TypeProviders-v2.pptx",
     "FileSizeBefore": 5085649,
-    "FileSizeAfter": 2398940,
-    "Compression": 52.829225925737305
+    "FileSizeAfter": 2431108,
+    "Compression": 52.19670095203188
   },
   {
     "FileName": "dsyme-fsharp/2010-10-29-pdc10/type-providers-one-minute.pptx",
     "FileSizeBefore": 3779702,
-    "FileSizeAfter": 1869399,
-    "Compression": 50.54110085927409
+    "FileSizeAfter": 1901567,
+    "Compression": 49.69002847314418
   },
   {
     "FileName": "dsyme-fsharp/2010-11-09-berlin/DEV304_Syme.pptx",
@@ -902,8 +902,8 @@
   {
     "FileName": "dsyme-fsharp/2011-11-15-dutch-ict/dutch-ict-v2.pptx",
     "FileSizeBefore": 4168627,
-    "FileSizeAfter": 2187501,
-    "Compression": 47.52466459580097
+    "FileSizeAfter": 2261989,
+    "Compression": 45.73779328301621
   },
   {
     "FileName": "dsyme-fsharp/2012-03-23-nicta/nicta-v4-redist.pptx",
@@ -1268,8 +1268,8 @@
   {
     "FileName": "dsyme-fsharp/2016-12-11-ctos/data-programming-cloud-nirvana-v1.pptx",
     "FileSizeBefore": 15626170,
-    "FileSizeAfter": 12121470,
-    "Compression": 22.428400561365965
+    "FileSizeAfter": 12177052,
+    "Compression": 22.072702396044583
   },
   {
     "FileName": "dsyme-fsharp/2017-10-oxford/fsharp-relaxation-given.pptx",
@@ -1280,20 +1280,20 @@
   {
     "FileName": "dsyme-fsharp/2018-04-05-fsharpx/fsharp-code-i-love-given.pptx",
     "FileSizeBefore": 11602818,
-    "FileSizeAfter": 10590631,
-    "Compression": 8.723630759355185
+    "FileSizeAfter": 10612335,
+    "Compression": 8.536572753274248
   },
   {
     "FileName": "dsyme-fsharp/2018-05-05-code-i-love/fsharp-code-i-love.pptx",
     "FileSizeBefore": 11902632,
-    "FileSizeAfter": 10970819,
-    "Compression": 7.828629835821187
+    "FileSizeAfter": 10992523,
+    "Compression": 7.646283611893571
   },
   {
     "FileName": "dsyme-fsharp/2018-05-25-malaga/fsharp-relaxation.pptx",
     "FileSizeBefore": 12611044,
-    "FileSizeAfter": 8539587,
-    "Compression": 32.284852863886606
+    "FileSizeAfter": 8561291,
+    "Compression": 32.112749745381905
   },
   {
     "FileName": "dsyme-fsharp/2018-09-05-exf-meetup/exf-meetup.pptx",
@@ -1304,32 +1304,32 @@
   {
     "FileName": "dsyme-fsharp/2018-09-27-openfsharp-code-I-love/fsharp-code-i-love-openfsharp.pptx",
     "FileSizeBefore": 17174317,
-    "FileSizeAfter": 10828442,
-    "Compression": 36.94979544164697
+    "FileSizeAfter": 10850146,
+    "Compression": 36.82342069265404
   },
   {
     "FileName": "dsyme-fsharp/2018-09-27-openfsharp-code-I-love/fsharp-code-i-love.pptx",
     "FileSizeBefore": 11781485,
-    "FileSizeAfter": 10697119,
-    "Compression": 9.203984047851353
+    "FileSizeAfter": 10718823,
+    "Compression": 9.01976278881652
   },
   {
     "FileName": "dsyme-fsharp/2018-11-08-codemesh/fsharp-code-i-love-codemesh.pptx",
     "FileSizeBefore": 17649477,
-    "FileSizeAfter": 11019009,
-    "Compression": 37.56750412490976
+    "FileSizeAfter": 11040713,
+    "Compression": 37.4445316424957
   },
   {
     "FileName": "dsyme-fsharp/2018-11-29-imperial/fsharp-relaxation.pptx",
     "FileSizeBefore": 12653084,
-    "FileSizeAfter": 8564938,
-    "Compression": 32.309482810672876
+    "FileSizeAfter": 8586642,
+    "Compression": 32.137951506526
   },
   {
     "FileName": "dsyme-fsharp/2019-02-20-lambdadays/fsharp-code-i-love-lambdadays-given.pptx",
     "FileSizeBefore": 18705563,
-    "FileSizeAfter": 11197307,
-    "Compression": 40.13916074057755
+    "FileSizeAfter": 11219011,
+    "Compression": 40.02313108672538
   },
   {
     "FileName": "dsyme-fsharp/2019-04-05-fsharp-exchange/fsharp-exchange.pptx",
@@ -1364,8 +1364,8 @@
   {
     "FileName": "dsyme-fsharp/2019-10-18-ndc-sydney/fsharp-code-i-love-ndc-sydney.pptx",
     "FileSizeBefore": 18283001,
-    "FileSizeAfter": 11101429,
-    "Compression": 39.28005035934746
+    "FileSizeAfter": 11123133,
+    "Compression": 39.16133899462129
   },
   {
     "FileName": "dsyme-fsharp/2019-11-13-buildstuff-functional-uis/functional-uis.pptx",
