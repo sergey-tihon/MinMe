@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text.Json;
 using System.Threading.Tasks;
 
@@ -39,6 +40,7 @@ namespace MinMe.Tests.RepoTests
 
         private readonly ImageOptimizer _imageOptimizer;
         private readonly ImageOptimizerOptions _options;
+        private readonly bool _isOSX = RuntimeInformation.IsOSPlatform(OSPlatform.OSX);
 
 
         private static List<string> GetAllPptx()
@@ -126,20 +128,13 @@ namespace MinMe.Tests.RepoTests
 
         public static IEnumerable<TestCaseData> TestCases()
             => GetAllPptx().Select(file =>
-            {
-                long? expectedSize = null;
+                {
+                    var key = GetPath(file).Replace('\\', '/');
+                    if (_baseline.Value.TryGetValue(key, out var result))
+                        return new TestCaseData(new object[] { file, result.FileSizeAfter });
 
-                var key = GetPath(file).Replace('\\', '/');
-                if (_baseline.Value.TryGetValue(key, out var result))
-                    expectedSize = result.FileSizeAfter;
-
-                var test = new TestCaseData(new object[] {file, expectedSize ?? 0})
-                    .SetName("baseline/" + key);
-                if (expectedSize is null)
-                    test = test.Ignore("Unknown file");
-
-                return test;
-            });
+                    return new TestCaseData(new object[] { file, 0 }).Ignore("Unknown file");
+                });
 
         [TestCaseSource(nameof(TestCases)), Parallelizable(ParallelScope.Children)]
         public async Task OptimizeBaseline(string file, long expectedSize)
@@ -147,9 +142,13 @@ namespace MinMe.Tests.RepoTests
             await using var srcStream = new FileStream(file, FileMode.Open, FileAccess.Read);
             await using var dstStream = _imageOptimizer.Transform(".pptx", srcStream, _options);
 
-            await TestContext.Out.WriteLineAsync($"Compression difference {expectedSize-dstStream.Length:0,0}, new size {dstStream.Length:0,0} bytes");
-            Assert.LessOrEqual(dstStream.Length, expectedSize);
-            //Assert.AreEqual(expectedSize, dstStream.Length);
+            var deltaSize = dstStream.Length - expectedSize;
+            await TestContext.Out.WriteLineAsync($"Compression difference {deltaSize:0,0}, new size {dstStream.Length:0,0} bytes");
+
+            if (_isOSX)
+                Assert.AreEqual(expectedSize, dstStream.Length);
+            else
+                Assert.LessOrEqual(deltaSize, 600_000);
         }
     }
 }
