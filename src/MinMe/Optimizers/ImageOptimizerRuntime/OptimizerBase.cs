@@ -7,9 +7,11 @@ using System.Linq;
 using System.Threading;
 
 using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.VariantTypes;
 
 using Microsoft.IO;
 
+using MinMe.Optimizers.ImageOptimizerRuntime.ImageEngine;
 using MinMe.Optimizers.ImageOptimizerRuntime.Model;
 using MinMe.Optimizers.ImageOptimizerRuntime.Utils;
 namespace MinMe.Optimizers.ImageOptimizerRuntime
@@ -18,9 +20,13 @@ namespace MinMe.Optimizers.ImageOptimizerRuntime
     {
         private readonly RecyclableMemoryStreamManager _manager;
         protected readonly ImageOptimizerOptions Options;
+        private readonly IImageEngine _imageEngine;
 
         protected OptimizerBase(RecyclableMemoryStreamManager manager, ImageOptimizerOptions options)
-            => (_manager, Options) = (manager, options);
+        {
+            (_manager, Options) = (manager, options);
+            _imageEngine = new SystemDrawingEngine(_manager);
+        }
 
         public void Transform(TDocument document, CancellationToken token)
         {
@@ -105,31 +111,13 @@ namespace MinMe.Optimizers.ImageOptimizerRuntime
 
         private void ResizeImage(ImageMetadata meta)
         {
-            var srcImage = LoadImage(meta.ImagePart, out var sourceFileSize);
-
-            // No sense to optimize small images, it does not add much compression but can corrupt image quality
-            if (sourceFileSize <= Options.MinImageSizeForTransformation)
-                return;
-
-            // Don't optimize image metafile
-            // Added MemoryBitmap to condition, because only metafiles(by structure, not by extension) are loaded into MemoryBMP
-            if (srcImage.RawFormat.Equals(ImageFormat.Emf)
-                || srcImage.RawFormat.Equals(ImageFormat.Wmf)
-                || srcImage.RawFormat.Equals(ImageFormat.MemoryBmp))
-                return;
-
+            ImageCrop? crop = null;
             var crops = meta.Crops.Distinct().ToList();
             if (crops.Count == 1)
             {
-                var crop = crops.First();
-                if (crop.IsValid())
+                if (crops[0].IsValid())
                 {
-                    srcImage = ImageUtils.CropImage(srcImage, crops.First());
-                    foreach (var imageCrop in meta.Crops)
-                    {
-                        imageCrop.RemoveCrop();
-                    }
-                    meta.IsCropped = true;
+                    crop = crops.First();
                 }
                 else
                 {
@@ -139,71 +127,47 @@ namespace MinMe.Optimizers.ImageOptimizerRuntime
 
             // Get new image size based on usage meta
             var newSize =
-                meta.Sizes
-                    .Aggregate(new Size(), Converters.Expand)
-                    .Restrict(srcImage.Size) // New images cannot be larger than source one
-                    .Restrict(Options.ExpectedScreenSize); // New image cannot be large than target screen size
-
-            // If we do not know image size - keep it as is
-            if (newSize.Width == 0 || newSize.Height == 0)
-                newSize = srcImage.Size;
-
-            if (crops.Count > 1) // We cannot resize image
-                newSize = srcImage.Size;
-
-            var newImage =
-                newSize.Width == srcImage.Size.Width &&
-                newSize.Height == srcImage.Size.Height
-                    ? new Bitmap(srcImage) // Clone image
-                    : ImageUtils.ResizeImage(srcImage, newSize);
+                crops.Count > 1
+                    ? (Size?) null // We cannot resize if more than 1 crop in identified
+                    : meta.Sizes
+                        .Aggregate(new Size(), Converters.Expand)
+                        .Restrict(Options.ExpectedScreenSize); // New image cannot be large than target screen size
 
 
-            using var newImageStream = _manager.GetStream();
-            newImage.Save(newImageStream, ImageFormat.Png);
-
-            var isJpegAllowed = ImageUtils.FormatConverter(srcImage, true).Equals(ImageFormat.Jpeg);
-            if (isJpegAllowed)
+            Stream? newImageStream;
+            using (var stream = meta.ImagePart.GetStream(FileMode.Open, FileAccess.Read))
             {
-                var jpegCodec = ImageCodecInfo.GetImageEncoders()
-                    .FirstOrDefault(t => t.MimeType == "image/jpeg");
-                var encoderParams = new EncoderParameters(1)
-                    {Param = {[0] = new EncoderParameter(Encoder.Quality, 80L)}};
+                var sourceFileSize = stream.Length;
+                // No sense to optimize small images, it does not add much compression but can corrupt image quality
+                if (sourceFileSize <= Options.MinImageSizeForTransformation)
+                    return;
 
-                using var jpegImageStream = _manager.GetStream();
-                newImage.Save(jpegImageStream, jpegCodec, encoderParams);
+                newImageStream = _imageEngine.Transform(stream, crop, newSize);
 
-                if (jpegImageStream.Length < newImageStream.Length)
+                // It looks strange, but practically it worth to remove the crop, even if result image looks bigger.
+                if (newImageStream is null || (newImageStream.Length >= sourceFileSize && crop is null))
                 {
-                    newImageStream.SetLength(0);
-                    newImageStream.Position = 0;
-
-                    jpegImageStream.Position = 0;
-                    jpegImageStream.CopyTo(newImageStream);
+                    newImageStream?.Dispose();
+                    return;
                 }
             }
 
-            if (newImageStream.Length < sourceFileSize || meta.IsCropped)
+            // Replace image by smaller one
+            using (var stream = meta.ImagePart.GetStream(FileMode.Create, FileAccess.Write))
             {
-                using var stream = meta.ImagePart.GetStream(FileMode.Create, FileAccess.Write);
                 newImageStream.Position = 0;
                 newImageStream.CopyTo(stream);
+                newImageStream.Dispose();
             }
-        }
 
-        /// <summary>
-        /// Extract image stream from ImagePart and convert to Bitmap
-        /// </summary>
-        private static Bitmap LoadImage(ImagePart imagePart, out long fileSize)
-        {
-            using var stream = imagePart.GetStream(FileMode.Open, FileAccess.Read);
-            fileSize = stream.Length;
-            try
+            // Remove crops from markup, because image was cropped
+            if (crop is {})
             {
-                return new Bitmap(stream);
-            }
-            catch (Exception exception)
-            {
-                throw new FormatException("Image corrupted.", exception);
+                foreach (var imageCrop in meta.Crops)
+                {
+                    imageCrop.RemoveCrop();
+                }
+                meta.IsCropped = true;
             }
         }
     }
