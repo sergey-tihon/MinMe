@@ -2,6 +2,7 @@ source https://api.nuget.org/v3/index.json
 
 nuget DocumentFormat.OpenXml
 nuget System.Drawing.Common
+nuget SixLabors.ImageSharp prerelease
 nuget System.IO.Compression
 nuget Microsoft.IO.RecyclableMemoryStream
 

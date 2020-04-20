@@ -7,7 +7,6 @@ using System.Linq;
 using System.Threading;
 
 using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.VariantTypes;
 
 using Microsoft.IO;
 
@@ -18,14 +17,14 @@ namespace MinMe.Optimizers.ImageOptimizerRuntime
 {
     internal abstract class OptimizerBase<TDocument>
     {
-        private readonly RecyclableMemoryStreamManager _manager;
         protected readonly ImageOptimizerOptions Options;
-        private readonly IImageEngine _imageEngine;
+        private readonly IImageEngine _imageEngineBase;
 
         protected OptimizerBase(RecyclableMemoryStreamManager manager, ImageOptimizerOptions options)
         {
-            (_manager, Options) = (manager, options);
-            _imageEngine = new SystemDrawingEngine(_manager);
+            Options = options;
+            _imageEngineBase = new SystemDrawingEngine(manager);
+            //_imageEngineBase = new ChooseBestImageEngine(new ImageSharpEngine(manager), new SystemDrawingEngine(manager));
         }
 
         public void Transform(TDocument document, CancellationToken token)
@@ -121,7 +120,8 @@ namespace MinMe.Optimizers.ImageOptimizerRuntime
                 }
                 else
                 {
-                    var msg = $"Unsupported image crop L/T/R/B={crop.Left}/{crop.Top}/{crop.Right}/{crop.Bottom}";
+                    var c = crops.First();
+                    var msg = $"Unsupported image crop L/T/R/B={c.Left}/{c.Top}/{c.Right}/{c.Bottom}";
                 }
             }
 
@@ -142,7 +142,7 @@ namespace MinMe.Optimizers.ImageOptimizerRuntime
                 if (sourceFileSize <= Options.MinImageSizeForTransformation)
                     return;
 
-                newImageStream = _imageEngine.Transform(stream, crop, newSize);
+                newImageStream = _imageEngineBase.Transform(stream, crop, newSize);
 
                 // It looks strange, but practically it worth to remove the crop, even if result image looks bigger.
                 if (newImageStream is null || (newImageStream.Length >= sourceFileSize && crop is null))

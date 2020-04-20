@@ -11,15 +11,13 @@ using MinMe.Optimizers.ImageOptimizerRuntime.Utils;
 
 namespace MinMe.Optimizers.ImageOptimizerRuntime.ImageEngine
 {
-    internal class SystemDrawingEngine : IImageEngine
+    internal class SystemDrawingEngine : ImageEngineBase
     {
-        private readonly RecyclableMemoryStreamManager _streamManager;
+        public SystemDrawingEngine(RecyclableMemoryStreamManager streamManager) : base(streamManager)
+        {
+        }
 
-        public SystemDrawingEngine(RecyclableMemoryStreamManager streamManager)
-            => _streamManager = streamManager;
-
-
-        public Stream? Transform(Stream imageStream, ImageCrop? crop, Size? size)
+        public override Stream? Transform(Stream imageStream, ImageCrop? crop, Size? size)
         {
             var srcImage = new Bitmap(imageStream);
 
@@ -35,15 +33,7 @@ namespace MinMe.Optimizers.ImageOptimizerRuntime.ImageEngine
                 srcImage = CropImage(srcImage, crop);
             }
 
-            var newSize = srcImage.Size;
-            if (size is {} sz)
-            {
-                // Get new image size based on usage meta
-                newSize = sz.Restrict(srcImage.Size); // New images cannot be larger than source one
-                // If we do not know image size - keep it as is
-                if (newSize.Width == 0 || newSize.Height == 0)
-                    newSize = srcImage.Size;
-            }
+            var newSize = GetFinalSize(srcImage.Size, size);
             var newImage =
                 newSize.Width == srcImage.Size.Width &&
                 newSize.Height == srcImage.Size.Height
@@ -51,7 +41,7 @@ namespace MinMe.Optimizers.ImageOptimizerRuntime.ImageEngine
                     : ResizeImage(srcImage, newSize);
 
 
-            var newImageStream = _streamManager.GetStream();
+            var newImageStream = StreamManager.GetStream();
             newImage.Save(newImageStream, ImageFormat.Png);
 
             var isJpegAllowed = FormatConverter(srcImage, true).Equals(ImageFormat.Jpeg);
@@ -62,7 +52,7 @@ namespace MinMe.Optimizers.ImageOptimizerRuntime.ImageEngine
                 var encoderParams = new EncoderParameters(1)
                     {Param = {[0] = new EncoderParameter(Encoder.Quality, 80L)}};
 
-                var jpegImageStream = _streamManager.GetStream();
+                var jpegImageStream = StreamManager.GetStream();
                 newImage.Save(jpegImageStream, jpegCodec, encoderParams);
 
                 if (jpegImageStream.Length < newImageStream.Length)
