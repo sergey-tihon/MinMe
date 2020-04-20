@@ -19,10 +19,7 @@ namespace MinMe.Tests.RepoTests
         public BaselineTests()
         {
             _imageOptimizer = new ImageOptimizer();
-            _options = new ImageOptimizerOptions
-            {
-                ReZipAfterOptimization = false
-            };
+            _options = new ImageOptimizerOptions();
         }
 
         private const string Root = "../../../../data/";
