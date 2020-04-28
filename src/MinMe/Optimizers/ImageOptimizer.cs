@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 using System.IO.Compression;
+using System.Linq;
 using System.Threading;
 
 using DocumentFormat.OpenXml.Packaging;
@@ -15,9 +16,10 @@ namespace MinMe.Optimizers
     {
         private readonly RecyclableMemoryStreamManager _manager = new RecyclableMemoryStreamManager();
 
-        public Stream Transform(string fileType, Stream stream, ImageOptimizerOptions? options = null, CancellationToken? token = null)
+        public Stream Transform(string fileType, Stream stream, out OptimizeDiagnostic diagnostic, ImageOptimizerOptions? options = null, CancellationToken? token = null)
         {
             options ??= new ImageOptimizerOptions();
+            diagnostic = new OptimizeDiagnostic();
             var cancellationToken = token ?? CancellationToken.None;
 
             // Copy of the original stream that will be modified in-place
@@ -28,14 +30,15 @@ namespace MinMe.Optimizers
             {
                 case ".pptx":
                     memoryStream.Position = 0;
-                    TransformPptxStream(memoryStream, options, cancellationToken);
+                    TransformPptxStream(memoryStream, diagnostic, options, cancellationToken);
                     break;
                 case ".docx":
                     memoryStream.Position = 0;
-                    TransformDocxStream(memoryStream, options, cancellationToken);
+                    TransformDocxStream(memoryStream, diagnostic, options, cancellationToken);
                     break;
                 default:
-                    var msg = $"ImageOptimizer cannot process {fileType}.";
+                    var message = $"ImageOptimizer cannot process {fileType}.";
+                    diagnostic.Errors.Add(new OptimizeError("/", message));
                     break;
             }
 
@@ -52,34 +55,34 @@ namespace MinMe.Optimizers
             }
         }
 
-        private void TransformDocxStream(Stream stream, ImageOptimizerOptions options, CancellationToken token)
+        private void TransformDocxStream(Stream stream, OptimizeDiagnostic diagnostic, ImageOptimizerOptions options, CancellationToken token)
         {
             using var document = OpenXmlFactory.OpenWord(stream, true, options.OpenXmlUriAutoRecovery);
             var transformation = new OptimizerWord(_manager, options);
-            transformation.Transform(document, token);
+            transformation.Transform(document, diagnostic, token);
 
             foreach (var part in document.MainDocumentPart.EmbeddedPackageParts)
             {
                 token.ThrowIfCancellationRequested();
-                TransformEmbeddedPart(part, options, token);
+                TransformEmbeddedPart(part, diagnostic, options, token);
             }
         }
 
-        private void TransformPptxStream(Stream stream, ImageOptimizerOptions options, CancellationToken token)
+        private void TransformPptxStream(Stream stream, OptimizeDiagnostic diagnostic, ImageOptimizerOptions options, CancellationToken token)
         {
             using var document = OpenXmlFactory.OpenPowerPoint(stream, true, options.OpenXmlUriAutoRecovery);
             var transformation = new OptimizerPowerPoint(_manager, options);
-            transformation.Transform(document, token);
+            transformation.Transform(document, diagnostic, token);
 
             foreach (var slide in document.PresentationPart.SlideParts)
             foreach (var part in slide.EmbeddedPackageParts)
             {
                 token.ThrowIfCancellationRequested();
-                TransformEmbeddedPart(part, options, token);
+                TransformEmbeddedPart(part, diagnostic, options, token);
             }
         }
 
-        private void TransformEmbeddedPart(EmbeddedPackagePart part, ImageOptimizerOptions options, CancellationToken token)
+        private void TransformEmbeddedPart(EmbeddedPackagePart part, OptimizeDiagnostic diagnostic, ImageOptimizerOptions options, CancellationToken token)
         {
             // Read mode about office mime types: http://filext.com/faq/office_mime_types.php
             var fileType = part.ContentType
@@ -92,13 +95,20 @@ namespace MinMe.Optimizers
 
             if (fileType is null)
             {
-                var msg = $"Unsupported embedding type {part.ContentType}";
+                var message = $"Unsupported embedding type {part.ContentType}";
+                diagnostic.Errors.Add(new OptimizeError(part.Uri.OriginalString, message));
                 return;
             }
 
-            using var result = Transform(fileType, part.GetStream(), options, token);
+            using var result = Transform(fileType, part.GetStream(), out var partDiagnostic, options, token);
             result.Position = 0;
             part.FeedData(result);
+
+            foreach (var error in partDiagnostic.Errors)
+            {
+                var pointer = part.Uri.OriginalString + '|' + error.Pointer;
+                diagnostic.Errors.Add(new OptimizeError(pointer, error.Message));
+            }
         }
 
         private Stream ReZip(Stream stream, CancellationToken token)

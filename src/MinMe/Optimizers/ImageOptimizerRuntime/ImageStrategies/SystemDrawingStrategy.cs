@@ -7,13 +7,12 @@ using System.Linq;
 using Microsoft.IO;
 
 using MinMe.Optimizers.ImageOptimizerRuntime.Model;
-using MinMe.Optimizers.ImageOptimizerRuntime.Utils;
 
-namespace MinMe.Optimizers.ImageOptimizerRuntime.ImageEngine
+namespace MinMe.Optimizers.ImageOptimizerRuntime.ImageStrategies
 {
-    internal class SystemDrawingEngine : ImageEngineBase
+    internal class SystemDrawingStrategy : ImageStrategyBase
     {
-        public SystemDrawingEngine(RecyclableMemoryStreamManager streamManager) : base(streamManager)
+        public SystemDrawingStrategy(RecyclableMemoryStreamManager streamManager) : base(streamManager)
         {
         }
 

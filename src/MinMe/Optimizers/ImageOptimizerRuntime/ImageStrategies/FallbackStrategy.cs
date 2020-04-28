@@ -4,16 +4,16 @@ using System.IO;
 
 using MinMe.Optimizers.ImageOptimizerRuntime.Model;
 
-namespace MinMe.Optimizers.ImageOptimizerRuntime.ImageEngine
+namespace MinMe.Optimizers.ImageOptimizerRuntime.ImageStrategies
 {
-    internal class FallbackImageEngine : IImageEngine
+    internal class FallbackStrategy : IImageStrategy
     {
-        public FallbackImageEngine(params IImageEngine[] engines)
+        public FallbackStrategy(params IImageStrategy[] engines)
             => _engines = engines;
 
-        private readonly IImageEngine[] _engines;
+        private readonly IImageStrategy[] _engines;
 
-        Stream? IImageEngine.Transform(Stream imageStream, ImageCrop? crop, Size? size)
+        Stream? IImageStrategy.Transform(Stream imageStream, ImageCrop? crop, Size? size)
         {
             foreach (var engine in _engines)
             {

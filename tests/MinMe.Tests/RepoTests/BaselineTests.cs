@@ -67,7 +67,7 @@ namespace MinMe.Tests.RepoTests
 
                     try
                     {
-                        await using var dstStream = _imageOptimizer.Transform(".pptx", srcStream, _options);
+                        await using var dstStream = _imageOptimizer.Transform(".pptx", srcStream, out var diagnostic, _options);
                         result.FileSizeAfter = dstStream.Length;
                         result.Compression = 100.0 * (srcStream.Length - dstStream.Length) / srcStream.Length;
                     }
@@ -138,13 +138,13 @@ namespace MinMe.Tests.RepoTests
         public async Task OptimizeBaseline(string file, long expectedSize)
         {
             await using var srcStream = new FileStream(file, FileMode.Open, FileAccess.Read);
-            await using var dstStream = _imageOptimizer.Transform(".pptx", srcStream, _options);
+            await using var dstStream = _imageOptimizer.Transform(".pptx", srcStream, out var diagnostic, _options);
 
             var deltaSize = dstStream.Length - expectedSize;
             await TestContext.Out.WriteLineAsync($"Compression difference {deltaSize:0,0}, new size {dstStream.Length:0,0} bytes");
 
             if (_isOSX)
-                Assert.AreEqual(expectedSize, dstStream.Length);
+                Assert.LessOrEqual(dstStream.Length, expectedSize);
             else
                 Assert.LessOrEqual(deltaSize, 600_000);
         }

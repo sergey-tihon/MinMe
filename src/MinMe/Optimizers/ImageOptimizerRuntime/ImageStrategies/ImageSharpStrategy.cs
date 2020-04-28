@@ -1,35 +1,35 @@
 using System.IO;
+
 using Microsoft.IO;
 
 using MinMe.Optimizers.ImageOptimizerRuntime.Model;
-using MinMe.Optimizers.ImageOptimizerRuntime.Utils;
 
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Advanced;
-using SixLabors.ImageSharp.Processing;
 using SixLabors.ImageSharp.Formats.Jpeg;
 using SixLabors.ImageSharp.Formats.Png;
 using SixLabors.ImageSharp.PixelFormats;
+using SixLabors.ImageSharp.Processing;
 using SixLabors.Primitives;
 
 using Size = System.Drawing.Size;
 
-namespace MinMe.Optimizers.ImageOptimizerRuntime.ImageEngine
+namespace MinMe.Optimizers.ImageOptimizerRuntime.ImageStrategies
 {
-    internal class ImageSharpEngine : ImageEngineBase
+    internal class ImageSharpStrategy : ImageStrategyBase
     {
-        public ImageSharpEngine(RecyclableMemoryStreamManager streamManager) : base(streamManager)
+        public ImageSharpStrategy(RecyclableMemoryStreamManager streamManager) : base(streamManager)
         {
         }
 
         private readonly PngEncoder _pngDecoder = new PngEncoder
         {
-            CompressionLevel = 9
+            //CompressionLevel = 9
         };
         private readonly JpegEncoder _jpegEncoder = new JpegEncoder
         {
-            Quality = 70,
-            Subsample = JpegSubsample.Ratio420
+            //Quality = 70,
+            //Subsample = JpegSubsample.Ratio420
         };
 
         public override Stream? Transform(Stream imageStream, ImageCrop? crop, Size? size)

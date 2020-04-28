@@ -6,12 +6,12 @@ using Microsoft.IO;
 using MinMe.Optimizers.ImageOptimizerRuntime.Model;
 using MinMe.Optimizers.ImageOptimizerRuntime.Utils;
 
-namespace MinMe.Optimizers.ImageOptimizerRuntime.ImageEngine
+namespace MinMe.Optimizers.ImageOptimizerRuntime.ImageStrategies
 {
-    internal abstract class ImageEngineBase : IImageEngine
+    internal abstract class ImageStrategyBase : IImageStrategy
     {
         protected readonly RecyclableMemoryStreamManager StreamManager;
-        protected ImageEngineBase(RecyclableMemoryStreamManager streamManager)
+        protected ImageStrategyBase(RecyclableMemoryStreamManager streamManager)
             => StreamManager = streamManager;
 
         public abstract Stream? Transform(Stream imageStream, ImageCrop? crop, Size? size);

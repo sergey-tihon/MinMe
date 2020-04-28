@@ -10,7 +10,7 @@ using DocumentFormat.OpenXml.Packaging;
 
 using Microsoft.IO;
 
-using MinMe.Optimizers.ImageOptimizerRuntime.ImageEngine;
+using MinMe.Optimizers.ImageOptimizerRuntime.ImageStrategies;
 using MinMe.Optimizers.ImageOptimizerRuntime.Model;
 using MinMe.Optimizers.ImageOptimizerRuntime.Utils;
 namespace MinMe.Optimizers.ImageOptimizerRuntime
@@ -18,17 +18,18 @@ namespace MinMe.Optimizers.ImageOptimizerRuntime
     internal abstract class OptimizerBase<TDocument>
     {
         protected readonly ImageOptimizerOptions Options;
-        private readonly IImageEngine _imageEngineBase;
+        private readonly IImageStrategy _imageStrategy;
 
         protected OptimizerBase(RecyclableMemoryStreamManager manager, ImageOptimizerOptions options)
         {
             Options = options;
-            _imageEngineBase = new SystemDrawingEngine(manager);
-            //_imageEngineBase = new ImageSharpEngine(manager);
-            //_imageEngineBase = new ChooseBestImageEngine(new ImageSharpEngine(manager), new SystemDrawingEngine(manager));
+            _imageStrategy = new SystemDrawingStrategy(manager);
+            //_imageStrategy = new ImageSharpStrategy(manager);
+            //_imageStrategy = new ChooseBestStrategy(new ImageSharpStrategy(manager), new SystemDrawingStrategy(manager));
+            //_imageStrategy = new FallbackStrategy(new ImageSharpStrategy(manager), new SystemDrawingStrategy(manager));
         }
 
-        public void Transform(TDocument document, CancellationToken token)
+        public void Transform(TDocument document, OptimizeDiagnostic diagnostic, CancellationToken token)
         {
             if (Options.RemoveUnusedParts)
             {
@@ -57,7 +58,8 @@ namespace MinMe.Optimizers.ImageOptimizerRuntime
 
                 if (!imagesMetadata.ContainsKey(uri))
                 {
-                    var msg = $"Found usage of unknown image '{uri}'";
+                    var message = $"Found usage of unknown image '{uri}'";
+                    diagnostic.Errors.Add(new OptimizeError(uri, message));
                     continue;
                 }
 
@@ -69,7 +71,7 @@ namespace MinMe.Optimizers.ImageOptimizerRuntime
                     meta.Crops.Add(crop);
             }
 
-            ResizeImages(imagesMetadata, token);
+            ResizeImages(imagesMetadata, diagnostic, token);
         }
 
         /// <summary>
@@ -93,23 +95,23 @@ namespace MinMe.Optimizers.ImageOptimizerRuntime
         /// </summary>
         protected abstract IEnumerable<ImageUsageInfo> GetImageUsageInfo(TDocument document);
 
-        private void ResizeImages(Dictionary<string, ImageMetadata> imagesMetadata, CancellationToken token)
+        private void ResizeImages(Dictionary<string, ImageMetadata> imagesMetadata, OptimizeDiagnostic diagnostic, CancellationToken token)
         {
             imagesMetadata.ExecuteInParallel(pair =>
             {
                 try
                 {
                     token.ThrowIfCancellationRequested();
-                    ResizeImage(pair.Value);
+                    ResizeImage(pair.Value, diagnostic);
                 }
-                catch (Exception)
+                catch (Exception e)
                 {
-                    //var msg = $"Cannot resize image {pair.Key}";
+                    diagnostic.Errors.Add(new OptimizeError(pair.Key, e.Message));
                 }
             }, Options.DegreeOfParallelism);
         }
 
-        private void ResizeImage(ImageMetadata meta)
+        private void ResizeImage(ImageMetadata meta, OptimizeDiagnostic diagnostic)
         {
             ImageCrop? crop = null;
             var crops = meta.Crops.Distinct().ToList();
@@ -121,8 +123,9 @@ namespace MinMe.Optimizers.ImageOptimizerRuntime
                 }
                 else
                 {
-                    var c = crops.First();
-                    var msg = $"Unsupported image crop L/T/R/B={c.Left}/{c.Top}/{c.Right}/{c.Bottom}";
+                    var imgCrop = crops.First();
+                    var message = $"Unsupported image crop L/T/R/B={imgCrop.Left}/{imgCrop.Top}/{imgCrop.Right}/{imgCrop.Bottom}";
+                    diagnostic.Errors.Add(new OptimizeError(meta.ImagePart.Uri.OriginalString, message));
                 }
             }
 
@@ -143,7 +146,7 @@ namespace MinMe.Optimizers.ImageOptimizerRuntime
                 if (sourceFileSize <= Options.MinImageSizeForTransformation)
                     return;
 
-                newImageStream = _imageEngineBase.Transform(stream, crop, newSize);
+                newImageStream = _imageStrategy.Transform(stream, crop, newSize);
 
                 // It looks strange, but practically it worth to remove the crop, even if result image looks bigger.
                 if (newImageStream is null || (newImageStream.Length >= sourceFileSize && crop is null))

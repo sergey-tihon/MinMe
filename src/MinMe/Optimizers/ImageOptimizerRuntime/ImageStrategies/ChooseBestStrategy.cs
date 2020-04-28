@@ -4,16 +4,16 @@ using System.IO;
 
 using MinMe.Optimizers.ImageOptimizerRuntime.Model;
 
-namespace MinMe.Optimizers.ImageOptimizerRuntime.ImageEngine
+namespace MinMe.Optimizers.ImageOptimizerRuntime.ImageStrategies
 {
-    internal class ChooseBestImageEngine : IImageEngine
+    internal class ChooseBestStrategy : IImageStrategy
     {
-        public ChooseBestImageEngine(params IImageEngine[] engines)
+        public ChooseBestStrategy(params IImageStrategy[] engines)
             => _engines = engines;
 
-        private readonly IImageEngine[] _engines;
+        private readonly IImageStrategy[] _engines;
 
-        Stream? IImageEngine.Transform(Stream imageStream, ImageCrop? crop, Size? size)
+        Stream? IImageStrategy.Transform(Stream imageStream, ImageCrop? crop, Size? size)
         {
             Stream? result = null;
             foreach (var engine in _engines)

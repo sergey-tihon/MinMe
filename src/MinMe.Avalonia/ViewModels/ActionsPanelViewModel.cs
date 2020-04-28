@@ -183,7 +183,7 @@ namespace MinMe.Avalonia.ViewModels
                 await using var originalStream = new FileStream(FileContentInfo.FileName, FileMode.Open, FileAccess.Read);
                 var extension = Path.GetExtension(FileContentInfo.FileName);
                 await using var transformedStream = new ImageOptimizer()
-                    .Transform(extension, originalStream, SelectedMode.Options);
+                    .Transform(extension, originalStream, out var diagnostic, SelectedMode.Options);
 
                 if (transformedStream is { })
                 {
