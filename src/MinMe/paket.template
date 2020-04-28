@@ -26,3 +26,5 @@ dependencies
         System.IO.Compression >= LOCKEDVERSION
         Microsoft.IO.RecyclableMemoryStream >= LOCKEDVERSION
         System.Drawing.Common >= LOCKEDVERSION
+        SixLabors.ImageSharp >= LOCKEDVERSION
+        Magick.NET-Q8-AnyCPU >= LOCKEDVERSION

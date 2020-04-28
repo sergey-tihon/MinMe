@@ -3,3 +3,4 @@ Microsoft.IO.RecyclableMemoryStream
 System.IO.Compression
 System.Drawing.Common
 SixLabors.ImageSharp
+Magick.NET-Q8-AnyCPU

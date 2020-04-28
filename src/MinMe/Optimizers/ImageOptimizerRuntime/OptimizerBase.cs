@@ -27,6 +27,7 @@ namespace MinMe.Optimizers.ImageOptimizerRuntime
             //_imageStrategy = new ImageSharpStrategy(manager);
             //_imageStrategy = new ChooseBestStrategy(new ImageSharpStrategy(manager), new SystemDrawingStrategy(manager));
             //_imageStrategy = new FallbackStrategy(new ImageSharpStrategy(manager), new SystemDrawingStrategy(manager));
+            //_imageStrategy = new FallbackStrategy(new ImageSharpStrategy(manager), new MagickNetStrategy(manager));
         }
 
         public void Transform(TDocument document, OptimizeDiagnostic diagnostic, CancellationToken token)

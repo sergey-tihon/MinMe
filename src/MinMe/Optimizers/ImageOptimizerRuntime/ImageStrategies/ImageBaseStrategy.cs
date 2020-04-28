@@ -8,10 +8,10 @@ using MinMe.Optimizers.ImageOptimizerRuntime.Utils;
 
 namespace MinMe.Optimizers.ImageOptimizerRuntime.ImageStrategies
 {
-    internal abstract class ImageStrategyBase : IImageStrategy
+    internal abstract class ImageBaseStrategy : IImageStrategy
     {
         protected readonly RecyclableMemoryStreamManager StreamManager;
-        protected ImageStrategyBase(RecyclableMemoryStreamManager streamManager)
+        protected ImageBaseStrategy(RecyclableMemoryStreamManager streamManager)
             => StreamManager = streamManager;
 
         public abstract Stream? Transform(Stream imageStream, ImageCrop? crop, Size? size);

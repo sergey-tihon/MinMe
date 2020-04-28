@@ -10,7 +10,7 @@ using MinMe.Optimizers.ImageOptimizerRuntime.Model;
 
 namespace MinMe.Optimizers.ImageOptimizerRuntime.ImageStrategies
 {
-    internal class SystemDrawingStrategy : ImageStrategyBase
+    internal class SystemDrawingStrategy : ImageBaseStrategy
     {
         public SystemDrawingStrategy(RecyclableMemoryStreamManager streamManager) : base(streamManager)
         {

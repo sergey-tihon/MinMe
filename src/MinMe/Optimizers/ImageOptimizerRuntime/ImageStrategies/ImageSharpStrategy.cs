@@ -16,7 +16,7 @@ using Size = System.Drawing.Size;
 
 namespace MinMe.Optimizers.ImageOptimizerRuntime.ImageStrategies
 {
-    internal class ImageSharpStrategy : ImageStrategyBase
+    internal class ImageSharpStrategy : ImageBaseStrategy
     {
         public ImageSharpStrategy(RecyclableMemoryStreamManager streamManager) : base(streamManager)
         {

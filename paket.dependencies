@@ -4,6 +4,7 @@ nuget DocumentFormat.OpenXml
 nuget System.Drawing.Common
 nuget SixLabors.ImageSharp prerelease
 nuget System.IO.Compression
+nuget Magick.NET-Q8-AnyCPU
 nuget Microsoft.IO.RecyclableMemoryStream
 
 nuget Avalonia
