@@ -62,7 +62,8 @@ namespace MinMe.Tests.RepoTests
                         FileName = GetPath(file),
                         FileSizeBefore = srcStream.Length,
                         FileSizeAfter = -1,
-                        Compression = 0
+                        Compression = 0,
+                        Errors = null
                     };
 
                     try
@@ -70,6 +71,14 @@ namespace MinMe.Tests.RepoTests
                         await using var dstStream = _imageOptimizer.Transform(".pptx", srcStream, out var diagnostic, _options);
                         result.FileSizeAfter = dstStream.Length;
                         result.Compression = 100.0 * (srcStream.Length - dstStream.Length) / srcStream.Length;
+
+                        if (diagnostic.Errors.Count > 0)
+                        {
+                            result.Errors = diagnostic.Errors
+                                .Select(x => x.ToString())
+                                .OrderBy(x => x)
+                                .ToList();
+                        }
                     }
                     catch (Exception e)
                     {
@@ -84,7 +93,8 @@ namespace MinMe.Tests.RepoTests
             await using var fs = File.Create(BaselineFile);
             await JsonSerializer.SerializeAsync(fs, results, new JsonSerializerOptions
             {
-                WriteIndented = true
+                WriteIndented = true,
+                IgnoreNullValues = true
             });
         }
 

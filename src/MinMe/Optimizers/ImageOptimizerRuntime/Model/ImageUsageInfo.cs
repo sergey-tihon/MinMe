@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
@@ -39,11 +40,24 @@ namespace MinMe.Optimizers.ImageOptimizerRuntime.Model
                 return null;
 
             return new ImageCrop(sourceRectangle, null,
-                sourceRectangle.Left?.Value ?? 0,
-                sourceRectangle.Right?.Value ?? 0,
-                sourceRectangle.Top?.Value ?? 0,
-                sourceRectangle.Bottom?.Value ?? 0
+                ParseRectSize(sourceRectangle.Left),
+                ParseRectSize(sourceRectangle.Right),
+                ParseRectSize(sourceRectangle.Top),
+                ParseRectSize(sourceRectangle.Bottom)
             );
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        private static int ParseRectSize(Int32Value? value)
+        {
+            if (value is null || !value.HasValue)
+                return 0;
+
+            // Ignore human errors with negative 1px crop
+            if (value.Value == -1)
+                return 0;
+
+            return value.Value;
         }
 
         /// <summary>

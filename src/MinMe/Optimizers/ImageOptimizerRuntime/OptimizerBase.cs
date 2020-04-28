@@ -102,14 +102,26 @@ namespace MinMe.Optimizers.ImageOptimizerRuntime
                 try
                 {
                     token.ThrowIfCancellationRequested();
+                    if (IsIgnoredImagePart(pair.Value.ImagePart))
+                        return;
                     ResizeImage(pair.Value, diagnostic);
                 }
                 catch (Exception e)
                 {
-                    diagnostic.Errors.Add(new OptimizeError(pair.Key, e.Message));
+                    var message = $"[{e.GetType().Name}] {e.Message}";
+                    diagnostic.Errors.Add(new OptimizeError(pair.Key, message));
                 }
             }, Options.DegreeOfParallelism);
         }
+
+        private static bool IsIgnoredImagePart(ImagePart imagePart) =>
+            imagePart.ContentType switch
+            {
+                "image/svg+xml" => true,
+                "image/x-emf" => true,
+                "image/x-wmf" => true,
+                _ => false
+            };
 
         private void ResizeImage(ImageMetadata meta, OptimizeDiagnostic diagnostic)
         {

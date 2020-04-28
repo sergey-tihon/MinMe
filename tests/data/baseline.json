@@ -242,8 +242,8 @@
   {
     "FileName": "dl-tutorials/ppts/Week9b Handwrting Generation.pptx",
     "FileSizeBefore": 1599564,
-    "FileSizeAfter": 1192725,
-    "Compression": 25.434368365379566
+    "FileSizeAfter": 1192543,
+    "Compression": 25.44574646591196
   },
   {
     "FileName": "dl-tutorials/ppts/Week9c Image Captioning.pptx",
@@ -321,7 +321,10 @@
     "FileName": "dotNETConf/2018/Technical/Decks/Complete Awesomeness for Mobile .NET Developers.pptx",
     "FileSizeBefore": 16236376,
     "FileSizeAfter": 7866684,
-    "Compression": 51.54901561777086
+    "Compression": 51.54901561777086,
+    "Errors": [
+      "[/ppt/media/image42.png] Unsupported image crop L/T/R/B=1/46941/-1407/0"
+    ]
   },
   {
     "FileName": "dotNETConf/2018/Technical/Decks/dotNETConf2018-KEYNOTE.pptx",
@@ -333,7 +336,10 @@
     "FileName": "dotNETConf/2018/Technical/Decks/DotNetDevOps.pptx",
     "FileSizeBefore": 14964636,
     "FileSizeAfter": 5569127,
-    "Compression": 62.78474798852441
+    "Compression": 62.78474798852441,
+    "Errors": [
+      "[/ppt/media/image108.png] Unsupported image crop L/T/R/B=0/-1127/0/589"
+    ]
   },
   {
     "FileName": "dotNETConf/2018/Technical/Decks/Entity Framework Core 2.2 and beyond.pptx",
@@ -363,7 +369,10 @@
     "FileName": "dotNETConf/2018/Technical/Decks/What\u0027s new in ASP.NET Core.pptx",
     "FileSizeBefore": 3122390,
     "FileSizeAfter": 1634953,
-    "Compression": 47.637771066394656
+    "Compression": 47.637771066394656,
+    "Errors": [
+      "[/ppt/media/image27.png] Unsupported image crop L/T/R/B=-1417/35427/1417/3437"
+    ]
   },
   {
     "FileName": "dotNETConf/2018/Technical/Decks/What\u0027s new with F# 4.5.pptx",
@@ -675,13 +684,19 @@
     "FileName": "dsyme-fsharp/2007-07-06-dublin/APGAdCenter.pptx",
     "FileSizeBefore": 1457603,
     "FileSizeAfter": 957290,
-    "Compression": 34.32436678574344
+    "Compression": 34.32436678574344,
+    "Errors": [
+      "[/ppt/media/image8.png] Unsupported image crop L/T/R/B=-849/-21872/-849/-21872"
+    ]
   },
   {
     "FileName": "dsyme-fsharp/2007-07-06-dublin/fsharp-at-dublin.pptx",
     "FileSizeBefore": 2514702,
     "FileSizeAfter": 1352310,
-    "Compression": 46.22384680172839
+    "Compression": 46.22384680172839,
+    "Errors": [
+      "[/ppt/media/image16.png] Unsupported image crop L/T/R/B=-849/-21872/-849/-21872"
+    ]
   },
   {
     "FileName": "dsyme-fsharp/2007-09-18-nextgen/fsharp-v2.pptx",
@@ -729,25 +744,37 @@
     "FileName": "dsyme-fsharp/2009-03-24-chalmers/FSharp Impromptu.pptx",
     "FileSizeBefore": 1554201,
     "FileSizeAfter": 955734,
-    "Compression": 38.506409402644834
+    "Compression": 38.506409402644834,
+    "Errors": [
+      "[/ppt/media/image6.png] Unsupported image crop L/T/R/B=0/0/0/-26666"
+    ]
   },
   {
     "FileName": "dsyme-fsharp/2009-03-24-sdc2009/FSharp Intro v1.pptx",
     "FileSizeBefore": 2120087,
     "FileSizeAfter": 1239794,
-    "Compression": 41.52155076654873
+    "Compression": 41.52155076654873,
+    "Errors": [
+      "[/ppt/media/image6.png] Unsupported image crop L/T/R/B=0/0/0/-26666"
+    ]
   },
   {
     "FileName": "dsyme-fsharp/2009-03-25-aarhus/FSharp Overview.pptx",
     "FileSizeBefore": 2175338,
     "FileSizeAfter": 1355768,
-    "Compression": 37.675524447235325
+    "Compression": 37.675524447235325,
+    "Errors": [
+      "[/ppt/media/image5.png] Unsupported image crop L/T/R/B=0/0/0/-26666"
+    ]
   },
   {
     "FileName": "dsyme-fsharp/2009-03-25-mdcc/FSharp Intro v1.pptx",
     "FileSizeBefore": 2113776,
     "FileSizeAfter": 1234414,
-    "Compression": 41.60147527457971
+    "Compression": 41.60147527457971,
+    "Errors": [
+      "[/ppt/media/image6.png] Unsupported image crop L/T/R/B=0/0/0/-26666"
+    ]
   },
   {
     "FileName": "dsyme-fsharp/2009-03-28-york/FSharp-LOP-v2.pptx",
@@ -771,7 +798,10 @@
     "FileName": "dsyme-fsharp/2009-11-18-edinburgh/FSharp-DL.pptx",
     "FileSizeBefore": 2053302,
     "FileSizeAfter": 954052,
-    "Compression": 53.535719538577375
+    "Compression": 53.535719538577375,
+    "Errors": [
+      "[/ppt/media/image10.png] Unsupported image crop L/T/R/B=0/0/0/-26666"
+    ]
   },
   {
     "FileName": "dsyme-fsharp/2010-01-26-berkeley/FSharp-berkeley-redist.pptx",
@@ -837,13 +867,19 @@
     "FileName": "dsyme-fsharp/2010-10-29-pdc10/PDC_FT_55_Syme_TypeProviders-v2.pptx",
     "FileSizeBefore": 5085649,
     "FileSizeAfter": 2398940,
-    "Compression": 52.829225925737305
+    "Compression": 52.829225925737305,
+    "Errors": [
+      "[/ppt/media/image13.png] Unsupported image crop L/T/R/B=0/9382/-6081/38738"
+    ]
   },
   {
     "FileName": "dsyme-fsharp/2010-10-29-pdc10/type-providers-one-minute.pptx",
     "FileSizeBefore": 3779702,
     "FileSizeAfter": 1869399,
-    "Compression": 50.54110085927409
+    "Compression": 50.54110085927409,
+    "Errors": [
+      "[/ppt/media/image12.png] Unsupported image crop L/T/R/B=0/9382/-6081/38738"
+    ]
   },
   {
     "FileName": "dsyme-fsharp/2010-11-09-berlin/DEV304_Syme.pptx",
@@ -879,7 +915,10 @@
     "FileName": "dsyme-fsharp/2011-08-20-jackhu/DEV217.pptx",
     "FileSizeBefore": 8317344,
     "FileSizeAfter": 4490763,
-    "Compression": 46.00724702501183
+    "Compression": 46.00724702501183,
+    "Errors": [
+      "[/ppt/embeddings/Microsoft_Excel_Worksheet1.xlsx] Unsupported embedding type application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    ]
   },
   {
     "FileName": "dsyme-fsharp/2011-09-15-build/SAC-904T_Syme.pptx",
@@ -903,7 +942,10 @@
     "FileName": "dsyme-fsharp/2011-11-15-dutch-ict/dutch-ict-v2.pptx",
     "FileSizeBefore": 4168627,
     "FileSizeAfter": 2187501,
-    "Compression": 47.52466459580097
+    "Compression": 47.52466459580097,
+    "Errors": [
+      "[/ppt/media/image23.png] Unsupported image crop L/T/R/B=0/9382/-6081/38738"
+    ]
   },
   {
     "FileName": "dsyme-fsharp/2012-03-23-nicta/nicta-v4-redist.pptx",
@@ -1269,7 +1311,10 @@
     "FileName": "dsyme-fsharp/2016-12-11-ctos/data-programming-cloud-nirvana-v1.pptx",
     "FileSizeBefore": 15626170,
     "FileSizeAfter": 12121470,
-    "Compression": 22.428400561365965
+    "Compression": 22.428400561365965,
+    "Errors": [
+      "[/ppt/media/image51.jpeg] Unsupported image crop L/T/R/B=52125/0/180/-114"
+    ]
   },
   {
     "FileName": "dsyme-fsharp/2017-10-oxford/fsharp-relaxation-given.pptx",
@@ -1281,19 +1326,30 @@
     "FileName": "dsyme-fsharp/2018-04-05-fsharpx/fsharp-code-i-love-given.pptx",
     "FileSizeBefore": 11602818,
     "FileSizeAfter": 10590631,
-    "Compression": 8.723630759355185
+    "Compression": 8.723630759355185,
+    "Errors": [
+      "[/ppt/media/image26.png] Unsupported image crop L/T/R/B=0/0/-397/45958",
+      "[/ppt/media/image29.png] Unsupported image crop L/T/R/B=-541/61940/0/0"
+    ]
   },
   {
     "FileName": "dsyme-fsharp/2018-05-05-code-i-love/fsharp-code-i-love.pptx",
     "FileSizeBefore": 11902632,
     "FileSizeAfter": 10970819,
-    "Compression": 7.828629835821187
+    "Compression": 7.828629835821187,
+    "Errors": [
+      "[/ppt/media/image34.png] Unsupported image crop L/T/R/B=0/0/-397/45958",
+      "[/ppt/media/image37.png] Unsupported image crop L/T/R/B=-541/61940/0/0"
+    ]
   },
   {
     "FileName": "dsyme-fsharp/2018-05-25-malaga/fsharp-relaxation.pptx",
     "FileSizeBefore": 12611044,
     "FileSizeAfter": 8539587,
-    "Compression": 32.284852863886606
+    "Compression": 32.284852863886606,
+    "Errors": [
+      "[/ppt/media/image31.png] Unsupported image crop L/T/R/B=0/0/-397/45958"
+    ]
   },
   {
     "FileName": "dsyme-fsharp/2018-09-05-exf-meetup/exf-meetup.pptx",
@@ -1305,31 +1361,50 @@
     "FileName": "dsyme-fsharp/2018-09-27-openfsharp-code-I-love/fsharp-code-i-love-openfsharp.pptx",
     "FileSizeBefore": 17174317,
     "FileSizeAfter": 10828442,
-    "Compression": 36.94979544164697
+    "Compression": 36.94979544164697,
+    "Errors": [
+      "[/ppt/media/image33.png] Unsupported image crop L/T/R/B=0/0/-397/45958",
+      "[/ppt/media/image36.png] Unsupported image crop L/T/R/B=-541/61940/0/0"
+    ]
   },
   {
     "FileName": "dsyme-fsharp/2018-09-27-openfsharp-code-I-love/fsharp-code-i-love.pptx",
     "FileSizeBefore": 11781485,
     "FileSizeAfter": 10697119,
-    "Compression": 9.203984047851353
+    "Compression": 9.203984047851353,
+    "Errors": [
+      "[/ppt/media/image26.png] Unsupported image crop L/T/R/B=0/0/-397/45958",
+      "[/ppt/media/image29.png] Unsupported image crop L/T/R/B=-541/61940/0/0"
+    ]
   },
   {
     "FileName": "dsyme-fsharp/2018-11-08-codemesh/fsharp-code-i-love-codemesh.pptx",
     "FileSizeBefore": 17649477,
     "FileSizeAfter": 11019009,
-    "Compression": 37.56750412490976
+    "Compression": 37.56750412490976,
+    "Errors": [
+      "[/ppt/media/image41.png] Unsupported image crop L/T/R/B=0/0/-397/45958",
+      "[/ppt/media/image44.png] Unsupported image crop L/T/R/B=-541/61940/0/0"
+    ]
   },
   {
     "FileName": "dsyme-fsharp/2018-11-29-imperial/fsharp-relaxation.pptx",
     "FileSizeBefore": 12653084,
     "FileSizeAfter": 8564938,
-    "Compression": 32.309482810672876
+    "Compression": 32.309482810672876,
+    "Errors": [
+      "[/ppt/media/image54.png] Unsupported image crop L/T/R/B=0/0/-397/45958"
+    ]
   },
   {
     "FileName": "dsyme-fsharp/2019-02-20-lambdadays/fsharp-code-i-love-lambdadays-given.pptx",
     "FileSizeBefore": 18705563,
     "FileSizeAfter": 11197307,
-    "Compression": 40.13916074057755
+    "Compression": 40.13916074057755,
+    "Errors": [
+      "[/ppt/media/image41.png] Unsupported image crop L/T/R/B=0/0/-397/45958",
+      "[/ppt/media/image45.png] Unsupported image crop L/T/R/B=-541/61940/0/0"
+    ]
   },
   {
     "FileName": "dsyme-fsharp/2019-04-05-fsharp-exchange/fsharp-exchange.pptx",
@@ -1365,7 +1440,11 @@
     "FileName": "dsyme-fsharp/2019-10-18-ndc-sydney/fsharp-code-i-love-ndc-sydney.pptx",
     "FileSizeBefore": 18283001,
     "FileSizeAfter": 11101429,
-    "Compression": 39.28005035934746
+    "Compression": 39.28005035934746,
+    "Errors": [
+      "[/ppt/media/image44.png] Unsupported image crop L/T/R/B=0/0/-397/45958",
+      "[/ppt/media/image47.png] Unsupported image crop L/T/R/B=-541/61940/0/0"
+    ]
   },
   {
     "FileName": "dsyme-fsharp/2019-11-13-buildstuff-functional-uis/functional-uis.pptx",
