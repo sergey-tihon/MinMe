@@ -96,14 +96,17 @@ namespace MinMe.Tests.RepoTests
                 WriteIndented = true,
                 IgnoreNullValues = true
             });
+
+            PrintStats(results);
         }
 
         [Test]
-        public void BaselineStats()
+        public void BaselineStats() => PrintStats(_baseline.Value.Values.ToList());
+
+
+        private void PrintStats(List<OptimizeResult> results)
         {
             var log = TestContext.Out;
-            var results = _baseline.Value.Values.ToList();
-
             log.WriteLine($"Number of files {results.Count}");
 
             var totalSizeBefore = results.Sum(x => x.FileSizeBefore);

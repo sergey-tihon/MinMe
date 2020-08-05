@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Threading;
@@ -25,7 +24,8 @@ namespace MinMe.Optimizers.ImageOptimizerRuntime
             Options = options;
             _imageStrategy = new SystemDrawingStrategy(manager);
             //_imageStrategy = new ImageSharpStrategy(manager);
-            //_imageStrategy = new ChooseBestStrategy(new ImageSharpStrategy(manager), new SystemDrawingStrategy(manager));
+            //_imageStrategy = new MagickNetStrategy(manager);
+            //_imageStrategy = new ChooseBestStrategy(new ImageSharpStrategy(manager), new SystemDrawingStrategy(manager), new MagickNetStrategy(manager));
             //_imageStrategy = new FallbackStrategy(new ImageSharpStrategy(manager), new SystemDrawingStrategy(manager));
             //_imageStrategy = new FallbackStrategy(new ImageSharpStrategy(manager), new MagickNetStrategy(manager));
         }

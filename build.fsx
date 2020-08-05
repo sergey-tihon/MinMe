@@ -49,7 +49,9 @@ Target.create "AssemblyInfo" (fun _ ->
 )
 
 Target.create "Build" (fun _ ->
-    DotNet.exec id "build" "MinMe.sln -c Release" |> ignore
+    let result = DotNet.exec id "build" "MinMe.sln -c Release"
+    if not result.OK
+    then failwithf "Build failed: %A" result.Errors
 )
 
 Target.create "RestoreData" (fun _ ->

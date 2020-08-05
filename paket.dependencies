@@ -1,8 +1,9 @@
 source https://api.nuget.org/v3/index.json
+framework: netstandard2.0,netcoreapp3.1
 
 nuget DocumentFormat.OpenXml
 nuget System.Drawing.Common
-nuget SixLabors.ImageSharp prerelease
+nuget SixLabors.ImageSharp
 nuget System.IO.Compression
 nuget Magick.NET-Q8-AnyCPU
 nuget Microsoft.IO.RecyclableMemoryStream
@@ -12,7 +13,7 @@ nuget Avalonia.Controls.DataGrid
 nuget Avalonia.Desktop
 nuget Avalonia.ReactiveUI
 nuget Microsoft.Extensions.Hosting
-nuget Clippit
+nuget Clippit prerelease
 
 group Tests
     source https://api.nuget.org/v3/index.json
