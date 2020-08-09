@@ -6,9 +6,10 @@ using System.Linq;
 
 using Microsoft.IO;
 
+using MinMe.Optimizers.ImageOptimizerRuntime.ImageStrategies;
 using MinMe.Optimizers.ImageOptimizerRuntime.Model;
 
-namespace MinMe.Optimizers.ImageOptimizerRuntime.ImageStrategies
+namespace MinMe.Tests.Experimental.ImageStrategies
 {
     internal class SystemDrawingStrategy : ImageBaseStrategy
     {
@@ -41,7 +42,7 @@ namespace MinMe.Optimizers.ImageOptimizerRuntime.ImageStrategies
 
 
             var newImageStream = StreamManager.GetStream();
-            newImage.Save(newImageStream, ImageFormat.Png);
+            newImage.Save((Stream) newImageStream, ImageFormat.Png);
 
             var isJpegAllowed = FormatConverter(srcImage, true).Equals(ImageFormat.Jpeg);
             if (isJpegAllowed)
@@ -52,7 +53,7 @@ namespace MinMe.Optimizers.ImageOptimizerRuntime.ImageStrategies
                     {Param = {[0] = new EncoderParameter(Encoder.Quality, 80L)}};
 
                 var jpegImageStream = StreamManager.GetStream();
-                newImage.Save(jpegImageStream, jpegCodec, encoderParams);
+                newImage.Save((Stream) jpegImageStream, jpegCodec, encoderParams);
 
                 if (jpegImageStream.Length < newImageStream.Length)
                 {

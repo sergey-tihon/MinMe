@@ -5,9 +5,10 @@ using ImageMagick;
 
 using Microsoft.IO;
 
+using MinMe.Optimizers.ImageOptimizerRuntime.ImageStrategies;
 using MinMe.Optimizers.ImageOptimizerRuntime.Model;
 
-namespace MinMe.Optimizers.ImageOptimizerRuntime.ImageStrategies
+namespace MinMe.Tests.Experimental.ImageStrategies
 {
     internal class MagickNetStrategy : ImageBaseStrategy
     {
@@ -29,17 +30,17 @@ namespace MinMe.Optimizers.ImageOptimizerRuntime.ImageStrategies
             }
             if (newSize.Width != srcImageSize.Width || newSize.Height != srcImageSize.Height)
             {
-                image.Resize(newSize.Width, newSize.Height);
+                image.Resize((int) newSize.Width, newSize.Height);
             }
 
             var newImageStream = StreamManager.GetStream();
-            image.Write(newImageStream, MagickFormat.Png);
+            image.Write((Stream) newImageStream, MagickFormat.Png);
 
             var isJpegAllowed = !image.HasAlpha;
             if (isJpegAllowed)
             {
                 var jpegImageStream = StreamManager.GetStream();
-                image.Write(jpegImageStream, MagickFormat.Jpeg);
+                image.Write((Stream) jpegImageStream, MagickFormat.Jpeg);
                 if (jpegImageStream.Length < newImageStream.Length)
                 {
                     newImageStream.Dispose();

@@ -12,6 +12,10 @@ using Microsoft.IO;
 using MinMe.Optimizers.ImageOptimizerRuntime.ImageStrategies;
 using MinMe.Optimizers.ImageOptimizerRuntime.Model;
 using MinMe.Optimizers.ImageOptimizerRuntime.Utils;
+
+using SixLabors.ImageSharp.Formats.Jpeg;
+using SixLabors.ImageSharp.Formats.Png;
+
 namespace MinMe.Optimizers.ImageOptimizerRuntime
 {
     internal abstract class OptimizerBase<TDocument>
@@ -22,12 +26,14 @@ namespace MinMe.Optimizers.ImageOptimizerRuntime
         protected OptimizerBase(RecyclableMemoryStreamManager manager, ImageOptimizerOptions options)
         {
             Options = options;
-            _imageStrategy = new SystemDrawingStrategy(manager);
-            //_imageStrategy = new ImageSharpStrategy(manager);
-            //_imageStrategy = new MagickNetStrategy(manager);
-            //_imageStrategy = new ChooseBestStrategy(new ImageSharpStrategy(manager), new SystemDrawingStrategy(manager), new MagickNetStrategy(manager));
-            //_imageStrategy = new FallbackStrategy(new ImageSharpStrategy(manager), new SystemDrawingStrategy(manager));
-            //_imageStrategy = new FallbackStrategy(new ImageSharpStrategy(manager), new MagickNetStrategy(manager));
+            _imageStrategy = options.ImageStrategy ?? new ImageSharpStrategy(manager, new PngEncoder
+            {
+                //CompressionLevel = 9
+            }, new JpegEncoder
+            {
+                //Quality = 70,
+                //Subsample = JpegSubsample.Ratio420
+            });
         }
 
         public void Transform(TDocument document, OptimizeDiagnostic diagnostic, CancellationToken token)

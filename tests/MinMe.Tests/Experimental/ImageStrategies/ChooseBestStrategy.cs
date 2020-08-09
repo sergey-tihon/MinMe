@@ -2,9 +2,10 @@ using System;
 using System.Drawing;
 using System.IO;
 
+using MinMe.Optimizers.ImageOptimizerRuntime.ImageStrategies;
 using MinMe.Optimizers.ImageOptimizerRuntime.Model;
 
-namespace MinMe.Optimizers.ImageOptimizerRuntime.ImageStrategies
+namespace MinMe.Tests.Experimental.ImageStrategies
 {
     internal class ChooseBestStrategy : IImageStrategy
     {

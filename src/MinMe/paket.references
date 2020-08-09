@@ -1,6 +1,4 @@
 DocumentFormat.OpenXml
-Microsoft.IO.RecyclableMemoryStream
 System.IO.Compression
-System.Drawing.Common
+Microsoft.IO.RecyclableMemoryStream
 SixLabors.ImageSharp
-Magick.NET-Q8-AnyCPU

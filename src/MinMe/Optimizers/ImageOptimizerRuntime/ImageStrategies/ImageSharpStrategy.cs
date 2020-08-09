@@ -15,21 +15,18 @@ using Size = System.Drawing.Size;
 
 namespace MinMe.Optimizers.ImageOptimizerRuntime.ImageStrategies
 {
-    internal class ImageSharpStrategy : ImageBaseStrategy
+    public class ImageSharpStrategy : ImageBaseStrategy
     {
-        public ImageSharpStrategy(RecyclableMemoryStreamManager streamManager) : base(streamManager)
+        public ImageSharpStrategy(RecyclableMemoryStreamManager streamManager,
+                                  PngEncoder? pngEncoder = null, JpegEncoder? jpegEncoder = null)
+            : base(streamManager)
         {
+            _pngDecoder = pngEncoder ?? new PngEncoder();
+            _jpegEncoder = jpegEncoder ?? new JpegEncoder();
         }
 
-        private readonly PngEncoder _pngDecoder = new PngEncoder
-        {
-            //CompressionLevel = 9
-        };
-        private readonly JpegEncoder _jpegEncoder = new JpegEncoder
-        {
-            //Quality = 70,
-            //Subsample = JpegSubsample.Ratio420
-        };
+        private readonly PngEncoder _pngDecoder;
+        private readonly JpegEncoder _jpegEncoder;
 
         public override Stream? Transform(Stream imageStream, ImageCrop? crop, Size? size)
         {

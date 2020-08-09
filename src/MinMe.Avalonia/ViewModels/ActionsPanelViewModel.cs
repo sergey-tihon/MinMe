@@ -48,15 +48,15 @@ namespace MinMe.Avalonia.ViewModels
             PublishModes = new ObservableCollection<PublishMode> {
                 new PublishMode("2160p (4K)", new ImageOptimizerOptions {
                     ExpectedScreenSize = new Size(3840, 2160),
-                    //DegreeOfParallelism = Environment.ProcessorCount
+                    DegreeOfParallelism = Environment.ProcessorCount
                 }),
                 new PublishMode("1080p (Full HD)", new ImageOptimizerOptions {
                     ExpectedScreenSize = new Size(1920, 1080),
-                    //DegreeOfParallelism = Environment.ProcessorCount
+                    DegreeOfParallelism = Environment.ProcessorCount
                 }),
                 new PublishMode("720p (HD ready)", new ImageOptimizerOptions {
                     ExpectedScreenSize = new Size(1280, 720),
-                    //DegreeOfParallelism = Environment.ProcessorCount
+                    DegreeOfParallelism = Environment.ProcessorCount
                 }),
             };
             _selectedMode = PublishModes[1];

@@ -7,7 +7,7 @@ using Rectangle = System.Drawing.Rectangle;
 
 namespace MinMe.Optimizers.ImageOptimizerRuntime.Model
 {
-    internal class ImageCrop: IEquatable<ImageCrop>
+    public class ImageCrop: IEquatable<ImageCrop>
     {
         public long Left { get; }
         public long Right { get; }

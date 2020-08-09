@@ -6,7 +6,10 @@ using System.Runtime.InteropServices;
 using System.Text.Json;
 using System.Threading.Tasks;
 
+using Microsoft.IO;
+
 using MinMe.Optimizers;
+using MinMe.Optimizers.ImageOptimizerRuntime.ImageStrategies;
 using MinMe.Optimizers.ImageOptimizerRuntime.Utils;
 
 using NUnit.Framework;
@@ -19,21 +22,25 @@ namespace MinMe.Tests.RepoTests
     {
         public BaselineTests()
         {
-            _imageOptimizer = new ImageOptimizer();
-            _options = new ImageOptimizerOptions();
+            var streamManager = new RecyclableMemoryStreamManager();
+            _imageOptimizer = new ImageOptimizer(streamManager);
+            _options = new ImageOptimizerOptions
+            {
+                ImageStrategy = new ImageSharpStrategy(streamManager)
+            };
         }
 
         private const string Root = "../../../../data/";
         private const string BaselineFile = Root + "baseline.json";
 
-        private static readonly Lazy<Dictionary<string, OptimizeResult>> _baseline =
+        private static readonly Lazy<Dictionary<string, OptimizeResult>> Baseline =
             new Lazy<Dictionary<string, OptimizeResult>>(() =>
             {
                 var json = File.ReadAllText(BaselineFile);
                 return
                     JsonSerializer.Deserialize<OptimizeResult[]>(json)
                         .ToDictionary(x => x.FileName, x => x,
-                            StringComparer.InvariantCultureIgnoreCase);
+                            StringComparer.InvariantCultureIgnoreCase)!;
             });
 
         private readonly ImageOptimizer _imageOptimizer;
@@ -41,14 +48,14 @@ namespace MinMe.Tests.RepoTests
         private readonly bool _isOSX = RuntimeInformation.IsOSPlatform(OSPlatform.OSX);
 
 
-        private static List<string> GetAllPptx()
-            => Directory.GetFiles(Root, "*.pptx", SearchOption.AllDirectories)
+        private static List<string> GetAllPptx() =>
+            Directory.GetFiles(Root, "*.pptx", SearchOption.AllDirectories)
                 .Where(file => file.IndexOf("~$", StringComparison.Ordinal) < 0)
-                .OrderBy(x=>x)
+                .OrderBy(x => x)
                 .ToList();
 
-        private static string GetPath(string file)
-            => Path.GetRelativePath(Root, file);
+        private static string GetPath(string file) =>
+            Path.GetRelativePath(Root, file);
 
         [Test, Explicit]
         public async Task GenerateBaseline()
@@ -101,7 +108,8 @@ namespace MinMe.Tests.RepoTests
         }
 
         [Test]
-        public void BaselineStats() => PrintStats(_baseline.Value.Values.ToList());
+        public void BaselineStats() =>
+            PrintStats(Baseline.Value.Values.ToList());
 
 
         private void PrintStats(List<OptimizeResult> results)
@@ -137,11 +145,11 @@ namespace MinMe.Tests.RepoTests
                 log.WriteLine($"\t[{x.Compression:0.00}%] {x.FileName} from {x.FileSizeBefore:0,0} to {x.FileSizeAfter:0,0} (optimized {x.FileSizeBefore-x.FileSizeAfter:0,0} bytes)");
         }
 
-        public static IEnumerable<TestCaseData> TestCases()
-            => GetAllPptx().Select(file =>
+        public static IEnumerable<TestCaseData> TestCases() =>
+            GetAllPptx().Select(file =>
                 {
                     var key = GetPath(file).Replace('\\', '/');
-                    if (_baseline.Value.TryGetValue(key, out var result))
+                    if (Baseline.Value.TryGetValue(key, out var result))
                         return new TestCaseData(new object[] { file, result.FileSizeAfter });
 
                     return new TestCaseData(new object[] { file, 0 }).Ignore("Unknown file");

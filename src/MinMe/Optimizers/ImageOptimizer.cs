@@ -14,7 +14,10 @@ namespace MinMe.Optimizers
 {
     public class ImageOptimizer
     {
-        private readonly RecyclableMemoryStreamManager _manager = new RecyclableMemoryStreamManager();
+        public ImageOptimizer(RecyclableMemoryStreamManager? memoryStreamManager = null) =>
+            _memoryStreamManager = memoryStreamManager ?? new RecyclableMemoryStreamManager();
+
+        private readonly RecyclableMemoryStreamManager _memoryStreamManager;
 
         public Stream Transform(string fileType, Stream stream, out OptimizeDiagnostic diagnostic, ImageOptimizerOptions? options = null, CancellationToken? token = null)
         {
@@ -23,7 +26,7 @@ namespace MinMe.Optimizers
             var cancellationToken = token ?? CancellationToken.None;
 
             // Copy of the original stream that will be modified in-place
-            var memoryStream = _manager.GetStream();
+            var memoryStream = _memoryStreamManager.GetStream();
             stream.CopyTo(memoryStream);
 
             switch (fileType.ToLower())
@@ -58,7 +61,7 @@ namespace MinMe.Optimizers
         private void TransformDocxStream(Stream stream, OptimizeDiagnostic diagnostic, ImageOptimizerOptions options, CancellationToken token)
         {
             using var document = OpenXmlFactory.OpenWord(stream, true, options.OpenXmlUriAutoRecovery);
-            var transformation = new OptimizerWord(_manager, options);
+            var transformation = new OptimizerWord(_memoryStreamManager, options);
             transformation.Transform(document, diagnostic, token);
 
             foreach (var part in document.MainDocumentPart.EmbeddedPackageParts)
@@ -71,7 +74,7 @@ namespace MinMe.Optimizers
         private void TransformPptxStream(Stream stream, OptimizeDiagnostic diagnostic, ImageOptimizerOptions options, CancellationToken token)
         {
             using var document = OpenXmlFactory.OpenPowerPoint(stream, true, options.OpenXmlUriAutoRecovery);
-            var transformation = new OptimizerPowerPoint(_manager, options);
+            var transformation = new OptimizerPowerPoint(_memoryStreamManager, options);
             transformation.Transform(document, diagnostic, token);
 
             foreach (var slide in document.PresentationPart.SlideParts)
@@ -117,7 +120,7 @@ namespace MinMe.Optimizers
             {
                 using var zip = new ZipArchive(stream, ZipArchiveMode.Read, false);
 
-                var packedStream = _manager.GetStream();
+                var packedStream = _memoryStreamManager.GetStream();
                 using (var newZip = new ZipArchive(packedStream, ZipArchiveMode.Create, true))
                 {
                     foreach (var entry in zip.Entries)

@@ -8,7 +8,7 @@ using MinMe.Optimizers.ImageOptimizerRuntime.Utils;
 
 namespace MinMe.Optimizers.ImageOptimizerRuntime.ImageStrategies
 {
-    internal abstract class ImageBaseStrategy : IImageStrategy
+    public abstract class ImageBaseStrategy : IImageStrategy
     {
         protected readonly RecyclableMemoryStreamManager StreamManager;
         protected ImageBaseStrategy(RecyclableMemoryStreamManager streamManager)
