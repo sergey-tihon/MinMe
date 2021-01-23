@@ -11,6 +11,7 @@ nuget Avalonia
 nuget Avalonia.Controls.DataGrid
 nuget Avalonia.Desktop
 nuget Avalonia.ReactiveUI
+nuget Avalonia.Diagnostics
 nuget Microsoft.Extensions.Hosting
 nuget Clippit prerelease
 

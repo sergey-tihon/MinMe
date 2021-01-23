@@ -4,6 +4,7 @@ Clippit
 Avalonia
 Avalonia.Desktop
 Avalonia.ReactiveUI
+Avalonia.Diagnostics
 Microsoft.Extensions.Hosting
 System.Drawing.Common
 SixLabors.ImageSharp
