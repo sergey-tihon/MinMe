@@ -20,7 +20,7 @@ namespace MinMe.Avalonia.ViewModels
                 .ToProperty(this, nameof(Slides), deferSubscription: false);
         }
 
-        private readonly ObservableAsPropertyHelper<DataGridCollectionView?> _slides;
+        private readonly ObservableAsPropertyHelper<DataGridCollectionView> _slides;
         public DataGridCollectionView? Slides => _slides.Value;
 
         private DataGridCollectionView ToDataGridCollection(FileContentInfo? fileContentInfoOpt)

@@ -48,7 +48,7 @@ namespace MinMe.Tests.Experimental.ImageStrategies
             if (isJpegAllowed)
             {
                 var jpegCodec = ImageCodecInfo.GetImageEncoders()
-                    .FirstOrDefault(t => t.MimeType == "image/jpeg");
+                    .First(t => t.MimeType == "image/jpeg");
                 var encoderParams = new EncoderParameters(1)
                     {Param = {[0] = new EncoderParameter(Encoder.Quality, 80L)}};
 

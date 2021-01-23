@@ -37,10 +37,14 @@ namespace MinMe.Tests.RepoTests
             new Lazy<Dictionary<string, OptimizeResult>>(() =>
             {
                 var json = File.ReadAllText(BaselineFile);
-                return
-                    JsonSerializer.Deserialize<OptimizeResult[]>(json)
-                        .ToDictionary(x => x.FileName, x => x,
-                            StringComparer.InvariantCultureIgnoreCase)!;
+                var results = JsonSerializer.Deserialize<OptimizeResult[]>(json);
+                if (results is null)
+                    throw new NullReferenceException(nameof(results));
+
+                return results.ToDictionary(
+                    x => x.FileName,
+                    x => x,
+                    StringComparer.InvariantCultureIgnoreCase)!;
             });
 
         private readonly ImageOptimizer _imageOptimizer;

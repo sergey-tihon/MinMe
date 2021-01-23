@@ -5,6 +5,7 @@ using MinMe.Avalonia.Services;
 using ReactiveUI;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Reactive.Linq;
 using System.Text;
@@ -20,7 +21,7 @@ namespace MinMe.Avalonia.ViewModels
                 .ToProperty(this, nameof(Parts), deferSubscription: false);
         }
 
-        private readonly ObservableAsPropertyHelper<DataGridCollectionView?> _parts;
+        private readonly ObservableAsPropertyHelper<DataGridCollectionView> _parts;
         public DataGridCollectionView? Parts => _parts.Value;
 
         private DataGridCollectionView ToDataGridCollection(FileContentInfo? fileContentInfoOpt)
@@ -56,7 +57,7 @@ namespace MinMe.Avalonia.ViewModels
 
             var view = new DataGridCollectionView(rows);
             view.GroupDescriptions.Add(new DataGridPathGroupDescription(nameof(PartInfoRow.PartType)));
-            view.SortDescriptions.Add(DataGridSortDescription.FromPath(nameof(PartInfoRow.Size), true));
+            view.SortDescriptions.Add(DataGridSortDescription.FromPath(nameof(PartInfoRow.Size), ListSortDirection.Descending));
             return view;
         }
     }

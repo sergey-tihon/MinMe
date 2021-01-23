@@ -32,8 +32,11 @@ namespace MinMe.Avalonia
             {
                 desktop.Exit += Desktop_Exit;
 
-                desktop.MainWindow = Host.Services.GetService<MainWindow>();
-                desktop.MainWindow.Content = Host.Services.GetService<MainViewModel>();
+                var window =
+                    Host.Services.GetService<MainWindow>()
+                    ?? throw new NullReferenceException(nameof(MainWindow));
+                window.Content = Host.Services.GetService<MainViewModel>();
+                desktop.MainWindow = window;
             }
         }
 

@@ -31,8 +31,11 @@ namespace MinMe.Avalonia.Views
             base.OnOpened(e);
 
             // Open file dialog directly after app start
-            if (Application.Current is App app && app.Host is {}) {
-                var vm = app.Host.Services.GetService<ActionsPanelViewModel>();
+            if (Application.Current is App {Host: { }} app)
+            {
+                var vm =
+                    app.Host.Services.GetService<ActionsPanelViewModel>()
+                    ?? throw new NullReferenceException(nameof(ActionsPanelViewModel));
                 vm.OpenCommand.Execute().Subscribe();
             }
         }
