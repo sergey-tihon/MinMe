@@ -32,7 +32,7 @@ namespace MinMe.Avalonia
             };
         }
 
-        public bool Match(object data)
-            => data is ViewModelBase;
+        public bool Match(object data) =>
+            data is ViewModelBase;
     }
 }

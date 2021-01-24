@@ -34,7 +34,7 @@ namespace MinMe.Tests.RepoTests
         private const string BaselineFile = Root + "baseline.json";
 
         private static readonly Lazy<Dictionary<string, OptimizeResult>> Baseline =
-            new Lazy<Dictionary<string, OptimizeResult>>(() =>
+            new(() =>
             {
                 var json = File.ReadAllText(BaselineFile);
                 var results = JsonSerializer.Deserialize<OptimizeResult[]>(json);
@@ -52,7 +52,7 @@ namespace MinMe.Tests.RepoTests
         private readonly bool _isOSX = RuntimeInformation.IsOSPlatform(OSPlatform.OSX);
 
 
-        private static List<string> GetAllPptx() =>
+        private static IEnumerable<string> GetAllPptx() =>
             Directory.GetFiles(Root, "*.pptx", SearchOption.AllDirectories)
                 .Where(file => file.IndexOf("~$", StringComparison.Ordinal) < 0)
                 .OrderBy(x => x)

@@ -2,7 +2,6 @@ using System;
 
 using Avalonia;
 using Avalonia.Controls;
-using Avalonia.Input;
 using Avalonia.Markup.Xaml;
 
 using Microsoft.Extensions.DependencyInjection;
@@ -33,10 +32,8 @@ namespace MinMe.Avalonia.Views
             // Open file dialog directly after app start
             if (Application.Current is App {Host: { }} app)
             {
-                var vm =
-                    app.Host.Services.GetService<ActionsPanelViewModel>()
-                    ?? throw new NullReferenceException(nameof(ActionsPanelViewModel));
-                vm.OpenCommand.Execute().Subscribe();
+                var vm = app.Host.Services.GetService<ActionsPanelViewModel>();
+                vm!.OpenCommand.Execute().Subscribe();
             }
         }
     }

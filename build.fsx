@@ -126,7 +126,7 @@ Target.create "All" ignore
   //==> "AssemblyInfo"
   ==> "Build"
   ==> "RestoreData"
-  //==> "RunTests"
+  ==> "RunTests"
   ==> "NuGet"
   ==> "PublishWin"
   ==> "PublishMac"

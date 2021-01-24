@@ -19,6 +19,27 @@
       <SubType>Designer</SubType>
     </AvaloniaResource>
     <AvaloniaResource Include="Assets\**" />
+    <Compile Update="App.axaml.cs">
+      <DependentUpon>App.axaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\MainView.axaml.cs">
+      <DependentUpon>MainView.axaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\ActionsPanelView.axaml.cs">
+      <DependentUpon>ActionsPanelView.axaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\MainWindow.axaml.cs">
+      <DependentUpon>MainWindow.axaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\OverviewView.axaml.cs">
+      <DependentUpon>OverviewView.axaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\PartsInfoView.axaml.cs">
+      <DependentUpon>PartsInfoView.axaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\SlidesInfoView.axaml.cs">
+      <DependentUpon>SlidesInfoView.axaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MinMe\MinMe.csproj" />

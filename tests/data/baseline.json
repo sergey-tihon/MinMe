@@ -29,7 +29,7 @@
     "FileSizeAfter": 2379602,
     "Compression": 82.31179238123244,
     "Errors": [
-      "[/ppt/media/image25.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n"
+      "[/ppt/media/image25.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n"
     ]
   },
   {
@@ -50,7 +50,7 @@
     "FileSizeAfter": 2553880,
     "Compression": 82.27131507692799,
     "Errors": [
-      "[/ppt/media/image2.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n"
+      "[/ppt/media/image2.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n"
     ]
   },
   {
@@ -65,11 +65,11 @@
     "FileSizeAfter": 6155609,
     "Compression": 82.36451067232612,
     "Errors": [
-      "[/ppt/media/image11.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image13.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image14.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image15.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image27.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n"
+      "[/ppt/media/image11.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image13.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image14.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image15.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image27.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n"
     ]
   },
   {
@@ -78,7 +78,7 @@
     "FileSizeAfter": 4297920,
     "Compression": 68.01685479128786,
     "Errors": [
-      "[/ppt/media/image68.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n"
+      "[/ppt/media/image68.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n"
     ]
   },
   {
@@ -93,23 +93,23 @@
     "FileSizeAfter": 1719311,
     "Compression": 85.95471275475964,
     "Errors": [
-      "[/ppt/media/image1.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image13.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image14.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image15.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image17.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image18.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image19.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image2.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image20.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image21.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image3.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image4.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image5.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image6.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image7.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image8.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image9.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n"
+      "[/ppt/media/image1.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image13.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image14.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image15.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image17.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image18.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image19.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image2.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image20.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image21.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image3.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image4.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image5.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image6.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image7.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image8.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image9.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n"
     ]
   },
   {
@@ -118,7 +118,7 @@
     "FileSizeAfter": 4284268,
     "Compression": 68.18098805220339,
     "Errors": [
-      "[/ppt/media/image68.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n"
+      "[/ppt/media/image68.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n"
     ]
   },
   {
@@ -157,22 +157,22 @@
     "FileSizeAfter": 4019251,
     "Compression": 91.28253189436494,
     "Errors": [
-      "[/ppt/media/image10.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image11.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image12.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image13.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image14.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image15.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image16.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image17.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image18.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image19.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image20.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image21.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image22.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image23.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image8.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image9.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n"
+      "[/ppt/media/image10.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image11.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image12.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image13.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image14.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image15.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image16.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image17.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image18.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image19.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image20.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image21.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image22.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image23.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image8.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image9.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n"
     ]
   },
   {
@@ -181,9 +181,9 @@
     "FileSizeAfter": 1955558,
     "Compression": 86.96480114095768,
     "Errors": [
-      "[/ppt/media/image32.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image33.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image34.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n"
+      "[/ppt/media/image32.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image33.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image34.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n"
     ]
   },
   {
@@ -192,7 +192,7 @@
     "FileSizeAfter": 1301250,
     "Compression": 74.49657063396478,
     "Errors": [
-      "[/ppt/media/image1.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n"
+      "[/ppt/media/image1.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n"
     ]
   },
   {
@@ -201,15 +201,15 @@
     "FileSizeAfter": 2692946,
     "Compression": 90.55146483125395,
     "Errors": [
-      "[/ppt/media/image1.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image2.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image3.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image4.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image5.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image6.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image7.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image8.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image9.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n"
+      "[/ppt/media/image1.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image2.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image3.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image4.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image5.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image6.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image7.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image8.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image9.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n"
     ]
   },
   {
@@ -245,10 +245,10 @@
   {
     "FileName": "dl-tutorials/ppts/Week6a Residual Networks and Analysis.pptx",
     "FileSizeBefore": 6259336,
-    "FileSizeAfter": 1218028,
-    "Compression": 80.54061964400057,
+    "FileSizeAfter": 1218068,
+    "Compression": 80.53998059858107,
     "Errors": [
-      "[/ppt/media/image6.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n"
+      "[/ppt/media/image6.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n"
     ]
   },
   {
@@ -257,36 +257,36 @@
     "FileSizeAfter": 31160847,
     "Compression": 17.052088461702784,
     "Errors": [
-      "[/ppt/media/image11.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image12.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image13.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image14.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image15.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image16.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image17.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image19.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image20.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image22.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image23.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image24.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image25.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image26.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image27.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image28.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image29.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image30.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image31.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image32.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image33.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image34.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image35.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image36.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image37.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image38.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image39.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image41.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image7.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image9.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n"
+      "[/ppt/media/image11.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image12.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image13.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image14.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image15.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image16.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image17.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image19.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image20.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image22.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image23.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image24.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image25.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image26.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image27.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image28.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image29.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image30.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image31.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image32.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image33.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image34.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image35.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image36.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image37.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image38.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image39.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image41.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image7.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image9.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n"
     ]
   },
   {
@@ -295,14 +295,14 @@
     "FileSizeAfter": 2705797,
     "Compression": 81.94401718236402,
     "Errors": [
-      "[/ppt/media/image2.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image28.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image29.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image3.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image30.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image31.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image32.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image4.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n"
+      "[/ppt/media/image2.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image28.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image29.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image3.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image30.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image31.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image32.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image4.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n"
     ]
   },
   {
@@ -359,7 +359,7 @@
     "FileSizeAfter": 1343058,
     "Compression": 76.75227564275104,
     "Errors": [
-      "[/ppt/media/image17.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n"
+      "[/ppt/media/image17.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n"
     ]
   },
   {
@@ -392,7 +392,7 @@
     "FileSizeAfter": 1194066,
     "Compression": 53.716596101943445,
     "Errors": [
-      "[/ppt/media/image1.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n"
+      "[/ppt/media/image1.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n"
     ]
   },
   {
@@ -425,7 +425,7 @@
     "FileSizeAfter": 8066347,
     "Compression": 29.794905675862942,
     "Errors": [
-      "[/ppt/media/image34.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n"
+      "[/ppt/media/image34.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n"
     ]
   },
   {
@@ -453,7 +453,7 @@
     "Compression": 50.55968770370925,
     "Errors": [
       "[/ppt/media/image42.png] Unsupported image crop L/T/R/B=1/46941/-1407/0",
-      "[/ppt/media/image49.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n"
+      "[/ppt/media/image49.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n"
     ]
   },
   {
@@ -462,24 +462,24 @@
     "FileSizeAfter": 9712124,
     "Compression": 87.5746946483734,
     "Errors": [
-      "[/ppt/media/image40.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image41.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image42.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image45.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image55.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image56.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image57.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image58.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image59.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image60.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image61.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image62.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image63.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image64.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image66.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image67.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image70.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image71.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n"
+      "[/ppt/media/image40.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image41.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image42.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image45.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image55.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image56.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image57.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image58.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image59.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image60.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image61.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image62.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image63.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image64.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image66.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image67.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image70.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image71.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n"
     ]
   },
   {
@@ -548,12 +548,12 @@
     "FileSizeAfter": 10268367,
     "Compression": 88.6427594975594,
     "Errors": [
-      "[/ppt/media/image68.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image71.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image74.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image76.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image80.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n",
-      "[/ppt/media/image93.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n"
+      "[/ppt/media/image68.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image71.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image74.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image76.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image80.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image93.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n"
     ]
   },
   {
@@ -598,7 +598,7 @@
     "FileSizeAfter": 2326458,
     "Compression": 46.370571861619055,
     "Errors": [
-      "[/ppt/media/image20.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n"
+      "[/ppt/media/image20.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n"
     ]
   },
   {
@@ -613,7 +613,7 @@
     "FileSizeAfter": 3701054,
     "Compression": 46.342188313699204,
     "Errors": [
-      "[/ppt/media/image47.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n"
+      "[/ppt/media/image47.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n"
     ]
   },
   {
@@ -676,7 +676,7 @@
     "FileSizeAfter": 1631989,
     "Compression": 79.29963285774173,
     "Errors": [
-      "[/ppt/media/image19.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - JPEG : JpegDecoder\n - PNG : PngDecoder\n - GIF : GifDecoder\n - BMP : BmpDecoder\n"
+      "[/ppt/media/image19.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n"
     ]
   },
   {
@@ -1051,14 +1051,14 @@
   {
     "FileName": "dsyme-fsharp/2010-11-09-berlin/DEV304_Syme.pptx",
     "FileSizeBefore": 9354449,
-    "FileSizeAfter": 7533146,
-    "Compression": 19.4699121241668
+    "FileSizeAfter": 7533135,
+    "Compression": 19.47002971527238
   },
   {
     "FileName": "dsyme-fsharp/2011-01-25-padl-async/Async-v3.pptx",
     "FileSizeBefore": 7062852,
-    "FileSizeAfter": 1910461,
-    "Compression": 72.9505729413557
+    "FileSizeAfter": 1910450,
+    "Compression": 72.95072868580567
   },
   {
     "FileName": "dsyme-fsharp/2011-03-10-sigcse/fsharp-sigcse.pptx",
@@ -1069,14 +1069,14 @@
   {
     "FileName": "dsyme-fsharp/2011-03-29-techdays-sweden/fsharp-techdays-sweden-don-dsyme-redist.pptx",
     "FileSizeBefore": 8803045,
-    "FileSizeAfter": 7155840,
-    "Compression": 18.711763940772766
+    "FileSizeAfter": 7155829,
+    "Compression": 18.711888897534887
   },
   {
     "FileName": "dsyme-fsharp/2011-06-28-ucl-algo/fsharp-ucl-algo-redist-v2.pptx",
     "FileSizeBefore": 4503099,
-    "FileSizeAfter": 3091627,
-    "Compression": 31.34445856064901
+    "FileSizeAfter": 3091616,
+    "Compression": 31.344702836868567
   },
   {
     "FileName": "dsyme-fsharp/2011-08-20-jackhu/DEV217.pptx",
@@ -1141,8 +1141,8 @@
   {
     "FileName": "dsyme-fsharp/2012-06-05-new-york/fp-success-v3-redist.pptx",
     "FileSizeBefore": 7668394,
-    "FileSizeAfter": 5476457,
-    "Compression": 28.584042499642038
+    "FileSizeAfter": 5476446,
+    "Compression": 28.58418594558391
   },
   {
     "FileName": "dsyme-fsharp/2012-06-26-screencasts/screencast-2.pptx",
