@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Runtime.InteropServices;
 using System.Text.Json;
 using System.Threading.Tasks;
 
@@ -49,8 +48,6 @@ namespace MinMe.Tests.RepoTests
 
         private readonly ImageOptimizer _imageOptimizer;
         private readonly ImageOptimizerOptions _options;
-        private readonly bool _isOSX = RuntimeInformation.IsOSPlatform(OSPlatform.OSX);
-
 
         private static IEnumerable<string> GetAllPptx() =>
             Directory.GetFiles(Root, "*.pptx", SearchOption.AllDirectories)
@@ -168,10 +165,7 @@ namespace MinMe.Tests.RepoTests
             var deltaSize = dstStream.Length - expectedSize;
             await TestContext.Out.WriteLineAsync($"Compression difference {deltaSize:0,0}, new size {dstStream.Length:0,0} bytes");
 
-            if (_isOSX)
-                Assert.LessOrEqual(dstStream.Length, 1.01 * expectedSize);
-            else
-                Assert.LessOrEqual(deltaSize, 600_000);
+            Assert.LessOrEqual(dstStream.Length, 1.01 * expectedSize);
         }
     }
 }

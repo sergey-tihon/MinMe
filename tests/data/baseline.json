@@ -842,6 +842,366 @@
     "Compression": 63.71533597575581
   },
   {
+    "FileName": "dotNETConf/2020/FocusOnMicroservices/Technical/AddingDAPR-DotNETConf.pptx",
+    "FileSizeBefore": 12993155,
+    "FileSizeAfter": 1643031,
+    "Compression": 87.35464173251223,
+    "Errors": [
+      "[/ppt/media/image34.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image46.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image47.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image49.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image60.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image85.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n"
+    ]
+  },
+  {
+    "FileName": "dotNETConf/2020/FocusOnMicroservices/Technical/Beyond-REST-and-RPC-Asynchronous-Eventing-and-Messaging-Patterns.pptx",
+    "FileSizeBefore": 3032537,
+    "FileSizeAfter": 1232639,
+    "Compression": 59.35287846446721
+  },
+  {
+    "FileName": "dotNETConf/2020/FocusOnMicroservices/Technical/DevelopDebugMicroservices.pptx",
+    "FileSizeBefore": 3220936,
+    "FileSizeAfter": 1067802,
+    "Compression": 66.8480839110122
+  },
+  {
+    "FileName": "dotNETConf/2020/FocusOnMicroservices/Technical/dotNETMicroservices_Welcome.pptx",
+    "FileSizeBefore": 18740236,
+    "FileSizeAfter": 10672993,
+    "Compression": 43.04771295302791
+  },
+  {
+    "FileName": "dotNETConf/2020/FocusOnMicroservices/Technical/evolving-monoliths-dotnet5-kubernetes.pptx",
+    "FileSizeBefore": 5061224,
+    "FileSizeAfter": 4190928,
+    "Compression": 17.19536618019673
+  },
+  {
+    "FileName": "dotNETConf/2020/FocusOnMicroservices/Technical/TyeNetConfPresentation.pptx",
+    "FileSizeBefore": 985582,
+    "FileSizeAfter": 501200,
+    "Compression": 49.14679854136946
+  },
+  {
+    "FileName": "dotNETConf/2020/FocusOnMicroservices/Technical/WhyMicroservices.pptx",
+    "FileSizeBefore": 8091592,
+    "FileSizeAfter": 4093516,
+    "Compression": 49.41025202457069
+  },
+  {
+    "FileName": "dotNETConf/2020/MainEvent/Technical/Abdalla_Sanderson_blazor-in-net5.pptx",
+    "FileSizeBefore": 2206799,
+    "FileSizeAfter": 871910,
+    "Compression": 60.48983165208975
+  },
+  {
+    "FileName": "dotNETConf/2020/MainEvent/Technical/Achtman_dotnetconf2020-mlnet-in-real-world.pptx",
+    "FileSizeBefore": 4820510,
+    "FileSizeAfter": 3377302,
+    "Compression": 29.93890687914764
+  },
+  {
+    "FileName": "dotNETConf/2020/MainEvent/Technical/adora_dotnetconf2020.pptx",
+    "FileSizeBefore": 18904991,
+    "FileSizeAfter": 11784675,
+    "Compression": 37.66368362724955
+  },
+  {
+    "FileName": "dotNETConf/2020/MainEvent/Technical/Ajaj_dotnetconf2020-building-react-apps-in-fsharp.pptx",
+    "FileSizeBefore": 3442710,
+    "FileSizeAfter": 3039967,
+    "Compression": 11.698429434950954
+  },
+  {
+    "FileName": "dotNETConf/2020/MainEvent/Technical/Bassi_Analyzing memory dumps of .NET applications.pptx",
+    "FileSizeBefore": 8857043,
+    "FileSizeAfter": 6537543,
+    "Compression": 26.18819847662476
+  },
+  {
+    "FileName": "dotNETConf/2020/MainEvent/Technical/Beltran_AI Enrichment with Azure Cognitive Search_NET Conf Latam 2020.pptx",
+    "FileSizeBefore": 9115870,
+    "FileSizeAfter": 6818734,
+    "Compression": 25.19930626478877
+  },
+  {
+    "FileName": "dotNETConf/2020/MainEvent/Technical/Brett-Parker-dotnetconf2020.pptx",
+    "FileSizeBefore": 3459177,
+    "FileSizeAfter": 3051192,
+    "Compression": 11.794279390733692
+  },
+  {
+    "FileName": "dotNETConf/2020/MainEvent/Technical/Condron_dotentConf2020_Tye.pptx",
+    "FileSizeBefore": 5594329,
+    "FileSizeAfter": 4653338,
+    "Compression": 16.820444417909638
+  },
+  {
+    "FileName": "dotNETConf/2020/MainEvent/Technical/D\u0027Souza_healthcheck-clydedsouza-dotnetconf2020.pptx",
+    "FileSizeBefore": 4195338,
+    "FileSizeAfter": 3447861,
+    "Compression": 17.816848129995723
+  },
+  {
+    "FileName": "dotNETConf/2020/MainEvent/Technical/dotentConf2020_Tye.pptx",
+    "FileSizeBefore": 9561637,
+    "FileSizeAfter": 6184993,
+    "Compression": 35.314496879561524
+  },
+  {
+    "FileName": "dotNETConf/2020/MainEvent/Technical/dotnetconf2020_FoundationUpdate.pptx",
+    "FileSizeBefore": 17440021,
+    "FileSizeAfter": 5824596,
+    "Compression": 66.60212737129159,
+    "Errors": [
+      "[/ppt/media/image39.jpeg] Unsupported image crop L/T/R/B=-398/1/2/1"
+    ]
+  },
+  {
+    "FileName": "dotNETConf/2020/MainEvent/Technical/dotnetconf2020_immol_phcart_porting.pptx",
+    "FileSizeBefore": 12599685,
+    "FileSizeAfter": 9780187,
+    "Compression": 22.37752769216056
+  },
+  {
+    "FileName": "dotNETConf/2020/MainEvent/Technical/dotnetconf2020-deck-Dobretsberger.pptx",
+    "FileSizeBefore": 4265932,
+    "FileSizeAfter": 3177440,
+    "Compression": 25.515924773296902
+  },
+  {
+    "FileName": "dotNETConf/2020/MainEvent/Technical/dotNETConf2020-keynote.pptx",
+    "FileSizeBefore": 20482629,
+    "FileSizeAfter": 4975501,
+    "Compression": 75.70867977933888
+  },
+  {
+    "FileName": "dotNETConf/2020/MainEvent/Technical/Downie_dotnetConf_Effectively_diagnose_and_debug_.NET_in_Visual Studio.pptx",
+    "FileSizeBefore": 3655806,
+    "FileSizeAfter": 2906783,
+    "Compression": 20.488587195272398
+  },
+  {
+    "FileName": "dotNETConf/2020/MainEvent/Technical/Driscoll_dotnetconf2020-csharp-lsp.pptx",
+    "FileSizeBefore": 5112096,
+    "FileSizeAfter": 3926608,
+    "Compression": 23.18986184922975
+  },
+  {
+    "FileName": "dotNETConf/2020/MainEvent/Technical/Dumont_Havens_dotnetconf2020_Improve _Your_Productivity_with_Roslyn_Analyzers.pptx",
+    "FileSizeBefore": 4444645,
+    "FileSizeAfter": 3937403,
+    "Compression": 11.412430014095614
+  },
+  {
+    "FileName": "dotNETConf/2020/MainEvent/Technical/Felstead_Deck-NoNotes.pptx",
+    "FileSizeBefore": 5601907,
+    "FileSizeAfter": 3212858,
+    "Compression": 42.64706643648315
+  },
+  {
+    "FileName": "dotNETConf/2020/MainEvent/Technical/Franklin_Blazor_Session_State.pptx",
+    "FileSizeBefore": 4954064,
+    "FileSizeAfter": 3222101,
+    "Compression": 34.96044863368741
+  },
+  {
+    "FileName": "dotNETConf/2020/MainEvent/Technical/Fritz_IntroducingBlazorWebFormComponents.pptx",
+    "FileSizeBefore": 5575179,
+    "FileSizeAfter": 4137299,
+    "Compression": 25.790741427315606
+  },
+  {
+    "FileName": "dotNETConf/2020/MainEvent/Technical/gaster-http-apis.pptx",
+    "FileSizeBefore": 4175561,
+    "FileSizeAfter": 3500587,
+    "Compression": 16.16486982228256
+  },
+  {
+    "FileName": "dotNETConf/2020/MainEvent/Technical/Gnelson_DotNetConf2020.pptx",
+    "FileSizeBefore": 12212505,
+    "FileSizeAfter": 7998815,
+    "Compression": 34.50307696905754,
+    "Errors": [
+      "[/ppt/media/image14.png] Unsupported image crop L/T/R/B=2969/0/16050/-2"
+    ]
+  },
+  {
+    "FileName": "dotNETConf/2020/MainEvent/Technical/Gujral_Build and run an Azure Static Web App with a backend API.pptx",
+    "FileSizeBefore": 6417998,
+    "FileSizeAfter": 4264511,
+    "Compression": 33.5538745883062,
+    "Errors": [
+      "[/ppt/media/image18.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n"
+    ]
+  },
+  {
+    "FileName": "dotNETConf/2020/MainEvent/Technical/Hawker_Pedri_MVVMToolkitDotNetConf.pptx",
+    "FileSizeBefore": 10396293,
+    "FileSizeAfter": 5768767,
+    "Compression": 44.51130802104173
+  },
+  {
+    "FileName": "dotNETConf/2020/MainEvent/Technical/Inusah_Buiding_native_android_apps_with.dotNET.pptx",
+    "FileSizeBefore": 4916205,
+    "FileSizeAfter": 4464329,
+    "Compression": 9.19156137711914
+  },
+  {
+    "FileName": "dotNETConf/2020/MainEvent/Technical/Jensen_DotNetConf_2020.pptx",
+    "FileSizeBefore": 3439753,
+    "FileSizeAfter": 2993777,
+    "Compression": 12.965349546900606
+  },
+  {
+    "FileName": "dotNETConf/2020/MainEvent/Technical/Juback_Building-Cross-Platform-Desktop-Apps-with-Electron-NET.pptx",
+    "FileSizeBefore": 5432106,
+    "FileSizeAfter": 3128995,
+    "Compression": 42.39812330613578,
+    "Errors": [
+      "[/ppt/media/image5.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n"
+    ]
+  },
+  {
+    "FileName": "dotNETConf/2020/MainEvent/Technical/Levin_Accelerate_.NET_to_Azure_with_GitHub_Actions.pptx",
+    "FileSizeBefore": 10645969,
+    "FileSizeAfter": 6368799,
+    "Compression": 40.176427340714596
+  },
+  {
+    "FileName": "dotNETConf/2020/MainEvent/Technical/Likness_dotnetconf-efcore5-next-gen.pptx",
+    "FileSizeBefore": 5186856,
+    "FileSizeAfter": 4345977,
+    "Compression": 16.21172826081927
+  },
+  {
+    "FileName": "dotNETConf/2020/MainEvent/Technical/Lipton_dotnetconf2020-mobile-blazor-bindings.pptx",
+    "FileSizeBefore": 4423559,
+    "FileSizeAfter": 3675446,
+    "Compression": 16.912015867766204
+  },
+  {
+    "FileName": "dotNETConf/2020/MainEvent/Technical/lizzy-gallagher-dotnetconf2020-1.pptx",
+    "FileSizeBefore": 4167868,
+    "FileSizeAfter": 3242826,
+    "Compression": 22.19460885037626
+  },
+  {
+    "FileName": "dotNETConf/2020/MainEvent/Technical/Lyalin_dotnetconf2020-desktop-dmitry.pptx",
+    "FileSizeBefore": 6264705,
+    "FileSizeAfter": 5043307,
+    "Compression": 19.496496642699057
+  },
+  {
+    "FileName": "dotNETConf/2020/MainEvent/Technical/Matskas_Dandison_dotnetconf2020-Secure_Dev_Ops.pptx",
+    "FileSizeBefore": 16796613,
+    "FileSizeAfter": 14833449,
+    "Compression": 11.687856355325922
+  },
+  {
+    "FileName": "dotNETConf/2020/MainEvent/Technical/Miller_Hamed_dotnetconf-2020-UnityTools.pptx",
+    "FileSizeBefore": 6400421,
+    "FileSizeAfter": 3578533,
+    "Compression": 44.089099763906155
+  },
+  {
+    "FileName": "dotNETConf/2020/MainEvent/Technical/Newton-King_gRPC-dofnetconf-2020.pptx",
+    "FileSizeBefore": 7615590,
+    "FileSizeAfter": 4434300,
+    "Compression": 41.77338853588494
+  },
+  {
+    "FileName": "dotNETConf/2020/MainEvent/Technical/Nosenko_Asynchronous_Coroutines_with_C#.pptx",
+    "FileSizeBefore": 2709439,
+    "FileSizeAfter": 1760219,
+    "Compression": 35.03382065438639
+  },
+  {
+    "FileName": "dotNETConf/2020/MainEvent/Technical/Paez_test_readability_nicopaez.pptx",
+    "FileSizeBefore": 906780,
+    "FileSizeAfter": 506939,
+    "Compression": 44.094598469308984
+  },
+  {
+    "FileName": "dotNETConf/2020/MainEvent/Technical/Powell_2020-get-your-jam-on-dotnetconf.pptx",
+    "FileSizeBefore": 10821422,
+    "FileSizeAfter": 6546231,
+    "Compression": 39.50673950244247
+  },
+  {
+    "FileName": "dotNETConf/2020/MainEvent/Technical/Rappl_DNC20_Microfrontends-Blazor.pptx",
+    "FileSizeBefore": 20065770,
+    "FileSizeAfter": 9578468,
+    "Compression": 52.26463773879597,
+    "Errors": [
+      "[/ppt/media/image14.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
+      "[/ppt/media/image24.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n"
+    ]
+  },
+  {
+    "FileName": "dotNETConf/2020/MainEvent/Technical/Rian_dotnetconf2020_GitHub_Codespaces.pptx",
+    "FileSizeBefore": 13475769,
+    "FileSizeAfter": 9252269,
+    "Compression": 31.341439586861426
+  },
+  {
+    "FileName": "dotNETConf/2020/MainEvent/Technical/Richter_The_New_Improved_Azure_SDK_for_.NET.pptx",
+    "FileSizeBefore": 7084465,
+    "FileSizeAfter": 4567785,
+    "Compression": 35.52392453064557
+  },
+  {
+    "FileName": "dotNETConf/2020/MainEvent/Technical/Roth_modern-web-dev-with-blazor-and-dotnet5.pptx",
+    "FileSizeBefore": 11629024,
+    "FileSizeAfter": 7630469,
+    "Compression": 34.384269909495416
+  },
+  {
+    "FileName": "dotNETConf/2020/MainEvent/Technical/Rousos_dotnetconf-aks-diagnostics.pptx",
+    "FileSizeBefore": 10029376,
+    "FileSizeAfter": 6195846,
+    "Compression": 38.22301606799865
+  },
+  {
+    "FileName": "dotNETConf/2020/MainEvent/Technical/Shilkov_dotnetconf2020-pulumi.pptx",
+    "FileSizeBefore": 12419482,
+    "FileSizeAfter": 7684812,
+    "Compression": 38.122926543957306
+  },
+  {
+    "FileName": "dotNETConf/2020/MainEvent/Technical/Spencer_Lessons learned from YARP.pptx",
+    "FileSizeBefore": 4336222,
+    "FileSizeAfter": 3197618,
+    "Compression": 26.257972954336747
+  },
+  {
+    "FileName": "dotNETConf/2020/MainEvent/Technical/Turner_dotnetconf2020-levenshtein-distance.pptx",
+    "FileSizeBefore": 5028198,
+    "FileSizeAfter": 4100641,
+    "Compression": 18.44710570267917
+  },
+  {
+    "FileName": "dotNETConf/2020/MainEvent/Technical/Ukirade_Single file applications_HarishchandraUkirade.pptx",
+    "FileSizeBefore": 4132759,
+    "FileSizeAfter": 3144846,
+    "Compression": 23.904442528586834
+  },
+  {
+    "FileName": "dotNETConf/2020/MainEvent/Technical/Walker_Trailblazor.pptx",
+    "FileSizeBefore": 7487437,
+    "FileSizeAfter": 5460770,
+    "Compression": 27.06756664530199
+  },
+  {
+    "FileName": "dotNETConf/2020/MainEvent/Technical/Wengier_Source_generators.pptx",
+    "FileSizeBefore": 625310,
+    "FileSizeAfter": 373576,
+    "Compression": 40.2574722937423
+  },
+  {
     "FileName": "dsyme-fsharp/2007-03-23-epfl-apats/apats-epfl.pptx",
     "FileSizeBefore": 155276,
     "FileSizeAfter": 133511,
@@ -1624,5 +1984,17 @@
     "FileSizeBefore": 38227296,
     "FileSizeAfter": 2559180,
     "Compression": 93.30535960482268
+  },
+  {
+    "FileName": "dsyme-fsharp/2020-06-04-fsharpconf/on-independence.pptx",
+    "FileSizeBefore": 2465927,
+    "FileSizeAfter": 742963,
+    "Compression": 69.87084370299688
+  },
+  {
+    "FileName": "dsyme-fsharp/2020-06-10-ndc-oslo/functional-data-changing.pptx",
+    "FileSizeBefore": 7411137,
+    "FileSizeAfter": 1058876,
+    "Compression": 85.71236775139901
   }
 ]
