@@ -169,7 +169,7 @@ namespace MinMe.Tests.RepoTests
             await TestContext.Out.WriteLineAsync($"Compression difference {deltaSize:0,0}, new size {dstStream.Length:0,0} bytes");
 
             if (_isOSX)
-                Assert.LessOrEqual(dstStream.Length, expectedSize);
+                Assert.LessOrEqual(dstStream.Length, 1.01 * expectedSize);
             else
                 Assert.LessOrEqual(deltaSize, 600_000);
         }

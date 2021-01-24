@@ -1,6 +1,5 @@
 group Tests
     System.Drawing.Common
-    Magick.NET-Q8-AnyCPU
     Microsoft.NET.Test.Sdk
     NUnit
     NUnit3TestAdapter

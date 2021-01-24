@@ -24,4 +24,3 @@ group Tests
     
     // Experimental
     nuget System.Drawing.Common
-    nuget Magick.NET-Q8-AnyCPU
