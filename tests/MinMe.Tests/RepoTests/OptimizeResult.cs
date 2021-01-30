@@ -24,7 +24,7 @@ namespace MinMe.Tests.RepoTests
             100.0 * (1.0 - FileSizeAfter / FileSizeBefore);
         public List<string>? Errors { get; set; }
 
-        private static string OsMoniker =>
+        public static string OsMoniker =>
             OperatingSystem.IsWindows() ? "win" : "macOS";
     }
 }

@@ -147,26 +147,33 @@ namespace MinMe.Tests.RepoTests
         {
             var log = TestContext.Out;
             log.WriteLine($"Number of files {results.Count}");
-
             var totalSizeBefore = results.Sum(x => x.FileSizeBefore);
             log.WriteLine($"Total size before {totalSizeBefore:0,0} bytes");
 
-            var totalSizeAfter = results.Sum(x => x.FileSizeAfter);
-            log.WriteLine($"Total size after {totalSizeAfter:0,0} bytes (-{totalSizeBefore - totalSizeAfter:0,0} bytes)");
+            log.WriteLine("MacOS results");
+            {
+                var totalSizeAfter = results.Sum(x => x.FileSizeAfterOnOs.TryGetValue("macOS", out var q) ? q : 0);
+                log.WriteLine($"\tTotal size after {totalSizeAfter:0,0} bytes (-{totalSizeBefore - totalSizeAfter:0,0} bytes)");
 
-            var totalCompression = 100.0 * (totalSizeBefore - totalSizeAfter) / totalSizeBefore;
-            log.WriteLine($"Total compression {totalCompression:F2}%");
+                var totalCompression = 100.0 * (totalSizeBefore - totalSizeAfter) / totalSizeBefore;
+                log.WriteLine($"\tTotal compression {totalCompression:F2}%");
+            }
+            log.WriteLine("Windows results");
+            {
+                var totalSizeAfter = results.Sum(x => x.FileSizeAfterOnOs.TryGetValue("win", out var q) ? q : 0);
+                log.WriteLine($"\tTotal size after {totalSizeAfter:0,0} bytes (-{totalSizeBefore - totalSizeAfter:0,0} bytes)");
 
-            var averageCompression = results.Average(x => x.Compression);
-            log.WriteLine($"Average compression {averageCompression:F2}%");
+                var totalCompression = 100.0 * (totalSizeBefore - totalSizeAfter) / totalSizeBefore;
+                log.WriteLine($"\tTotal compression {totalCompression:F2}%");
+            }
 
-            log.WriteLine("Top 10 docs by compression:");
+            log.WriteLine($"Top 10 docs by compression ({OptimizeResult.OsMoniker}):");
             foreach (var x in results.OrderByDescending(x=>x.Compression).Take(10))
             {
                 Print(x);
             }
 
-            log.WriteLine("Top 10 docs by saved space:");
+            log.WriteLine($"Top 10 docs by saved space: ({OptimizeResult.OsMoniker})");
             foreach (var x in results.OrderByDescending(x=>x.FileSizeBefore-x.FileSizeAfter).Take(10))
             {
                 Print(x);
@@ -180,10 +187,9 @@ namespace MinMe.Tests.RepoTests
             GetAllPptx().Select(file =>
                 {
                     var key = GetPath(file).Replace('\\', '/');
-                    if (Baseline.Value.TryGetValue(key, out var result))
-                        return new TestCaseData(new object[] { file, result.FileSizeAfter });
-
-                    return new TestCaseData(new object[] { file, 0 }).Ignore("Unknown file");
+                    return Baseline.Value.TryGetValue(key, out var result)
+                        ? new TestCaseData(new object[] {file, result.FileSizeAfter})
+                        : new TestCaseData(new object[] {file, 0}).Ignore("Unknown file");
                 });
 
         [TestCaseSource(nameof(TestCases)), Parallelizable(ParallelScope.Children)]
