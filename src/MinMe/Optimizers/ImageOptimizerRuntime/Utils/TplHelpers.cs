@@ -9,7 +9,7 @@ namespace MinMe.Optimizers.ImageOptimizerRuntime.Utils
     public static class TplHelpers
     {
         // https://devblogs.microsoft.com/pfxteam/implementing-a-simple-foreachasync-part-2/
-        private static Task ForEachAsync<T>(this IEnumerable<T> source, int dop, Func<T, Task> body) =>
+        public static Task ForEachAsync<T>(this IEnumerable<T> source, int dop, Func<T, Task> body) =>
             Task.WhenAll(
                 from partition in Partitioner.Create(source).GetPartitions(dop)
                 select Task.Run(async delegate {

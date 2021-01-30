@@ -1,5 +1,7 @@
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text.Json;
@@ -56,56 +58,84 @@ namespace MinMe.Tests.RepoTests
                 .ToList();
 
         private static string GetPath(string file) =>
-            Path.GetRelativePath(Root, file);
+            Path.GetRelativePath(Root, file).Replace("\\", "/");
 
         [Test, Explicit]
         public async Task GenerateBaseline()
         {
-            var results = await GetAllPptx()
-                .ExecuteInParallel(async file =>
+            var results = new ConcurrentDictionary<string, OptimizeResult>();
+            if (File.Exists(BaselineFile))
+            {
+                var json = await File.ReadAllTextAsync(BaselineFile);
+                foreach (var item in JsonSerializer.Deserialize<OptimizeResult[]>(json)!)
                 {
-                    await using var srcStream = new FileStream(file, FileMode.Open, FileAccess.Read);
-                    var result = new OptimizeResult
-                    {
-                        FileName = GetPath(file),
-                        FileSizeBefore = srcStream.Length,
-                        FileSizeAfter = -1,
-                        Compression = 0,
-                        Errors = null
-                    };
+                    results.TryAdd(item.FileName, item);
+                }
+            }
 
-                    try
-                    {
-                        await using var dstStream = _imageOptimizer.Transform(".pptx", srcStream, out var diagnostic, _options);
-                        result.FileSizeAfter = dstStream.Length;
-                        result.Compression = 100.0 * (srcStream.Length - dstStream.Length) / srcStream.Length;
+            await GetAllPptx().ForEachAsync(Environment.ProcessorCount, async file =>
+            {
+                await using var srcStream = new FileStream(file, FileMode.Open, FileAccess.Read);
 
-                        if (diagnostic.Errors.Count > 0)
-                        {
-                            result.Errors = diagnostic.Errors
-                                .Select(x => x.ToString())
-                                .OrderBy(x => x)
-                                .ToList();
-                        }
+                var fileName = GetPath(file);
+                var result = results.GetOrAdd(fileName, _ => new OptimizeResult
+                {
+                    FileName = fileName,
+                    FileSizeBefore = srcStream.Length,
+                });
+
+
+                try
+                {
+                    await using var dstStream = _imageOptimizer.Transform(".pptx", srcStream, out var diagnostic, _options);
+                    result.FileSizeAfter = dstStream.Length;
+
+                    if (diagnostic.Errors.Count > 0)
+                    {
+                        result.Errors = diagnostic.Errors
+                            .Select(x => x.ToString())
+                            .OrderBy(x => x)
+                            .ToList();
                     }
-                    catch (Exception e)
-                    {
-                        await TestContext.Out.WriteLineAsync($"{e.Message} on file {file}");
-                    }
+                }
+                catch (Exception e)
+                {
+                    await TestContext.Out.WriteLineAsync($"{e.Message} on file {file}");
+                } ;
+            });
 
-                    return result;
-                }, Environment.ProcessorCount);
-
-            results = results.OrderBy(x => x.FileName).ToList();
+            var data = results.Values.OrderBy(x => x.FileName).ToList();
 
             await using var fs = File.Create(BaselineFile);
-            await JsonSerializer.SerializeAsync(fs, results, new JsonSerializerOptions
+            await JsonSerializer.SerializeAsync(fs, data, new JsonSerializerOptions
             {
                 WriteIndented = true,
                 IgnoreNullValues = true
             });
 
-            PrintStats(results);
+            PrintStats(data);
+        }
+
+        [Test]
+        public async Task SerializeTestAsync()
+        {
+            var obj = new OptimizeResult
+            {
+                FileName = "test.ppx",
+                FileSizeBefore = 100,
+                FileSizeAfter = 12
+            };
+
+
+            await using var stream = new MemoryStream();
+            await JsonSerializer.SerializeAsync(stream, obj, obj.GetType());
+            stream.Position = 0;
+
+            using var reader = new StreamReader(stream);
+            var str = await reader.ReadToEndAsync();
+            await TestContext.Out.WriteLineAsync(str);
+
+            StringAssert.Contains("10", str);
         }
 
         [Test]

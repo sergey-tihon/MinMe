@@ -2,491 +2,604 @@
   {
     "FileName": "dl-tutorials/ppts/Week10a Neural Style.pptx",
     "FileSizeBefore": 12264320,
-    "FileSizeAfter": 2513196,
-    "Compression": 79.50806893492668
+    "FileSizeAfter": {
+      "macOS": 2513196,
+      "win": 2514130
+    }
   },
   {
     "FileName": "dl-tutorials/ppts/Week10b Generative Adversarial Network.pptx",
     "FileSizeBefore": 46823904,
-    "FileSizeAfter": 6090518,
-    "Compression": 86.99271636982684
+    "FileSizeAfter": {
+      "macOS": 6090518,
+      "win": 6094342
+    }
   },
   {
     "FileName": "dl-tutorials/ppts/Week10c Little More on GAN.pptx",
     "FileSizeBefore": 15696800,
-    "FileSizeAfter": 1340785,
-    "Compression": 91.45822715457928
+    "FileSizeAfter": {
+      "macOS": 1340785,
+      "win": 1340933
+    }
   },
   {
     "FileName": "dl-tutorials/ppts/Week10c Neural Style Code.pptx",
     "FileSizeBefore": 7459914,
-    "FileSizeAfter": 1169127,
-    "Compression": 84.32787562966544
+    "FileSizeAfter": {
+      "macOS": 1169127,
+      "win": 1169109
+    }
   },
   {
     "FileName": "dl-tutorials/ppts/Week10d CNN finetune with VGG (use_vgg, cnn_finetune_vgg).pptx",
     "FileSizeBefore": 13453042,
-    "FileSizeAfter": 2379602,
-    "Compression": 82.31179238123244,
+    "FileSizeAfter": {
+      "macOS": 2379602,
+      "win": 2380288
+    },
     "Errors": [
-      "[/ppt/media/image25.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n"
+      "[/ppt/media/image25.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n"
     ]
   },
   {
     "FileName": "dl-tutorials/ppts/Week10e Implementing DCGAN.pptx",
     "FileSizeBefore": 899182,
-    "FileSizeAfter": 321495,
-    "Compression": 64.24583677164357
+    "FileSizeAfter": {
+      "macOS": 321495,
+      "win": 321652
+    }
   },
   {
     "FileName": "dl-tutorials/ppts/Week1a Ubuntu in VirtualBox.pptx",
     "FileSizeBefore": 9737099,
-    "FileSizeAfter": 1865369,
-    "Compression": 80.84266165928886
+    "FileSizeAfter": {
+      "macOS": 1865369,
+      "win": 1866673
+    }
   },
   {
     "FileName": "dl-tutorials/ppts/Week1b Course introduction.pptx",
     "FileSizeBefore": 14405355,
-    "FileSizeAfter": 2553880,
-    "Compression": 82.27131507692799,
+    "FileSizeAfter": {
+      "macOS": 2553880,
+      "win": 2552677
+    },
     "Errors": [
-      "[/ppt/media/image2.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n"
+      "[/ppt/media/image2.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n"
     ]
   },
   {
     "FileName": "dl-tutorials/ppts/Week1c Brief Intro to deep learning and tools.pptx",
     "FileSizeBefore": 5417017,
-    "FileSizeAfter": 751344,
-    "Compression": 86.12993091954483
+    "FileSizeAfter": {
+      "macOS": 751344,
+      "win": 751660
+    }
   },
   {
     "FileName": "dl-tutorials/ppts/Week1d What we will learn.pptx",
     "FileSizeBefore": 34904668,
-    "FileSizeAfter": 6155609,
-    "Compression": 82.36451067232612,
+    "FileSizeAfter": {
+      "macOS": 6155609,
+      "win": 6153835
+    },
     "Errors": [
-      "[/ppt/media/image11.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image13.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image14.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image15.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image27.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n"
+      "[/ppt/media/image11.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image13.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image14.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image15.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image27.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n"
     ]
   },
   {
     "FileName": "dl-tutorials/ppts/Week1e Introduction to CNNs (AlexNet).pptx",
     "FileSizeBefore": 13438078,
-    "FileSizeAfter": 4297920,
-    "Compression": 68.01685479128786,
+    "FileSizeAfter": {
+      "macOS": 4297920,
+      "win": 4296617
+    },
     "Errors": [
-      "[/ppt/media/image68.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n"
+      "[/ppt/media/image68.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n"
     ]
   },
   {
     "FileName": "dl-tutorials/ppts/Week1f Basics of Python (basic_python).pptx",
     "FileSizeBefore": 3525937,
-    "FileSizeAfter": 1629493,
-    "Compression": 53.785532753421286
+    "FileSizeAfter": {
+      "macOS": 1629493,
+      "win": 1629803
+    }
   },
   {
     "FileName": "dl-tutorials/ppts/Week2a Terminologies.pptx",
     "FileSizeBefore": 12241195,
-    "FileSizeAfter": 1719311,
-    "Compression": 85.95471275475964,
+    "FileSizeAfter": {
+      "macOS": 1719311,
+      "win": 1721607
+    },
     "Errors": [
-      "[/ppt/media/image1.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image13.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image14.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image15.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image17.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image18.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image19.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image2.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image20.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image21.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image3.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image4.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image5.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image6.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image7.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image8.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image9.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n"
+      "[/ppt/media/image1.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image13.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image14.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image15.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image17.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image18.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image19.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image2.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image20.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image21.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image3.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image4.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image5.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image6.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image7.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image8.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image9.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n"
     ]
   },
   {
     "FileName": "dl-tutorials/ppts/Week2b Modern CNNs.pptx",
     "FileSizeBefore": 13464491,
-    "FileSizeAfter": 4284268,
-    "Compression": 68.18098805220339,
+    "FileSizeAfter": {
+      "macOS": 4284268,
+      "win": 4282955
+    },
     "Errors": [
-      "[/ppt/media/image68.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n"
+      "[/ppt/media/image68.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n"
     ]
   },
   {
     "FileName": "dl-tutorials/ppts/Week2c ImgHandling (basic_imgprocess).pptx",
     "FileSizeBefore": 6044277,
-    "FileSizeAfter": 970107,
-    "Compression": 83.94999104111211
+    "FileSizeAfter": {
+      "macOS": 970107,
+      "win": 970104
+    }
   },
   {
     "FileName": "dl-tutorials/ppts/Week2d MNIST (basic_mnist).pptx",
     "FileSizeBefore": 1504241,
-    "FileSizeAfter": 552586,
-    "Compression": 63.26479600010902
+    "FileSizeAfter": {
+      "macOS": 552586,
+      "win": 552694
+    }
   },
   {
     "FileName": "dl-tutorials/ppts/Week3a Regulaziation.pptx",
     "FileSizeBefore": 5261859,
-    "FileSizeAfter": 1275615,
-    "Compression": 75.7573321520018
+    "FileSizeAfter": {
+      "macOS": 1275615,
+      "win": 1276047
+    }
   },
   {
     "FileName": "dl-tutorials/ppts/Week3b AlphaGo.pptx",
     "FileSizeBefore": 9079692,
-    "FileSizeAfter": 4690496,
-    "Compression": 48.3408027496968
+    "FileSizeAfter": {
+      "macOS": 4690496,
+      "win": 4692851
+    }
   },
   {
     "FileName": "dl-tutorials/ppts/Week3c TensorFlow101 (basic_tensorflow).pptx",
     "FileSizeBefore": 1798747,
-    "FileSizeAfter": 797554,
-    "Compression": 55.66057928102173
+    "FileSizeAfter": {
+      "macOS": 797554,
+      "win": 797612
+    }
   },
   {
     "FileName": "dl-tutorials/ppts/Week3d Logistic regression.pptx",
     "FileSizeBefore": 46105715,
-    "FileSizeAfter": 4019251,
-    "Compression": 91.28253189436494,
+    "FileSizeAfter": {
+      "macOS": 4019251,
+      "win": 4169781
+    },
     "Errors": [
-      "[/ppt/media/image10.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image11.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image12.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image13.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image14.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image15.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image16.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image17.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image18.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image19.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image20.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image21.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image22.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image23.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image8.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image9.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n"
+      "[/ppt/media/image10.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image11.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image12.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image13.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image14.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image15.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image16.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image17.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image18.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image19.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image20.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image21.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image22.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image23.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image8.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image9.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n"
     ]
   },
   {
     "FileName": "dl-tutorials/ppts/Week4a Optimizaiton methods.pptx",
     "FileSizeBefore": 15002134,
-    "FileSizeAfter": 1955558,
-    "Compression": 86.96480114095768,
+    "FileSizeAfter": {
+      "macOS": 1955558,
+      "win": 1955483
+    },
     "Errors": [
-      "[/ppt/media/image32.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image33.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image34.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n"
+      "[/ppt/media/image32.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image33.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image34.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n"
     ]
   },
   {
     "FileName": "dl-tutorials/ppts/Week4b Restricted Boltzmann machine.pptx",
     "FileSizeBefore": 5102255,
-    "FileSizeAfter": 1301250,
-    "Compression": 74.49657063396478,
+    "FileSizeAfter": {
+      "macOS": 1301250,
+      "win": 1301155
+    },
     "Errors": [
-      "[/ppt/media/image1.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n"
+      "[/ppt/media/image1.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n"
     ]
   },
   {
     "FileName": "dl-tutorials/ppts/Week4c Multi-layer perceptron (mlp_mnist_simple).pptx",
     "FileSizeBefore": 28501201,
-    "FileSizeAfter": 2692946,
-    "Compression": 90.55146483125395,
+    "FileSizeAfter": {
+      "macOS": 2692946,
+      "win": 2783358
+    },
     "Errors": [
-      "[/ppt/media/image1.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image2.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image3.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image4.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image5.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image6.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image7.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image8.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image9.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n"
+      "[/ppt/media/image1.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image2.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image3.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image4.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image5.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image6.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image7.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image8.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image9.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n"
     ]
   },
   {
     "FileName": "dl-tutorials/ppts/Week4d Generate your own dataset (basic_gendataset).pptx",
     "FileSizeBefore": 2650672,
-    "FileSizeAfter": 696305,
-    "Compression": 73.7310010442635
+    "FileSizeAfter": {
+      "macOS": 696305,
+      "win": 696353
+    }
   },
   {
     "FileName": "dl-tutorials/ppts/Week5a Semantic segmentations.pptx",
     "FileSizeBefore": 19183176,
-    "FileSizeAfter": 6357951,
-    "Compression": 66.8566299970349
+    "FileSizeAfter": {
+      "macOS": 6357951,
+      "win": 6356775
+    }
   },
   {
     "FileName": "dl-tutorials/ppts/Week5b Implementing CNN.pptx",
     "FileSizeBefore": 6329404,
-    "FileSizeAfter": 3437421,
-    "Compression": 45.69123727921302
+    "FileSizeAfter": {
+      "macOS": 3437421,
+      "win": 3436528
+    }
   },
   {
     "FileName": "dl-tutorials/ppts/Week5c Using Custom Dataset.pptx",
     "FileSizeBefore": 4471101,
-    "FileSizeAfter": 1527615,
-    "Compression": 65.83358327177132
+    "FileSizeAfter": {
+      "macOS": 1527615,
+      "win": 1527379
+    }
   },
   {
     "FileName": "dl-tutorials/ppts/Week5d Implementing Modern CNN.pptx",
     "FileSizeBefore": 2902020,
-    "FileSizeAfter": 1292156,
-    "Compression": 55.47391127559424
+    "FileSizeAfter": {
+      "macOS": 1292156,
+      "win": 1292071
+    }
   },
   {
     "FileName": "dl-tutorials/ppts/Week6a Residual Networks and Analysis.pptx",
     "FileSizeBefore": 6259336,
-    "FileSizeAfter": 1218068,
-    "Compression": 80.53998059858107,
+    "FileSizeAfter": {
+      "macOS": 1218068,
+      "win": 1217055
+    },
     "Errors": [
-      "[/ppt/media/image6.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n"
+      "[/ppt/media/image6.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n"
     ]
   },
   {
     "FileName": "dl-tutorials/ppts/Week6b Weakly supervised localization.pptx",
     "FileSizeBefore": 37566765,
-    "FileSizeAfter": 31160847,
-    "Compression": 17.052088461702784,
+    "FileSizeAfter": {
+      "macOS": 31160847,
+      "win": 31148389
+    },
     "Errors": [
-      "[/ppt/media/image11.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image12.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image13.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image14.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image15.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image16.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image17.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image19.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image20.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image22.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image23.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image24.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image25.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image26.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image27.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image28.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image29.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image30.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image31.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image32.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image33.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image34.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image35.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image36.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image37.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image38.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image39.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image41.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image7.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image9.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n"
+      "[/ppt/media/image11.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image12.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image13.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image14.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image15.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image16.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image17.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image19.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image20.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image22.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image23.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image24.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image25.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image26.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image27.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image28.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image29.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image30.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image31.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image32.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image33.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image34.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image35.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image36.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image37.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image38.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image39.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image41.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image7.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image9.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n"
     ]
   },
   {
     "FileName": "dl-tutorials/ppts/Week6c Implementing DAE and DCAE.pptx",
     "FileSizeBefore": 14985598,
-    "FileSizeAfter": 2705797,
-    "Compression": 81.94401718236402,
+    "FileSizeAfter": {
+      "macOS": 2705797,
+      "win": 2708791
+    },
     "Errors": [
-      "[/ppt/media/image2.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image28.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image29.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image3.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image30.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image31.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image32.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image4.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n"
+      "[/ppt/media/image2.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image28.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image29.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image3.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image30.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image31.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image32.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image4.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n"
     ]
   },
   {
     "FileName": "dl-tutorials/ppts/Week6d Implementing CAM.pptx",
     "FileSizeBefore": 5292150,
-    "FileSizeAfter": 1476382,
-    "Compression": 72.1024158423325
+    "FileSizeAfter": {
+      "macOS": 1476382,
+      "win": 1475798
+    }
   },
   {
     "FileName": "dl-tutorials/ppts/Week7a Image detection (RCNN, SPPnet, FastRCNN, FasterRCNN).pptx",
     "FileSizeBefore": 26812277,
-    "FileSizeAfter": 7753394,
-    "Compression": 71.08267231462662
+    "FileSizeAfter": {
+      "macOS": 7753394,
+      "win": 7751381
+    }
   },
   {
     "FileName": "dl-tutorials/ppts/Week7b Other dections (YOLO, SSD, AttentionNet).pptx",
     "FileSizeBefore": 48863069,
-    "FileSizeAfter": 39199784,
-    "Compression": 19.776254741592265
+    "FileSizeAfter": {
+      "macOS": 39199784,
+      "win": 39769190
+    }
   },
   {
     "FileName": "dl-tutorials/ppts/Week7c Using a custom dataset (git@sjchoi86-face_recognition).pptx",
     "FileSizeBefore": 4784097,
-    "FileSizeAfter": 2134599,
-    "Compression": 55.381360369574445
+    "FileSizeAfter": {
+      "macOS": 2134599,
+      "win": 2134231
+    }
   },
   {
     "FileName": "dl-tutorials/ppts/Week8a Visual QnA.pptx",
     "FileSizeBefore": 32803221,
-    "FileSizeAfter": 6634203,
-    "Compression": 79.77575738675175
+    "FileSizeAfter": {
+      "macOS": 6634203,
+      "win": 6636876
+    }
   },
   {
     "FileName": "dl-tutorials/ppts/Week8b Deep reinforcement learning.pptx",
     "FileSizeBefore": 6267336,
-    "FileSizeAfter": 5439711,
-    "Compression": 13.205371468834604
+    "FileSizeAfter": {
+      "macOS": 5439711,
+      "win": 5438590
+    }
   },
   {
     "FileName": "dl-tutorials/ppts/Week8c Implementing RNN (rnn_mnist_simple).pptx",
     "FileSizeBefore": 3179027,
-    "FileSizeAfter": 1272493,
-    "Compression": 59.97224937064077
+    "FileSizeAfter": {
+      "macOS": 1272493,
+      "win": 1272625
+    }
   },
   {
     "FileName": "dl-tutorials/ppts/Week8d Implementing RNN in TF1-0-1.pptx",
     "FileSizeBefore": 10127631,
-    "FileSizeAfter": 3698423,
-    "Compression": 63.48185473977083
+    "FileSizeAfter": {
+      "macOS": 3698423,
+      "win": 3698071
+    }
   },
   {
     "FileName": "dl-tutorials/ppts/Week9a Basics of RNN.pptx",
     "FileSizeBefore": 5777159,
-    "FileSizeAfter": 1343058,
-    "Compression": 76.75227564275104,
+    "FileSizeAfter": {
+      "macOS": 1343058,
+      "win": 1339924
+    },
     "Errors": [
-      "[/ppt/media/image17.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n"
+      "[/ppt/media/image17.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n"
     ]
   },
   {
     "FileName": "dl-tutorials/ppts/Week9b Handwrting Generation.pptx",
     "FileSizeBefore": 1599564,
-    "FileSizeAfter": 1178327,
-    "Compression": 26.334488648156622
+    "FileSizeAfter": {
+      "macOS": 1178327,
+      "win": 1180782
+    }
   },
   {
     "FileName": "dl-tutorials/ppts/Week9c Image Captioning.pptx",
     "FileSizeBefore": 37656746,
-    "FileSizeAfter": 4863351,
-    "Compression": 87.08504712542077
+    "FileSizeAfter": {
+      "macOS": 4863351,
+      "win": 4863879
+    }
   },
   {
     "FileName": "dl-tutorials/ppts/Week9d Implementing Word2Vec 2.pptx",
     "FileSizeBefore": 4851777,
-    "FileSizeAfter": 2608183,
-    "Compression": 46.242727149248616
+    "FileSizeAfter": {
+      "macOS": 2608183,
+      "win": 2608319
+    }
   },
   {
     "FileName": "dl-tutorials/ppts/Week9e Implementing Hangul-RNN.pptx",
     "FileSizeBefore": 5627040,
-    "FileSizeAfter": 2511643,
-    "Compression": 55.36475660382723
+    "FileSizeAfter": {
+      "macOS": 2511643,
+      "win": 2511712
+    }
   },
   {
     "FileName": "dl-tutorials/ppts/Week9f Word2Vec.pptx",
     "FileSizeBefore": 2579901,
-    "FileSizeAfter": 1194066,
-    "Compression": 53.716596101943445,
+    "FileSizeAfter": {
+      "macOS": 1194066,
+      "win": 1193915
+    },
     "Errors": [
-      "[/ppt/media/image1.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n"
+      "[/ppt/media/image1.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n"
     ]
   },
   {
     "FileName": "dotNETConf/2018/Technical/Decks/.NET Core Microservice Development Made Easy with Azure Dev Spaces.pptx",
     "FileSizeBefore": 5507273,
-    "FileSizeAfter": 1785501,
-    "Compression": 67.57921751836163
+    "FileSizeAfter": {
+      "macOS": 1785501,
+      "win": 1798340
+    }
   },
   {
     "FileName": "dotNETConf/2018/Technical/Decks/5 Azure Services Every .NET Developer Needs to Know.pptx",
     "FileSizeBefore": 2965201,
-    "FileSizeAfter": 1508582,
-    "Compression": 49.123786212131996
+    "FileSizeAfter": {
+      "macOS": 1508582,
+      "win": 1519911
+    }
   },
   {
     "FileName": "dotNETConf/2018/Technical/Decks/A lap around docs.microsoft.com.pptx",
     "FileSizeBefore": 6436299,
-    "FileSizeAfter": 3056202,
-    "Compression": 52.5161587427806
+    "FileSizeAfter": {
+      "macOS": 3056202,
+      "win": 3069084
+    }
   },
   {
     "FileName": "dotNETConf/2018/Technical/Decks/Artificial Intelligence and Machine Learning for Every .NET Developer.pptx",
     "FileSizeBefore": 23284287,
-    "FileSizeAfter": 13474380,
-    "Compression": 42.13101736806457
+    "FileSizeAfter": {
+      "macOS": 13474380,
+      "win": 13495778
+    }
   },
   {
     "FileName": "dotNETConf/2018/Technical/Decks/Azure Durable Functions for Serverless .NET Orchestration.pptx",
     "FileSizeBefore": 11489689,
-    "FileSizeAfter": 8066347,
-    "Compression": 29.794905675862942,
+    "FileSizeAfter": {
+      "macOS": 8066347,
+      "win": 8069875
+    },
     "Errors": [
-      "[/ppt/media/image34.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n"
+      "[/ppt/media/image34.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n"
     ]
   },
   {
     "FileName": "dotNETConf/2018/Technical/Decks/Blazor_Modern Web development with .NET and WebAssembly.pptx",
     "FileSizeBefore": 3186823,
-    "FileSizeAfter": 1652772,
-    "Compression": 48.13731418406356
+    "FileSizeAfter": {
+      "macOS": 1652772,
+      "win": 1664067
+    }
   },
   {
     "FileName": "dotNETConf/2018/Technical/Decks/Build Great Libraries using .NET Standard.pptx",
     "FileSizeBefore": 3290616,
-    "FileSizeAfter": 1789702,
-    "Compression": 45.61194621311025
+    "FileSizeAfter": {
+      "macOS": 1789702,
+      "win": 1801310
+    }
   },
   {
     "FileName": "dotNETConf/2018/Technical/Decks/Building resilient microservices with .NET on Azure Service Fabric.pptx",
     "FileSizeBefore": 3145185,
-    "FileSizeAfter": 1598075,
-    "Compression": 49.18979328719932
+    "FileSizeAfter": {
+      "macOS": 1598075,
+      "win": 1612628
+    }
   },
   {
     "FileName": "dotNETConf/2018/Technical/Decks/Complete Awesomeness for Mobile .NET Developers.pptx",
     "FileSizeBefore": 16236376,
-    "FileSizeAfter": 8027315,
-    "Compression": 50.55968770370925,
+    "FileSizeAfter": {
+      "macOS": 8027315,
+      "win": 10421288
+    },
     "Errors": [
       "[/ppt/media/image42.png] Unsupported image crop L/T/R/B=1/46941/-1407/0",
-      "[/ppt/media/image49.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n"
+      "[/ppt/media/image44.gif] [ImageProcessingException] An error occurred when processing the image using ResizeProcessor\u00601. See the inner exception for more detail.",
+      "[/ppt/media/image49.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n"
     ]
   },
   {
     "FileName": "dotNETConf/2018/Technical/Decks/dotNETConf2018-KEYNOTE.pptx",
     "FileSizeBefore": 78164067,
-    "FileSizeAfter": 9712124,
-    "Compression": 87.5746946483734,
+    "FileSizeAfter": {
+      "macOS": 9712124,
+      "win": 9746613
+    },
     "Errors": [
-      "[/ppt/media/image40.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image41.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image42.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image45.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image55.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image56.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image57.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image58.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image59.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image60.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image61.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image62.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image63.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image64.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image66.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image67.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image70.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image71.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n"
+      "[/ppt/media/image40.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image41.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image42.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image45.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image55.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image56.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image57.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image58.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image59.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image60.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image61.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image62.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image63.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image64.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image66.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image67.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image70.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image71.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n"
     ]
   },
   {
     "FileName": "dotNETConf/2018/Technical/Decks/DotNetDevOps.pptx",
     "FileSizeBefore": 14964636,
-    "FileSizeAfter": 5909284,
-    "Compression": 60.51167565986904,
+    "FileSizeAfter": {
+      "macOS": 5909284,
+      "win": 5935652
+    },
     "Errors": [
       "[/ppt/media/image108.png] Unsupported image crop L/T/R/B=0/-1127/0/589"
     ]
@@ -494,32 +607,42 @@
   {
     "FileName": "dotNETConf/2018/Technical/Decks/Entity Framework Core 2.2 and beyond.pptx",
     "FileSizeBefore": 3031543,
-    "FileSizeAfter": 1586344,
-    "Compression": 47.67206006974006
+    "FileSizeAfter": {
+      "macOS": 1586344,
+      "win": 1597834
+    }
   },
   {
     "FileName": "dotNETConf/2018/Technical/Decks/Latest Productivity Updates in VS 2017 Update 15.8.pptx",
     "FileSizeBefore": 44063513,
-    "FileSizeAfter": 34607933,
-    "Compression": 21.458978996976477
+    "FileSizeAfter": {
+      "macOS": 34607933,
+      "win": 34631986
+    }
   },
   {
     "FileName": "dotNETConf/2018/Technical/Decks/Make Games with .NET using Visual Studio, Unity, and PlayFab.pptx",
     "FileSizeBefore": 3675360,
-    "FileSizeAfter": 1784796,
-    "Compression": 51.43887945670628
+    "FileSizeAfter": {
+      "macOS": 1784796,
+      "win": 1795675
+    }
   },
   {
     "FileName": "dotNETConf/2018/Technical/Decks/Visual Studio for Mac Tips \u0026 Tricks.pptx",
     "FileSizeBefore": 3635151,
-    "FileSizeAfter": 1789817,
-    "Compression": 50.763613395977224
+    "FileSizeAfter": {
+      "macOS": 1789817,
+      "win": 1800617
+    }
   },
   {
     "FileName": "dotNETConf/2018/Technical/Decks/What\u0027s new in ASP.NET Core.pptx",
     "FileSizeBefore": 3122390,
-    "FileSizeAfter": 1637857,
-    "Compression": 47.5447653880521,
+    "FileSizeAfter": {
+      "macOS": 1637857,
+      "win": 1649181
+    },
     "Errors": [
       "[/ppt/media/image27.png] Unsupported image crop L/T/R/B=-1417/35427/1417/3437"
     ]
@@ -527,435 +650,571 @@
   {
     "FileName": "dotNETConf/2018/Technical/Decks/What\u0027s new with F# 4.5.pptx",
     "FileSizeBefore": 2963144,
-    "FileSizeAfter": 1525028,
-    "Compression": 48.53344960622906
+    "FileSizeAfter": {
+      "macOS": 1525028,
+      "win": 1536364
+    }
   },
   {
     "FileName": "dotNETConf/2018/Technical/Decks/Whats Coming to Csharp.pptx",
     "FileSizeBefore": 3268850,
-    "FileSizeAfter": 1729633,
-    "Compression": 47.08741606375331
+    "FileSizeAfter": {
+      "macOS": 1729633,
+      "win": 1740784
+    }
   },
   {
     "FileName": "dotNETConf/2018/Technical/DotnetConf2018_PresentationTemplate.pptx",
     "FileSizeBefore": 2993737,
-    "FileSizeAfter": 1549120,
-    "Compression": 48.25463960261038
+    "FileSizeAfter": {
+      "macOS": 1549120,
+      "win": 1560102
+    }
   },
   {
     "FileName": "dotNETConf/2019/Technical/2019_09_23_DotnetConf2019_XamarinProductiveBeautiful.pptx",
     "FileSizeBefore": 90412517,
-    "FileSizeAfter": 10268367,
-    "Compression": 88.6427594975594,
+    "FileSizeAfter": {
+      "macOS": 10268367,
+      "win": 10287084
+    },
     "Errors": [
-      "[/ppt/media/image68.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image71.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image74.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image76.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image80.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image93.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n"
+      "[/ppt/media/image68.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image71.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image74.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image76.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image80.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image93.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n"
     ]
   },
   {
     "FileName": "dotNETConf/2019/Technical/ABP.IO Open Source Web Application Framework for ASP.NET Core 3.0.pptx",
     "FileSizeBefore": 6060594,
-    "FileSizeAfter": 2193259,
-    "Compression": 63.811154484197424
+    "FileSizeAfter": {
+      "macOS": 2193259,
+      "win": 2205381
+    }
   },
   {
     "FileName": "dotNETConf/2019/Technical/AppInsights-.NET Conf.pptx",
     "FileSizeBefore": 8797737,
-    "FileSizeAfter": 2440782,
-    "Compression": 72.25670646894764
+    "FileSizeAfter": {
+      "macOS": 2440782,
+      "win": 2452903
+    }
   },
   {
     "FileName": "dotNETConf/2019/Technical/ASP.NET Core Health Checks.pptx",
     "FileSizeBefore": 3967395,
-    "FileSizeAfter": 1740232,
-    "Compression": 56.13665894119441
+    "FileSizeAfter": {
+      "macOS": 1740232,
+      "win": 1751866
+    }
   },
   {
     "FileName": "dotNETConf/2019/Technical/Async Streams in the Real World.pptx",
     "FileSizeBefore": 2900902,
-    "FileSizeAfter": 1459509,
-    "Compression": 49.68775229221808
+    "FileSizeAfter": {
+      "macOS": 1459509,
+      "win": 1471203
+    }
   },
   {
     "FileName": "dotNETConf/2019/Technical/Awesome games with .NET, Visual Studio 2019 and Unity 2019.pptx",
     "FileSizeBefore": 3538830,
-    "FileSizeAfter": 1666034,
-    "Compression": 52.92133275687162
+    "FileSizeAfter": {
+      "macOS": 1666034,
+      "win": 1677064
+    }
   },
   {
     "FileName": "dotNETConf/2019/Technical/Azure Services Every .NET Developer Needs to Know.pptx",
     "FileSizeBefore": 4182563,
-    "FileSizeAfter": 1738945,
-    "Compression": 58.42393766692815
+    "FileSizeAfter": {
+      "macOS": 1738945,
+      "win": 1755125
+    }
   },
   {
     "FileName": "dotNETConf/2019/Technical/Blazor and Azure Functions for Serverless Websites.pptx",
     "FileSizeBefore": 4338025,
-    "FileSizeAfter": 2326458,
-    "Compression": 46.370571861619055,
+    "FileSizeAfter": {
+      "macOS": 2326458,
+      "win": 2338219
+    },
     "Errors": [
-      "[/ppt/media/image20.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n"
+      "[/ppt/media/image20.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n"
     ]
   },
   {
     "FileName": "dotNETConf/2019/Technical/Bringing Big Data Analytics through Apache Spark to .NET.pptx",
     "FileSizeBefore": 4916927,
-    "FileSizeAfter": 1974676,
-    "Compression": 59.83922478409787
+    "FileSizeAfter": {
+      "macOS": 1974676,
+      "win": 1986665
+    }
   },
   {
     "FileName": "dotNETConf/2019/Technical/Build Amazing Cloud Connected Apps With Xamarin, Azure, and App Center.pptx",
     "FileSizeBefore": 6897512,
-    "FileSizeAfter": 3701054,
-    "Compression": 46.342188313699204,
+    "FileSizeAfter": {
+      "macOS": 3701054,
+      "win": 3887662
+    },
     "Errors": [
-      "[/ppt/media/image47.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n"
+      "[/ppt/media/image47.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n"
     ]
   },
   {
     "FileName": "dotNETConf/2019/Technical/Building Cloud Native Apps with .NET Core 3.0 and Kubernetes.pptx",
     "FileSizeBefore": 2828920,
-    "FileSizeAfter": 1407100,
-    "Compression": 50.26016995885355
+    "FileSizeAfter": {
+      "macOS": 1407100,
+      "win": 1419034
+    }
   },
   {
     "FileName": "dotNETConf/2019/Technical/Building Full-stack C# Web Apps with Blazor in .NET Core 3.0.pptx",
     "FileSizeBefore": 9177278,
-    "FileSizeAfter": 5169397,
-    "Compression": 43.67178372497815
+    "FileSizeAfter": {
+      "macOS": 5169397,
+      "win": 5182592
+    }
   },
   {
     "FileName": "dotNETConf/2019/Technical/Cryptography 101 with .NET Core.pptx",
     "FileSizeBefore": 2821840,
-    "FileSizeAfter": 1399512,
-    "Compression": 50.4042752246761
+    "FileSizeAfter": {
+      "macOS": 1399512,
+      "win": 1411232
+    }
   },
   {
     "FileName": "dotNETConf/2019/Technical/Death to SQL Server! Long live SQL Server! How containerized SQL Server makes development easier.pptx",
     "FileSizeBefore": 3249811,
-    "FileSizeAfter": 1532662,
-    "Compression": 52.83842660388558
+    "FileSizeAfter": {
+      "macOS": 1532662,
+      "win": 1544385
+    }
   },
   {
     "FileName": "dotNETConf/2019/Technical/DevOps for the .NET Developer.pptx",
     "FileSizeBefore": 8369447,
-    "FileSizeAfter": 4257590,
-    "Compression": 49.129374975431475
+    "FileSizeAfter": {
+      "macOS": 4257590,
+      "win": 4271461
+    }
   },
   {
     "FileName": "dotNETConf/2019/Technical/Diagnostics Improvements in .NET Core 3.0.pptx",
     "FileSizeBefore": 3066913,
-    "FileSizeAfter": 1598379,
-    "Compression": 47.88313199624508
+    "FileSizeAfter": {
+      "macOS": 1598379,
+      "win": 1610267
+    }
   },
   {
     "FileName": "dotNETConf/2019/Technical/DotNet conf InnerSourcing and Opensourcing.pptx",
     "FileSizeBefore": 20836851,
-    "FileSizeAfter": 10663358,
-    "Compression": 48.8245224770288
+    "FileSizeAfter": {
+      "macOS": 10663358,
+      "win": 10642892
+    }
   },
   {
     "FileName": "dotNETConf/2019/Technical/dotNETConf2019_Keynote.pptx",
     "FileSizeBefore": 5214663,
-    "FileSizeAfter": 2824644,
-    "Compression": 45.83266454610777
+    "FileSizeAfter": {
+      "macOS": 2824644,
+      "win": 2839792
+    }
   },
   {
     "FileName": "dotNETConf/2019/Technical/DotnetConf2019_PresentationTemplate.pptx",
     "FileSizeBefore": 2760734,
-    "FileSizeAfter": 1339875,
-    "Compression": 51.466711389072614
+    "FileSizeAfter": {
+      "macOS": 1339875,
+      "win": 1351371
+    }
   },
   {
     "FileName": "dotNETConf/2019/Technical/Durable Functions 2.0 \u2013 Stateful functions and orchestrations.pptx",
     "FileSizeBefore": 7883865,
-    "FileSizeAfter": 1631989,
-    "Compression": 79.29963285774173,
+    "FileSizeAfter": {
+      "macOS": 1631989,
+      "win": 1653247
+    },
     "Errors": [
-      "[/ppt/media/image19.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n"
+      "[/ppt/media/image19.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n"
     ]
   },
   {
     "FileName": "dotNETConf/2019/Technical/Entity Framework Core 3.0 and beyond.pptx",
     "FileSizeBefore": 2768483,
-    "FileSizeAfter": 1347489,
-    "Compression": 51.327532081649046
+    "FileSizeAfter": {
+      "macOS": 1347489,
+      "win": 1359011
+    }
   },
   {
     "FileName": "dotNETConf/2019/Technical/Get Started with DevOps for .NET Windows Desktop Apps and Visual Studio App Center.pptx",
     "FileSizeBefore": 2673160,
-    "FileSizeAfter": 1254282,
-    "Compression": 53.07867841805204
+    "FileSizeAfter": {
+      "macOS": 1254282,
+      "win": 1266232
+    }
   },
   {
     "FileName": "dotNETConf/2019/Technical/How To Integrate ML.NET with a Chat Bot.pptx",
     "FileSizeBefore": 3128672,
-    "FileSizeAfter": 1519252,
-    "Compression": 51.440994773501345
+    "FileSizeAfter": {
+      "macOS": 1519252,
+      "win": 1530758
+    }
   },
   {
     "FileName": "dotNETConf/2019/Technical/Increase your .NET Productivity with Visual Studio 2019.pptx",
     "FileSizeBefore": 2663569,
-    "FileSizeAfter": 1240849,
-    "Compression": 53.41404709245377
+    "FileSizeAfter": {
+      "macOS": 1240849,
+      "win": 1252412
+    }
   },
   {
     "FileName": "dotNETConf/2019/Technical/Indexing and searching NuGet.org with Azure Functions and Search.pptx",
     "FileSizeBefore": 3924559,
-    "FileSizeAfter": 1791019,
-    "Compression": 54.36381514458058
+    "FileSizeAfter": {
+      "macOS": 1791019,
+      "win": 1803606
+    }
   },
   {
     "FileName": "dotNETConf/2019/Technical/Introduction to GraphQL with .NET Core.pptx",
     "FileSizeBefore": 2888665,
-    "FileSizeAfter": 1416443,
-    "Compression": 50.9654805939768
+    "FileSizeAfter": {
+      "macOS": 1416443,
+      "win": 1428047
+    }
   },
   {
     "FileName": "dotNETConf/2019/Technical/Modernizing .NET Desktop Applications with .NET Core.pptx",
     "FileSizeBefore": 3094506,
-    "FileSizeAfter": 1491464,
-    "Compression": 51.80284025947922
+    "FileSizeAfter": {
+      "macOS": 1491464,
+      "win": 1503218
+    }
   },
   {
     "FileName": "dotNETConf/2019/Technical/Modernizing with .NET Core - Beyond the Basics.pptx",
     "FileSizeBefore": 2789562,
-    "FileSizeAfter": 1368394,
-    "Compression": 50.945919108447846
+    "FileSizeAfter": {
+      "macOS": 1368394,
+      "win": 1379931
+    }
   },
   {
     "FileName": "dotNETConf/2019/Technical/Move your Web Forms app to .NET Core without rewriting everything.pptx",
     "FileSizeBefore": 2788012,
-    "FileSizeAfter": 1365241,
-    "Compression": 51.031738744309564
+    "FileSizeAfter": {
+      "macOS": 1365241,
+      "win": 1376766
+    }
   },
   {
     "FileName": "dotNETConf/2019/Technical/My House Runs .NET.pptx",
     "FileSizeBefore": 34745627,
-    "FileSizeAfter": 19745725,
-    "Compression": 43.170618276653926
+    "FileSizeAfter": {
+      "macOS": 19745725,
+      "win": 19763499
+    }
   },
   {
     "FileName": "dotNETConf/2019/Technical/Orchard Core - DotNetConf.pptx",
     "FileSizeBefore": 2768039,
-    "FileSizeAfter": 1350152,
-    "Compression": 51.22351961081473
+    "FileSizeAfter": {
+      "macOS": 1350152,
+      "win": 1361665
+    }
   },
   {
     "FileName": "dotNETConf/2019/Technical/Overview On Apriori Machine Learning Algorithm.pptx",
     "FileSizeBefore": 3870069,
-    "FileSizeAfter": 2057475,
-    "Compression": 46.83621919919257
+    "FileSizeAfter": {
+      "macOS": 2057475,
+      "win": 2067862
+    }
   },
   {
     "FileName": "dotNETConf/2019/Technical/PlayFab \u002B Azure Functions \u002B Visual Studio Code = Crazy Awesome Games!.pptx",
     "FileSizeBefore": 2963316,
-    "FileSizeAfter": 1453298,
-    "Compression": 50.957035969164274
+    "FileSizeAfter": {
+      "macOS": 1453298,
+      "win": 1464828
+    }
   },
   {
     "FileName": "dotNETConf/2019/Technical/Publish or perish - tricks to successfully ship your .NET Core 3 app.pptx",
     "FileSizeBefore": 2787217,
-    "FileSizeAfter": 1369021,
-    "Compression": 50.88215234048874
+    "FileSizeAfter": {
+      "macOS": 1369021,
+      "win": 1380613
+    }
   },
   {
     "FileName": "dotNETConf/2019/Technical/The Future of Blazor on the Client.pptx",
     "FileSizeBefore": 4590470,
-    "FileSizeAfter": 1453675,
-    "Compression": 68.33276331181774
+    "FileSizeAfter": {
+      "macOS": 1453675,
+      "win": 1465871
+    }
   },
   {
     "FileName": "dotNETConf/2019/Technical/Tips and Tricks for .NET Debugging in Visual Studio.pptx",
     "FileSizeBefore": 4618627,
-    "FileSizeAfter": 1897180,
-    "Compression": 58.92329040643464
+    "FileSizeAfter": {
+      "macOS": 1897180,
+      "win": 1908791
+    }
   },
   {
     "FileName": "dotNETConf/2019/Technical/Tips for moving to Core.pptx",
     "FileSizeBefore": 2833285,
-    "FileSizeAfter": 1410436,
-    "Compression": 50.21905667802569
+    "FileSizeAfter": {
+      "macOS": 1410436,
+      "win": 1422427
+    }
   },
   {
     "FileName": "dotNETConf/2019/Technical/Tour around XAML tools in VS 2019 for WPF and UWP.pptx",
     "FileSizeBefore": 3580318,
-    "FileSizeAfter": 1634938,
-    "Compression": 54.33539702339289
+    "FileSizeAfter": {
+      "macOS": 1634938,
+      "win": 1647041
+    }
   },
   {
     "FileName": "dotNETConf/2019/Technical/Versioning-DotNetConf.pptx",
     "FileSizeBefore": 2783907,
-    "FileSizeAfter": 1362662,
-    "Compression": 51.05217236064279
+    "FileSizeAfter": {
+      "macOS": 1362662,
+      "win": 1374257
+    }
   },
   {
     "FileName": "dotNETConf/2019/Technical/What\u0027s new in C# 8 - Part 2.pptx",
     "FileSizeBefore": 2764655,
-    "FileSizeAfter": 1346827,
-    "Compression": 51.28408427091264
+    "FileSizeAfter": {
+      "macOS": 1346827,
+      "win": 1358346
+    }
   },
   {
     "FileName": "dotNETConf/2019/Technical/What\u0027s New in F#.pptx",
     "FileSizeBefore": 3630706,
-    "FileSizeAfter": 1550608,
-    "Compression": 57.29183249759138
+    "FileSizeAfter": {
+      "macOS": 1550608,
+      "win": 1562104
+    }
   },
   {
     "FileName": "dotNETConf/2019/Technical/What\u0027s New in SignalR with .NET Core 3.0.pptx",
     "FileSizeBefore": 3435372,
-    "FileSizeAfter": 1926752,
-    "Compression": 43.914312627569885
+    "FileSizeAfter": {
+      "macOS": 1926752,
+      "win": 1938359
+    }
   },
   {
     "FileName": "dotNETConf/2019/Technical/What\u2019s New in C#8.0  Part 1 Nullable Reference Types.pptx",
     "FileSizeBefore": 12123320,
-    "FileSizeAfter": 1860380,
-    "Compression": 84.65453357661103
+    "FileSizeAfter": {
+      "macOS": 1860380,
+      "win": 1871915
+    }
   },
   {
     "FileName": "dotNETConf/2019/Technical/Whats new in ML.NET (.NET Conf 2019).pptx",
     "FileSizeBefore": 18087375,
-    "FileSizeAfter": 4602336,
-    "Compression": 74.55498102958555
+    "FileSizeAfter": {
+      "macOS": 4602336,
+      "win": 4618565
+    }
   },
   {
     "FileName": "dotNETConf/2019/Technical/Why you should create your next library using .NET Standard.pptx",
     "FileSizeBefore": 2923655,
-    "FileSizeAfter": 1490150,
-    "Compression": 49.03126394872172
+    "FileSizeAfter": {
+      "macOS": 1490150,
+      "win": 1501693
+    }
   },
   {
     "FileName": "dotNETConf/2020/FocusOnBlazor/Technical/Fritz-BlazorForWebForms.pptx",
     "FileSizeBefore": 3397643,
-    "FileSizeAfter": 1614797,
-    "Compression": 52.473023210502106
+    "FileSizeAfter": {
+      "macOS": 1614797,
+      "win": 1628753
+    }
   },
   {
     "FileName": "dotNETConf/2020/FocusOnBlazor/Technical/Roth-Welcome-to-Blazor.pptx",
     "FileSizeBefore": 8862827,
-    "FileSizeAfter": 3215847,
-    "Compression": 63.71533597575581
+    "FileSizeAfter": {
+      "macOS": 3215847,
+      "win": 3231514
+    }
   },
   {
     "FileName": "dotNETConf/2020/FocusOnMicroservices/Technical/AddingDAPR-DotNETConf.pptx",
     "FileSizeBefore": 12993155,
-    "FileSizeAfter": 1643031,
-    "Compression": 87.35464173251223,
+    "FileSizeAfter": {
+      "macOS": 1643031,
+      "win": 1667422
+    },
     "Errors": [
-      "[/ppt/media/image34.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image46.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image47.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image49.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image60.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image85.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n"
+      "[/ppt/media/image34.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image46.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image47.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image49.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image60.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image85.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n"
     ]
   },
   {
     "FileName": "dotNETConf/2020/FocusOnMicroservices/Technical/Beyond-REST-and-RPC-Asynchronous-Eventing-and-Messaging-Patterns.pptx",
     "FileSizeBefore": 3032537,
-    "FileSizeAfter": 1232639,
-    "Compression": 59.35287846446721
+    "FileSizeAfter": {
+      "macOS": 1232639,
+      "win": 1248077
+    }
   },
   {
     "FileName": "dotNETConf/2020/FocusOnMicroservices/Technical/DevelopDebugMicroservices.pptx",
     "FileSizeBefore": 3220936,
-    "FileSizeAfter": 1067802,
-    "Compression": 66.8480839110122
+    "FileSizeAfter": {
+      "macOS": 1067802,
+      "win": 1085370
+    }
   },
   {
     "FileName": "dotNETConf/2020/FocusOnMicroservices/Technical/dotNETMicroservices_Welcome.pptx",
     "FileSizeBefore": 18740236,
-    "FileSizeAfter": 10672993,
-    "Compression": 43.04771295302791
+    "FileSizeAfter": {
+      "macOS": 10672993,
+      "win": 10705148
+    }
   },
   {
     "FileName": "dotNETConf/2020/FocusOnMicroservices/Technical/evolving-monoliths-dotnet5-kubernetes.pptx",
     "FileSizeBefore": 5061224,
-    "FileSizeAfter": 4190928,
-    "Compression": 17.19536618019673
+    "FileSizeAfter": {
+      "macOS": 4190928,
+      "win": 4199333
+    }
   },
   {
     "FileName": "dotNETConf/2020/FocusOnMicroservices/Technical/TyeNetConfPresentation.pptx",
     "FileSizeBefore": 985582,
-    "FileSizeAfter": 501200,
-    "Compression": 49.14679854136946
+    "FileSizeAfter": {
+      "macOS": 501200,
+      "win": 503257
+    }
   },
   {
     "FileName": "dotNETConf/2020/FocusOnMicroservices/Technical/WhyMicroservices.pptx",
     "FileSizeBefore": 8091592,
-    "FileSizeAfter": 4093516,
-    "Compression": 49.41025202457069
+    "FileSizeAfter": {
+      "macOS": 4093516,
+      "win": 4096856
+    }
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Abdalla_Sanderson_blazor-in-net5.pptx",
     "FileSizeBefore": 2206799,
-    "FileSizeAfter": 871910,
-    "Compression": 60.48983165208975
+    "FileSizeAfter": {
+      "macOS": 871910,
+      "win": 874062
+    }
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Achtman_dotnetconf2020-mlnet-in-real-world.pptx",
     "FileSizeBefore": 4820510,
-    "FileSizeAfter": 3377302,
-    "Compression": 29.93890687914764
+    "FileSizeAfter": {
+      "macOS": 3377302,
+      "win": 3378828
+    }
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/adora_dotnetconf2020.pptx",
     "FileSizeBefore": 18904991,
-    "FileSizeAfter": 11784675,
-    "Compression": 37.66368362724955
+    "FileSizeAfter": {
+      "macOS": 11784675,
+      "win": 11786677
+    }
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Ajaj_dotnetconf2020-building-react-apps-in-fsharp.pptx",
     "FileSizeBefore": 3442710,
-    "FileSizeAfter": 3039967,
-    "Compression": 11.698429434950954
+    "FileSizeAfter": {
+      "macOS": 3039967,
+      "win": 3041183
+    }
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Bassi_Analyzing memory dumps of .NET applications.pptx",
     "FileSizeBefore": 8857043,
-    "FileSizeAfter": 6537543,
-    "Compression": 26.18819847662476
+    "FileSizeAfter": {
+      "macOS": 6537543,
+      "win": 6539196
+    }
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Beltran_AI Enrichment with Azure Cognitive Search_NET Conf Latam 2020.pptx",
     "FileSizeBefore": 9115870,
-    "FileSizeAfter": 6818734,
-    "Compression": 25.19930626478877
+    "FileSizeAfter": {
+      "macOS": 6818734,
+      "win": 6824002
+    }
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Brett-Parker-dotnetconf2020.pptx",
     "FileSizeBefore": 3459177,
-    "FileSizeAfter": 3051192,
-    "Compression": 11.794279390733692
+    "FileSizeAfter": {
+      "macOS": 3051192,
+      "win": 3052460
+    }
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Condron_dotentConf2020_Tye.pptx",
     "FileSizeBefore": 5594329,
-    "FileSizeAfter": 4653338,
-    "Compression": 16.820444417909638
+    "FileSizeAfter": {
+      "macOS": 4653338,
+      "win": 4656046
+    }
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/D\u0027Souza_healthcheck-clydedsouza-dotnetconf2020.pptx",
     "FileSizeBefore": 4195338,
-    "FileSizeAfter": 3447861,
-    "Compression": 17.816848129995723
+    "FileSizeAfter": {
+      "macOS": 3447861,
+      "win": 3450112
+    }
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/dotentConf2020_Tye.pptx",
     "FileSizeBefore": 9561637,
-    "FileSizeAfter": 6184993,
-    "Compression": 35.314496879561524
+    "FileSizeAfter": {
+      "macOS": 6184993,
+      "win": 6193651
+    }
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/dotnetconf2020_FoundationUpdate.pptx",
     "FileSizeBefore": 17440021,
-    "FileSizeAfter": 5824596,
-    "Compression": 66.60212737129159,
+    "FileSizeAfter": {
+      "macOS": 5824596,
+      "win": 5830119
+    },
     "Errors": [
       "[/ppt/media/image39.jpeg] Unsupported image crop L/T/R/B=-398/1/2/1"
     ]
@@ -963,68 +1222,90 @@
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/dotnetconf2020_immol_phcart_porting.pptx",
     "FileSizeBefore": 12599685,
-    "FileSizeAfter": 9780187,
-    "Compression": 22.37752769216056
+    "FileSizeAfter": {
+      "macOS": 9780187,
+      "win": 9790741
+    }
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/dotnetconf2020-deck-Dobretsberger.pptx",
     "FileSizeBefore": 4265932,
-    "FileSizeAfter": 3177440,
-    "Compression": 25.515924773296902
+    "FileSizeAfter": {
+      "macOS": 3177440,
+      "win": 3178699
+    }
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/dotNETConf2020-keynote.pptx",
     "FileSizeBefore": 20482629,
-    "FileSizeAfter": 4975501,
-    "Compression": 75.70867977933888
+    "FileSizeAfter": {
+      "macOS": 4975501,
+      "win": 4982326
+    }
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Downie_dotnetConf_Effectively_diagnose_and_debug_.NET_in_Visual Studio.pptx",
     "FileSizeBefore": 3655806,
-    "FileSizeAfter": 2906783,
-    "Compression": 20.488587195272398
+    "FileSizeAfter": {
+      "macOS": 2906783,
+      "win": 2909024
+    }
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Driscoll_dotnetconf2020-csharp-lsp.pptx",
     "FileSizeBefore": 5112096,
-    "FileSizeAfter": 3926608,
-    "Compression": 23.18986184922975
+    "FileSizeAfter": {
+      "macOS": 3926608,
+      "win": 3929609
+    }
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Dumont_Havens_dotnetconf2020_Improve _Your_Productivity_with_Roslyn_Analyzers.pptx",
     "FileSizeBefore": 4444645,
-    "FileSizeAfter": 3937403,
-    "Compression": 11.412430014095614
+    "FileSizeAfter": {
+      "macOS": 3937403,
+      "win": 3938815
+    }
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Felstead_Deck-NoNotes.pptx",
     "FileSizeBefore": 5601907,
-    "FileSizeAfter": 3212858,
-    "Compression": 42.64706643648315
+    "FileSizeAfter": {
+      "macOS": 3212858,
+      "win": 3214160
+    }
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Franklin_Blazor_Session_State.pptx",
     "FileSizeBefore": 4954064,
-    "FileSizeAfter": 3222101,
-    "Compression": 34.96044863368741
+    "FileSizeAfter": {
+      "macOS": 3222101,
+      "win": 3223335
+    }
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Fritz_IntroducingBlazorWebFormComponents.pptx",
     "FileSizeBefore": 5575179,
-    "FileSizeAfter": 4137299,
-    "Compression": 25.790741427315606
+    "FileSizeAfter": {
+      "macOS": 4137299,
+      "win": 4139949
+    }
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/gaster-http-apis.pptx",
     "FileSizeBefore": 4175561,
-    "FileSizeAfter": 3500587,
-    "Compression": 16.16486982228256
+    "FileSizeAfter": {
+      "macOS": 3500587,
+      "win": 3502641
+    }
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Gnelson_DotNetConf2020.pptx",
     "FileSizeBefore": 12212505,
-    "FileSizeAfter": 7998815,
-    "Compression": 34.50307696905754,
+    "FileSizeAfter": {
+      "macOS": 7998815,
+      "win": 8010745
+    },
     "Errors": [
       "[/ppt/media/image14.png] Unsupported image crop L/T/R/B=2969/0/16050/-2"
     ]
@@ -1032,186 +1313,244 @@
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Gujral_Build and run an Azure Static Web App with a backend API.pptx",
     "FileSizeBefore": 6417998,
-    "FileSizeAfter": 4264511,
-    "Compression": 33.5538745883062,
+    "FileSizeAfter": {
+      "macOS": 4264511,
+      "win": 4267275
+    },
     "Errors": [
-      "[/ppt/media/image18.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n"
+      "[/ppt/media/image18.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n"
     ]
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Hawker_Pedri_MVVMToolkitDotNetConf.pptx",
     "FileSizeBefore": 10396293,
-    "FileSizeAfter": 5768767,
-    "Compression": 44.51130802104173
+    "FileSizeAfter": {
+      "macOS": 5768767,
+      "win": 5773575
+    }
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Inusah_Buiding_native_android_apps_with.dotNET.pptx",
     "FileSizeBefore": 4916205,
-    "FileSizeAfter": 4464329,
-    "Compression": 9.19156137711914
+    "FileSizeAfter": {
+      "macOS": 4464329,
+      "win": 4465790
+    }
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Jensen_DotNetConf_2020.pptx",
     "FileSizeBefore": 3439753,
-    "FileSizeAfter": 2993777,
-    "Compression": 12.965349546900606
+    "FileSizeAfter": {
+      "macOS": 2993777,
+      "win": 2994835
+    }
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Juback_Building-Cross-Platform-Desktop-Apps-with-Electron-NET.pptx",
     "FileSizeBefore": 5432106,
-    "FileSizeAfter": 3128995,
-    "Compression": 42.39812330613578,
+    "FileSizeAfter": {
+      "macOS": 3128995,
+      "win": 3133157
+    },
     "Errors": [
-      "[/ppt/media/image5.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n"
+      "[/ppt/media/image5.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n"
     ]
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Levin_Accelerate_.NET_to_Azure_with_GitHub_Actions.pptx",
     "FileSizeBefore": 10645969,
-    "FileSizeAfter": 6368799,
-    "Compression": 40.176427340714596
+    "FileSizeAfter": {
+      "macOS": 6368799,
+      "win": 6379214
+    }
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Likness_dotnetconf-efcore5-next-gen.pptx",
     "FileSizeBefore": 5186856,
-    "FileSizeAfter": 4345977,
-    "Compression": 16.21172826081927
+    "FileSizeAfter": {
+      "macOS": 4345977,
+      "win": 4349618
+    }
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Lipton_dotnetconf2020-mobile-blazor-bindings.pptx",
     "FileSizeBefore": 4423559,
-    "FileSizeAfter": 3675446,
-    "Compression": 16.912015867766204
+    "FileSizeAfter": {
+      "macOS": 3675446,
+      "win": 3676855
+    }
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/lizzy-gallagher-dotnetconf2020-1.pptx",
     "FileSizeBefore": 4167868,
-    "FileSizeAfter": 3242826,
-    "Compression": 22.19460885037626
+    "FileSizeAfter": {
+      "macOS": 3242826,
+      "win": 3245136
+    }
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Lyalin_dotnetconf2020-desktop-dmitry.pptx",
     "FileSizeBefore": 6264705,
-    "FileSizeAfter": 5043307,
-    "Compression": 19.496496642699057
+    "FileSizeAfter": {
+      "macOS": 5043307,
+      "win": 5046173
+    }
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Matskas_Dandison_dotnetconf2020-Secure_Dev_Ops.pptx",
     "FileSizeBefore": 16796613,
-    "FileSizeAfter": 14833449,
-    "Compression": 11.687856355325922
+    "FileSizeAfter": {
+      "macOS": 14833449,
+      "win": 14829708
+    }
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Miller_Hamed_dotnetconf-2020-UnityTools.pptx",
     "FileSizeBefore": 6400421,
-    "FileSizeAfter": 3578533,
-    "Compression": 44.089099763906155
+    "FileSizeAfter": {
+      "macOS": 3578533,
+      "win": 3583044
+    }
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Newton-King_gRPC-dofnetconf-2020.pptx",
     "FileSizeBefore": 7615590,
-    "FileSizeAfter": 4434300,
-    "Compression": 41.77338853588494
+    "FileSizeAfter": {
+      "macOS": 4434300,
+      "win": 4443208
+    }
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Nosenko_Asynchronous_Coroutines_with_C#.pptx",
     "FileSizeBefore": 2709439,
-    "FileSizeAfter": 1760219,
-    "Compression": 35.03382065438639
+    "FileSizeAfter": {
+      "macOS": 1760219,
+      "win": 1760798
+    }
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Paez_test_readability_nicopaez.pptx",
     "FileSizeBefore": 906780,
-    "FileSizeAfter": 506939,
-    "Compression": 44.094598469308984
+    "FileSizeAfter": {
+      "macOS": 506939,
+      "win": 508572
+    }
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Powell_2020-get-your-jam-on-dotnetconf.pptx",
     "FileSizeBefore": 10821422,
-    "FileSizeAfter": 6546231,
-    "Compression": 39.50673950244247
+    "FileSizeAfter": {
+      "macOS": 6546231,
+      "win": 6556625
+    }
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Rappl_DNC20_Microfrontends-Blazor.pptx",
     "FileSizeBefore": 20065770,
-    "FileSizeAfter": 9578468,
-    "Compression": 52.26463773879597,
+    "FileSizeAfter": {
+      "macOS": 9578468,
+      "win": 9599448
+    },
     "Errors": [
-      "[/ppt/media/image14.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n",
-      "[/ppt/media/image24.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\n - TGA : TgaDecoder\n - BMP : BmpDecoder\n - GIF : GifDecoder\n - PNG : PngDecoder\n - JPEG : JpegDecoder\n"
+      "[/ppt/media/image14.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n",
+      "[/ppt/media/image24.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - TGA : TgaDecoder\r\n - BMP : BmpDecoder\r\n - JPEG : JpegDecoder\r\n - PNG : PngDecoder\r\n - GIF : GifDecoder\r\n"
     ]
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Rian_dotnetconf2020_GitHub_Codespaces.pptx",
     "FileSizeBefore": 13475769,
-    "FileSizeAfter": 9252269,
-    "Compression": 31.341439586861426
+    "FileSizeAfter": {
+      "macOS": 9252269,
+      "win": 9263391
+    }
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Richter_The_New_Improved_Azure_SDK_for_.NET.pptx",
     "FileSizeBefore": 7084465,
-    "FileSizeAfter": 4567785,
-    "Compression": 35.52392453064557
+    "FileSizeAfter": {
+      "macOS": 4567785,
+      "win": 4569916
+    }
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Roth_modern-web-dev-with-blazor-and-dotnet5.pptx",
     "FileSizeBefore": 11629024,
-    "FileSizeAfter": 7630469,
-    "Compression": 34.384269909495416
+    "FileSizeAfter": {
+      "macOS": 7630469,
+      "win": 7641551
+    }
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Rousos_dotnetconf-aks-diagnostics.pptx",
     "FileSizeBefore": 10029376,
-    "FileSizeAfter": 6195846,
-    "Compression": 38.22301606799865
+    "FileSizeAfter": {
+      "macOS": 6195846,
+      "win": 6206245
+    }
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Shilkov_dotnetconf2020-pulumi.pptx",
     "FileSizeBefore": 12419482,
-    "FileSizeAfter": 7684812,
-    "Compression": 38.122926543957306
+    "FileSizeAfter": {
+      "macOS": 7684812,
+      "win": 7695191
+    }
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Spencer_Lessons learned from YARP.pptx",
     "FileSizeBefore": 4336222,
-    "FileSizeAfter": 3197618,
-    "Compression": 26.257972954336747
+    "FileSizeAfter": {
+      "macOS": 3197618,
+      "win": 3200707
+    }
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Turner_dotnetconf2020-levenshtein-distance.pptx",
     "FileSizeBefore": 5028198,
-    "FileSizeAfter": 4100641,
-    "Compression": 18.44710570267917
+    "FileSizeAfter": {
+      "macOS": 4100641,
+      "win": 4106255
+    }
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Ukirade_Single file applications_HarishchandraUkirade.pptx",
     "FileSizeBefore": 4132759,
-    "FileSizeAfter": 3144846,
-    "Compression": 23.904442528586834
+    "FileSizeAfter": {
+      "macOS": 3144846,
+      "win": 3148437
+    }
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Walker_Trailblazor.pptx",
     "FileSizeBefore": 7487437,
-    "FileSizeAfter": 5460770,
-    "Compression": 27.06756664530199
+    "FileSizeAfter": {
+      "macOS": 5460770,
+      "win": 5461761
+    }
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Wengier_Source_generators.pptx",
     "FileSizeBefore": 625310,
-    "FileSizeAfter": 373576,
-    "Compression": 40.2574722937423
+    "FileSizeAfter": {
+      "macOS": 373576,
+      "win": 374743
+    }
   },
   {
     "FileName": "dsyme-fsharp/2007-03-23-epfl-apats/apats-epfl.pptx",
     "FileSizeBefore": 155276,
-    "FileSizeAfter": 133511,
-    "Compression": 14.01697622298359
+    "FileSizeAfter": {
+      "macOS": 133511,
+      "win": 134240
+    }
   },
   {
     "FileName": "dsyme-fsharp/2007-07-06-dublin/APGAdCenter.pptx",
     "FileSizeBefore": 1457603,
-    "FileSizeAfter": 974568,
-    "Compression": 33.138996009201406,
+    "FileSizeAfter": {
+      "macOS": 974568,
+      "win": 971905
+    },
     "Errors": [
       "[/ppt/media/image8.png] Unsupported image crop L/T/R/B=-849/-21872/-849/-21872"
     ]
@@ -1219,8 +1558,10 @@
   {
     "FileName": "dsyme-fsharp/2007-07-06-dublin/fsharp-at-dublin.pptx",
     "FileSizeBefore": 2514702,
-    "FileSizeAfter": 1366578,
-    "Compression": 45.656463469627816,
+    "FileSizeAfter": {
+      "macOS": 1366578,
+      "win": 1365439
+    },
     "Errors": [
       "[/ppt/media/image16.png] Unsupported image crop L/T/R/B=-849/-21872/-849/-21872"
     ]
@@ -1228,50 +1569,66 @@
   {
     "FileName": "dsyme-fsharp/2007-09-18-nextgen/fsharp-v2.pptx",
     "FileSizeBefore": 2004288,
-    "FileSizeAfter": 1377972,
-    "Compression": 31.24880256729572
+    "FileSizeAfter": {
+      "macOS": 1377972,
+      "win": 1377501
+    }
   },
   {
     "FileName": "dsyme-fsharp/2007-10-01-icfp/apats-icfp-v3.pptx",
     "FileSizeBefore": 149800,
-    "FileSizeAfter": 127912,
-    "Compression": 14.611481975967957
+    "FileSizeAfter": {
+      "macOS": 127912,
+      "win": 128556
+    }
   },
   {
     "FileName": "dsyme-fsharp/2007-11-09-teched/TLA405_Parallel and Asynchronous Functional Programming on NET with FSharp-v4.pptx",
     "FileSizeBefore": 1994248,
-    "FileSizeAfter": 1658754,
-    "Compression": 16.82308318724652
+    "FileSizeAfter": {
+      "macOS": 1658754,
+      "win": 1660137
+    }
   },
   {
     "FileName": "dsyme-fsharp/2008-01-leon-bambrick/fsharp_leonb.pptx",
     "FileSizeBefore": 2881539,
-    "FileSizeAfter": 719491,
-    "Compression": 75.0310164117161
+    "FileSizeAfter": {
+      "macOS": 719491,
+      "win": 720199
+    }
   },
   {
     "FileName": "dsyme-fsharp/2008-05-28-jaoo-brisbane/FSharp Async Parallel.pptx",
     "FileSizeBefore": 427272,
-    "FileSizeAfter": 349019,
-    "Compression": 18.314563088618023
+    "FileSizeAfter": {
+      "macOS": 349019,
+      "win": 349948
+    }
   },
   {
     "FileName": "dsyme-fsharp/2008-05-28-jaoo-brisbane/FSharp Intro v2 redist.pptx",
     "FileSizeBefore": 1084996,
-    "FileSizeAfter": 903741,
-    "Compression": 16.705591541351303
+    "FileSizeAfter": {
+      "macOS": 903741,
+      "win": 905212
+    }
   },
   {
     "FileName": "dsyme-fsharp/2008-06-18-wg28/talk-v4.pptx",
     "FileSizeBefore": 302106,
-    "FileSizeAfter": 239738,
-    "Compression": 20.644409578095107
+    "FileSizeAfter": {
+      "macOS": 239738,
+      "win": 240733
+    }
   },
   {
     "FileName": "dsyme-fsharp/2009-03-24-chalmers/FSharp Impromptu.pptx",
     "FileSizeBefore": 1554201,
-    "FileSizeAfter": 925434,
-    "Compression": 40.455964189959985,
+    "FileSizeAfter": {
+      "macOS": 925434,
+      "win": 926999
+    },
     "Errors": [
       "[/ppt/media/image6.png] Unsupported image crop L/T/R/B=0/0/0/-26666"
     ]
@@ -1279,8 +1636,10 @@
   {
     "FileName": "dsyme-fsharp/2009-03-24-sdc2009/FSharp Intro v1.pptx",
     "FileSizeBefore": 2120087,
-    "FileSizeAfter": 1224607,
-    "Compression": 42.23788929416576,
+    "FileSizeAfter": {
+      "macOS": 1224607,
+      "win": 1226653
+    },
     "Errors": [
       "[/ppt/media/image6.png] Unsupported image crop L/T/R/B=0/0/0/-26666"
     ]
@@ -1288,8 +1647,10 @@
   {
     "FileName": "dsyme-fsharp/2009-03-25-aarhus/FSharp Overview.pptx",
     "FileSizeBefore": 2175338,
-    "FileSizeAfter": 1336121,
-    "Compression": 38.578694437370196,
+    "FileSizeAfter": {
+      "macOS": 1336121,
+      "win": 1338487
+    },
     "Errors": [
       "[/ppt/media/image5.png] Unsupported image crop L/T/R/B=0/0/0/-26666"
     ]
@@ -1297,8 +1658,10 @@
   {
     "FileName": "dsyme-fsharp/2009-03-25-mdcc/FSharp Intro v1.pptx",
     "FileSizeBefore": 2113776,
-    "FileSizeAfter": 1219227,
-    "Compression": 42.31995253990962,
+    "FileSizeAfter": {
+      "macOS": 1219227,
+      "win": 1221128
+    },
     "Errors": [
       "[/ppt/media/image6.png] Unsupported image crop L/T/R/B=0/0/0/-26666"
     ]
@@ -1306,26 +1669,34 @@
   {
     "FileName": "dsyme-fsharp/2009-03-28-york/FSharp-LOP-v2.pptx",
     "FileSizeBefore": 1663680,
-    "FileSizeAfter": 1204904,
-    "Compression": 27.57597614925947
+    "FileSizeAfter": {
+      "macOS": 1204904,
+      "win": 1207406
+    }
   },
   {
     "FileName": "dsyme-fsharp/2009-10-05-jaoo-session/FSharp Intro redist.pptx",
     "FileSizeBefore": 765184,
-    "FileSizeAfter": 511325,
-    "Compression": 33.17620337069254
+    "FileSizeAfter": {
+      "macOS": 511325,
+      "win": 512756
+    }
   },
   {
     "FileName": "dsyme-fsharp/2009-11-11-teched-europe/DEV306_TechEd09_Europe-given-redist.pptx",
     "FileSizeBefore": 736641,
-    "FileSizeAfter": 475461,
-    "Compression": 35.45553397109311
+    "FileSizeAfter": {
+      "macOS": 475461,
+      "win": 476510
+    }
   },
   {
     "FileName": "dsyme-fsharp/2009-11-18-edinburgh/FSharp-DL.pptx",
     "FileSizeBefore": 2053302,
-    "FileSizeAfter": 966600,
-    "Compression": 52.92460631704445,
+    "FileSizeAfter": {
+      "macOS": 966600,
+      "win": 968378
+    },
     "Errors": [
       "[/ppt/media/image10.png] Unsupported image crop L/T/R/B=0/0/0/-26666"
     ]
@@ -1333,68 +1704,90 @@
   {
     "FileName": "dsyme-fsharp/2010-01-26-berkeley/FSharp-berkeley-redist.pptx",
     "FileSizeBefore": 518970,
-    "FileSizeAfter": 333025,
-    "Compression": 35.82962406304796
+    "FileSizeAfter": {
+      "macOS": 333025,
+      "win": 334367
+    }
   },
   {
     "FileName": "dsyme-fsharp/2010-02-24-imperial/FSharp-imperial-redist.pptx",
     "FileSizeBefore": 886399,
-    "FileSizeAfter": 552016,
-    "Compression": 37.72375645730647
+    "FileSizeAfter": {
+      "macOS": 552016,
+      "win": 553410
+    }
   },
   {
     "FileName": "dsyme-fsharp/2010-03-04-csharp-design/EST-Intro.pptx",
     "FileSizeBefore": 291783,
-    "FileSizeAfter": 266095,
-    "Compression": 8.8038028260728
+    "FileSizeAfter": {
+      "macOS": 266095,
+      "win": 266639
+    }
   },
   {
     "FileName": "dsyme-fsharp/2010-03-10-qcon-london/FSharp-qcon-redist.pptx",
     "FileSizeBefore": 2126841,
-    "FileSizeAfter": 950456,
-    "Compression": 55.3113749452827
+    "FileSizeAfter": {
+      "macOS": 950456,
+      "win": 951361
+    }
   },
   {
     "FileName": "dsyme-fsharp/2010-03-17-sdc-sweden/FSharp-sdc.pptx",
     "FileSizeBefore": 2153077,
-    "FileSizeAfter": 1260614,
-    "Compression": 41.450584442637215
+    "FileSizeAfter": {
+      "macOS": 1260614,
+      "win": 1261896
+    }
   },
   {
     "FileName": "dsyme-fsharp/2010-06-07-msrc-tab-async/AsyncRecap-v3.pptx",
     "FileSizeBefore": 2739821,
-    "FileSizeAfter": 1448025,
-    "Compression": 47.14891958270267
+    "FileSizeAfter": {
+      "macOS": 1448025,
+      "win": 1448706
+    }
   },
   {
     "FileName": "dsyme-fsharp/2010-06-10-erlang-factory/FSharp-ef.pptx",
     "FileSizeBefore": 1928149,
-    "FileSizeAfter": 1230715,
-    "Compression": 36.17116726974938
+    "FileSizeAfter": {
+      "macOS": 1230715,
+      "win": 1231788
+    }
   },
   {
     "FileName": "dsyme-fsharp/2010-06-21-lqg/FSharp-lqg.pptx",
     "FileSizeBefore": 2200670,
-    "FileSizeAfter": 1287923,
-    "Compression": 41.47586871271022
+    "FileSizeAfter": {
+      "macOS": 1287923,
+      "win": 1288533
+    }
   },
   {
     "FileName": "dsyme-fsharp/2010-09-09-meetup/FSharp-meetup-2010-redist.pptx",
     "FileSizeBefore": 4087384,
-    "FileSizeAfter": 2380307,
-    "Compression": 41.764536926307876
+    "FileSizeAfter": {
+      "macOS": 2380307,
+      "win": 2382098
+    }
   },
   {
     "FileName": "dsyme-fsharp/2010-10-20-splash/FSharp-splash-redist.pptx",
     "FileSizeBefore": 3566321,
-    "FileSizeAfter": 1376791,
-    "Compression": 61.394641704995145
+    "FileSizeAfter": {
+      "macOS": 1376791,
+      "win": 1378109
+    }
   },
   {
     "FileName": "dsyme-fsharp/2010-10-29-pdc10/PDC_FT_55_Syme_TypeProviders-v2.pptx",
     "FileSizeBefore": 5085649,
-    "FileSizeAfter": 2668164,
-    "Compression": 47.535427631753585,
+    "FileSizeAfter": {
+      "macOS": 2668164,
+      "win": 2669687
+    },
     "Errors": [
       "[/ppt/media/image13.png] Unsupported image crop L/T/R/B=0/9382/-6081/38738"
     ]
@@ -1402,8 +1795,10 @@
   {
     "FileName": "dsyme-fsharp/2010-10-29-pdc10/type-providers-one-minute.pptx",
     "FileSizeBefore": 3779702,
-    "FileSizeAfter": 1802445,
-    "Compression": 52.31251035134516,
+    "FileSizeAfter": {
+      "macOS": 1802445,
+      "win": 1803563
+    },
     "Errors": [
       "[/ppt/media/image12.png] Unsupported image crop L/T/R/B=0/9382/-6081/38738"
     ]
@@ -1411,38 +1806,50 @@
   {
     "FileName": "dsyme-fsharp/2010-11-09-berlin/DEV304_Syme.pptx",
     "FileSizeBefore": 9354449,
-    "FileSizeAfter": 7533135,
-    "Compression": 19.47002971527238
+    "FileSizeAfter": {
+      "macOS": 7533135,
+      "win": 7523569
+    }
   },
   {
     "FileName": "dsyme-fsharp/2011-01-25-padl-async/Async-v3.pptx",
     "FileSizeBefore": 7062852,
-    "FileSizeAfter": 1910450,
-    "Compression": 72.95072868580567
+    "FileSizeAfter": {
+      "macOS": 1910450,
+      "win": 1913758
+    }
   },
   {
     "FileName": "dsyme-fsharp/2011-03-10-sigcse/fsharp-sigcse.pptx",
     "FileSizeBefore": 3395905,
-    "FileSizeAfter": 269294,
-    "Compression": 92.07003729491844
+    "FileSizeAfter": {
+      "macOS": 269294,
+      "win": 269913
+    }
   },
   {
     "FileName": "dsyme-fsharp/2011-03-29-techdays-sweden/fsharp-techdays-sweden-don-dsyme-redist.pptx",
     "FileSizeBefore": 8803045,
-    "FileSizeAfter": 7155829,
-    "Compression": 18.711888897534887
+    "FileSizeAfter": {
+      "macOS": 7155829,
+      "win": 7146416
+    }
   },
   {
     "FileName": "dsyme-fsharp/2011-06-28-ucl-algo/fsharp-ucl-algo-redist-v2.pptx",
     "FileSizeBefore": 4503099,
-    "FileSizeAfter": 3091616,
-    "Compression": 31.344702836868567
+    "FileSizeAfter": {
+      "macOS": 3091616,
+      "win": 3090176
+    }
   },
   {
     "FileName": "dsyme-fsharp/2011-08-20-jackhu/DEV217.pptx",
     "FileSizeBefore": 8317344,
-    "FileSizeAfter": 4982933,
-    "Compression": 40.08985320313793,
+    "FileSizeAfter": {
+      "macOS": 4982933,
+      "win": 4982392
+    },
     "Errors": [
       "[/ppt/embeddings/Microsoft_Excel_Worksheet1.xlsx] Unsupported embedding type application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
     ]
@@ -1450,26 +1857,34 @@
   {
     "FileName": "dsyme-fsharp/2011-09-15-build/SAC-904T_Syme.pptx",
     "FileSizeBefore": 2885593,
-    "FileSizeAfter": 1321979,
-    "Compression": 54.18692102455197
+    "FileSizeAfter": {
+      "macOS": 1321979,
+      "win": 1319649
+    }
   },
   {
     "FileName": "dsyme-fsharp/2011-10-14-fpday/fsharp-fpday-4.pptx",
     "FileSizeBefore": 3704987,
-    "FileSizeAfter": 2478778,
-    "Compression": 33.096175506148874
+    "FileSizeAfter": {
+      "macOS": 2478778,
+      "win": 2477534
+    }
   },
   {
     "FileName": "dsyme-fsharp/2011-10-25-iswc/iswc-v1.pptx",
     "FileSizeBefore": 2909145,
-    "FileSizeAfter": 2063250,
-    "Compression": 29.077099972672382
+    "FileSizeAfter": {
+      "macOS": 2063250,
+      "win": 2062195
+    }
   },
   {
     "FileName": "dsyme-fsharp/2011-11-15-dutch-ict/dutch-ict-v2.pptx",
     "FileSizeBefore": 4168627,
-    "FileSizeAfter": 2229591,
-    "Compression": 46.514979632382556,
+    "FileSizeAfter": {
+      "macOS": 2229591,
+      "win": 2229037
+    },
     "Errors": [
       "[/ppt/media/image23.png] Unsupported image crop L/T/R/B=0/9382/-6081/38738"
     ]
@@ -1477,368 +1892,490 @@
   {
     "FileName": "dsyme-fsharp/2012-03-23-nicta/nicta-v4-redist.pptx",
     "FileSizeBefore": 6128062,
-    "FileSizeAfter": 5033397,
-    "Compression": 17.863151515111955
+    "FileSizeAfter": {
+      "macOS": 5033397,
+      "win": 5034804
+    }
   },
   {
     "FileName": "dsyme-fsharp/2012-04-22-quant-workshop/fp-success-v2-redist.pptx",
     "FileSizeBefore": 6800604,
-    "FileSizeAfter": 5179457,
-    "Compression": 23.83827965868914
+    "FileSizeAfter": {
+      "macOS": 5179457,
+      "win": 5169877
+    }
   },
   {
     "FileName": "dsyme-fsharp/2012-05-03-inf-rich-workshop/inf-rich-workshop-dsyme-redist.pptx",
     "FileSizeBefore": 5528816,
-    "FileSizeAfter": 4710599,
-    "Compression": 14.799136017548784
+    "FileSizeAfter": {
+      "macOS": 4710599,
+      "win": 4711943
+    }
   },
   {
     "FileName": "dsyme-fsharp/2012-05-28-net-tutorials/fp-success-v3.pptx",
     "FileSizeBefore": 8363180,
-    "FileSizeAfter": 6597739,
-    "Compression": 21.109685550233284
+    "FileSizeAfter": {
+      "macOS": 6597739,
+      "win": 6588525
+    }
   },
   {
     "FileName": "dsyme-fsharp/2012-06-05-new-york/fp-success-v3-redist.pptx",
     "FileSizeBefore": 7668394,
-    "FileSizeAfter": 5476446,
-    "Compression": 28.58418594558391
+    "FileSizeAfter": {
+      "macOS": 5476446,
+      "win": 5467062
+    }
   },
   {
     "FileName": "dsyme-fsharp/2012-06-26-screencasts/screencast-2.pptx",
     "FileSizeBefore": 5302888,
-    "FileSizeAfter": 4577675,
-    "Compression": 13.67581212350704
+    "FileSizeAfter": {
+      "macOS": 4577675,
+      "win": 4567662
+    }
   },
   {
     "FileName": "dsyme-fsharp/2012-06-28-pisa/fp-success-v3-redist.pptx",
     "FileSizeBefore": 8791968,
-    "FileSizeAfter": 7056807,
-    "Compression": 19.735751995457672
+    "FileSizeAfter": {
+      "macOS": 7056807,
+      "win": 7047531
+    }
   },
   {
     "FileName": "dsyme-fsharp/2012-07-16-faculty-summit/slides-v1.pptx",
     "FileSizeBefore": 6272979,
-    "FileSizeAfter": 5151631,
-    "Compression": 17.875844953410493
+    "FileSizeAfter": {
+      "macOS": 5151631,
+      "win": 5152984
+    }
   },
   {
     "FileName": "dsyme-fsharp/2012-10-02-sap-research/sap-v2-redist.pptx",
     "FileSizeBefore": 6401651,
-    "FileSizeAfter": 5158253,
-    "Compression": 19.42308320150536
+    "FileSizeAfter": {
+      "macOS": 5158253,
+      "win": 5160064
+    }
   },
   {
     "FileName": "dsyme-fsharp/2012-10-18-boston-fsug/slides-v1.pptx",
     "FileSizeBefore": 5527476,
-    "FileSizeAfter": 4746377,
-    "Compression": 14.13120563526644
+    "FileSizeAfter": {
+      "macOS": 4746377,
+      "win": 4747662
+    }
   },
   {
     "FileName": "dsyme-fsharp/2012-10-18-monkeyspace/fsharp-3.0-information-rich.pptx",
     "FileSizeBefore": 8811811,
-    "FileSizeAfter": 7219957,
-    "Compression": 18.065003890800654
+    "FileSizeAfter": {
+      "macOS": 7219957,
+      "win": 7212296
+    }
   },
   {
     "FileName": "dsyme-fsharp/2012-11-01-prog-fsharp/fp-success-v3.pptx",
     "FileSizeBefore": 7149934,
-    "FileSizeAfter": 5393671,
-    "Compression": 24.56334561969383
+    "FileSizeAfter": {
+      "macOS": 5393671,
+      "win": 5384328
+    }
   },
   {
     "FileName": "dsyme-fsharp/2012-11-13-msr-svc/slides-v1.pptx",
     "FileSizeBefore": 5527476,
-    "FileSizeAfter": 4746377,
-    "Compression": 14.13120563526644
+    "FileSizeAfter": {
+      "macOS": 4746377,
+      "win": 4747662
+    }
   },
   {
     "FileName": "dsyme-fsharp/2012-11-15-facebook/fsharp-3.0-information-rich.pptx",
     "FileSizeBefore": 8681708,
-    "FileSizeAfter": 7191861,
-    "Compression": 17.16075915015801
+    "FileSizeAfter": {
+      "macOS": 7191861,
+      "win": 7184151
+    }
   },
   {
     "FileName": "dsyme-fsharp/2012-11-16-google/fsharp-3.0-information-rich.pptx",
     "FileSizeBefore": 8670463,
-    "FileSizeAfter": 7187969,
-    "Compression": 17.09821032625363
+    "FileSizeAfter": {
+      "macOS": 7187969,
+      "win": 7180266
+    }
   },
   {
     "FileName": "dsyme-fsharp/2013-01-22-ddfp/themes-and-meditations.pptx",
     "FileSizeBefore": 5408476,
-    "FileSizeAfter": 4728783,
-    "Compression": 12.567181586827786
+    "FileSizeAfter": {
+      "macOS": 4728783,
+      "win": 4729956
+    }
   },
   {
     "FileName": "dsyme-fsharp/2013-03-15-fp-exchange/fsharp-open-source-world-given.pptx",
     "FileSizeBefore": 10088853,
-    "FileSizeAfter": 8454385,
-    "Compression": 16.200731639166513
+    "FileSizeAfter": {
+      "macOS": 8454385,
+      "win": 8456538
+    }
   },
   {
     "FileName": "dsyme-fsharp/2013-04-13-data-hackathon/fsharp-data-science-given.pptx",
     "FileSizeBefore": 9786378,
-    "FileSizeAfter": 8260657,
-    "Compression": 15.5902520830485
+    "FileSizeAfter": {
+      "macOS": 8260657,
+      "win": 8262637
+    }
   },
   {
     "FileName": "dsyme-fsharp/2013-04-13-data-hackathon/fsharp-data-science-redist.pptx",
     "FileSizeBefore": 9782131,
-    "FileSizeAfter": 8255626,
-    "Compression": 15.605035344548135
+    "FileSizeAfter": {
+      "macOS": 8255626,
+      "win": 8257592
+    }
   },
   {
     "FileName": "dsyme-fsharp/2013-05-15-ucam-seminar/ucam-strongly-typed-scalable-information.pptx",
     "FileSizeBefore": 10847797,
-    "FileSizeAfter": 9328183,
-    "Compression": 14.008503293341496
+    "FileSizeAfter": {
+      "macOS": 9328183,
+      "win": 9330433
+    }
   },
   {
     "FileName": "dsyme-fsharp/2013-06-12-ndc-oslo/fp-success-v3.pptx",
     "FileSizeBefore": 12534114,
-    "FileSizeAfter": 10300253,
-    "Compression": 17.822248943962055
+    "FileSizeAfter": {
+      "macOS": 10300253,
+      "win": 10291982
+    }
   },
   {
     "FileName": "dsyme-fsharp/2013-06-12-ndc-oslo/fsharp-open-source-world-given.pptx",
     "FileSizeBefore": 10088853,
-    "FileSizeAfter": 8454385,
-    "Compression": 16.200731639166513
+    "FileSizeAfter": {
+      "macOS": 8454385,
+      "win": 8456538
+    }
   },
   {
     "FileName": "dsyme-fsharp/2013-09-18-nyc-tutorials/fsharp-compiler-tutorial.pptx",
     "FileSizeBefore": 2041827,
-    "FileSizeAfter": 1922372,
-    "Compression": 5.850397707543293
+    "FileSizeAfter": {
+      "macOS": 1922372,
+      "win": 1923117
+    }
   },
   {
     "FileName": "dsyme-fsharp/2013-09-18-nyc-tutorials/fsharp-open-source-world.pptx",
     "FileSizeBefore": 10497668,
-    "FileSizeAfter": 8784688,
-    "Compression": 16.317719325854085
+    "FileSizeAfter": {
+      "macOS": 8784688,
+      "win": 8787304
+    }
   },
   {
     "FileName": "dsyme-fsharp/2013-09-22-ml-workshop/fsharp-open-source-world.pptx",
     "FileSizeBefore": 9943230,
-    "FileSizeAfter": 8486898,
-    "Compression": 14.646467998829355
+    "FileSizeAfter": {
+      "macOS": 8486898,
+      "win": 8488866
+    }
   },
   {
     "FileName": "dsyme-fsharp/2013-10-16-wg28/wg28-strongly-typed-scalable-information-given.pptx",
     "FileSizeBefore": 4011440,
-    "FileSizeAfter": 3276943,
-    "Compression": 18.310058233452327
+    "FileSizeAfter": {
+      "macOS": 3276943,
+      "win": 3277819
+    }
   },
   {
     "FileName": "dsyme-fsharp/2013-10-16-wg28/wg28-strongly-typed-scalable-information.pptx",
     "FileSizeBefore": 10903424,
-    "FileSizeAfter": 9373351,
-    "Compression": 14.032958821008886
+    "FileSizeAfter": {
+      "macOS": 9373351,
+      "win": 9375570
+    }
   },
   {
     "FileName": "dsyme-fsharp/2013-11-25-fsharp-in-finance/fp-success-v4-redist.pptx",
     "FileSizeBefore": 7873384,
-    "FileSizeAfter": 6632015,
-    "Compression": 15.766651289966296
+    "FileSizeAfter": {
+      "macOS": 6632015,
+      "win": 6632762
+    }
   },
   {
     "FileName": "dsyme-fsharp/2013-11-25-fsharp-in-finance/fp-success-v4.pptx",
     "FileSizeBefore": 8562783,
-    "FileSizeAfter": 6845782,
-    "Compression": 20.051903685986204
+    "FileSizeAfter": {
+      "macOS": 6845782,
+      "win": 6847357
+    }
   },
   {
     "FileName": "dsyme-fsharp/2013-12-04-ndclondon/data-type-providers-fsharp.pptx",
     "FileSizeBefore": 12315191,
-    "FileSizeAfter": 10420637,
-    "Compression": 15.383878333677488
+    "FileSizeAfter": {
+      "macOS": 10420637,
+      "win": 10423100
+    }
   },
   {
     "FileName": "dsyme-fsharp/2013-12-11-fsharp-in-finance/fp-success-v4-redist.pptx",
     "FileSizeBefore": 9874133,
-    "FileSizeAfter": 7940221,
-    "Compression": 19.585638556823167
+    "FileSizeAfter": {
+      "macOS": 7940221,
+      "win": 7941070
+    }
   },
   {
     "FileName": "dsyme-fsharp/2014-01-29-ucl/finance-data-v2-redist.pptx",
     "FileSizeBefore": 12220054,
-    "FileSizeAfter": 9923912,
-    "Compression": 18.78994970071327
+    "FileSizeAfter": {
+      "macOS": 9923912,
+      "win": 9926750
+    }
   },
   {
     "FileName": "dsyme-fsharp/2014-01-29-ucl/finance-data-v2.pptx",
     "FileSizeBefore": 14750484,
-    "FileSizeAfter": 11312643,
-    "Compression": 23.306631836623122
+    "FileSizeAfter": {
+      "macOS": 11312643,
+      "win": 11317239
+    }
   },
   {
     "FileName": "dsyme-fsharp/2014-03-18-royalh/rh-strongly-typed-scalable-information-v2.pptx",
     "FileSizeBefore": 6830211,
-    "FileSizeAfter": 5309357,
-    "Compression": 22.266574195145655
+    "FileSizeAfter": {
+      "macOS": 5309357,
+      "win": 5310250
+    }
   },
   {
     "FileName": "dsyme-fsharp/2014-03-18-royalh/rh-strongly-typed-scalable-information.pptx",
     "FileSizeBefore": 12620420,
-    "FileSizeAfter": 10131882,
-    "Compression": 19.71834534825307
+    "FileSizeAfter": {
+      "macOS": 10131882,
+      "win": 10133781
+    }
   },
   {
     "FileName": "dsyme-fsharp/2014-03-23-ucl-fp-workshop/workshop-fp-v1-redist.pptx",
     "FileSizeBefore": 9776681,
-    "FileSizeAfter": 8586326,
-    "Compression": 12.175450953140437
+    "FileSizeAfter": {
+      "macOS": 8586326,
+      "win": 8588098
+    }
   },
   {
     "FileName": "dsyme-fsharp/2014-03-23-ucl-fp-workshop/workshop-fp-v1.pptx",
     "FileSizeBefore": 9779735,
-    "FileSizeAfter": 8589377,
-    "Compression": 12.171679498473118
+    "FileSizeAfter": {
+      "macOS": 8589377,
+      "win": 8591199
+    }
   },
   {
     "FileName": "dsyme-fsharp/2014-03-28-CIFEr/finance-data-v2-redist.pptx",
     "FileSizeBefore": 14949605,
-    "FileSizeAfter": 11481211,
-    "Compression": 23.200572857945076
+    "FileSizeAfter": {
+      "macOS": 11481211,
+      "win": 11484557
+    }
   },
   {
     "FileName": "dsyme-fsharp/2014-03-28-CIFEr/finance-data-v2.pptx",
     "FileSizeBefore": 16236340,
-    "FileSizeAfter": 12550814,
-    "Compression": 22.69924133148234
+    "FileSizeAfter": {
+      "macOS": 12550814,
+      "win": 12555787
+    }
   },
   {
     "FileName": "dsyme-fsharp/2014-04-29-copenhagen/fp-success-v4-given.pptx",
     "FileSizeBefore": 11653074,
-    "FileSizeAfter": 8426442,
-    "Compression": 27.689105896006495
+    "FileSizeAfter": {
+      "macOS": 8426442,
+      "win": 8427589
+    }
   },
   {
     "FileName": "dsyme-fsharp/2014-04-29-copenhagen/fp-success-v4.pptx",
     "FileSizeBefore": 11660793,
-    "FileSizeAfter": 8434122,
-    "Compression": 27.671111218593797
+    "FileSizeAfter": {
+      "macOS": 8434122,
+      "win": 8435329
+    }
   },
   {
     "FileName": "dsyme-fsharp/2014-07-09-iverson/iverson-strongly-typed-scalable-information-v2.pptx",
     "FileSizeBefore": 12368169,
-    "FileSizeAfter": 10810785,
-    "Compression": 12.591871925424046
+    "FileSizeAfter": {
+      "macOS": 10810785,
+      "win": 10812193
+    }
   },
   {
     "FileName": "dsyme-fsharp/2014-11-25-cph-campus-days/fsharp-magic-v1.pptx",
     "FileSizeBefore": 13354132,
-    "FileSizeAfter": 12056533,
-    "Compression": 9.716835208757859
+    "FileSizeAfter": {
+      "macOS": 12056533,
+      "win": 12059769
+    }
   },
   {
     "FileName": "dsyme-fsharp/2014-12-01-codemesh/fsharp-relaxation.pptx",
     "FileSizeBefore": 12570532,
-    "FileSizeAfter": 11173852,
-    "Compression": 11.110746943725214
+    "FileSizeAfter": {
+      "macOS": 11173852,
+      "win": 11176907
+    }
   },
   {
     "FileName": "dsyme-fsharp/2015-01-06-sydney/fsharp-relaxation.pptx",
     "FileSizeBefore": 12570532,
-    "FileSizeAfter": 11173852,
-    "Compression": 11.110746943725214
+    "FileSizeAfter": {
+      "macOS": 11173852,
+      "win": 11176907
+    }
   },
   {
     "FileName": "dsyme-fsharp/2015-03-11-scale/fsharp-scale-out.pptx",
     "FileSizeBefore": 8811834,
-    "FileSizeAfter": 8500636,
-    "Compression": 3.5315917208608334
+    "FileSizeAfter": {
+      "macOS": 8500636,
+      "win": 8501761
+    }
   },
   {
     "FileName": "dsyme-fsharp/2015-03-13-thessolonika/fp-success-v4-given.pptx",
     "FileSizeBefore": 6379900,
-    "FileSizeAfter": 5754321,
-    "Compression": 9.805467170331823
+    "FileSizeAfter": {
+      "macOS": 5754321,
+      "win": 5755315
+    }
   },
   {
     "FileName": "dsyme-fsharp/2015-03-18-dotnetconf/fsharp-data-nirvana.pptx",
     "FileSizeBefore": 8803962,
-    "FileSizeAfter": 8542182,
-    "Compression": 2.973434006189486
+    "FileSizeAfter": {
+      "macOS": 8542182,
+      "win": 8543614
+    }
   },
   {
     "FileName": "dsyme-fsharp/2015-03-25-azure-net-sdk/fsharp-scale-out.pptx",
     "FileSizeBefore": 8816465,
-    "FileSizeAfter": 8505212,
-    "Compression": 3.5303605243144505
+    "FileSizeAfter": {
+      "macOS": 8505212,
+      "win": 8506364
+    }
   },
   {
     "FileName": "dsyme-fsharp/2015-03-26-fsharp-meetup-redmond/fsharp.pptx",
     "FileSizeBefore": 8901000,
-    "FileSizeAfter": 8579627,
-    "Compression": 3.610526907089091
+    "FileSizeAfter": {
+      "macOS": 8579627,
+      "win": 8581014
+    }
   },
   {
     "FileName": "dsyme-fsharp/2015-04-12-plang-workshop/fsharp-relaxation-trim-given.pptx",
     "FileSizeBefore": 14454745,
-    "FileSizeAfter": 12745853,
-    "Compression": 11.822360062387817
+    "FileSizeAfter": {
+      "macOS": 12745853,
+      "win": 12748827
+    }
   },
   {
     "FileName": "dsyme-fsharp/2015-06-19-keynote/fsharp-relaxation-given.pptx",
     "FileSizeBefore": 8204485,
-    "FileSizeAfter": 6874057,
-    "Compression": 16.215862421590142
+    "FileSizeAfter": {
+      "macOS": 6874057,
+      "win": 6876932
+    }
   },
   {
     "FileName": "dsyme-fsharp/2015-06-22-pisa-seminar/fsharp-relaxation-given.pptx",
     "FileSizeBefore": 8203820,
-    "FileSizeAfter": 6873394,
-    "Compression": 16.21715249725128
+    "FileSizeAfter": {
+      "macOS": 6873394,
+      "win": 6876265
+    }
   },
   {
     "FileName": "dsyme-fsharp/2015-07-08-summer-school/summer-school-1.pptx",
     "FileSizeBefore": 12093165,
-    "FileSizeAfter": 11410018,
-    "Compression": 5.649033979111341
+    "FileSizeAfter": {
+      "macOS": 11410018,
+      "win": 11412112
+    }
   },
   {
     "FileName": "dsyme-fsharp/2015-07-08-summer-school/summer-school-2.pptx",
     "FileSizeBefore": 8722561,
-    "FileSizeAfter": 8524144,
-    "Compression": 2.2747562327165154
+    "FileSizeAfter": {
+      "macOS": 8524144,
+      "win": 8525268
+    }
   },
   {
     "FileName": "dsyme-fsharp/2015-07-22-prez/azure-programmability-thoughts-given.pptx",
     "FileSizeBefore": 9926544,
-    "FileSizeAfter": 8935242,
-    "Compression": 9.98637592297984
+    "FileSizeAfter": {
+      "macOS": 8935242,
+      "win": 8936525
+    }
   },
   {
     "FileName": "dsyme-fsharp/2015-11-11-future-decoded/fsharp-community-cloud-v3.pptx",
     "FileSizeBefore": 16772724,
-    "FileSizeAfter": 12085678,
-    "Compression": 27.94445314905319
+    "FileSizeAfter": {
+      "macOS": 12085678,
+      "win": 12080554
+    }
   },
   {
     "FileName": "dsyme-fsharp/2016-01-14-ndclondon/fsharp-community-cloud-v3.pptx",
     "FileSizeBefore": 17662180,
-    "FileSizeAfter": 12313446,
-    "Compression": 30.283543707515154
+    "FileSizeAfter": {
+      "macOS": 12313446,
+      "win": 12309089
+    }
   },
   {
     "FileName": "dsyme-fsharp/2016-03-04-fsharpconf/fsharpconf-intro-mini.pptx",
     "FileSizeBefore": 9970020,
-    "FileSizeAfter": 8794084,
-    "Compression": 11.794720572275683
+    "FileSizeAfter": {
+      "macOS": 8794084,
+      "win": 8795306
+    }
   },
   {
     "FileName": "dsyme-fsharp/2016-07-11-fringe/fsharp-relaxation-given.pptx",
     "FileSizeBefore": 19646522,
-    "FileSizeAfter": 12547970,
-    "Compression": 36.13134172043276
+    "FileSizeAfter": {
+      "macOS": 12547970,
+      "win": 12543207
+    }
   },
   {
     "FileName": "dsyme-fsharp/2016-12-11-ctos/data-programming-cloud-nirvana-v1.pptx",
     "FileSizeBefore": 15626170,
-    "FileSizeAfter": 13383345,
-    "Compression": 14.353005246967108,
+    "FileSizeAfter": {
+      "macOS": 13383345,
+      "win": 13386482
+    },
     "Errors": [
       "[/ppt/media/image51.jpeg] Unsupported image crop L/T/R/B=52125/0/180/-114"
     ]
@@ -1846,14 +2383,18 @@
   {
     "FileName": "dsyme-fsharp/2017-10-oxford/fsharp-relaxation-given.pptx",
     "FileSizeBefore": 8904158,
-    "FileSizeAfter": 7090399,
-    "Compression": 20.36979802020584
+    "FileSizeAfter": {
+      "macOS": 7090399,
+      "win": 7093055
+    }
   },
   {
     "FileName": "dsyme-fsharp/2018-04-05-fsharpx/fsharp-code-i-love-given.pptx",
     "FileSizeBefore": 11602818,
-    "FileSizeAfter": 10559321,
-    "Compression": 8.993478997946879,
+    "FileSizeAfter": {
+      "macOS": 10559321,
+      "win": 10561719
+    },
     "Errors": [
       "[/ppt/media/image26.png] Unsupported image crop L/T/R/B=0/0/-397/45958",
       "[/ppt/media/image29.png] Unsupported image crop L/T/R/B=-541/61940/0/0"
@@ -1862,8 +2403,10 @@
   {
     "FileName": "dsyme-fsharp/2018-05-05-code-i-love/fsharp-code-i-love.pptx",
     "FileSizeBefore": 11902632,
-    "FileSizeAfter": 10898529,
-    "Compression": 8.43597449706922,
+    "FileSizeAfter": {
+      "macOS": 10898529,
+      "win": 10901058
+    },
     "Errors": [
       "[/ppt/media/image34.png] Unsupported image crop L/T/R/B=0/0/-397/45958",
       "[/ppt/media/image37.png] Unsupported image crop L/T/R/B=-541/61940/0/0"
@@ -1872,8 +2415,10 @@
   {
     "FileName": "dsyme-fsharp/2018-05-25-malaga/fsharp-relaxation.pptx",
     "FileSizeBefore": 12611044,
-    "FileSizeAfter": 9260235,
-    "Compression": 26.570433026797783,
+    "FileSizeAfter": {
+      "macOS": 9260235,
+      "win": 9263151
+    },
     "Errors": [
       "[/ppt/media/image31.png] Unsupported image crop L/T/R/B=0/0/-397/45958"
     ]
@@ -1881,14 +2426,18 @@
   {
     "FileName": "dsyme-fsharp/2018-09-05-exf-meetup/exf-meetup.pptx",
     "FileSizeBefore": 6500551,
-    "FileSizeAfter": 589532,
-    "Compression": 90.93104569135755
+    "FileSizeAfter": {
+      "macOS": 589532,
+      "win": 589851
+    }
   },
   {
     "FileName": "dsyme-fsharp/2018-09-27-openfsharp-code-I-love/fsharp-code-i-love-openfsharp.pptx",
     "FileSizeBefore": 17174317,
-    "FileSizeAfter": 10781748,
-    "Compression": 37.221678160476486,
+    "FileSizeAfter": {
+      "macOS": 10781748,
+      "win": 10784396
+    },
     "Errors": [
       "[/ppt/media/image33.png] Unsupported image crop L/T/R/B=0/0/-397/45958",
       "[/ppt/media/image36.png] Unsupported image crop L/T/R/B=-541/61940/0/0"
@@ -1897,8 +2446,10 @@
   {
     "FileName": "dsyme-fsharp/2018-09-27-openfsharp-code-I-love/fsharp-code-i-love.pptx",
     "FileSizeBefore": 11781485,
-    "FileSizeAfter": 10656518,
-    "Compression": 9.548601046472495,
+    "FileSizeAfter": {
+      "macOS": 10656518,
+      "win": 10659094
+    },
     "Errors": [
       "[/ppt/media/image26.png] Unsupported image crop L/T/R/B=0/0/-397/45958",
       "[/ppt/media/image29.png] Unsupported image crop L/T/R/B=-541/61940/0/0"
@@ -1907,8 +2458,10 @@
   {
     "FileName": "dsyme-fsharp/2018-11-08-codemesh/fsharp-code-i-love-codemesh.pptx",
     "FileSizeBefore": 17649477,
-    "FileSizeAfter": 10956152,
-    "Compression": 37.92364498959374,
+    "FileSizeAfter": {
+      "macOS": 10956152,
+      "win": 10958625
+    },
     "Errors": [
       "[/ppt/media/image41.png] Unsupported image crop L/T/R/B=0/0/-397/45958",
       "[/ppt/media/image44.png] Unsupported image crop L/T/R/B=-541/61940/0/0"
@@ -1917,8 +2470,10 @@
   {
     "FileName": "dsyme-fsharp/2018-11-29-imperial/fsharp-relaxation.pptx",
     "FileSizeBefore": 12653084,
-    "FileSizeAfter": 9282764,
-    "Compression": 26.636352054566302,
+    "FileSizeAfter": {
+      "macOS": 9282764,
+      "win": 9285720
+    },
     "Errors": [
       "[/ppt/media/image54.png] Unsupported image crop L/T/R/B=0/0/-397/45958"
     ]
@@ -1926,8 +2481,10 @@
   {
     "FileName": "dsyme-fsharp/2019-02-20-lambdadays/fsharp-code-i-love-lambdadays-given.pptx",
     "FileSizeBefore": 18705563,
-    "FileSizeAfter": 11508152,
-    "Compression": 38.477382370153734,
+    "FileSizeAfter": {
+      "macOS": 11508152,
+      "win": 11510034
+    },
     "Errors": [
       "[/ppt/media/image41.png] Unsupported image crop L/T/R/B=0/0/-397/45958",
       "[/ppt/media/image45.png] Unsupported image crop L/T/R/B=-541/61940/0/0"
@@ -1936,38 +2493,50 @@
   {
     "FileName": "dsyme-fsharp/2019-04-05-fsharp-exchange/fsharp-exchange.pptx",
     "FileSizeBefore": 13148123,
-    "FileSizeAfter": 5644379,
-    "Compression": 57.07083817211019
+    "FileSizeAfter": {
+      "macOS": 5644379,
+      "win": 5647521
+    }
   },
   {
     "FileName": "dsyme-fsharp/2019-06-20-ndc-oslo-fabulous/fabulous.pptx",
     "FileSizeBefore": 55710731,
-    "FileSizeAfter": 2976489,
-    "Compression": 94.6572429645556
+    "FileSizeAfter": {
+      "macOS": 2976489,
+      "win": 2975276
+    }
   },
   {
     "FileName": "dsyme-fsharp/2019-07-16-curryon-fabulous/fabulous.pptx",
     "FileSizeBefore": 36903619,
-    "FileSizeAfter": 2475722,
-    "Compression": 93.29138424066214
+    "FileSizeAfter": {
+      "macOS": 2475722,
+      "win": 2474805
+    }
   },
   {
     "FileName": "dsyme-fsharp/2019-09-27-openfsharp/lightning.pptx",
     "FileSizeBefore": 2018509,
-    "FileSizeAfter": 159317,
-    "Compression": 92.10719397337341
+    "FileSizeAfter": {
+      "macOS": 159317,
+      "win": 159454
+    }
   },
   {
     "FileName": "dsyme-fsharp/2019-10-15-girl-geek-sydney/fsharp-community.pptx",
     "FileSizeBefore": 4591276,
-    "FileSizeAfter": 738160,
-    "Compression": 83.92255224909154
+    "FileSizeAfter": {
+      "macOS": 738160,
+      "win": 738815
+    }
   },
   {
     "FileName": "dsyme-fsharp/2019-10-18-ndc-sydney/fsharp-code-i-love-ndc-sydney.pptx",
     "FileSizeBefore": 18283001,
-    "FileSizeAfter": 11027824,
-    "Compression": 39.68263744010078,
+    "FileSizeAfter": {
+      "macOS": 11027824,
+      "win": 11030269
+    },
     "Errors": [
       "[/ppt/media/image44.png] Unsupported image crop L/T/R/B=0/0/-397/45958",
       "[/ppt/media/image47.png] Unsupported image crop L/T/R/B=-541/61940/0/0"
@@ -1976,25 +2545,33 @@
   {
     "FileName": "dsyme-fsharp/2019-11-13-buildstuff-functional-uis/functional-uis.pptx",
     "FileSizeBefore": 38308330,
-    "FileSizeAfter": 2572255,
-    "Compression": 93.2853898877868
+    "FileSizeAfter": {
+      "macOS": 2572255,
+      "win": 2571423
+    }
   },
   {
     "FileName": "dsyme-fsharp/2019-11-19-buildstuff-kiev/functional-uis.pptx",
     "FileSizeBefore": 38227296,
-    "FileSizeAfter": 2559180,
-    "Compression": 93.30535960482268
+    "FileSizeAfter": {
+      "macOS": 2559180,
+      "win": 2558319
+    }
   },
   {
     "FileName": "dsyme-fsharp/2020-06-04-fsharpconf/on-independence.pptx",
     "FileSizeBefore": 2465927,
-    "FileSizeAfter": 742963,
-    "Compression": 69.87084370299688
+    "FileSizeAfter": {
+      "macOS": 742963,
+      "win": 743784
+    }
   },
   {
     "FileName": "dsyme-fsharp/2020-06-10-ndc-oslo/functional-data-changing.pptx",
     "FileSizeBefore": 7411137,
-    "FileSizeAfter": 1058876,
-    "Compression": 85.71236775139901
+    "FileSizeAfter": {
+      "macOS": 1058876,
+      "win": 1057651
+    }
   }
 ]

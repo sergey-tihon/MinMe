@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace MinMe.Tests.RepoTests
 {
@@ -7,8 +8,23 @@ namespace MinMe.Tests.RepoTests
     {
         public string FileName { get; set; } = String.Empty;
         public long FileSizeBefore { get; set; }
-        public long FileSizeAfter { get; set; }
-        public double Compression { get; set; }
+
+        [JsonPropertyName(nameof(FileSizeAfter))]
+        public Dictionary<string, long> FileSizeAfterOnOs { get; set; } = new();
+
+        [JsonIgnore]
+        public long FileSizeAfter
+        {
+            get => FileSizeAfterOnOs.TryGetValue(OsMoniker, out var size) ? size : FileSizeBefore;
+            set => FileSizeAfterOnOs[OsMoniker] = value;
+        }
+
+        [JsonIgnore]
+        public double Compression =>
+            100.0 * (1.0 - FileSizeAfter / FileSizeBefore);
         public List<string>? Errors { get; set; }
+
+        private static string OsMoniker =>
+            OperatingSystem.IsWindows() ? "win" : "macOS";
     }
 }
