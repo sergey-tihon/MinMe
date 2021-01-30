@@ -123,7 +123,7 @@ Target.create "All" ignore
 
 // Build order
 "Clean"
-  //==> "AssemblyInfo"
+  ==> "AssemblyInfo"
   ==> "Build"
   ==> "RestoreData"
   ==> "RunTests"

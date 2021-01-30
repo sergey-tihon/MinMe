@@ -7,8 +7,10 @@ authors
     Sergey Tihon
 projectUrl
     https://github.com/sergey-tihon/MinMe
+iconUrl
+    https://raw.githubusercontent.com/sergey-tihon/MinMe/master/src/MinMe.Avalonia/Assets/AppIcon-512%402x.png
 licenseUrl
-    https://github.com/sergey-tihon/MinMe/LICENSE
+    https://github.com/sergey-tihon/MinMe/LICENSE.txt
 requireLicenseAcceptance
     false
 copyright
