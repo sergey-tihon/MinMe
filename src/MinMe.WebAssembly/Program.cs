@@ -8,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using MudBlazor.Services;
+using BlazorDownloadFile;
 
 namespace MinMe.WebAssembly
 {
@@ -20,6 +21,7 @@ namespace MinMe.WebAssembly
 
             builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
             builder.Services.AddMudServices();
+            builder.Services.AddBlazorDownloadFile(ServiceLifetime.Scoped);
 
             await builder.Build().RunAsync();
         }
