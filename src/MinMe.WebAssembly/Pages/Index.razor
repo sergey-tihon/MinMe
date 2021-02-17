@@ -1,0 +1,80 @@
+﻿@page "/"
+@using System.IO
+
+<MudContainer MaxWidth="MaxWidth.ExtraLarge" Class="mt-16">
+    <MudText Typo="Typo.h3" GutterBottom="true">Optimize size of your document</MudText>
+    <MudText Class="mb-8">
+        Choose <b>one</b> PowerPoint(*.pptx) document (not larger then 100 Mb)<br/>
+    </MudText>
+    <InputFile OnChange="@OnInputFileChange"/>
+    @if (_sourceDocument is not null)
+    {
+        <MudText Class="mb-8">
+            File '@_sourceFileName' has @_sourceDocument.Length bytes.
+        </MudText>
+    }
+</MudContainer>
+
+@code {
+#nullable enable
+
+    private bool _isBusy;
+    private bool IsBusy
+    {
+        get => _isBusy;
+        set
+        {
+            _isBusy = value;
+            ProgressPercent = _isBusy ? 0 : 100;
+        }
+    }
+
+    private int _progressPercent;
+    private int ProgressPercent
+    {
+        get => _progressPercent;
+        set
+        {
+            _progressPercent = value;
+            StateHasChanged();
+        }
+    }
+
+    private const long MaxAllowedFileSize = 100_000_000L;
+
+    private string _sourceFileName = string.Empty;
+    private MemoryStream? _sourceDocument;
+
+    private async Task OnInputFileChange(InputFileChangeEventArgs e)
+    {
+        if (e.FileCount != 1)
+            return;
+
+        var file = e.GetMultipleFiles(1).First();
+        if (!Path.GetExtension(file.Name).Equals(".pptx", StringComparison.InvariantCultureIgnoreCase))
+            return;
+
+        IsBusy = true;
+        if (_sourceDocument is not null)
+            await _sourceDocument.DisposeAsync();
+
+        _sourceDocument = new MemoryStream();
+        _sourceFileName = file.Name;
+        await using (var stream = file.OpenReadStream(MaxAllowedFileSize))
+        {
+            //await stream.CopyToAsync(_sourceDocument);
+            var copiedBytes = 0L;
+            byte[] buffer = new byte[262_144];
+            int read;
+            while ((read = await stream.ReadAsync(buffer, 0, buffer.Length)) > 0)
+            {
+                await _sourceDocument.WriteAsync(buffer, 0, read);
+                copiedBytes += read;
+                ProgressPercent = (int)(100.0 * copiedBytes / file.Size);
+            }
+        }
+        _sourceDocument.Position = 0;
+
+        IsBusy = false;
+    }
+}
