@@ -1,8 +1,12 @@
 ﻿@page "/"
 @using System.IO
+@using BlazorDownloadFile
+@using MinMe.Optimizers
+@inject ISnackbar Snackbar
+@inject IBlazorDownloadFileService BlazorDownloadFileService 
 
 <MudContainer MaxWidth="MaxWidth.ExtraLarge" Class="mt-16">
-    <MudText Typo="Typo.h3" GutterBottom="true">Optimize size of your document</MudText>
+    <MudText Typo="Typo.h4" GutterBottom="true">Optimize size of your document</MudText>
     <MudText Class="mb-8">
         Choose <b>one</b> PowerPoint(*.pptx) document (not larger then 100 Mb)<br/>
     </MudText>
@@ -12,6 +16,10 @@
         <MudText Class="mb-8">
             File '@_sourceFileName' has @_sourceDocument.Length bytes.
         </MudText>
+        <MudButton Variant="Variant.Filled" @onclick="OptimizeAndDownload">Optimize</MudButton>
+        @if(@IsBusy) {
+            <MudProgressLinear Color="Color.Primary" Indeterminate="true"/>
+        }
     }
 </MudContainer>
 
@@ -76,5 +84,38 @@
         _sourceDocument.Position = 0;
 
         IsBusy = false;
+    }
+    
+    private async Task OptimizeAndDownload()
+    {
+        IsBusy = true;
+        var extension = Path.GetExtension(_sourceFileName);
+        await using var transformedStream = new ImageOptimizer()
+            .Transform(extension, _sourceDocument, out var diagnostic, new ImageOptimizerOptions{ DegreeOfParallelism = 1});
+        IsBusy = false;
+        
+
+        var initialFileSize = _sourceDocument.Length;
+        var resultFileSize = transformedStream.Length;
+        var compression = 100.0 * (initialFileSize - resultFileSize) / initialFileSize;
+
+        Snackbar.Configuration.PositionClass = Defaults.Classes.Position.TopCenter;
+        Snackbar.Add($"Compressed presentation size from {PrintFileSize(initialFileSize)} to {PrintFileSize(resultFileSize)} (compression {compression:0.00}%).", Severity.Info);
+
+        transformedStream.Position = 0;
+        await BlazorDownloadFileService.DownloadFile(
+            _sourceFileName, transformedStream, "application/octet-stream");
+    }
+    
+    private static readonly string[] FileSizeOrders = { "B", "KB", "MB", "GB", "TB" };
+
+    public static string PrintFileSize(double size)
+    {
+        var order = 0;
+        while (size >= 1024 && order < FileSizeOrders.Length - 1) {
+            order++;
+            size /= 1024;
+        }
+        return $"{size:0.##} {FileSizeOrders[order]}";
     }
 }
