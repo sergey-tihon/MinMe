@@ -95,7 +95,7 @@ Target.create "PublishWin" (fun _ ->
     //dotnet publish -r win-x64 -c release /p:PublishSingleFile=true
     DotNet.exec appDir "publish" "-r win-x64 -c Release /p:PublishSingleFile=true" |> ignore
 
-    Shell.cp "src/MinMe.Avalonia/bin/Release/net5.0/win-x64/publish/MinMe.Avalonia.exe" "bin/"
+    Shell.cp "src/MinMe.Avalonia/bin/Release/net6.0/win-x64/publish/MinMe.Avalonia.exe" "bin/"
 )
 
 Target.create "PublishMac" (fun _ ->
@@ -116,7 +116,7 @@ Target.create "PublishMac" (fun _ ->
     Shell.cp "src/MinMe.Avalonia/Assets/AppIcon.icns" resources
 
     let macOs = Path.combine contents "macOS"
-    Shell.cp_r "src/MinMe.Avalonia/bin/Release/net5.0/osx-x64/publish/" macOs
+    Shell.cp_r "src/MinMe.Avalonia/bin/Release/net6.0/osx-x64/publish/" macOs
 )
 
 Target.create "All" ignore
