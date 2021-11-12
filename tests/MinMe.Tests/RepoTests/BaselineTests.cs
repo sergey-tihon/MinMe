@@ -5,6 +5,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 using Microsoft.IO;
@@ -110,7 +111,7 @@ namespace MinMe.Tests.RepoTests
             await JsonSerializer.SerializeAsync(fs, data, new JsonSerializerOptions
             {
                 WriteIndented = true,
-                IgnoreNullValues = true
+                DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
             });
 
             PrintStats(data);
