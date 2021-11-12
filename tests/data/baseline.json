@@ -553,18 +553,6 @@
     }
   },
   {
-    "FileName": "dotNETConf/2018/Technical/Decks/Complete Awesomeness for Mobile .NET Developers.pptx",
-    "FileSizeBefore": 16236376,
-    "FileSizeAfter": {
-      "macOS": 8027880,
-      "win": 8036271
-    },
-    "Errors": [
-      "[/ppt/media/image42.png] Unsupported image crop L/T/R/B=1/46941/-1407/0",
-      "[/ppt/media/image49.tiff] [UnknownImageFormatException] Image cannot be loaded. Available decoders:\r\n - JPEG : JpegDecoder\r\n - BMP : BmpDecoder\r\n - TGA : TgaDecoder\r\n - GIF : GifDecoder\r\n - PNG : PngDecoder\r\n"
-    ]
-  },
-  {
     "FileName": "dotNETConf/2018/Technical/Decks/dotNETConf2018-KEYNOTE.pptx",
     "FileSizeBefore": 78164067,
     "FileSizeAfter": {
@@ -1537,14 +1525,6 @@
     "Errors": [
       "[/ppt/media/image39.png] Unsupported image crop L/T/R/B=0/0/-684/0"
     ]
-  },
-  {
-    "FileName": "dotNETConf/2021/FocusOnFSharp/Technical/fsharp-bonanza.pptx",
-    "FileSizeBefore": 19712951,
-    "FileSizeAfter": {
-      "macOS": 2885291,
-      "win": 2886873
-    }
   },
   {
     "FileName": "dotNETConf/2021/FocusOnWindows/Technical/An_Opinionated_Way_to_Deploy_Windows_Apps_using_GitHub_Actions.pptx",
