@@ -13,6 +13,12 @@
       "commands": [
         "paket"
       ]
+    },
+    "dotnet-serve": {
+      "version": "1.9.71",
+      "commands": [
+        "dotnet-serve"
+      ]
     }
   }
 }

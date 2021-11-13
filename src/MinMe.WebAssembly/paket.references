@@ -2,4 +2,4 @@ Microsoft.AspNetCore.Components.WebAssembly
 Microsoft.AspNetCore.Components.WebAssembly.DevServer
 System.Net.Http.Json
 MudBlazor
-BlazorDownloadFile
+BlazorDownloadFileFast

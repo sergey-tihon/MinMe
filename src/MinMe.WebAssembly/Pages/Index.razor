@@ -1,6 +1,6 @@
 ﻿@page "/"
 @using System.IO
-@using BlazorDownloadFile
+@using Blazor.DownloadFileFast.Interfaces
 @using MinMe.Optimizers
 @inject ISnackbar Snackbar
 @inject IBlazorDownloadFileService BlazorDownloadFileService 
@@ -103,8 +103,8 @@
         Snackbar.Add($"Compressed presentation size from {PrintFileSize(initialFileSize)} to {PrintFileSize(resultFileSize)} (compression {compression:0.00}%).", Severity.Info);
 
         transformedStream.Position = 0;
-        await BlazorDownloadFileService.DownloadFile(
-            _sourceFileName, transformedStream, "application/octet-stream");
+        await BlazorDownloadFileService.DownloadFileAsync(
+            _sourceFileName, ((MemoryStream)transformedStream).ToArray(), "application/octet-stream");
     }
     
     private static readonly string[] FileSizeOrders = { "B", "KB", "MB", "GB", "TB" };
