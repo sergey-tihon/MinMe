@@ -18,24 +18,23 @@ namespace MinMe.Optimizers.ImageOptimizerRuntime.Utils
                             await body(partition.Current);
                 }));
 
-        public static async Task<List<T2>> ExecuteInParallel<T1, T2>(this IEnumerable<T1> collection,
-                                                                     Func<T1, Task<T2>> processor, int degreeOfParallelism)
+        public static void ExecuteInParallel<T1>(this IEnumerable<T1> collection, Action<T1> processor, int degreeOfParallelism)
         {
-            var result = new ConcurrentBag<T2>();
-            await collection.ForEachAsync(degreeOfParallelism, async item =>
-                result.Add(await processor(item)));
-            return result.ToList();
-        }
-
-        public static Task ExecuteInParallel<T>(this IEnumerable<T> collection,
-                                                Func<T, Task> processor, int degreeOfParallelism)
-            => collection.ForEachAsync(degreeOfParallelism, processor);
-
-        public static void ExecuteInParallel<T1>(this IEnumerable<T1> collection, Action<T1> processor, int degreeOfParallelism) =>
-            collection.ForEachAsync(degreeOfParallelism, item =>
+            if (degreeOfParallelism == 1)
             {
-                processor(item);
-                return Task.CompletedTask;
-            }).GetAwaiter().GetResult();
+                foreach (var item in collection)
+                {
+                    processor(item);
+                }
+            }
+            else
+            {
+                collection.ForEachAsync(degreeOfParallelism, item =>
+                {
+                    processor(item);
+                    return Task.CompletedTask;
+                }).GetAwaiter().GetResult();
+            }
+        }
     }
 }

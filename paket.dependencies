@@ -13,7 +13,14 @@ nuget Avalonia.Desktop
 nuget Avalonia.ReactiveUI
 nuget Avalonia.Diagnostics
 nuget Microsoft.Extensions.Hosting
-nuget Clippit prerelease
+nuget Clippit
+
+//WebAssembly
+nuget Microsoft.AspNetCore.Components.WebAssembly
+nuget Microsoft.AspNetCore.Components.WebAssembly.DevServer
+nuget System.Net.Http.Json
+nuget MudBlazor
+nuget BlazorDownloadFileFast
 
 group Tests
     source https://api.nuget.org/v3/index.json
@@ -21,6 +28,3 @@ group Tests
     nuget Microsoft.NET.Test.Sdk
     nuget NUnit
     nuget NUnit3TestAdapter
-    
-    // Experimental
-    nuget System.Drawing.Common

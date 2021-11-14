@@ -1,0 +1,1 @@
+dotnet serve --directory "src/MinMe.WebAssembly/bin/Release/net6.0/publish/wwwroot/" -o -S
