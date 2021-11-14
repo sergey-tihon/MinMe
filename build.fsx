@@ -120,6 +120,21 @@ Target.create "PublishMac" (fun _ ->
     Shell.cp_r "src/MinMe.Avalonia/bin/Release/net6.0/osx-x64/publish/" macOs
 )
 
+Target.create "PublishWasm" (fun _ ->
+    let wasm (options:DotNet.Options) =
+        {options with WorkingDirectory = "src/MinMe.WebAssembly" }
+
+    DotNet.exec wasm "publish" "Release" |> ignore
+
+    Shell.copyRecursive "src/MinMe.WebAssembly/bin/Release/net6.0/publish/wwwroot" "bin/wasm" true |> Trace.tracefn "%A"
+
+    let index = "bin/wasm/index.html"
+    let html = 
+        System.IO.File.ReadAllText(index)
+            .Replace("<base href=\"/\" />", "<base href=\"/MinMe/\" />")
+    System.IO.File.WriteAllText(index, html)
+)
+
 Target.create "All" ignore
 
 // Build order
@@ -132,6 +147,9 @@ Target.create "All" ignore
   ==> "PublishWin"
   ==> "PublishMac"
   ==> "All"
+
+"Build"
+  ==> "PublishWasm"
 
 // start build
 Target.runOrDefault "All"

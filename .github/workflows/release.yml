@@ -23,21 +23,19 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: ${{ matrix.dotnet }}
+    - name: Install wasm-tools
+      run: dotnet workload install wasm-tools
 
     - name: Restore Tools
       run: dotnet tool restore    
     - name: Restore Dependencies
       run: dotnet paket restore  
-    - name: Install wasm-tools
-      run: dotnet workload install wasm-tools
 
-    - name: Publish Blazor WASM
-      run: dotnet publish -c Release src/MinMe.WebAssembly/MinMe.WebAssembly.csproj 
-    - name: Change base-tag in index.html from
-      run: sed -i 's/<base href="\/" \/>/<base href="\/MinMe\/" \/>/g' src/MinMe.WebAssembly/bin/Release/net6.0/publish/wwwroot/index.html
+    - name: Publish Blazor Wasm
+      run: dotnet fake run build.fsx -t PublishWasm
     - name: Publish
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: src/MinMe.WebAssembly/bin/Release/net6.0/publish/wwwroot
+        publish_dir: bin/wasm
         force_orphan: true
