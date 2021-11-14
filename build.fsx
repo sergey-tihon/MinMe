@@ -124,7 +124,7 @@ Target.create "PublishWasm" (fun _ ->
     let wasm (options:DotNet.Options) =
         {options with WorkingDirectory = "src/MinMe.WebAssembly" }
 
-    DotNet.exec wasm "publish" "Release" |> ignore
+    DotNet.exec wasm "publish" "-c Release" |> ignore
 
     Shell.copyRecursive "src/MinMe.WebAssembly/bin/Release/net6.0/publish/wwwroot" "bin/wasm" true |> Trace.tracefn "%A"
 
