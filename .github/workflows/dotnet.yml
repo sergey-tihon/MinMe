@@ -31,13 +31,3 @@ jobs:
       run: dotnet workload install wasm-tools
     - name: Build and Test
       run: dotnet fake run build.fsx
-
-    - name: Publish Blazor Wasm
-      run: dotnet publish -c Release src/MinMe.WebAssembly/MinMe.WebAssembly.csproj 
-    - name: Publish
-      if: github.event_name == 'push'
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: docs/_site
-        force_orphan: true
