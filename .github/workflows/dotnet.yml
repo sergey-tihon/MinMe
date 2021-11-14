@@ -1,0 +1,41 @@
+name: dotnet
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, macos-latest]
+        dotnet: [6.0.100]
+    runs-on: ${{ matrix.os }}
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: ${{ matrix.dotnet }}
+
+    - name: Restore Tools
+      run: dotnet tool restore    
+    - name: Restore Dependencies
+      run: dotnet paket restore  
+    - name: Build and Test
+      run: dotnet fake run build.fsx
+
+    - name: Publish Blazor Wasm
+      run: dotnet publish -c Release src/MinMe.WebAssembly/MinMe.WebAssembly.csproj 
+    - name: Publish
+      if: github.event_name == 'push'
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: docs/_site
+        force_orphan: true

@@ -28,6 +28,3 @@ group Tests
     nuget Microsoft.NET.Test.Sdk
     nuget NUnit
     nuget NUnit3TestAdapter
-    
-    // Experimental
-    nuget System.Drawing.Common
