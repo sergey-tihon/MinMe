@@ -28,6 +28,8 @@ jobs:
       run: dotnet tool restore    
     - name: Restore Dependencies
       run: dotnet paket restore  
+    - name: Install wasm-tools
+      run: dotnet workload install wasm-tools
 
     - name: Publish Blazor WASM
       run: dotnet publish -c Release src/MinMe.WebAssembly/MinMe.WebAssembly.csproj 

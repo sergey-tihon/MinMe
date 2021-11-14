@@ -26,7 +26,9 @@ jobs:
     - name: Restore Tools
       run: dotnet tool restore    
     - name: Restore Dependencies
-      run: dotnet paket restore  
+      run: dotnet paket restore
+    - name: Install wasm-tools
+      run: dotnet workload install wasm-tools
     - name: Build and Test
       run: dotnet fake run build.fsx
 
