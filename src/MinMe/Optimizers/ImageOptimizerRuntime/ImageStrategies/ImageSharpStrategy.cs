@@ -75,14 +75,21 @@ namespace MinMe.Optimizers.ImageOptimizerRuntime.ImageStrategies
             var maxX = image.Width - minX;
             var maxY = image.Height - minY;
 
-            for (var y = minY; y < maxY; y++)
+            var result = false;
+            image.ProcessPixelRows(accessor =>
             {
-                var pixelRowSpan = image.GetPixelRowSpan(y);
-                for (var x = minX; x < maxX; x++)
-                    if (pixelRowSpan[x].A != 255)
-                        return true;
-            }
-            return false;
+                for (var y = minY; y < maxY; y++)
+                {
+                    var pixelRowSpan = accessor.GetRowSpan(y);
+                    for (var x = minX; x < maxX; x++)
+                        if (pixelRowSpan[x].A != 255)
+                        {
+                            result = true;
+                            return;
+                        }
+                }
+            });
+            return result;
         }
     }
 }

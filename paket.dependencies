@@ -13,7 +13,7 @@ nuget Avalonia.Desktop
 nuget Avalonia.ReactiveUI
 nuget Avalonia.Diagnostics
 nuget Microsoft.Extensions.Hosting
-nuget Clippit
+nuget Clippit prerelease
 
 //WebAssembly
 nuget Microsoft.AspNetCore.Components.WebAssembly
