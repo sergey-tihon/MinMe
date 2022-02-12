@@ -550,18 +550,6 @@
     }
   },
   {
-    "FileName": "dotNETConf/2018/Technical/Decks/Complete Awesomeness for Mobile .NET Developers.pptx",
-    "FileSizeBefore": 16236376,
-    "FileSizeAfter": {
-      "win": 8002588,
-      "macOS": 7994044
-    },
-    "Errors": [
-      "[/ppt/media/image42.png] Unsupported image crop L/T/R/B=1/46941/-1407/0",
-      "[/ppt/media/image49.tiff] [NotSupportedException] ExtraSamples is not supported."
-    ]
-  },
-  {
     "FileName": "dotNETConf/2018/Technical/Decks/dotNETConf2018-KEYNOTE.pptx",
     "FileSizeBefore": 78164067,
     "FileSizeAfter": {
