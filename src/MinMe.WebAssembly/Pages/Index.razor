@@ -3,7 +3,8 @@
 @using Blazor.DownloadFileFast.Interfaces
 @using MinMe.Optimizers
 @inject ISnackbar Snackbar
-@inject IBlazorDownloadFileService BlazorDownloadFileService 
+@inject IBlazorDownloadFileService BlazorDownloadFileService
+@inject ILogger<Index> Logger
 
 <MudContainer MaxWidth="MaxWidth.ExtraLarge" Class="mt-16">
     <MudText Typo="Typo.h4" GutterBottom="true">Optimize size of your document</MudText>
@@ -72,7 +73,7 @@
         {
             //await stream.CopyToAsync(_sourceDocument);
             var copiedBytes = 0L;
-            byte[] buffer = new byte[262_144];
+            var buffer = new byte[262_144];
             int read;
             while ((read = await stream.ReadAsync(buffer, 0, buffer.Length)) > 0)
             {
@@ -90,8 +91,11 @@
     {
         IsBusy = true;
         var extension = Path.GetExtension(_sourceFileName);
+
+        var options = new ImageOptimizerOptions { DegreeOfParallelism = 1 };
+        
         await using var transformedStream = new ImageOptimizer()
-            .Transform(extension, _sourceDocument, out var diagnostic, new ImageOptimizerOptions{ DegreeOfParallelism = 1});
+            .Transform(extension, _sourceDocument, out var diagnostic, options);
         IsBusy = false;
         
 

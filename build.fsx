@@ -135,6 +135,20 @@ Target.create "PublishWasm" (fun _ ->
     System.IO.File.WriteAllText(index, html)
 )
 
+Target.create "ReleaseWasm" (fun _ ->
+    let cloneUrl = "git@github.com:sergey-tihon/MinMe.git"
+    let tempDocsDir = "tmp/gh-pages"
+    
+    Shell.cleanDir tempDocsDir
+    Repository.cloneSingleBranch "" cloneUrl "gh-pages" tempDocsDir
+
+    Repository.fullclean tempDocsDir
+    Shell.copyRecursive "bin/wasm" tempDocsDir true |> Trace.tracefn "%A"
+    Staging.stageAll tempDocsDir
+    Commit.exec tempDocsDir (sprintf "Update generated wasm app for version %s" release.NugetVersion)
+    Branches.push tempDocsDir
+)
+
 Target.create "All" ignore
 
 // Build order
@@ -150,6 +164,7 @@ Target.create "All" ignore
 
 "Build"
   ==> "PublishWasm"
+  ==> "ReleaseWasm"
 
 // start build
 Target.runOrDefault "All"
