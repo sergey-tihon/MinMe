@@ -6,8 +6,10 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <RunAOTCompilation>false</RunAOTCompilation>
-    <BlazorCacheBootResources>false</BlazorCacheBootResources>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishTrimmed>true</PublishTrimmed>
+    <TrimMode>Link</TrimMode>
+    <BlazorEnableTimeZoneSupport>false</BlazorEnableTimeZoneSupport>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\MinMe\MinMe.csproj" />
