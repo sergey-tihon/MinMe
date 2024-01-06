@@ -4,7 +4,7 @@ using Avalonia.Markup.Xaml;
 
 namespace MinMe.Avalonia.Views
 {
-    public class OverviewView : UserControl
+    public partial class OverviewView : UserControl
     {
         public OverviewView()
         {

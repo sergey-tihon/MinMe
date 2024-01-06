@@ -14,16 +14,16 @@ licenseUrl
 requireLicenseAcceptance
     false
 copyright
-    Copyright 2021
+    Copyright 2024
 tags
     OpenXML PowerPoint Optimize
 description
     MinMe helps Office documents to lose extra weight
 files
-    bin/Release/netstandard2.0/MinMe.dll ==> lib/netstandard2.0
+    bin/Release/net8.0/MinMe.dll ==> lib/net8.0
 
 dependencies
-    framework: netstandard20
+    framework: net8.0
         DocumentFormat.OpenXml >= LOCKEDVERSION
         System.IO.Compression >= LOCKEDVERSION
         Microsoft.IO.RecyclableMemoryStream >= LOCKEDVERSION

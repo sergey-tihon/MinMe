@@ -3,17 +3,12 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Packaging;
-
 using MinMe.Analyzers.Model;
-
 using Presentation = DocumentFormat.OpenXml.Presentation;
 using Drawing = DocumentFormat.OpenXml.Drawing;
-
 using static System.String;
-
 using Picture = DocumentFormat.OpenXml.Presentation.Picture;
 
 namespace MinMe.Analyzers
@@ -50,6 +45,7 @@ namespace MinMe.Analyzers
             var result = new List<PartInfo>();
 
             var visitedParts = new HashSet<string>();
+
             void ProcessPart(OpenXmlPart root)
             {
                 var key = root.Uri.OriginalString;
@@ -81,7 +77,7 @@ namespace MinMe.Analyzers
             foreach (var idPartPair in _document.Parts)
                 ProcessPart(idPartPair.OpenXmlPart);
 
-            result.Sort((x,y) =>
+            result.Sort((x, y) =>
                 Compare(x.PartType, y.PartType, StringComparison.InvariantCultureIgnoreCase));
             return result;
         }
@@ -89,16 +85,18 @@ namespace MinMe.Analyzers
         private Dictionary<string, List<PartUsageInfo>> GetPartUsageData()
         {
             var usages = new Dictionary<string, List<PartUsageInfo>>(StringComparer.InvariantCultureIgnoreCase);
+
             void AddUsage(Uri uri, PartUsageInfo usage)
             {
                 var key = uri.OriginalString;
                 if (usages.TryGetValue(key, out var list))
                     list.Add(usage);
                 else
-                    usages.Add(key, new List<PartUsageInfo> {usage});
+                    usages.Add(key, new List<PartUsageInfo> { usage });
             }
 
             var presentation = _document.PresentationPart;
+
             OpenXmlPart? GetPart(StringValue relId)
                 => relId?.HasValue == true ? presentation.GetPartById(relId.Value) : null;
 
@@ -114,6 +112,7 @@ namespace MinMe.Analyzers
                     var usage = ImageUsageInfo.FromPict(pic);
                     AddUsage(uri, new ImageUsage(usage, slide.Uri));
                 }
+
                 // Analyze background images
                 foreach (var commonSlideData in slide.RootElement.Descendants<Presentation.CommonSlideData>())
                 {
@@ -158,7 +157,7 @@ namespace MinMe.Analyzers
             foreach (var slideId in slideIdList.Cast<Presentation.SlideId>())
             {
                 var part = presentationPart.GetPartById(slideId.RelationshipId);
-                var title = GetSlideTitle((SlidePart) part);
+                var title = GetSlideTitle((SlidePart)part);
                 yield return new SlideInfo(number++, part.Uri.OriginalString, title);
             }
         }
@@ -170,14 +169,15 @@ namespace MinMe.Analyzers
                 slidePart.Slide.CommonSlideData.ShapeTree
                     .Descendants<Presentation.Shape>()
                     .Where(shape =>
-                        shape.NonVisualShapeProperties
+                    {
+                        var value =
+                            shape.NonVisualShapeProperties
                                 ?.ApplicationNonVisualDrawingProperties
-                                ?.PlaceholderShape?.Type?.Value switch
-                            {
-                                Presentation.PlaceholderValues.Title => true,
-                                Presentation.PlaceholderValues.CenteredTitle => true,
-                                _ => false
-                            })
+                                ?.PlaceholderShape?.Type?.Value;
+                        
+                        return value == Presentation.PlaceholderValues.Title || 
+                               value == Presentation.PlaceholderValues.CenteredTitle;
+                    })
                     .ToList();
 
             var paragraphText = new StringBuilder();

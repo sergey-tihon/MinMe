@@ -4,11 +4,11 @@ using Avalonia.Markup.Xaml;
 
 namespace MinMe.Avalonia.Views
 {
-    public class ActionsPanelView : UserControl
+    public partial class ActionsPanelView : UserControl
     {
         public ActionsPanelView()
         {
-            this.InitializeComponent();
+            InitializeComponent();
         }
 
         private void InitializeComponent()

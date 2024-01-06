@@ -3,6 +3,7 @@ DocumentFormat.OpenXml
 Clippit
 Avalonia
 Avalonia.Desktop
+Avalonia.Themes.Fluent
 Avalonia.ReactiveUI
 Avalonia.Diagnostics
 Microsoft.Extensions.Hosting

@@ -12,9 +12,9 @@ namespace MinMe.Avalonia
     {
         public bool SupportsRecycling => false;
 
-        public IControl Build(object data)
+        public Control Build(object? data)
         {
-            var fullName = data.GetType().FullName;
+            var fullName = data?.GetType().FullName;
             if (fullName is null)
                 throw new Exception("Data Type.FullName is null");
 
@@ -32,7 +32,7 @@ namespace MinMe.Avalonia
             };
         }
 
-        public bool Match(object data) =>
+        public bool Match(object? data) =>
             data is ViewModelBase;
     }
 }

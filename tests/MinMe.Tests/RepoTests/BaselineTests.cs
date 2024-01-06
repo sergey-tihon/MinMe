@@ -15,7 +15,6 @@ using MinMe.Optimizers.ImageOptimizerRuntime.Utils;
 
 using NUnit.Framework;
 
-
 namespace MinMe.Tests.RepoTests
 {
     [TestFixture]
@@ -135,7 +134,7 @@ namespace MinMe.Tests.RepoTests
             var str = await reader.ReadToEndAsync();
             await TestContext.Out.WriteLineAsync(str);
 
-            StringAssert.Contains("10", str);
+            Assert.That(str, Does.Contain("10"));
         }
 
         [Test]
@@ -200,8 +199,8 @@ namespace MinMe.Tests.RepoTests
 
             var deltaSize = dstStream.Length - expectedSize;
             await TestContext.Out.WriteLineAsync($"Compression difference {deltaSize:0,0}, new size {dstStream.Length:0,0} bytes");
-
-            Assert.LessOrEqual(dstStream.Length, 1.01 * expectedSize);
+            
+            Assert.That(dstStream.Length, Is.LessThanOrEqualTo(1.01 * expectedSize));
         }
     }
 }

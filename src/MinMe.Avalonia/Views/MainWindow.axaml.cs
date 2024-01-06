@@ -10,7 +10,7 @@ using MinMe.Avalonia.ViewModels;
 
 namespace MinMe.Avalonia.Views
 {
-    public class MainWindow : Window
+    public partial class MainWindow : Window
     {
         public MainWindow()
         {

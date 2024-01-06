@@ -19,9 +19,8 @@ namespace MinMe.Avalonia.ViewModels
                 .ToProperty(this, nameof(FileName), "", deferSubscription: true);
 
 
-            var assets = AvaloniaLocator.Current.GetService<IAssetLoader>();
             var uri = new Uri("avares://MinMe.Avalonia/Assets/PowerPoint.png");
-            var defaultThumbnail = new Bitmap(assets.Open(uri));
+            var defaultThumbnail = new Bitmap(AssetLoader.Open(uri));
 
             _thumbnail = stateService.FileContentInfo.Select(GetThumbnail)
                 .ToProperty(this, nameof(Thumbnail), defaultThumbnail, deferSubscription: true);

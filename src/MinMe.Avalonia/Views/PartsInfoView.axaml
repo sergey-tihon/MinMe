@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="250"
              x:Class="MinMe.Avalonia.Views.PartsInfoView">
-  <DataGrid Margin="10" Items="{Binding Parts}">
+  <DataGrid Margin="10" ItemsSource="{Binding Parts}">
     <DataGrid.Columns>
       <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="Auto"/>
       <DataGridTemplateColumn Header="Size (bytes)" Width="Auto" SortMemberPath="Size">
