@@ -1,6 +1,4 @@
 using System.Drawing;
-using System.IO;
-
 using MinMe.Optimizers.ImageOptimizerRuntime.Model;
 
 namespace MinMe.Optimizers.ImageOptimizerRuntime.ImageStrategies

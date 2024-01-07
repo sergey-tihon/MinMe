@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace MinMe.Analyzers.Model
+﻿namespace MinMe.Analyzers.Model
 {
     public class FileContentInfo
     {

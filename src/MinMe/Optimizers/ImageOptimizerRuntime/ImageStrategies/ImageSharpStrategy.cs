@@ -1,11 +1,8 @@
-using System.IO;
-
 using Microsoft.IO;
 
 using MinMe.Optimizers.ImageOptimizerRuntime.Model;
 
 using SixLabors.ImageSharp;
-using SixLabors.ImageSharp.Advanced;
 using SixLabors.ImageSharp.Formats.Jpeg;
 using SixLabors.ImageSharp.Formats.Png;
 using SixLabors.ImageSharp.PixelFormats;

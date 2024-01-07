@@ -1,5 +1,3 @@
-using System;
-
 namespace MinMe.Analyzers.Model
 {
     public class PartUsageInfo

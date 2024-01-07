@@ -3,12 +3,8 @@ using MinMe.Analyzers.Model;
 using MinMe.Avalonia.Models;
 using MinMe.Avalonia.Services;
 using ReactiveUI;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
 using System.Reactive.Linq;
-using System.Text;
 
 namespace MinMe.Avalonia.ViewModels
 {

@@ -3,11 +3,7 @@ using MinMe.Analyzers.Model;
 using MinMe.Avalonia.Models;
 using MinMe.Avalonia.Services;
 using ReactiveUI;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reactive.Linq;
-using System.Text;
 
 namespace MinMe.Avalonia.ViewModels
 {
@@ -44,8 +40,7 @@ namespace MinMe.Avalonia.ViewModels
                     .OrderBy(x => x.Number)
                     .Select(x =>
                     {
-                        if (!slideSizes.TryGetValue(x.FileName, out var size))
-                            size = 0;
+                        var size = slideSizes.GetValueOrDefault(x.FileName, 0);
                         return new SlideInfoRow(x, size);
                     });
             }

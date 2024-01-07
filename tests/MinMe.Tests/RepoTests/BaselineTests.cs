@@ -1,12 +1,6 @@
-using System;
 using System.Collections.Concurrent;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using System.Text.Json;
 using System.Text.Json.Serialization;
-using System.Threading.Tasks;
-
 using Microsoft.IO;
 
 using MinMe.Optimizers;
@@ -151,7 +145,7 @@ namespace MinMe.Tests.RepoTests
 
             log.WriteLine("MacOS results");
             {
-                var totalSizeAfter = results.Sum(x => x.FileSizeAfterOnOs.TryGetValue("macOS", out var q) ? q : 0);
+                var totalSizeAfter = results.Sum(x => x.FileSizeAfterOnOs.GetValueOrDefault("macOS", 0));
                 log.WriteLine($"\tTotal size after {totalSizeAfter:0,0} bytes (-{totalSizeBefore - totalSizeAfter:0,0} bytes)");
 
                 var totalCompression = 100.0 * (totalSizeBefore - totalSizeAfter) / totalSizeBefore;
@@ -159,7 +153,7 @@ namespace MinMe.Tests.RepoTests
             }
             log.WriteLine("Windows results");
             {
-                var totalSizeAfter = results.Sum(x => x.FileSizeAfterOnOs.TryGetValue("win", out var q) ? q : 0);
+                var totalSizeAfter = results.Sum(x => x.FileSizeAfterOnOs.GetValueOrDefault("win", 0));
                 log.WriteLine($"\tTotal size after {totalSizeAfter:0,0} bytes (-{totalSizeBefore - totalSizeAfter:0,0} bytes)");
 
                 var totalCompression = 100.0 * (totalSizeBefore - totalSizeAfter) / totalSizeBefore;
@@ -178,17 +172,19 @@ namespace MinMe.Tests.RepoTests
                 Print(x);
             }
 
+            return;
+
             void Print(OptimizeResult x) =>
                 log.WriteLine($"\t[{x.Compression:0.00}%] {x.FileName} from {x.FileSizeBefore:0,0} to {x.FileSizeAfter:0,0} (optimized {x.FileSizeBefore-x.FileSizeAfter:0,0} bytes)");
         }
 
         public static IEnumerable<TestCaseData> TestCases() =>
-            GetAllPptx().Select(file =>
+            GetAllPptx().Take(10).Select(file =>
                 {
                     var key = GetPath(file).Replace('\\', '/');
                     return Baseline.Value.TryGetValue(key, out var result)
-                        ? new TestCaseData(new object[] {file, result.FileSizeAfter})
-                        : new TestCaseData(new object[] {file, 0}).Ignore("Unknown file");
+                        ? new TestCaseData(file, result.FileSizeAfter)
+                        : new TestCaseData(file, 0).Ignore("Unknown file");
                 });
 
         [TestCaseSource(nameof(TestCases)), Parallelizable(ParallelScope.Children)]

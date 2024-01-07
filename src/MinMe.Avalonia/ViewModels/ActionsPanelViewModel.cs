@@ -1,16 +1,10 @@
-﻿using System;
-
-using Clippit;
-using Clippit.PowerPoint;
+﻿using Clippit.PowerPoint;
 using MinMe.Analyzers;
 using MinMe.Analyzers.Model;
 using MinMe.Avalonia.Services;
 using ReactiveUI;
-using System.IO;
-using System.Linq;
 using System.Reactive;
 using System.Reactive.Linq;
-using System.Threading.Tasks;
 using Avalonia.Controls;
 using Avalonia.Controls.Notifications;
 using MinMe.Optimizers;

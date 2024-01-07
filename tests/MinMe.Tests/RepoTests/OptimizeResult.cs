@@ -1,5 +1,3 @@
-using System;
-using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
 namespace MinMe.Tests.RepoTests
@@ -15,7 +13,7 @@ namespace MinMe.Tests.RepoTests
         [JsonIgnore]
         public long FileSizeAfter
         {
-            get => FileSizeAfterOnOs.TryGetValue(OsMoniker, out var size) ? size : FileSizeBefore;
+            get => FileSizeAfterOnOs.GetValueOrDefault(OsMoniker, FileSizeBefore);
             set => FileSizeAfterOnOs[OsMoniker] = value;
         }
 

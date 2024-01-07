@@ -3,9 +3,7 @@ using Avalonia.Data.Converters;
 using Avalonia.Layout;
 using Avalonia.Media;
 using MinMe.Avalonia.Models;
-using System;
 using System.Globalization;
-using System.Text;
 
 namespace MinMe.Avalonia.Views.Converters
 {

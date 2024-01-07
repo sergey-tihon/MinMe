@@ -1,11 +1,8 @@
-﻿using Avalonia;
-using Avalonia.Media.Imaging;
+﻿using Avalonia.Media.Imaging;
 using Avalonia.Platform;
 using DocumentFormat.OpenXml.Packaging;
 using MinMe.Avalonia.Services;
 using ReactiveUI;
-using System;
-using System.IO;
 using System.Reactive.Linq;
 
 namespace MinMe.Avalonia.ViewModels

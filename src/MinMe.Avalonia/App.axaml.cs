@@ -8,7 +8,6 @@ using Microsoft.Extensions.Logging;
 using MinMe.Avalonia.Services;
 using MinMe.Avalonia.ViewModels;
 using MinMe.Avalonia.Views;
-using System;
 
 namespace MinMe.Avalonia
 {

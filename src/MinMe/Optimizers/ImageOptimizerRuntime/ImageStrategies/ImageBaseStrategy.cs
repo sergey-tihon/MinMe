@@ -1,6 +1,4 @@
 using System.Drawing;
-using System.IO;
-
 using Microsoft.IO;
 
 using MinMe.Optimizers.ImageOptimizerRuntime.Model;

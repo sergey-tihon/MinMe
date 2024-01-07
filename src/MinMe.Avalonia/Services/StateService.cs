@@ -1,12 +1,5 @@
 ﻿using MinMe.Analyzers.Model;
-using System;
-using System.Reactive.Linq;
-using System.Reactive.Threading.Tasks;
-using System.Collections.Generic;
-using System.Text;
 using System.Reactive.Subjects;
-using System.Threading.Tasks;
-using Microsoft.Extensions.Logging;
 
 namespace MinMe.Avalonia.Services
 {
