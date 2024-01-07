@@ -12,11 +12,17 @@ using Notification = Avalonia.Controls.Notifications.Notification;
 using Microsoft.Extensions.Logging;
 using System.Collections.ObjectModel;
 using System.Drawing;
+using Avalonia.Platform.Storage;
 
 namespace MinMe.Avalonia.ViewModels;
 
 class ActionsPanelViewModel : ViewModelBase
 {
+    private static readonly IReadOnlyList<FilePickerFileType> PowerPointFileType =
+    [
+        new FilePickerFileType("PowerPoint files (*.pptx)") { Patterns = ["*.pptx"] }
+    ];
+    
     private readonly INotificationManager _notificationManager;
     private readonly StateService _stateService;
     private readonly ILogger<ActionsPanelViewModel> _logger;
@@ -33,10 +39,10 @@ class ActionsPanelViewModel : ViewModelBase
 
         OpenCommand = ReactiveCommand.CreateFromTask(OpenFile);
 
-        var fileAnalyzed = _stateService.FileContentInfo.Select(x => x is { });
+        var fileAnalyzed = _stateService.FileContentInfo.Select(x => x is not null);
         OptimizeCommand = ReactiveCommand.CreateFromTask(Optimize, fileAnalyzed);
 
-        var moreThanOneSlide = _stateService.FileContentInfo.Select(x => x?.Slides?.Count > 1);
+        var moreThanOneSlide = _stateService.FileContentInfo.Select(x => x?.Slides.Count > 1);
         PublishCommand = ReactiveCommand.CreateFromTask(PublishSlides, moreThanOneSlide);
 
         PublishModes = new ObservableCollection<PublishMode> {
@@ -56,12 +62,10 @@ class ActionsPanelViewModel : ViewModelBase
         _selectedMode = PublishModes[1];
     }
 
-    public class PublishMode
+    public class PublishMode(string name, ImageOptimizerOptions options)
     {
-        public PublishMode(string name, ImageOptimizerOptions options) =>
-            (Name, Options) = (name, options);
-        public string Name { get; }
-        public ImageOptimizerOptions Options { get; }
+        public string Name { get; } = name;
+        public ImageOptimizerOptions Options { get; } = options;
 
         public override string ToString() => Name;
     }
@@ -85,30 +89,25 @@ class ActionsPanelViewModel : ViewModelBase
 
     private async Task OpenFile()
     {
-        var openFileDialog = new OpenFileDialog
-        {
-            Title = "Choose File",
-            AllowMultiple = false,
-            Filters = {
-                new FileDialogFilter {
-                    Name = "PowerPoint files (*.pptx)",
-                    Extensions = {"pptx"}
-                }
+        var files = await GetStorageProvider().OpenFilePickerAsync(
+            new FilePickerOpenOptions
+            {
+                Title = "Choose File",
+                AllowMultiple = false,
+                FileTypeFilter = PowerPointFileType
             }
-        };
+        );
 
-        var dialogResult = await openFileDialog.ShowAsync(GetWindow());
-
-        var fileName = dialogResult.FirstOrDefault();
-        if (fileName is { })
+        if (files.Count > 0)
         {
             FileContentInfo? state = null;
             await _stateService.Run(() =>
             {
-                using var analyzer = new PowerPointAnalyzer(fileName);
+                var file = files[0];
+                using var analyzer = new PowerPointAnalyzer(file.TryGetLocalPath()!);
                 state = analyzer.Analyze();
             });
-            if (state is { })
+            if (state is { }) 
                 _stateService.SetState(state);
         }
     }
@@ -121,15 +120,15 @@ class ActionsPanelViewModel : ViewModelBase
             return;
         }
 
-        var openFileDialog = new OpenFolderDialog
+        var folders = await GetStorageProvider().OpenFolderPickerAsync(new FolderPickerOpenOptions
         {
             Title = "Select folder",
-            //Directory = new FileInfo(FileContentInfo.FileName).DirectoryName,
-        };
+            AllowMultiple = false
+        });
 
-        var targetDir = await openFileDialog.ShowAsync(GetWindow());
-        if (!string.IsNullOrEmpty(targetDir))
+        if (folders.Count > 0)
         {
+            var targetDir = folders[0].TryGetLocalPath()!;
             var count = 0;
             await _stateService.Run(() =>
             {
@@ -155,39 +154,35 @@ class ActionsPanelViewModel : ViewModelBase
         }
 
         var sourceFileInfo = new FileInfo(FileContentInfo.FileName);
-        var saveFileDialog = new SaveFileDialog
+
+        var storageProvider = GetStorageProvider();
+        var file = await storageProvider.SaveFilePickerAsync(new FilePickerSaveOptions
         {
             Title = "Save Optimized File",
-            InitialFileName = sourceFileInfo.Name,
-            Directory = sourceFileInfo.DirectoryName,
-            Filters = {
-                new FileDialogFilter {
-                    Name = "PowerPoint files (*.pptx)",
-                    Extensions = {"pptx"}
-                }
-            }
-        };
+            DefaultExtension = "pptx",
+            SuggestedFileName = sourceFileInfo.Name,
+            SuggestedStartLocation = await storageProvider.TryGetFolderFromPathAsync(sourceFileInfo.DirectoryName!),
+            FileTypeChoices = PowerPointFileType
+        });
 
-        var resultFileName = await saveFileDialog.ShowAsync(GetWindow());
-        if (resultFileName is null)
+        if (file is null)
             return;
 
+        var targetFilePath = file.TryGetLocalPath()!;
         await _stateService.RunTask(async () =>
         {
             await using var originalStream = new FileStream(FileContentInfo.FileName, FileMode.Open, FileAccess.Read);
             var extension = Path.GetExtension(FileContentInfo.FileName);
+            
             await using var transformedStream = new ImageOptimizer()
-                .Transform(extension, originalStream, out var diagnostic, SelectedMode.Options);
+                .Transform(extension, originalStream, out _, SelectedMode.Options);
 
-            if (transformedStream is { })
-            {
-                await using var targetFile = File.Create(resultFileName);
-                transformedStream.CopyTo(targetFile);
-            }
+            await using var targetFile = File.Create(targetFilePath);
+            await transformedStream.CopyToAsync(targetFile);
         });
 
         var initialFileSize = sourceFileInfo.Length;
-        var resultFileSize = new FileInfo(resultFileName).Length;
+        var resultFileSize = new FileInfo(targetFilePath).Length;
         var compression = 100.0 * (initialFileSize - resultFileSize) / initialFileSize;
 
         _notificationManager.Show(new Notification("Presentation is optimized",
