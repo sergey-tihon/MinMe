@@ -17,6 +17,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MinMe.Tests", "tests\MinMe.Tests\MinMe.Tests.csproj", "{BAA224C6-959D-4AC1-9102-2130B931B527}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{01738505-CD10-4F4F-B7E9-20CCB82BC19C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{5118FC72-E7F2-49F0-8984-A97567D53835}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
@@ -195,5 +199,10 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F6D05029-56B8-4E45-AF2D-0E76295DDBA2}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{546ADF3D-76B3-4A50-B346-F1508D0B9E84} = {01738505-CD10-4F4F-B7E9-20CCB82BC19C}
+		{7FA7E65E-A389-48D5-AFC3-40966C841C66} = {01738505-CD10-4F4F-B7E9-20CCB82BC19C}
+		{BAA224C6-959D-4AC1-9102-2130B931B527} = {5118FC72-E7F2-49F0-8984-A97567D53835}
 	EndGlobalSection
 EndGlobal

@@ -4,17 +4,16 @@ using Avalonia.Controls.ApplicationLifetimes;
 
 using ReactiveUI;
 
-namespace MinMe.Avalonia.ViewModels
-{
-    public class ViewModelBase : ReactiveObject
-    {
-        protected static Window GetWindow()
-        {
-            if (Application.Current.ApplicationLifetime is IClassicDesktopStyleApplicationLifetime lifetime)
-                return lifetime.MainWindow;
+namespace MinMe.Avalonia.ViewModels;
 
-            var name = Application.Current.ApplicationLifetime?.GetType().Name;
-            throw new Exception($"Unknown application lifetime '{name}'");
-        }
+public class ViewModelBase : ReactiveObject
+{
+    protected static Window? GetWindow()
+    {
+        if (Application.Current?.ApplicationLifetime is IClassicDesktopStyleApplicationLifetime lifetime)
+            return lifetime.MainWindow;
+
+        var name = Application.Current?.ApplicationLifetime?.GetType().Name;
+        throw new InvalidDataException($"Unknown application lifetime '{name}'");
     }
 }

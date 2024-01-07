@@ -1,20 +1,20 @@
 <Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="MinMe.Avalonia.App"
              xmlns:local="clr-namespace:MinMe.Avalonia"
              xmlns:converter="clr-namespace:MinMe.Avalonia.Views.Converters;assembly=MinMe.Avalonia"
-             x:Class="MinMe.Avalonia.App"
              RequestedThemeVariant="Default">
+    
     <Application.DataTemplates>
         <local:ViewLocator/>
     </Application.DataTemplates>
+    
     <Application.Resources>
         <converter:InfoRowSizeConverter x:Key="sizeConverter" />
     </Application.Resources>
+    
     <Application.Styles>
         <FluentTheme />
         <StyleInclude Source="avares://Avalonia.Controls.DataGrid/Themes/Fluent.xaml"/>
-        <!-- <StyleInclude Source="avares://Avalonia.Themes.Default/DefaultTheme.xaml"/> -->
-        <!-- <StyleInclude Source="avares://Avalonia.Themes.Default/Accents/BaseLight.xaml"/> -->
-        <!-- <StyleInclude Source="avares://Avalonia.Controls.DataGrid/Themes/Default.xaml"/> -->
     </Application.Styles>
 </Application>

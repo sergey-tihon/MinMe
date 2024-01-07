@@ -1,18 +1,17 @@
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 
-namespace MinMe.Avalonia.Views
-{
-    public partial class MainView : UserControl
-    {
-        public MainView()
-        {
-            InitializeComponent();
-        }
+namespace MinMe.Avalonia.Views;
 
-        private void InitializeComponent()
-        {
-            AvaloniaXamlLoader.Load(this);
-        }
+public partial class MainView : UserControl
+{
+    public MainView()
+    {
+        InitializeComponent();
+    }
+
+    private void InitializeComponent()
+    {
+        AvaloniaXamlLoader.Load(this);
     }
 }
