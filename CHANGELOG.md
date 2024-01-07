@@ -3,8 +3,9 @@
 ## [0.2.0] - 2024-01-10
 
 - Migration from .NET 6 to .NET 8
-- Clippit v2, OpenXml v3 and SixLabors.ImageSharp v2
 - Migration to Avalonia 11
+- Migration to SixLabors.ImageSharp v2 with support for *.tiff images
+- Migration to Clippit v2 with support of OpenXml v3
 - Migration from FAKE to Fun.Build
 - Remove Blazor WASM UI
 

@@ -24,12 +24,6 @@ pipeline "build" {
         if ctx.GetStageLevel() = 0 then
             printfn "::endgroup::")
 
-
-    stage "Prepare Environment" {
-        run "dotnet tool restore"
-        run "dotnet paket restore"
-    }
-
     stage "Clear" {
         run "rm -rf ./bin"
         run "mkdir bin"
@@ -63,9 +57,7 @@ pipeline "build" {
 
     stage "Test" { run "dotnet test tests/MinMe.Tests -c Release" }
 
-    stage "NuGet" {
-        run $"dotnet paket pack bin/ -version %s{version.Version} --release-notes '%s{version.ReleaseNotes}'"
-    }
+    stage "NuGet" { run $"dotnet pack src/MinMe/MinMe.csproj -o bin/ -p:PackageVersion=%s{version.Version}" }
 
     stage "Publish Windows App" {
         run "dotnet publish src/MinMe.Avalonia -r win-x64 -c Release /p:PublishSingleFile=true"
@@ -74,9 +66,10 @@ pipeline "build" {
 
     stage "Publish macOS App" {
         run "dotnet publish src/MinMe.Avalonia -r osx-x64 -c Release --self-contained"
-        run "cp -r src/MinMe.Avalonia/bin/Release/net8.0/osx-x64/publish/ bin/MinMe.Avalonia.app"
-        run "cp src/MinMe.Avalonia/Assets/Info.plist bin/MinMe.Avalonia.app/Contents/"
-        run "cp src/MinMe.Avalonia/Assets/AppIcon.icns bin/MinMe.Avalonia.app/Contents/Resources/"
+        run "cp -r src/MinMe.Avalonia/bin/Release/net8.0/osx-x64/publish/ bin/MinMe.app"
+        run "mkdir -p bin/MinMe.app/Contents/Resources/"
+        run "cp src/MinMe.Avalonia/Assets/Info.plist bin/MinMe.app/Contents/"
+        run "cp src/MinMe.Avalonia/Assets/AppIcon.icns bin/MinMe.app/Contents/Resources/"
     }
 
     runIfOnlySpecified
