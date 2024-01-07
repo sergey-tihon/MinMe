@@ -14,14 +14,7 @@ nuget Avalonia.Themes.Fluent
 nuget Avalonia.ReactiveUI
 nuget Avalonia.Diagnostics
 nuget Microsoft.Extensions.Hosting
-nuget Clippit prerelease
-
-//WebAssembly
-nuget Microsoft.AspNetCore.Components.WebAssembly
-nuget Microsoft.AspNetCore.Components.WebAssembly.DevServer
-nuget System.Net.Http.Json
-nuget MudBlazor
-nuget BlazorDownloadFileFast
+nuget Clippit
 
 group Tests
     source https://api.nuget.org/v3/index.json
