@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
   <key>CFBundleName</key>
-  <string>MinMe.Avalonia</string>
+  <string>MinMe</string>
   <key>CFBundleGetInfoString</key>
   <string>MinMe.Avalonia</string>
   <key>CFBundleExecutable</key>
@@ -13,9 +13,9 @@
   <key>CFBundleIdentifier</key>
   <string>com.sergeytihon.MinMe</string>
   <key>CFBundleShortVersionString</key>
-  <string>1.0</string>
+  <string>1.1</string>
   <key>CFBundleVersion</key>
-  <string>1</string>
+  <string>1.1</string>
   <key>LSMinimumSystemVersion</key>
   <string>10.14</string>
   <key>CFBundleDevelopmentRegion</key>
@@ -29,7 +29,7 @@
   <key>IFMajorVersion</key>
   <integer>1</integer>
   <key>IFMinorVersion</key>
-  <integer>0</integer>
+  <integer>1</integer>
   <key>NSHighResolutionCapable</key>
   <string>true</string>
 </dict>

@@ -1,5 +1,5 @@
 source https://api.nuget.org/v3/index.json
-framework: netstandard2.0,net6.0
+framework: net8.0
 
 nuget DocumentFormat.OpenXml
 nuget System.IO.Compression
@@ -10,20 +10,15 @@ nuget SixLabors.ImageSharp
 nuget Avalonia
 nuget Avalonia.Controls.DataGrid
 nuget Avalonia.Desktop
+nuget Avalonia.Themes.Fluent
 nuget Avalonia.ReactiveUI
 nuget Avalonia.Diagnostics
 nuget Microsoft.Extensions.Hosting
-nuget Clippit prerelease
-
-//WebAssembly
-nuget Microsoft.AspNetCore.Components.WebAssembly
-nuget Microsoft.AspNetCore.Components.WebAssembly.DevServer
-nuget System.Net.Http.Json
-nuget MudBlazor
-nuget BlazorDownloadFileFast
+nuget Clippit
 
 group Tests
     source https://api.nuget.org/v3/index.json
+    framework: net8.0
 
     nuget Microsoft.NET.Test.Sdk
     nuget NUnit

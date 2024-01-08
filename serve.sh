@@ -1,1 +1,0 @@
-dotnet serve --directory "bin/wasm/" -o -S

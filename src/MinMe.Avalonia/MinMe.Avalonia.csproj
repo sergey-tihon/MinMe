@@ -2,12 +2,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net6.0</TargetFramework>
-    <LangVersion>9</LangVersion>
-    <Nullable>enable</Nullable>
-    <AnalysisLevel>5</AnalysisLevel>
     <ApplicationIcon>Assets/minme-logo.ico</ApplicationIcon>
-    <PublishTrimmed>true</PublishTrimmed>
     <!-- <PublishReadyToRun>true</PublishReadyToRun>
     <PublishSingleFile>true</PublishSingleFile> -->
   </PropertyGroup>
@@ -44,5 +39,16 @@
   <ItemGroup>
     <ProjectReference Include="..\MinMe\MinMe.csproj" />
   </ItemGroup>
-  <Import Project="..\..\.paket\Paket.Restore.targets" />
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="11.0.6"/>
+    <PackageReference Include="Avalonia.Desktop" Version="11.0.6"/>
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="11.0.6"/>
+    <PackageReference Include="Avalonia.Fonts.Inter" Version="11.0.6"/>
+    <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
+    <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.0.6"/>
+    <PackageReference Include="Avalonia.ReactiveUI" Version="11.0.6"/>
+    <PackageReference Include="Avalonia.Controls.DataGrid" Version="11.0.6" />
+    <PackageReference Include="Clippit" Version="2.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
+  </ItemGroup>
 </Project>

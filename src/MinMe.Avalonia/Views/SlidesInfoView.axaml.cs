@@ -1,19 +1,17 @@
-﻿using Avalonia;
-using Avalonia.Controls;
+﻿using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 
-namespace MinMe.Avalonia.Views
-{
-    public class SlidesInfoView : UserControl
-    {
-        public SlidesInfoView()
-        {
-            this.InitializeComponent();
-        }
+namespace MinMe.Avalonia.Views;
 
-        private void InitializeComponent()
-        {
-            AvaloniaXamlLoader.Load(this);
-        }
+public partial class SlidesInfoView : UserControl
+{
+    public SlidesInfoView()
+    {
+        this.InitializeComponent();
+    }
+
+    private void InitializeComponent()
+    {
+        AvaloniaXamlLoader.Load(this);
     }
 }
