@@ -2,19 +2,16 @@ using DocumentFormat.OpenXml.Presentation;
 
 namespace MinMe.Analyzers.Model;
 
-public class ImageUsageInfo
+public class ImageUsageInfo(long width, long height, ImageCrop? crop)
 {
-    public ImageUsageInfo(long width, long height, ImageCrop? crop) =>
-        (Width, Height, Crop) = (width, height, crop);
-
-    public long Width { get; }
-    public long Height { get; }
-    public ImageCrop? Crop { get; }
+    public long Width { get; } = width;
+    public long Height { get; } = height;
+    public ImageCrop? Crop { get; } = crop;
 
     public static ImageUsageInfo FromPict(Picture pict)
     {
         var crop = ImageCrop.FromSourceRect(pict.BlipFill?.SourceRectangle);
-        if (pict.ShapeProperties.Transform2D is {} transform)
+        if (pict.ShapeProperties?.Transform2D is {} transform)
             return new ImageUsageInfo(
                 transform.Extents.Cx.Value,
                 transform.Extents.Cy.Value,

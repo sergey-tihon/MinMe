@@ -11,13 +11,9 @@ using Picture = DocumentFormat.OpenXml.Drawing.Pictures.Picture;
 
 namespace MinMe.Optimizers.ImageOptimizerRuntime;
 
-internal class OptimizerWord: OptimizerBase<WordprocessingDocument>
+internal class OptimizerWord(RecyclableMemoryStreamManager manager, ImageOptimizerOptions options)
+    : OptimizerBase<WordprocessingDocument>(manager, options)
 {
-    public OptimizerWord(RecyclableMemoryStreamManager manager, ImageOptimizerOptions options)
-        : base(manager, options)
-    {
-    }
-
     protected override void RemoveUnusedPieces(WordprocessingDocument document)
     {
     }
@@ -47,9 +43,9 @@ internal class OptimizerWord: OptimizerBase<WordprocessingDocument>
                 .Select(pict =>
                     new ImageUsageInfo(
                         part,
-                        pict?.BlipFill?.Blip,
-                        pict?.ShapeProperties?.Transform2D,
-                        pict?.BlipFill?.SourceRectangle))
+                        pict.BlipFill?.Blip,
+                        pict.ShapeProperties?.Transform2D,
+                        pict.BlipFill?.SourceRectangle))
                 .ToList();
 
         // Analyze grouped images

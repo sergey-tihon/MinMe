@@ -9,7 +9,7 @@ using Picture = DocumentFormat.OpenXml.Presentation.Picture;
 
 namespace MinMe.Analyzers;
 
-public class PowerPointAnalyzer : IDisposable
+public sealed class PowerPointAnalyzer : IDisposable
 {
     public PowerPointAnalyzer(string fileName)
     {
@@ -29,12 +29,14 @@ public class PowerPointAnalyzer : IDisposable
     }
 
     public FileContentInfo Analyze()
-        => new(_fileName, _fileStream.Length)
+    {
+        return new FileContentInfo(_fileName, _fileStream.Length)
         {
             Parts = EnumerateAllParts(),
             PartUsages = GetPartUsageData(),
             Slides = GetSlidesData().ToList()
         };
+    }
 
     private List<PartInfo> EnumerateAllParts()
     {
@@ -42,13 +44,20 @@ public class PowerPointAnalyzer : IDisposable
 
         var visitedParts = new HashSet<string>();
 
+        foreach (var idPartPair in _document.Parts)
+            ProcessPart(idPartPair.OpenXmlPart);
+
+        result.Sort((x, y) =>
+            Compare(x.PartType, y.PartType, StringComparison.InvariantCultureIgnoreCase));
+        
+        return result;
+
         void ProcessPart(OpenXmlPart root)
         {
             var key = root.Uri.OriginalString;
-            if (visitedParts.Contains(key))
+            if (!visitedParts.Add(key))
                 return;
 
-            visitedParts.Add(key);
             result.Add(new PartInfo(
                 key, root.GetType().Name,
                 root.ContentType, root.GetPartSize()));
@@ -57,10 +66,9 @@ public class PowerPointAnalyzer : IDisposable
             {
                 var dataPart = refPart.DataPart;
                 var dataPartKey = dataPart.Uri.OriginalString;
-                if (visitedParts.Contains(dataPartKey))
+                if (!visitedParts.Add(dataPartKey))
                     continue;
 
-                visitedParts.Add(dataPartKey);
                 result.Add(new PartInfo(
                     dataPartKey, dataPart.GetType().Name,
                     dataPart.ContentType, dataPart.GetPartSize()));
@@ -69,18 +77,32 @@ public class PowerPointAnalyzer : IDisposable
             foreach (var idPartPair in root.Parts)
                 ProcessPart(idPartPair.OpenXmlPart);
         }
-
-        foreach (var idPartPair in _document.Parts)
-            ProcessPart(idPartPair.OpenXmlPart);
-
-        result.Sort((x, y) =>
-            Compare(x.PartType, y.PartType, StringComparison.InvariantCultureIgnoreCase));
-        return result;
     }
 
     private Dictionary<string, List<PartUsageInfo>> GetPartUsageData()
     {
         var usages = new Dictionary<string, List<PartUsageInfo>>(StringComparer.InvariantCultureIgnoreCase);
+
+        var presentation = _document.PresentationPart;
+
+        foreach (var slideId in presentation.Presentation.SlideIdList.ChildElements.OfType<Presentation.SlideId>())
+        {
+            if (GetPart(slideId.RelationshipId) is not SlidePart slide)
+                continue;
+            
+            ProcessImages(slide);
+            ProcessEmbeddedParts(slide);
+            
+            AddUsage(slide.Uri, new Reference(presentation.Uri));
+            if (slide.SlideLayoutPart is not { } layout) continue;
+            AddUsage(layout.Uri, new Reference(slide.Uri));
+            if (layout.SlideMasterPart is not { } master) continue;
+            AddUsage(master.Uri, new Reference(layout.Uri));
+            if (master.ThemePart is not { } theme) continue;
+            AddUsage(theme.Uri, new Reference(master.Uri));
+        }
+
+        return usages;
 
         void AddUsage(Uri uri, PartUsageInfo usage)
         {
@@ -88,12 +110,10 @@ public class PowerPointAnalyzer : IDisposable
             if (usages.TryGetValue(key, out var list))
                 list.Add(usage);
             else
-                usages.Add(key, new List<PartUsageInfo> { usage });
+                usages.Add(key, [usage]);
         }
 
-        var presentation = _document.PresentationPart;
-
-        OpenXmlPart? GetPart(StringValue relId)
+        OpenXmlPart? GetPart(StringValue? relId)
             => relId?.HasValue == true ? presentation.GetPartById(relId.Value) : null;
 
         void ProcessImages(OpenXmlPart slide)
@@ -124,24 +144,14 @@ public class PowerPointAnalyzer : IDisposable
                 AddUsage(uri, new ImageUsage(usage, slide.Uri));
             }
         }
-
-        foreach (var slideId in presentation.Presentation.SlideIdList.ChildElements.OfType<Presentation.SlideId>())
+        
+        void ProcessEmbeddedParts(SlidePart slide)
         {
-            var slide = GetPart(slideId.RelationshipId) as SlidePart;
-            if (slide is null)
-                continue;
-            AddUsage(slide.Uri, new Reference(presentation.Uri));
-            var layout = slide.SlideLayoutPart;
-            AddUsage(layout.Uri, new Reference(slide.Uri));
-            var master = layout.SlideMasterPart;
-            AddUsage(master.Uri, new Reference(layout.Uri));
-            var theme = master.ThemePart;
-            AddUsage(theme.Uri, new Reference(master.Uri));
-
-            ProcessImages(slide);
+            foreach (var part in slide.EmbeddedPackageParts)
+            {
+                AddUsage(part.Uri, new Reference(slide.Uri));
+            }
         }
-
-        return usages;
     }
 
     private IEnumerable<SlideInfo> GetSlidesData()

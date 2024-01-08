@@ -1,11 +1,8 @@
 namespace MinMe.Analyzers.Model;
 
-public class SlideInfo
+public class SlideInfo(int number, string fileName, string title)
 {
-    public SlideInfo(int number, string fileName, string title) =>
-        (Number, FileName, Title) = (number, fileName, title);
-
-    public int Number { get; }
-    public string FileName { get; }
-    public string Title { get; }
+    public int Number { get; } = number;
+    public string FileName { get; } = fileName;
+    public string Title { get; } = title;
 }

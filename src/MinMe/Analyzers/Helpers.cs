@@ -4,7 +4,7 @@ namespace MinMe.Analyzers;
 
 public static class Helpers
 {
-    private static readonly string[] FileSizeOrders = { "B", "KB", "MB", "GB", "TB" };
+    private static readonly string[] FileSizeOrders = ["B", "KB", "MB", "GB", "TB"];
 
     public static string PrintFileSize(double size)
     {
@@ -18,13 +18,13 @@ public static class Helpers
 
     public static long GetPartSize(this OpenXmlPart part)
     {
-        using var stream = part.GetStream();
+        using var stream = part.GetStream(FileMode.Open, FileAccess.Read);
         return stream.Length;
     }
 
     public static long GetPartSize(this DataPart part)
     {
-        using var stream = part.GetStream();
+        using var stream = part.GetStream(FileMode.Open, FileAccess.Read);
         return stream.Length;
     }
 }

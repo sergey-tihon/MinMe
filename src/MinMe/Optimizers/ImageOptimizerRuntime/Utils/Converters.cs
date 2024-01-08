@@ -1,4 +1,6 @@
 ﻿using System.Drawing;
+using System.Globalization;
+using DocumentFormat.OpenXml.Wordprocessing;
 
 namespace MinMe.Optimizers.ImageOptimizerRuntime.Utils;
 
@@ -18,7 +20,7 @@ internal static class Converters
         return PxToEmu(s);
     }
 
-    private static long PtToEmu(string s) => PtToEmu(double.Parse(s));
+    private static long PtToEmu(string s) => PtToEmu(double.Parse(s, CultureInfo.InvariantCulture));
 
     private static long PtToEmu(double x) => (long)(x * EmuInPt);
 

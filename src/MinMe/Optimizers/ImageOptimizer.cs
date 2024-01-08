@@ -7,12 +7,9 @@ using MinMe.Optimizers.ImageOptimizerRuntime;
 
 namespace MinMe.Optimizers;
 
-public class ImageOptimizer
+public class ImageOptimizer(RecyclableMemoryStreamManager? memoryStreamManager = null)
 {
-    public ImageOptimizer(RecyclableMemoryStreamManager? memoryStreamManager = null) =>
-        _memoryStreamManager = memoryStreamManager ?? new RecyclableMemoryStreamManager();
-
-    private readonly RecyclableMemoryStreamManager _memoryStreamManager;
+    private readonly RecyclableMemoryStreamManager _memoryStreamManager = memoryStreamManager ?? new RecyclableMemoryStreamManager();
 
     public Stream Transform(string fileType, Stream stream, out OptimizeDiagnostic diagnostic, ImageOptimizerOptions? options = null, CancellationToken? token = null)
     {
@@ -73,10 +70,12 @@ public class ImageOptimizer
         transformation.Transform(document, diagnostic, token);
 
         foreach (var slide in document.PresentationPart.SlideParts)
-        foreach (var part in slide.EmbeddedPackageParts)
         {
-            token.ThrowIfCancellationRequested();
-            TransformEmbeddedPart(part, diagnostic, options, token);
+            foreach (var part in slide.EmbeddedPackageParts)
+            {
+                token.ThrowIfCancellationRequested();
+                TransformEmbeddedPart(part, diagnostic, options, token);
+            }
         }
     }
 
@@ -98,9 +97,12 @@ public class ImageOptimizer
             return;
         }
 
-        using var result = Transform(fileType, part.GetStream(), out var partDiagnostic, options, token);
-        result.Position = 0;
-        part.FeedData(result);
+        using var docStream = part.GetStream(FileMode.Open, FileAccess.ReadWrite);
+        using var newDocStream = Transform(fileType, docStream, out var partDiagnostic, options, token);
+        newDocStream.Position = 0;
+        docStream.SetLength(0);
+        newDocStream.CopyTo(docStream);
+        
 
         foreach (var error in partDiagnostic.Errors)
         {
