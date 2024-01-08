@@ -3,7 +3,6 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <ApplicationIcon>Assets/minme-logo.ico</ApplicationIcon>
-    <PublishTrimmed>true</PublishTrimmed>
     <!-- <PublishReadyToRun>true</PublishReadyToRun>
     <PublishSingleFile>true</PublishSingleFile> -->
   </PropertyGroup>

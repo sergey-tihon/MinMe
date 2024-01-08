@@ -65,8 +65,9 @@ pipeline "build" {
     }
 
     stage "Publish macOS App" {
-        run "dotnet publish src/MinMe.Avalonia -r osx-x64 -c Release --self-contained"
-        run "cp -r src/MinMe.Avalonia/bin/Release/net8.0/osx-x64/publish/ bin/MinMe.app"
+        run "dotnet publish src/MinMe.Avalonia -r osx-x64 -c Release --self-contained -p:UseAppHost=true"
+        run "mkdir -p bin/MinMe.app/Contents/MacOS/"
+        run "cp -r src/MinMe.Avalonia/bin/Release/net8.0/osx-x64/publish/ bin/MinMe.app/Contents/MacOS"
         run "mkdir -p bin/MinMe.app/Contents/Resources/"
         run "cp src/MinMe.Avalonia/Assets/Info.plist bin/MinMe.app/Contents/"
         run "cp src/MinMe.Avalonia/Assets/AppIcon.icns bin/MinMe.app/Contents/Resources/"
