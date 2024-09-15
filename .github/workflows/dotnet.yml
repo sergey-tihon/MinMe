@@ -2,25 +2,24 @@ name: dotnet
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
   build:
-
     strategy:
       fail-fast: false
       matrix:
         os: [windows-latest, macos-latest]
-        dotnet: [8.0.100]
+        dotnet: [8.0.401]
     runs-on: ${{ matrix.os }}
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: ${{ matrix.dotnet }}
-    - name: Build and Test
-      run: dotnet fsi build.fsx -- -p build
+      - uses: actions/checkout@v2
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: ${{ matrix.dotnet }}
+      - name: Build and Test
+        run: dotnet fsi build.fsx -- -p build
