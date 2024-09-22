@@ -1,21 +1,21 @@
 using Microsoft.IO;
-
 using MinMe.Optimizers.ImageOptimizerRuntime.Model;
-
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Formats.Jpeg;
 using SixLabors.ImageSharp.Formats.Png;
 using SixLabors.ImageSharp.PixelFormats;
 using SixLabors.ImageSharp.Processing;
-
 using Size = System.Drawing.Size;
 
 namespace MinMe.Optimizers.ImageOptimizerRuntime.ImageStrategies;
 
 public class ImageSharpStrategy : ImageBaseStrategy
 {
-    public ImageSharpStrategy(RecyclableMemoryStreamManager streamManager,
-        PngEncoder? pngEncoder = null, JpegEncoder? jpegEncoder = null)
+    public ImageSharpStrategy(
+        RecyclableMemoryStreamManager streamManager,
+        PngEncoder? pngEncoder = null,
+        JpegEncoder? jpegEncoder = null
+    )
         : base(streamManager)
     {
         _pngDecoder = pngEncoder ?? new PngEncoder();
@@ -34,7 +34,7 @@ public class ImageSharpStrategy : ImageBaseStrategy
 
         image.Mutate(x =>
         {
-            if (crop is {})
+            if (crop is { })
             {
                 var rect = crop.GetRectangle(srcImageSize);
                 x.Crop(new Rectangle(rect.X, rect.Y, rect.Width, rect.Height));

@@ -1,12 +1,9 @@
 ﻿using System.Drawing;
 using DocumentFormat.OpenXml.Packaging;
-
 using Microsoft.IO;
-
 using MinMe.Optimizers.ImageOptimizerRuntime.ImageStrategies;
 using MinMe.Optimizers.ImageOptimizerRuntime.Model;
 using MinMe.Optimizers.ImageOptimizerRuntime.Utils;
-
 using SixLabors.ImageSharp.Formats.Jpeg;
 using SixLabors.ImageSharp.Formats.Png;
 
@@ -20,17 +17,27 @@ internal abstract class OptimizerBase<TDocument>
     protected OptimizerBase(RecyclableMemoryStreamManager manager, ImageOptimizerOptions options)
     {
         Options = options;
-        _imageStrategy = options.ImageStrategy ?? new ImageSharpStrategy(manager, new PngEncoder
-        {
-            //CompressionLevel = 9
-        }, new JpegEncoder
-        {
-            //Quality = 70,
-            //Subsample = JpegSubsample.Ratio420
-        });
+        _imageStrategy =
+            options.ImageStrategy
+            ?? new ImageSharpStrategy(
+                manager,
+                new PngEncoder
+                {
+                    //CompressionLevel = 9
+                },
+                new JpegEncoder
+                {
+                    //Quality = 70,
+                    //Subsample = JpegSubsample.Ratio420
+                }
+            );
     }
 
-    public void Transform(TDocument document, OptimizeDiagnostic diagnostic, CancellationToken token)
+    public void Transform(
+        TDocument document,
+        OptimizeDiagnostic diagnostic,
+        CancellationToken token
+    )
     {
         if (Options.RemoveUnusedParts)
         {
@@ -68,7 +75,7 @@ internal abstract class OptimizerBase<TDocument>
             meta.Sizes.Add(usage.GetScaledSizeInPt(scaleRatio));
 
             var crop = usage.Crop;
-            if (crop is {})
+            if (crop is { })
                 meta.Crops.Add(crop);
         }
 
@@ -96,23 +103,30 @@ internal abstract class OptimizerBase<TDocument>
     /// </summary>
     protected abstract IEnumerable<ImageUsageInfo> GetImageUsageInfo(TDocument document);
 
-    private void ResizeImages(Dictionary<string, ImageMetadata> imagesMetadata, OptimizeDiagnostic diagnostic, CancellationToken token)
+    private void ResizeImages(
+        Dictionary<string, ImageMetadata> imagesMetadata,
+        OptimizeDiagnostic diagnostic,
+        CancellationToken token
+    )
     {
-        imagesMetadata.ExecuteInParallel(pair =>
-        {
-            try
+        imagesMetadata.ExecuteInParallel(
+            pair =>
             {
-                token.ThrowIfCancellationRequested();
-                if (IsIgnoredImagePart(pair.Value.ImagePart))
-                    return;
-                ResizeImage(pair.Value, diagnostic);
-            }
-            catch (Exception e)
-            {
-                var message = $"[{e.GetType().Name}] {e.Message}";
-                diagnostic.Errors.Add(new OptimizeError(pair.Key, message));
-            }
-        }, Options.DegreeOfParallelism);
+                try
+                {
+                    token.ThrowIfCancellationRequested();
+                    if (IsIgnoredImagePart(pair.Value.ImagePart))
+                        return;
+                    ResizeImage(pair.Value, diagnostic);
+                }
+                catch (Exception e)
+                {
+                    var message = $"[{e.GetType().Name}] {e.Message}";
+                    diagnostic.Errors.Add(new OptimizeError(pair.Key, message));
+                }
+            },
+            Options.DegreeOfParallelism
+        );
     }
 
     private static bool IsIgnoredImagePart(ImagePart imagePart) =>
@@ -121,7 +135,7 @@ internal abstract class OptimizerBase<TDocument>
             "image/svg+xml" => true,
             "image/x-emf" => true,
             "image/x-wmf" => true,
-            _ => false
+            _ => false,
         };
 
     private void ResizeImage(ImageMetadata meta, OptimizeDiagnostic diagnostic)
@@ -137,19 +151,21 @@ internal abstract class OptimizerBase<TDocument>
             else
             {
                 var imgCrop = crops.First();
-                var message = $"Unsupported image crop L/T/R/B={imgCrop.Left}/{imgCrop.Top}/{imgCrop.Right}/{imgCrop.Bottom}";
-                diagnostic.Errors.Add(new OptimizeError(meta.ImagePart.Uri.OriginalString, message));
+                var message =
+                    $"Unsupported image crop L/T/R/B={imgCrop.Left}/{imgCrop.Top}/{imgCrop.Right}/{imgCrop.Bottom}";
+                diagnostic.Errors.Add(
+                    new OptimizeError(meta.ImagePart.Uri.OriginalString, message)
+                );
             }
         }
 
         // Get new image size based on usage meta
         var newSize =
             crops.Count > 1
-                ? (Size?) null // We cannot resize if more than 1 crop in identified
-                : meta.Sizes
-                    .Aggregate(new Size(), Converters.Expand)
+                ? (Size?)null // We cannot resize if more than 1 crop in identified
+                : meta
+                    .Sizes.Aggregate(new Size(), Converters.Expand)
                     .Restrict(Options.ExpectedScreenSize); // New image cannot be large than target screen size
-
 
         Stream? newImageStream;
         using (var stream = meta.ImagePart.GetStream(FileMode.Open, FileAccess.Read))
@@ -178,7 +194,7 @@ internal abstract class OptimizerBase<TDocument>
         }
 
         // Remove crops from markup, because image was cropped
-        if (crop is {})
+        if (crop is { })
         {
             foreach (var imageCrop in meta.Crops)
             {

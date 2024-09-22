@@ -1,9 +1,9 @@
-﻿using Avalonia.Controls;
+﻿using System.Globalization;
+using Avalonia.Controls;
 using Avalonia.Data.Converters;
 using Avalonia.Layout;
 using Avalonia.Media;
 using MinMe.Avalonia.Models;
-using System.Globalization;
 
 namespace MinMe.Avalonia.Views.Converters;
 
@@ -23,22 +23,28 @@ class InfoRowSizeConverter : IValueConverter
         if (size is null)
             return value;
 
-        var cell = new TextBlock {
+        var cell = new TextBlock
+        {
             Text = size.Value.ToString("0,0"),
-            VerticalAlignment = VerticalAlignment.Center
+            VerticalAlignment = VerticalAlignment.Center,
         };
 
         cell.Background = size switch
         {
             > 5_000_000 => DangerBrush,
             > 200_000 => WarningBrush,
-            _ => cell.Background
+            _ => cell.Background,
         };
 
         return cell;
     }
 
-    public object ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
+    public object ConvertBack(
+        object? value,
+        Type targetType,
+        object? parameter,
+        CultureInfo culture
+    )
     {
         throw new NotImplementedException();
     }

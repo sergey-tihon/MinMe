@@ -16,6 +16,9 @@ public class ImageCrop
         srcRect is null
             ? null
             : new ImageCrop(
-                srcRect.Left ?? 0, srcRect.Right ?? 0,
-                srcRect.Top ?? 0, srcRect.Bottom ?? 0);
+                srcRect.Left ?? 0,
+                srcRect.Right ?? 0,
+                srcRect.Top ?? 0,
+                srcRect.Bottom ?? 0
+            );
 }

@@ -18,10 +18,8 @@ public class OptimizeResult
     }
 
     [JsonIgnore]
-    public double Compression =>
-        100.0 * (1.0 - FileSizeAfter / FileSizeBefore);
+    public double Compression => 100.0 * (1.0 - FileSizeAfter / FileSizeBefore);
     public List<string>? Errors { get; set; }
 
-    public static string OsMoniker =>
-        OperatingSystem.IsWindows() ? "win" : "macOS";
+    public static string OsMoniker => OperatingSystem.IsWindows() ? "win" : "macOS";
 }

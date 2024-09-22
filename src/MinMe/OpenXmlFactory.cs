@@ -1,16 +1,19 @@
 using System.IO.Compression;
 using System.Xml;
 using System.Xml.Linq;
-
 using DocumentFormat.OpenXml.Packaging;
 
 namespace MinMe;
 
 public static class OpenXmlFactory
 {
-    public static PresentationDocument OpenPowerPoint(Stream stream, bool isEditable = false, bool autoRecovery = false)
+    public static PresentationDocument OpenPowerPoint(
+        Stream stream,
+        bool isEditable = false,
+        bool autoRecovery = false
+    )
     {
-        var openSettings = new OpenSettings {AutoSave = isEditable};
+        var openSettings = new OpenSettings { AutoSave = isEditable };
         try
         {
             return PresentationDocument.Open(stream, isEditable, openSettings);
@@ -25,9 +28,13 @@ public static class OpenXmlFactory
         }
     }
 
-    public static WordprocessingDocument OpenWord(Stream stream, bool isEditable = false, bool autoRecovery = false)
+    public static WordprocessingDocument OpenWord(
+        Stream stream,
+        bool isEditable = false,
+        bool autoRecovery = false
+    )
     {
-        var openSettings = new OpenSettings {AutoSave = isEditable};
+        var openSettings = new OpenSettings { AutoSave = isEditable };
         try
         {
             return WordprocessingDocument.Open(stream, isEditable, openSettings);
@@ -41,7 +48,6 @@ public static class OpenXmlFactory
             return WordprocessingDocument.Open(stream, isEditable, openSettings);
         }
     }
-
 
     // http://ericwhite.com/blog/handling-invalid-hyperlinks-openxmlpackageexception-in-the-open-xml-sdk/
     private static void FixInvalidUri(Stream fs)
@@ -68,7 +74,7 @@ public static class OpenXmlFactory
                             .Where(r => r.Attribute("TargetMode")?.Value == "External");
                         foreach (var rel in urisToCheck)
                         {
-                            if (rel.Attribute("Target") is {} attr)
+                            if (rel.Attribute("Target") is { } attr)
                             {
                                 try
                                 {

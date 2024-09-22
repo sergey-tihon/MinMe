@@ -1,5 +1,4 @@
 using System.Drawing;
-
 using MinMe.Optimizers.ImageOptimizerRuntime.ImageStrategies;
 
 namespace MinMe.Optimizers;

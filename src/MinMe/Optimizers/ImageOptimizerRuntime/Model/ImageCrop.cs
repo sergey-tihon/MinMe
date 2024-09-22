@@ -1,24 +1,27 @@
 using System.Drawing;
-
 using DocumentFormat.OpenXml.Drawing;
-
 using Rectangle = System.Drawing.Rectangle;
 
 namespace MinMe.Optimizers.ImageOptimizerRuntime.Model;
 
-public class ImageCrop: IEquatable<ImageCrop>
+public class ImageCrop : IEquatable<ImageCrop>
 {
     public long Left { get; }
     public long Right { get; }
     public long Top { get; }
     public long Bottom { get; }
 
-    private SourceRectangle? SourceRectangle { get;}
+    private SourceRectangle? SourceRectangle { get; }
     private DocumentFormat.OpenXml.Vml.ImageData? ImageData { get; }
 
-    public ImageCrop(SourceRectangle? sourceRectangle,
+    public ImageCrop(
+        SourceRectangle? sourceRectangle,
         DocumentFormat.OpenXml.Vml.ImageData? imageData,
-        long left, long right, long top, long bottom)
+        long left,
+        long right,
+        long top,
+        long bottom
+    )
     {
         SourceRectangle = sourceRectangle;
         ImageData = imageData;
@@ -40,14 +43,15 @@ public class ImageCrop: IEquatable<ImageCrop>
         return new Rectangle(x, y, w, h);
     }
 
-    private static int Percentage(int value, long percentage1000)
-        => (int) (value * percentage1000 / 100_000);
+    private static int Percentage(int value, long percentage1000) =>
+        (int)(value * percentage1000 / 100_000);
 
     public void RemoveCrop()
     {
         SourceRectangle?.Remove();
 
-        if (ImageData is null) return;
+        if (ImageData is null)
+            return;
         ImageData.CropLeft = "";
         ImageData.CropRight = "";
         ImageData.CropTop = "";
@@ -55,6 +59,10 @@ public class ImageCrop: IEquatable<ImageCrop>
     }
 
     public bool IsValid() =>
-        Left >= 0 && Right >= 0 && Top >= 0 && Bottom >= 0 &&
-        Left + Right <= 100_000 && Top + Bottom <= 100_000;
+        Left >= 0
+        && Right >= 0
+        && Top >= 0
+        && Bottom >= 0
+        && Left + Right <= 100_000
+        && Top + Bottom <= 100_000;
 }

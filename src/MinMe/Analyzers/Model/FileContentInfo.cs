@@ -11,6 +11,5 @@ public class FileContentInfo(string fileName, long fileSize)
     // TODO: Refactor
     public List<SlideInfo> Slides { get; set; } = [];
 
-    public override string ToString() => 
-        Helpers.PrintFileSize(FileSize);
+    public override string ToString() => Helpers.PrintFileSize(FileSize);
 }

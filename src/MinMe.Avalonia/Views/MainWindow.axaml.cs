@@ -1,9 +1,7 @@
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
-
 using Microsoft.Extensions.DependencyInjection;
-
 using MinMe.Avalonia.ViewModels;
 
 namespace MinMe.Avalonia.Views;

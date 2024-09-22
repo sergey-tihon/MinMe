@@ -1,17 +1,22 @@
 using System.IO.Compression;
 using DocumentFormat.OpenXml.Packaging;
 using Microsoft.IO;
-
 using MinMe.Optimizers.ImageOptimizerRuntime;
-
 
 namespace MinMe.Optimizers;
 
 public class ImageOptimizer(RecyclableMemoryStreamManager? memoryStreamManager = null)
 {
-    private readonly RecyclableMemoryStreamManager _memoryStreamManager = memoryStreamManager ?? new RecyclableMemoryStreamManager();
+    private readonly RecyclableMemoryStreamManager _memoryStreamManager =
+        memoryStreamManager ?? new RecyclableMemoryStreamManager();
 
-    public Stream Transform(string fileType, Stream stream, out OptimizeDiagnostic diagnostic, ImageOptimizerOptions? options = null, CancellationToken? token = null)
+    public Stream Transform(
+        string fileType,
+        Stream stream,
+        out OptimizeDiagnostic diagnostic,
+        ImageOptimizerOptions? options = null,
+        CancellationToken? token = null
+    )
     {
         options ??= new ImageOptimizerOptions();
         diagnostic = new OptimizeDiagnostic();
@@ -50,7 +55,12 @@ public class ImageOptimizer(RecyclableMemoryStreamManager? memoryStreamManager =
         }
     }
 
-    private void TransformDocxStream(Stream stream, OptimizeDiagnostic diagnostic, ImageOptimizerOptions options, CancellationToken token)
+    private void TransformDocxStream(
+        Stream stream,
+        OptimizeDiagnostic diagnostic,
+        ImageOptimizerOptions options,
+        CancellationToken token
+    )
     {
         using var document = OpenXmlFactory.OpenWord(stream, true, options.OpenXmlUriAutoRecovery);
         var transformation = new OptimizerWord(_memoryStreamManager, options);
@@ -63,9 +73,18 @@ public class ImageOptimizer(RecyclableMemoryStreamManager? memoryStreamManager =
         }
     }
 
-    private void TransformPptxStream(Stream stream, OptimizeDiagnostic diagnostic, ImageOptimizerOptions options, CancellationToken token)
+    private void TransformPptxStream(
+        Stream stream,
+        OptimizeDiagnostic diagnostic,
+        ImageOptimizerOptions options,
+        CancellationToken token
+    )
     {
-        using var document = OpenXmlFactory.OpenPowerPoint(stream, true, options.OpenXmlUriAutoRecovery);
+        using var document = OpenXmlFactory.OpenPowerPoint(
+            stream,
+            true,
+            options.OpenXmlUriAutoRecovery
+        );
         var transformation = new OptimizerPowerPoint(_memoryStreamManager, options);
         transformation.Transform(document, diagnostic, token);
 
@@ -79,16 +98,20 @@ public class ImageOptimizer(RecyclableMemoryStreamManager? memoryStreamManager =
         }
     }
 
-    private void TransformEmbeddedPart(EmbeddedPackagePart part, OptimizeDiagnostic diagnostic, ImageOptimizerOptions options, CancellationToken token)
+    private void TransformEmbeddedPart(
+        EmbeddedPackagePart part,
+        OptimizeDiagnostic diagnostic,
+        ImageOptimizerOptions options,
+        CancellationToken token
+    )
     {
         // Read mode about office mime types: http://filext.com/faq/office_mime_types.php
-        var fileType = part.ContentType
-            switch
-            {
-                "application/vnd.openxmlformats-officedocument.wordprocessingml.document" => ".docx",
-                "application/vnd.openxmlformats-officedocument.presentationml.presentation" => ".pptx",
-                _ => null
-            };
+        var fileType = part.ContentType switch
+        {
+            "application/vnd.openxmlformats-officedocument.wordprocessingml.document" => ".docx",
+            "application/vnd.openxmlformats-officedocument.presentationml.presentation" => ".pptx",
+            _ => null,
+        };
 
         if (fileType is null)
         {
@@ -98,11 +121,16 @@ public class ImageOptimizer(RecyclableMemoryStreamManager? memoryStreamManager =
         }
 
         using var docStream = part.GetStream(FileMode.Open, FileAccess.ReadWrite);
-        using var newDocStream = Transform(fileType, docStream, out var partDiagnostic, options, token);
+        using var newDocStream = Transform(
+            fileType,
+            docStream,
+            out var partDiagnostic,
+            options,
+            token
+        );
         newDocStream.Position = 0;
         docStream.SetLength(0);
         newDocStream.CopyTo(docStream);
-        
 
         foreach (var error in partDiagnostic.Errors)
         {

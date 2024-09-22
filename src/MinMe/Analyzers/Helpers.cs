@@ -9,7 +9,8 @@ public static class Helpers
     public static string PrintFileSize(double size)
     {
         var order = 0;
-        while (size >= 1024 && order < FileSizeOrders.Length - 1) {
+        while (size >= 1024 && order < FileSizeOrders.Length - 1)
+        {
             order++;
             size /= 1024;
         }

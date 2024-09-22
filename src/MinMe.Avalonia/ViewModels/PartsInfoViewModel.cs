@@ -1,10 +1,10 @@
-﻿using Avalonia.Collections;
+﻿using System.ComponentModel;
+using System.Reactive.Linq;
+using Avalonia.Collections;
 using MinMe.Analyzers.Model;
 using MinMe.Avalonia.Models;
 using MinMe.Avalonia.Services;
 using ReactiveUI;
-using System.ComponentModel;
-using System.Reactive.Linq;
 
 namespace MinMe.Avalonia.ViewModels;
 
@@ -12,8 +12,8 @@ class PartsInfoViewModel : ViewModelBase
 {
     public PartsInfoViewModel(StateService stateService)
     {
-        _parts = stateService.FileContentInfo
-            .Select(ToDataGridCollection)
+        _parts = stateService
+            .FileContentInfo.Select(ToDataGridCollection)
             .ToProperty(this, nameof(Parts), deferSubscription: false);
     }
 
@@ -25,8 +25,11 @@ class PartsInfoViewModel : ViewModelBase
         IEnumerable<PartInfoRow> rows;
         if (fileContentInfoOpt is { } fileContentInfo)
         {
-            var slideToNumber = fileContentInfo.Slides
-                .ToDictionary(x => x.FileName, x => x.Number, StringComparer.InvariantCultureIgnoreCase);
+            var slideToNumber = fileContentInfo.Slides.ToDictionary(
+                x => x.FileName,
+                x => x.Number,
+                StringComparer.InvariantCultureIgnoreCase
+            );
 
             rows = fileContentInfo.Parts.Select(x =>
             {
@@ -36,10 +39,11 @@ class PartsInfoViewModel : ViewModelBase
                     var refs = usage.OfType<Reference>().ToList();
                     if (refs.Count > 0)
                     {
-                        var ids = refs
-                            .Select(r =>
+                        var ids = refs.Select(r =>
                                 slideToNumber.TryGetValue(r.From.OriginalString, out int number)
-                                    ? $"Slide #{number}" : r.From.OriginalString)
+                                    ? $"Slide #{number}"
+                                    : r.From.OriginalString
+                            )
                             .Distinct()
                             .OrderBy(x => x);
                         usageInfo = string.Join(", ", ids);
@@ -47,13 +51,17 @@ class PartsInfoViewModel : ViewModelBase
                 }
                 return new PartInfoRow(x, usageInfo);
             });
-        } else {
+        }
+        else
+        {
             rows = new List<PartInfoRow>();
         }
 
         var view = new DataGridCollectionView(rows);
         view.GroupDescriptions.Add(new DataGridPathGroupDescription(nameof(PartInfoRow.PartType)));
-        view.SortDescriptions.Add(DataGridSortDescription.FromPath(nameof(PartInfoRow.Size), ListSortDirection.Descending));
+        view.SortDescriptions.Add(
+            DataGridSortDescription.FromPath(nameof(PartInfoRow.Size), ListSortDirection.Descending)
+        );
         return view;
     }
 }

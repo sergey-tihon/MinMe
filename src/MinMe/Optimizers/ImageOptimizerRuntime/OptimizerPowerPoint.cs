@@ -1,9 +1,7 @@
 ﻿using System.Drawing;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Presentation;
-
 using Microsoft.IO;
-
 using MinMe.Optimizers.ImageOptimizerRuntime.Model;
 using MinMe.Optimizers.ImageOptimizerRuntime.Utils;
 
@@ -12,27 +10,24 @@ namespace MinMe.Optimizers.ImageOptimizerRuntime;
 internal class OptimizerPowerPoint : OptimizerBase<PresentationDocument>
 {
     public OptimizerPowerPoint(RecyclableMemoryStreamManager manager, ImageOptimizerOptions options)
-        : base(manager, options)
-    {
-    }
+        : base(manager, options) { }
 
     protected override void RemoveUnusedPieces(PresentationDocument document)
     {
         var presentationPart = document.PresentationPart;
         var usedLayoutUris = new HashSet<Uri>(
-            presentationPart.SlideParts
-                .Select(slide => slide.SlideLayoutPart.Uri));
+            presentationPart.SlideParts.Select(slide => slide.SlideLayoutPart.Uri)
+        );
 
         var slideMasterIdList = presentationPart.Presentation.SlideMasterIdList;
-        var slideMasterIds =
-            slideMasterIdList.ChildElements.Cast<SlideMasterId>()
-                .ToDictionary(x => x.RelationshipId.Value);
+        var slideMasterIds = slideMasterIdList
+            .ChildElements.Cast<SlideMasterId>()
+            .ToDictionary(x => x.RelationshipId.Value);
 
         foreach (var masterPart in presentationPart.SlideMasterParts.ToList())
         {
             // Skip if at least one layout is used
-            if (masterPart.SlideLayoutParts
-                .Any(layout => usedLayoutUris.Contains(layout.Uri)))
+            if (masterPart.SlideLayoutParts.Any(layout => usedLayoutUris.Contains(layout.Uri)))
                 continue;
 
             var id = presentationPart.GetIdOfPart(masterPart);
@@ -43,12 +38,12 @@ internal class OptimizerPowerPoint : OptimizerBase<PresentationDocument>
 
     protected override IEnumerable<ImagePart> LoadAllImageParts(PresentationDocument document)
     {
-        var imageParts =
-            document.PresentationPart.SlideParts
-                .SelectMany(slide => slide.ImageParts).ToList();
+        var imageParts = document
+            .PresentationPart.SlideParts.SelectMany(slide => slide.ImageParts)
+            .ToList();
         imageParts.AddRange(
-            document.PresentationPart.SlideMasterParts
-                .SelectMany(master => master.ImageParts));
+            document.PresentationPart.SlideMasterParts.SelectMany(master => master.ImageParts)
+        );
         return imageParts;
     }
 
@@ -57,43 +52,46 @@ internal class OptimizerPowerPoint : OptimizerBase<PresentationDocument>
         var slideSize = document.PresentationPart.RootElement.GetFirstChild<SlideSize>();
         return Math.Min(
             Options.ExpectedScreenSize.Width / Converters.EmuToPt(slideSize.Cx.Value),
-            Options.ExpectedScreenSize.Height / Converters.EmuToPt(slideSize.Cy.Value));
+            Options.ExpectedScreenSize.Height / Converters.EmuToPt(slideSize.Cy.Value)
+        );
     }
 
     protected override IEnumerable<ImageUsageInfo> GetImageUsageInfo(PresentationDocument document)
     {
         var presentationPart = document.PresentationPart;
         var slideSizeElement = presentationPart.RootElement.GetFirstChild<SlideSize>();
-        var slideSize = new Size { Width = slideSizeElement.Cx.Value, Height = slideSizeElement.Cy.Value };
+        var slideSize = new Size
+        {
+            Width = slideSizeElement.Cx.Value,
+            Height = slideSizeElement.Cy.Value,
+        };
 
         var result = new List<ImageUsageInfo>();
         foreach (var slide in presentationPart.SlideParts)
-            result.AddRange(
-                GetImageUsageFromPart(slide, slideSize));
+            result.AddRange(GetImageUsageFromPart(slide, slideSize));
         foreach (var master in presentationPart.SlideMasterParts)
-            result.AddRange(
-                GetImageUsageFromPart(master, slideSize));
+            result.AddRange(GetImageUsageFromPart(master, slideSize));
         return result;
     }
 
     private IEnumerable<ImageUsageInfo> GetImageUsageFromPart(OpenXmlPart part, Size slideSize)
     {
         // Analyze single and grouped images
-        var imageUsageInfos =
-            part.RootElement.Descendants<Picture>()
-                .Select(pict =>
-                    new ImageUsageInfo(
-                        part,
-                        pict?.BlipFill?.Blip,
-                        pict?.ShapeProperties?.Transform2D,
-                        pict?.BlipFill?.SourceRectangle))
-                .ToList();
+        var imageUsageInfos = part
+            .RootElement.Descendants<Picture>()
+            .Select(pict => new ImageUsageInfo(
+                part,
+                pict?.BlipFill?.Blip,
+                pict?.ShapeProperties?.Transform2D,
+                pict?.BlipFill?.SourceRectangle
+            ))
+            .ToList();
 
         // Analyze background images
         imageUsageInfos.AddRange(
             part.RootElement.Descendants<CommonSlideData>()
-                .Select(commonSlideData =>
-                    new ImageUsageInfo(part, commonSlideData, slideSize)));
+                .Select(commonSlideData => new ImageUsageInfo(part, commonSlideData, slideSize))
+        );
 
         return imageUsageInfos;
     }

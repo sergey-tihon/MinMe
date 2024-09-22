@@ -2,10 +2,10 @@ using System.Text;
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Packaging;
 using MinMe.Analyzers.Model;
-using Presentation = DocumentFormat.OpenXml.Presentation;
-using Drawing = DocumentFormat.OpenXml.Drawing;
 using static System.String;
+using Drawing = DocumentFormat.OpenXml.Drawing;
 using Picture = DocumentFormat.OpenXml.Presentation.Picture;
+using Presentation = DocumentFormat.OpenXml.Presentation;
 
 namespace MinMe.Analyzers;
 
@@ -34,7 +34,7 @@ public sealed class PowerPointAnalyzer : IDisposable
         {
             Parts = EnumerateAllParts(),
             PartUsages = GetPartUsageData(),
-            Slides = GetSlidesData().ToList()
+            Slides = GetSlidesData().ToList(),
         };
     }
 
@@ -47,9 +47,10 @@ public sealed class PowerPointAnalyzer : IDisposable
         foreach (var idPartPair in _document.Parts)
             ProcessPart(idPartPair.OpenXmlPart);
 
-        result.Sort((x, y) =>
-            Compare(x.PartType, y.PartType, StringComparison.InvariantCultureIgnoreCase));
-        
+        result.Sort(
+            (x, y) => Compare(x.PartType, y.PartType, StringComparison.InvariantCultureIgnoreCase)
+        );
+
         return result;
 
         void ProcessPart(OpenXmlPart root)
@@ -58,9 +59,9 @@ public sealed class PowerPointAnalyzer : IDisposable
             if (!visitedParts.Add(key))
                 return;
 
-            result.Add(new PartInfo(
-                key, root.GetType().Name,
-                root.ContentType, root.GetPartSize()));
+            result.Add(
+                new PartInfo(key, root.GetType().Name, root.ContentType, root.GetPartSize())
+            );
 
             foreach (var refPart in root.DataPartReferenceRelationships)
             {
@@ -69,9 +70,14 @@ public sealed class PowerPointAnalyzer : IDisposable
                 if (!visitedParts.Add(dataPartKey))
                     continue;
 
-                result.Add(new PartInfo(
-                    dataPartKey, dataPart.GetType().Name,
-                    dataPart.ContentType, dataPart.GetPartSize()));
+                result.Add(
+                    new PartInfo(
+                        dataPartKey,
+                        dataPart.GetType().Name,
+                        dataPart.ContentType,
+                        dataPart.GetPartSize()
+                    )
+                );
             }
 
             foreach (var idPartPair in root.Parts)
@@ -81,24 +87,31 @@ public sealed class PowerPointAnalyzer : IDisposable
 
     private Dictionary<string, List<PartUsageInfo>> GetPartUsageData()
     {
-        var usages = new Dictionary<string, List<PartUsageInfo>>(StringComparer.InvariantCultureIgnoreCase);
+        var usages = new Dictionary<string, List<PartUsageInfo>>(
+            StringComparer.InvariantCultureIgnoreCase
+        );
 
         var presentation = _document.PresentationPart;
 
-        foreach (var slideId in presentation.Presentation.SlideIdList.ChildElements.OfType<Presentation.SlideId>())
+        foreach (
+            var slideId in presentation.Presentation.SlideIdList.ChildElements.OfType<Presentation.SlideId>()
+        )
         {
             if (GetPart(slideId.RelationshipId) is not SlidePart slide)
                 continue;
-            
+
             ProcessImages(slide);
             ProcessEmbeddedParts(slide);
-            
+
             AddUsage(slide.Uri, new Reference(presentation.Uri));
-            if (slide.SlideLayoutPart is not { } layout) continue;
+            if (slide.SlideLayoutPart is not { } layout)
+                continue;
             AddUsage(layout.Uri, new Reference(slide.Uri));
-            if (layout.SlideMasterPart is not { } master) continue;
+            if (layout.SlideMasterPart is not { } master)
+                continue;
             AddUsage(master.Uri, new Reference(layout.Uri));
-            if (master.ThemePart is not { } theme) continue;
+            if (master.ThemePart is not { } theme)
+                continue;
             AddUsage(theme.Uri, new Reference(master.Uri));
         }
 
@@ -113,8 +126,8 @@ public sealed class PowerPointAnalyzer : IDisposable
                 usages.Add(key, [usage]);
         }
 
-        OpenXmlPart? GetPart(StringValue? relId)
-            => relId?.HasValue == true ? presentation.GetPartById(relId.Value) : null;
+        OpenXmlPart? GetPart(StringValue? relId) =>
+            relId?.HasValue == true ? presentation.GetPartById(relId.Value) : null;
 
         void ProcessImages(OpenXmlPart slide)
         {
@@ -130,10 +143,13 @@ public sealed class PowerPointAnalyzer : IDisposable
             }
 
             // Analyze background images
-            foreach (var commonSlideData in slide.RootElement.Descendants<Presentation.CommonSlideData>())
+            foreach (
+                var commonSlideData in slide.RootElement.Descendants<Presentation.CommonSlideData>()
+            )
             {
-                var blipFill = commonSlideData?.Background?.BackgroundProperties
-                    ?.Descendants<Presentation.BlipFill>()?.FirstOrDefault();
+                var blipFill = commonSlideData
+                    ?.Background?.BackgroundProperties?.Descendants<Presentation.BlipFill>()
+                    ?.FirstOrDefault();
                 var srcRec = blipFill?.SourceRectangle;
                 var relId = blipFill?.Blip?.Embed?.Value;
                 if (relId is null || srcRec is null)
@@ -144,7 +160,7 @@ public sealed class PowerPointAnalyzer : IDisposable
                 AddUsage(uri, new ImageUsage(usage, slide.Uri));
             }
         }
-        
+
         void ProcessEmbeddedParts(SlidePart slide)
         {
             foreach (var part in slide.EmbeddedPackageParts)
@@ -171,20 +187,21 @@ public sealed class PowerPointAnalyzer : IDisposable
     // Code from Clippit
     private static string GetSlideTitle(SlidePart slidePart)
     {
-        var titleShapes =
-            slidePart.Slide.CommonSlideData.ShapeTree
-                .Descendants<Presentation.Shape>()
-                .Where(shape =>
-                {
-                    var value =
-                        shape.NonVisualShapeProperties
-                            ?.ApplicationNonVisualDrawingProperties
-                            ?.PlaceholderShape?.Type?.Value;
-                        
-                    return value == Presentation.PlaceholderValues.Title || 
-                           value == Presentation.PlaceholderValues.CenteredTitle;
-                })
-                .ToList();
+        var titleShapes = slidePart
+            .Slide.CommonSlideData.ShapeTree.Descendants<Presentation.Shape>()
+            .Where(shape =>
+            {
+                var value = shape
+                    .NonVisualShapeProperties
+                    ?.ApplicationNonVisualDrawingProperties
+                    ?.PlaceholderShape
+                    ?.Type
+                    ?.Value;
+
+                return value == Presentation.PlaceholderValues.Title
+                    || value == Presentation.PlaceholderValues.CenteredTitle;
+            })
+            .ToList();
 
         var paragraphText = new StringBuilder();
         foreach (var shape in titleShapes)
