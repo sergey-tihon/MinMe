@@ -1,6 +1,5 @@
 ﻿using System.Drawing;
 using System.Globalization;
-using DocumentFormat.OpenXml.Wordprocessing;
 
 namespace MinMe.Optimizers.ImageOptimizerRuntime.Utils;
 

@@ -1,11 +1,13 @@
 ﻿using System.Collections.ObjectModel;
 using System.Drawing;
+using System.IO.Packaging;
 using System.Reactive;
 using System.Reactive.Linq;
-using Avalonia.Controls;
 using Avalonia.Controls.Notifications;
 using Avalonia.Platform.Storage;
+using Clippit;
 using Clippit.PowerPoint;
+using DocumentFormat.OpenXml.Packaging;
 using Microsoft.Extensions.Logging;
 using MinMe.Analyzers;
 using MinMe.Analyzers.Model;
@@ -146,8 +148,10 @@ class ActionsPanelViewModel : ViewModelBase
             var count = 0;
             await _stateService.Run(() =>
             {
-                var presentation = new PmlDocument(FileContentInfo.FileName);
-                var slides = PresentationBuilder.PublishSlides(presentation);
+                using var fs = new FileStream(FileContentInfo.FileName, FileMode.Open, FileAccess.Read);
+                using var package = Package.Open(fs);
+                var presentation = PresentationDocument.Open(package, new OpenSettings { AutoSave = false });
+                var slides = PresentationBuilder.PublishSlides(presentation, FileContentInfo.FileName);
                 foreach (var slide in slides)
                 {
                     var targetPath = Path.Combine(targetDir, Path.GetFileName(slide.FileName));
