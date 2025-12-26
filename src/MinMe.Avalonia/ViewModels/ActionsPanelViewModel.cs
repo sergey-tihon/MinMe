@@ -148,10 +148,20 @@ class ActionsPanelViewModel : ViewModelBase
             var count = 0;
             await _stateService.Run(() =>
             {
-                using var fs = new FileStream(FileContentInfo.FileName, FileMode.Open, FileAccess.Read);
+                using var fs = new FileStream(
+                    FileContentInfo.FileName,
+                    FileMode.Open,
+                    FileAccess.Read
+                );
                 using var package = Package.Open(fs);
-                var presentation = PresentationDocument.Open(package, new OpenSettings { AutoSave = false });
-                var slides = PresentationBuilder.PublishSlides(presentation, FileContentInfo.FileName);
+                var presentation = PresentationDocument.Open(
+                    package,
+                    new OpenSettings { AutoSave = false }
+                );
+                var slides = PresentationBuilder.PublishSlides(
+                    presentation,
+                    FileContentInfo.FileName
+                );
                 foreach (var slide in slides)
                 {
                     var targetPath = Path.Combine(targetDir, Path.GetFileName(slide.FileName));

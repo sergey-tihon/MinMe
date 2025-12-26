@@ -25,20 +25,19 @@ public class BaselineTests
     private const string Root = "../../../../data/";
     private const string BaselineFile = Root + "baseline.json";
 
-    private static readonly Lazy<Dictionary<string, OptimizeResult>> Baseline =
-        new(() =>
-        {
-            var json = File.ReadAllText(BaselineFile);
-            var results = JsonSerializer.Deserialize<OptimizeResult[]>(json);
-            if (results is null)
-                throw new NullReferenceException(nameof(results));
+    private static readonly Lazy<Dictionary<string, OptimizeResult>> Baseline = new(() =>
+    {
+        var json = File.ReadAllText(BaselineFile);
+        var results = JsonSerializer.Deserialize<OptimizeResult[]>(json);
+        if (results is null)
+            throw new NullReferenceException(nameof(results));
 
-            return results.ToDictionary(
-                x => x.FileName,
-                x => x,
-                StringComparer.InvariantCultureIgnoreCase
-            )!;
-        });
+        return results.ToDictionary(
+            x => x.FileName,
+            x => x,
+            StringComparer.InvariantCultureIgnoreCase
+        )!;
+    });
 
     private readonly ImageOptimizer _imageOptimizer;
     private readonly ImageOptimizerOptions _options;
