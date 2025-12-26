@@ -12,14 +12,13 @@ jobs:
       fail-fast: false
       matrix:
         os: [windows-latest, macos-latest]
-        dotnet: [10.0.100]
     runs-on: ${{ matrix.os }}
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Setup .NET
-        uses: actions/setup-dotnet@v1
+        uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: ${{ matrix.dotnet }}
+          global-json-file: global.json
       - name: Build and Test
         run: dotnet fsi build.fsx -- -p build
