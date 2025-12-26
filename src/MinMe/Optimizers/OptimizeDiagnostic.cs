@@ -1,15 +1,12 @@
-using System.Collections.Generic;
+namespace MinMe.Optimizers;
 
-namespace MinMe.Optimizers
+/// <summary>
+/// Object containing all diagnostic information related to document optimization.
+/// </summary>
+public class OptimizeDiagnostic
 {
     /// <summary>
-    /// Object containing all diagnostic information related to document optimization.
+    /// List of all errors.
     /// </summary>
-    public class OptimizeDiagnostic
-    {
-        /// <summary>
-        /// List of all errors.
-        /// </summary>
-        public IList<OptimizeError> Errors { get; set; } = new List<OptimizeError>();
-    }
+    public IList<OptimizeError> Errors { get; set; } = new List<OptimizeError>();
 }

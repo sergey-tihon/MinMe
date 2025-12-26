@@ -2,23 +2,19 @@
   "version": 1,
   "isRoot": true,
   "tools": {
-    "fake-cli": {
-      "version": "5.20.4",
+    "csharpier": {
+      "version": "1.2.4",
       "commands": [
-        "fake"
-      ]
+        "csharpier"
+      ],
+      "rollForward": false
     },
-    "paket": {
-      "version": "6.2.1",
+    "dotnet-outdated-tool": {
+      "version": "4.6.9",
       "commands": [
-        "paket"
-      ]
-    },
-    "dotnet-serve": {
-      "version": "1.9.71",
-      "commands": [
-        "dotnet-serve"
-      ]
+        "dotnet-outdated"
+      ],
+      "rollForward": false
     }
   }
 }
