@@ -39,7 +39,7 @@ pipeline "build" {
             |> AssemblyInfoFile.createCSharp "src/MinMe/Properties/AssemblyInfo.Generated.cs")
     }
 
-    stage "Build" { run "dotnet build MinMe.sln -c Release" }
+    stage "Build" { run "dotnet build MinMe.slnx -c Release" }
 
     stage "Restore Test Data" {
         run (fun _ ->

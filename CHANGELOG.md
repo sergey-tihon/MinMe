@@ -1,10 +1,10 @@
 # Changelog
 
-## [0.2.0] - 2024-01-10
+## [0.2.0] - 2025-12-26
 
-- Migration from .NET 6 to .NET 8
+- Migration from .NET 6 to .NET 10
 - Migration to Avalonia 11
-- Migration to SixLabors.ImageSharp v2 with support for *.tiff images
+- Migration to SixLabors.ImageSharp v2 with support for \*.tiff images
 - Migration to Clippit v2 with support of OpenXml v3
 - Migration from FAKE to Fun.Build
 - Remove Blazor WASM UI
@@ -18,3 +18,4 @@
 - Parallel image processing
 - Deletion of unused parts (masters)
 - Replaceable image processing library
+
