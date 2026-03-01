@@ -44,7 +44,7 @@
     <PackageReference Include="Avalonia.Desktop" Version="11.3.12" />
     <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
     <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.3.12" />
-    <PackageReference Include="Avalonia.ReactiveUI" Version="11.3.12" />
+    <PackageReference Include="Avalonia.ReactiveUI" Version="11.3.9" />
     <PackageReference Include="Avalonia.Controls.DataGrid" Version="11.3.12" />
     <PackageReference Include="Devolutions.AvaloniaTheme.MacOS" Version="2026.2.20" />
     <PackageReference Include="Clippit" Version="3.2.0" />
