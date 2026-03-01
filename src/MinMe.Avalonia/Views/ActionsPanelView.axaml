@@ -16,7 +16,8 @@
     </Style>
   </UserControl.Styles>
   <Border BorderBrush="{DynamicResource LayoutBorderMidBrush}"
-          BorderThickness="0,0,0,1">
+          BorderThickness="0,0,0,1"
+          Padding="{Binding $parent[Window].WindowDecorationMargin}">
     <StackPanel Orientation="Horizontal">
       <Menu Classes="MacOS_Theme_MenuLabelBelowIcon Toolbar">
         <MenuItem Header="Open" Command="{Binding OpenCommand}">
