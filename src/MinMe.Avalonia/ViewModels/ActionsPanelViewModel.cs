@@ -53,6 +53,7 @@ class ActionsPanelViewModel : ViewModelBase
         {
             new(
                 "2160p (4K)",
+                "4K",
                 new ImageOptimizerOptions
                 {
                     ExpectedScreenSize = new Size(3840, 2160),
@@ -61,6 +62,7 @@ class ActionsPanelViewModel : ViewModelBase
             ),
             new(
                 "1080p (Full HD)",
+                "1080p",
                 new ImageOptimizerOptions
                 {
                     ExpectedScreenSize = new Size(1920, 1080),
@@ -69,6 +71,7 @@ class ActionsPanelViewModel : ViewModelBase
             ),
             new(
                 "720p (HD ready)",
+                "720p",
                 new ImageOptimizerOptions
                 {
                     ExpectedScreenSize = new Size(1280, 720),
@@ -79,9 +82,10 @@ class ActionsPanelViewModel : ViewModelBase
         _selectedMode = PublishModes[1];
     }
 
-    public class PublishMode(string name, ImageOptimizerOptions options)
+    public class PublishMode(string name, string shortName, ImageOptimizerOptions options)
     {
         public string Name { get; } = name;
+        public string ShortName { get; } = shortName;
         public ImageOptimizerOptions Options { get; } = options;
 
         public override string ToString() => Name;
@@ -202,6 +206,7 @@ class ActionsPanelViewModel : ViewModelBase
         if (file is null)
             return;
 
+        var mode = SelectedMode;
         var targetFilePath = file.TryGetLocalPath()!;
         await _stateService.RunTask(async () =>
         {
@@ -216,7 +221,7 @@ class ActionsPanelViewModel : ViewModelBase
                 extension,
                 originalStream,
                 out _,
-                SelectedMode.Options
+                mode.Options
             );
 
             await using var targetFile = File.Create(targetFilePath);

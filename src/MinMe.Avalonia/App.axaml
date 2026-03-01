@@ -3,6 +3,7 @@
              x:Class="MinMe.Avalonia.App"
              xmlns:local="clr-namespace:MinMe.Avalonia"
              xmlns:converter="clr-namespace:MinMe.Avalonia.Views.Converters;assembly=MinMe.Avalonia"
+             xmlns:macOS="using:Devolutions.AvaloniaTheme.MacOS"
              RequestedThemeVariant="Default">
     
     <Application.DataTemplates>
@@ -14,7 +15,6 @@
     </Application.Resources>
     
     <Application.Styles>
-        <FluentTheme />
-        <StyleInclude Source="avares://Avalonia.Controls.DataGrid/Themes/Fluent.xaml"/>
+        <macOS:DevolutionsMacOsTheme />
     </Application.Styles>
 </Application>

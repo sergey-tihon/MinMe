@@ -1,27 +1,58 @@
-﻿<UserControl xmlns="https://github.com/avaloniaui"
+<UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="50"
              x:Class="MinMe.Avalonia.Views.ActionsPanelView">
   <UserControl.Styles>
-    <Style Selector="Button">
-        <Setter Property="Padding" Value="5"/>
-        <Setter Property="Margin" Value="2"/>
+    <Style Selector="Menu.Toolbar > MenuItem ContentControl#PART_IconPresenter">
+      <Setter Property="MaxWidth" Value="28" />
+      <Setter Property="MaxHeight" Value="28" />
+    </Style>
+    <Style Selector="Menu.Toolbar > MenuItem ContentPresenter#PART_HeaderPresenter.TopLevelMenuItem">
+      <Setter Property="MinWidth" Value="55" />
+      <Setter Property="MaxWidth" Value="80" />
+      <Setter Property="FontSize" Value="13" />
     </Style>
   </UserControl.Styles>
-  <StackPanel Orientation="Horizontal">
-    <Button DockPanel.Dock="Left" Command="{Binding OpenCommand}">Open File</Button>
-    <Separator Width="20"></Separator>
-    <Button Command="{Binding PublishCommand}">Publish Slides</Button>
-    <Separator Width="20"></Separator>
-    <Border BorderThickness="1">
-      <Grid ColumnDefinitions="Auto,5,130" RowDefinitions="*,*">
-        <Button Grid.RowSpan="2" Command="{Binding OptimizeCommand}">Optimize</Button>
-        <TextBlock Grid.Row="0" Grid.Column="2" VerticalAlignment="Center">Target screen resolution</TextBlock>
-        <ComboBox Grid.Column="2" Grid.Row="1" ItemsSource="{Binding PublishModes}"
-                  SelectedItem="{Binding SelectedMode, Mode=TwoWay}" />
-      </Grid>
-    </Border>
-  </StackPanel>
+  <Border BorderBrush="{DynamicResource LayoutBorderMidBrush}"
+          BorderThickness="0,0,0,1">
+    <StackPanel Orientation="Horizontal">
+      <Menu Classes="MacOS_Theme_MenuLabelBelowIcon Toolbar">
+        <MenuItem Header="Open" Command="{Binding OpenCommand}">
+          <MenuItem.Icon>
+            <PathIcon Data="M1.5 3.5C1.5 2.39543 2.39543 1.5 3.5 1.5H6.29289C6.82333 1.5 7.33204 1.71071 7.70711 2.08579L8.91421 3.29289C9.10175 3.48043 9.35811 3.58579 9.62541 3.58579H12.5C13.6046 3.58579 14.5 4.48122 14.5 5.58579V12.5C14.5 13.6046 13.6046 14.5 12.5 14.5H3.5C2.39543 14.5 1.5 13.6046 1.5 12.5V3.5Z"
+                     Width="26" Height="26" />
+          </MenuItem.Icon>
+        </MenuItem>
+        <MenuItem Header="Publish" Command="{Binding PublishCommand}">
+          <MenuItem.Icon>
+            <PathIcon Data="M3 2C3 1.44772 3.44772 1 4 1H9L13 5V14C13 14.5523 12.5523 15 12 15H4C3.44772 15 3 14.5523 3 14V2ZM9 1V5H13M7 9H12M12 9L10 7M12 9L10 11"
+                     Width="26" Height="26" />
+          </MenuItem.Icon>
+        </MenuItem>
+        <MenuItem Header="-" />
+      </Menu>
+      <StackPanel Orientation="Vertical"
+                  VerticalAlignment="Center"
+                  Margin="0,0,0,0">
+        <TextBlock Text="Resolution"
+                   FontSize="13"
+                   HorizontalAlignment="Center"
+                   Margin="0,0,0,2" />
+        <ComboBox ItemsSource="{Binding PublishModes}"
+                  SelectedItem="{Binding SelectedMode}"
+                  MinWidth="80"
+                  FontSize="13" />
+      </StackPanel>
+      <Menu Classes="MacOS_Theme_MenuLabelBelowIcon Toolbar">
+        <MenuItem Header="Optimize" Command="{Binding OptimizeCommand}">
+          <MenuItem.Icon>
+            <PathIcon Data="M8 1C8.55228 1 9 1.44772 9 2V3.07089C9.64428 3.18289 10.249 3.40193 10.7942 3.71121L11.5523 2.95312C11.9428 2.5626 12.576 2.5626 12.9665 2.95312L13.0469 3.03353C13.4374 3.42405 13.4374 4.05722 13.0469 4.44774L12.2888 5.20583C12.5981 5.75101 12.8171 6.35572 12.9291 7H14C14.5523 7 15 7.44772 15 8C15 8.55228 14.5523 9 14 9H12.9291C12.8171 9.64428 12.5981 10.249 12.2888 10.7942L13.0469 11.5523C13.4374 11.9428 13.4374 12.576 13.0469 12.9665L12.9665 13.0469C12.576 13.4374 11.9428 13.4374 11.5523 13.0469L10.7942 12.2888C10.249 12.5981 9.64428 12.8171 9 12.9291V14C9 14.5523 8.55228 15 8 15C7.44772 15 7 14.5523 7 14V12.9291C6.35572 12.8171 5.75101 12.5981 5.20583 12.2888L4.44774 13.0469C4.05722 13.4374 3.42405 13.4374 3.03353 13.0469L2.95312 12.9665C2.5626 12.576 2.5626 11.9428 2.95312 11.5523L3.71121 10.7942C3.40193 10.249 3.18289 9.64428 3.07089 9H2C1.44772 9 1 8.55228 1 8C1 7.44772 1.44772 7 2 7H3.07089C3.18289 6.35572 3.40193 5.75101 3.71121 5.20583L2.95312 4.44774C2.5626 4.05722 2.5626 3.42405 2.95312 3.03353L3.03353 2.95312C3.42405 2.5626 4.05722 2.5626 4.44774 2.95312L5.20583 3.71121C5.75101 3.40193 6.35572 3.18289 7 3.07089V2C7 1.44772 7.44772 1 8 1ZM8 10.5C9.38071 10.5 10.5 9.38071 10.5 8C10.5 6.61929 9.38071 5.5 8 5.5C6.61929 5.5 5.5 6.61929 5.5 8C5.5 9.38071 6.61929 10.5 8 10.5Z"
+                     Width="26" Height="26" />
+          </MenuItem.Icon>
+        </MenuItem>
+      </Menu>
+    </StackPanel>
+  </Border>
 </UserControl>
