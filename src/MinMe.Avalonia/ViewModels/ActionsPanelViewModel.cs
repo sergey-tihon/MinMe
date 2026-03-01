@@ -202,6 +202,7 @@ class ActionsPanelViewModel : ViewModelBase
         if (file is null)
             return;
 
+        var mode = SelectedMode;
         var targetFilePath = file.TryGetLocalPath()!;
         await _stateService.RunTask(async () =>
         {
@@ -216,7 +217,7 @@ class ActionsPanelViewModel : ViewModelBase
                 extension,
                 originalStream,
                 out _,
-                SelectedMode.Options
+                mode.Options
             );
 
             await using var targetFile = File.Create(targetFilePath);

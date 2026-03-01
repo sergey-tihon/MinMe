@@ -5,62 +5,16 @@
              xmlns:view="clr-namespace:MinMe.Avalonia.Views"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600"
              x:Class="MinMe.Avalonia.Views.MainView">
-    <UserControl.Styles>
-      <Style Selector="TabControl">
-        <Setter Property="Background" Value="#F0F0F0"/>
-      </Style>
-      <Style Selector="TabControl WrapPanel">
-        <Setter Property="Background" Value="#2B579A"/>
-      </Style>
-
-      <Style Selector="TabItem">
-        <Setter Property="FontSize" Value="14"/>
-        <Setter Property="Height" Value="34"/>
-        <!--<Setter Property="VerticalAlignment" Value="Center"/>-->
-        <Setter Property="VerticalContentAlignment" Value="Center" />
-        <Setter Property="Background" Value="#2B579A"/>
-        <Setter Property="Foreground" Value="#F0F0F0"/>
-        <Setter Property="Margin" Value="0 0 0 0"/>
-        <Setter Property="Padding" Value="10 0"/>
-      </Style>
-      <Style Selector="TabItem:pointerover /template/ ContentPresenter#PART_ContentPresenter">
-        <Setter Property="Background" Value="#124078"/>
-      </Style>
-
-      <Style Selector="TabItem:focus">
-        <Setter Property="Foreground" Value="#2B579A"/>
-        <Setter Property="Margin" Value="0 0 0 0"/>
-        <Setter Property="Padding" Value="10 0"/>
-      </Style>
-      <Style Selector="TabItem:focus /template/ ContentPresenter#PART_ContentPresenter">
-        <Setter Property="Background" Value="#f0f0f0"/>
-      </Style>
-
-      <Style Selector="TabItem:selected">
-        <Setter Property="Foreground" Value="#2B579A"/>
-        <Setter Property="Margin" Value="0 0 0 0"/>
-        <Setter Property="Padding" Value="10 0"/>
-      </Style>
-      <Style Selector="TabItem:selected /template/ ContentPresenter#PART_ContentPresenter">
-        <Setter Property="Background" Value="#f0f0f0"/>
-      </Style>
-    </UserControl.Styles>
-    <Grid RowDefinitions="50,*,Auto" IsEnabled="{Binding !IsBusy}">
+    <Grid RowDefinitions="Auto,*,Auto" IsEnabled="{Binding !IsBusy}">
       <view:ActionsPanelView DataContext="{Binding ActionsPanelViewModel}"></view:ActionsPanelView>
       <TabControl Grid.Row="1" Margin="0,2,0,0">
         <TabItem Header="Overview">
           <view:OverviewView DataContext="{Binding OverviewViewModel}" />
         </TabItem>
-        <TabItem>
-          <TabItem.Header>
-            <TextBlock Text="{Binding FileContentInfo.Slides.Count, StringFormat=Slides ({0:D})}"></TextBlock>
-          </TabItem.Header>
+        <TabItem Header="{Binding FileContentInfo.Slides.Count, StringFormat='Slides ({0:D})', FallbackValue='Slides'}">
           <view:SlidesInfoView DataContext="{Binding SlidesInfoViewModel}" />
         </TabItem>
-        <TabItem>
-          <TabItem.Header>
-            <TextBlock Text="{Binding FileContentInfo.Parts.Count, StringFormat=Parts ({0:D})}"></TextBlock>
-          </TabItem.Header>
+        <TabItem Header="{Binding FileContentInfo.Parts.Count, StringFormat='Parts ({0:D})', FallbackValue='Parts'}">
           <view:PartsInfoView DataContext="{Binding PartsInfoViewModel}" />
         </TabItem>
       </TabControl>
