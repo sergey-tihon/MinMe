@@ -2,21 +2,24 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:MinMe.Avalonia.ViewModels;assembly=MinMe.Avalonia"
+             xmlns:model="clr-namespace:MinMe.Avalonia.Models;assembly=MinMe.Avalonia"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="250"
-             x:Class="MinMe.Avalonia.Views.SlidesInfoView">
+             x:Class="MinMe.Avalonia.Views.SlidesInfoView"
+             x:DataType="vm:SlidesInfoViewModel">
   <DataGrid Margin="10" ItemsSource="{Binding Slides}">
     <DataGrid.Columns>
-      <DataGridTextColumn Header="#" Binding="{Binding Number}" Width="Auto"/>
-      <DataGridTextColumn Header="Title" Binding="{Binding Title}" Width="*"/>
+      <DataGridTextColumn Header="#" Binding="{ReflectionBinding Number}" Width="Auto"/>
+      <DataGridTextColumn Header="Title" Binding="{ReflectionBinding Title}" Width="*"/>
       <DataGridTemplateColumn Header="Expected Size (bytes)" Width="Auto" SortMemberPath="Size">
         <DataGridTemplateColumn.CellTemplate>
-          <DataTemplate >
+          <DataTemplate x:DataType="model:SlideInfoRow">
             <ContentControl Content="{Binding Converter={StaticResource sizeConverter}}"
                 HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" />
           </DataTemplate>
         </DataGridTemplateColumn.CellTemplate>
       </DataGridTemplateColumn>
-      <DataGridTextColumn Header="Part Name" Binding="{Binding FileName}" Width="Auto"/>
+      <DataGridTextColumn Header="Part Name" Binding="{ReflectionBinding FileName}" Width="Auto"/>
     </DataGrid.Columns>
   </DataGrid>
 </UserControl>

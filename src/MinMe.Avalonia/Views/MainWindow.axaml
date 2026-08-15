@@ -10,6 +10,5 @@
         Icon="/Assets/minme-logo.ico"
         Title="MinMe"
         ExtendClientAreaToDecorationsHint="True"
-        ExtendClientAreaChromeHints="PreferSystemChrome"
-        Content="{Binding Content}">
+        WindowDecorations="Full">
 </Window>
