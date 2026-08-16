@@ -5,11 +5,12 @@ using Microsoft.IO;
 using MinMe.Optimizers;
 using MinMe.Optimizers.ImageOptimizerRuntime.ImageStrategies;
 using MinMe.Optimizers.ImageOptimizerRuntime.Utils;
-using NUnit.Framework;
+using TUnit.Assertions;
+using TUnit.Assertions.Extensions;
+using TUnit.Core;
 
 namespace MinMe.Tests.RepoTests;
 
-[TestFixture]
 public class BaselineTests
 {
     public BaselineTests()
@@ -52,7 +53,7 @@ public class BaselineTests
     private static string GetPath(string file) =>
         Path.GetRelativePath(Root, file).Replace("\\", "/");
 
-    [Test, Explicit]
+    [Test, Explicit, NotInParallel]
     public async Task GenerateBaseline()
     {
         var results = new ConcurrentDictionary<string, OptimizeResult>();
@@ -106,7 +107,7 @@ public class BaselineTests
                     }
                     catch (Exception e)
                     {
-                        await TestContext.Out.WriteLineAsync($"{e.Message} on file {file}");
+                        await Output.WriteLineAsync($"{e.Message} on file {file}");
                     }
                     ;
                 }
@@ -144,17 +145,19 @@ public class BaselineTests
 
         using var reader = new StreamReader(stream);
         var str = await reader.ReadToEndAsync();
-        await TestContext.Out.WriteLineAsync(str);
+        await Output.WriteLineAsync(str);
 
-        Assert.That(str, Does.Contain("10"));
+        await Assert.That(str).Contains("10");
     }
 
     [Test]
     public void BaselineStats() => PrintStats(Baseline.Value.Values.ToList());
 
+    private static TextWriter Output => TestContext.Current!.Output.StandardOutput;
+
     private void PrintStats(List<OptimizeResult> results)
     {
-        var log = TestContext.Out;
+        var log = Output;
         log.WriteLine($"Number of files {results.Count}");
         var totalSizeBefore = results.Sum(x => x.FileSizeBefore);
         log.WriteLine($"Total size before {totalSizeBefore:0,0} bytes");
@@ -204,18 +207,24 @@ public class BaselineTests
             );
     }
 
-    public static IEnumerable<TestCaseData> TestCases() =>
+    public static IEnumerable<TestDataRow<(string File, long ExpectedSize)>> TestCases() =>
         GetAllPptx()
             .Take(10)
             .Select(file =>
             {
                 var key = GetPath(file).Replace('\\', '/');
                 return Baseline.Value.TryGetValue(key, out var result)
-                    ? new TestCaseData(file, result.FileSizeAfter)
-                    : new TestCaseData(file, 0).Ignore("Unknown file");
+                    ? new TestDataRow<(string File, long ExpectedSize)>(
+                        (file, result.FileSizeAfter)
+                    )
+                    : new TestDataRow<(string File, long ExpectedSize)>(
+                        (file, 0),
+                        Skip: "Unknown file"
+                    );
             });
 
-    [TestCaseSource(nameof(TestCases)), Parallelizable(ParallelScope.Children)]
+    [Test]
+    [MethodDataSource(nameof(TestCases))]
     public async Task OptimizeBaseline(string file, long expectedSize)
     {
         await using var srcStream = new FileStream(file, FileMode.Open, FileAccess.Read);
@@ -227,10 +236,10 @@ public class BaselineTests
         );
 
         var deltaSize = dstStream.Length - expectedSize;
-        await TestContext.Out.WriteLineAsync(
+        await Output.WriteLineAsync(
             $"Compression difference {deltaSize:0,0}, new size {dstStream.Length:0,0} bytes"
         );
 
-        Assert.That(dstStream.Length, Is.LessThanOrEqualTo(1.01 * expectedSize));
+        await Assert.That(dstStream.Length <= 1.01 * expectedSize).IsTrue();
     }
 }

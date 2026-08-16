@@ -18,5 +18,5 @@
 - **Type aliases**: Use `using Alias = Namespace.Type;` for OpenXml disambiguation
 - **Error handling**: Return error objects (OptimizeError) rather than throwing exceptions
 - **Async**: Suffix async methods with `Async`, use `CancellationToken` parameter
-- **Tests**: NUnit framework with `[TestFixture]`, `[Test]`, `[TestCaseSource]` attributes
+- **Tests**: TUnit framework with `[Test]`, `[Explicit]`, `[MethodDataSource]`, `[NotInParallel]` attributes
 - **XML docs**: Add `<summary>` for public API classes (see OptimizeError.cs pattern)
