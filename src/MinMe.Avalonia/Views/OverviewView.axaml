@@ -3,11 +3,107 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="clr-namespace:MinMe.Avalonia.ViewModels;assembly=MinMe.Avalonia"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             mc:Ignorable="d"
+             d:DesignWidth="800"
+             d:DesignHeight="450"
              x:Class="MinMe.Avalonia.Views.OverviewView"
              x:DataType="vm:OverviewViewModel">
-  <Grid Margin="5" RowDefinitions="Auto,*">
-    <TextBlock Grid.Row="0" FontSize="18" FontWeight="Bold" Text="{Binding FileName}"></TextBlock>
-    <Image Grid.Row="1" Source="{Binding Thumbnail}"></Image>
-  </Grid>
+  <ScrollViewer HorizontalScrollBarVisibility="Disabled">
+    <StackPanel MaxWidth="860"
+                HorizontalAlignment="Center"
+                Margin="28,30"
+                Spacing="22">
+      <Border BorderBrush="{DynamicResource LayoutBorderMidBrush}"
+              BorderThickness="1"
+              CornerRadius="12"
+              Padding="34,30">
+        <Grid ColumnDefinitions="190,*"
+              VerticalAlignment="Center">
+          <Border Width="150"
+                  Height="150"
+                  CornerRadius="18"
+                  BorderBrush="{DynamicResource LayoutBorderMidBrush}"
+                  BorderThickness="1"
+                  HorizontalAlignment="Left"
+                  VerticalAlignment="Center"
+                  Padding="18">
+            <Image Source="{Binding Thumbnail}"
+                   Stretch="Uniform" />
+          </Border>
+
+          <StackPanel Grid.Column="1"
+                      VerticalAlignment="Center"
+                      Spacing="10">
+            <TextBlock Text="Ready to optimize"
+                       FontSize="26"
+                       FontWeight="SemiBold"
+                       IsVisible="{Binding !HasFile}" />
+            <TextBlock Text="Presentation loaded"
+                       FontSize="26"
+                       FontWeight="SemiBold"
+                       IsVisible="{Binding HasFile}" />
+            <TextBlock Text="Open a PowerPoint presentation to inspect its slides and image assets."
+                       FontSize="15"
+                       Opacity="0.72"
+                       TextWrapping="Wrap"
+                       IsVisible="{Binding !HasFile}" />
+            <TextBlock Text="Your presentation is ready for optimization or publishing."
+                       FontSize="15"
+                       Opacity="0.72"
+                       TextWrapping="Wrap"
+                       IsVisible="{Binding HasFile}" />
+            <Border Background="{DynamicResource LayoutBorderMidBrush}"
+                    Height="1"
+                    Margin="0,4,0,2"
+                    IsVisible="{Binding HasFile}" />
+            <TextBlock Text="{Binding FileName}"
+                       FontSize="15"
+                       FontWeight="SemiBold"
+                       TextTrimming="CharacterEllipsis"
+                       IsVisible="{Binding HasFile}" />
+          </StackPanel>
+        </Grid>
+      </Border>
+
+      <Grid ColumnDefinitions="*,*,*"
+            ColumnSpacing="12"
+            IsVisible="{Binding HasFile}">
+        <Border Padding="16,14"
+                BorderBrush="{DynamicResource LayoutBorderMidBrush}"
+                BorderThickness="1"
+                CornerRadius="10">
+          <StackPanel Spacing="4">
+            <TextBlock Text="Slides" FontSize="12" Opacity="0.65" />
+            <TextBlock Text="{Binding SlideCount}"
+                       FontSize="22"
+                       FontWeight="SemiBold" />
+          </StackPanel>
+        </Border>
+        <Border Grid.Column="1"
+                Padding="16,14"
+                BorderBrush="{DynamicResource LayoutBorderMidBrush}"
+                BorderThickness="1"
+                CornerRadius="10">
+          <StackPanel Spacing="4">
+            <TextBlock Text="Package parts" FontSize="12" Opacity="0.65" />
+            <TextBlock Text="{Binding PartCount}"
+                       FontSize="22"
+                       FontWeight="SemiBold" />
+          </StackPanel>
+        </Border>
+        <Border Grid.Column="2"
+                Padding="16,14"
+                BorderBrush="{DynamicResource LayoutBorderMidBrush}"
+                BorderThickness="1"
+                CornerRadius="10">
+          <StackPanel Spacing="4">
+            <TextBlock Text="Next step" FontSize="12" Opacity="0.65" />
+            <TextBlock Text="Optimize"
+                       FontSize="18"
+                       FontWeight="SemiBold" />
+          </StackPanel>
+        </Border>
+      </Grid>
+    </StackPanel>
+  </ScrollViewer>
 </UserControl>

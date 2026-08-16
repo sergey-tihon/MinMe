@@ -7,19 +7,42 @@
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600"
              x:Class="MinMe.Avalonia.Views.MainView"
              x:DataType="vm:MainViewModel">
-    <Grid RowDefinitions="Auto,*,Auto" IsEnabled="{Binding !IsBusy}">
-      <view:ActionsPanelView DataContext="{Binding ActionsPanelViewModel}"></view:ActionsPanelView>
-      <TabControl Grid.Row="1" Margin="0,2,0,0">
-        <TabItem Header="Overview">
-          <view:OverviewView DataContext="{Binding OverviewViewModel}" />
-        </TabItem>
-        <TabItem Header="{Binding FileContentInfo.Slides.Count, StringFormat='Slides ({0:D})', FallbackValue='Slides'}">
-          <view:SlidesInfoView DataContext="{Binding SlidesInfoViewModel}" />
-        </TabItem>
-        <TabItem Header="{Binding FileContentInfo.Parts.Count, StringFormat='Parts ({0:D})', FallbackValue='Parts'}">
-          <view:PartsInfoView DataContext="{Binding PartsInfoViewModel}" />
-        </TabItem>
-      </TabControl>
-      <ProgressBar Grid.Row="2" IsIndeterminate="true" IsVisible="{Binding IsBusy}"/>
+    <UserControl.Styles>
+      <Style Selector="TabControl /template/ ContentPresenter#PART_SelectedContentHost">
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="Background" Value="Transparent" />
+      </Style>
+    </UserControl.Styles>
+
+    <Grid RowDefinitions="Auto,*" IsEnabled="{Binding !IsBusy}">
+      <view:ActionsPanelView DataContext="{Binding ActionsPanelViewModel}" />
+
+      <Border Grid.Row="1"
+              Margin="16,14,16,16"
+              BorderBrush="{DynamicResource LayoutBorderMidBrush}"
+              BorderThickness="1"
+              CornerRadius="12"
+              Padding="0">
+        <TabControl Padding="0"
+                    Background="Transparent"
+                    BorderBrush="Transparent">
+          <TabItem Header="Overview">
+            <view:OverviewView DataContext="{Binding OverviewViewModel}" />
+          </TabItem>
+          <TabItem Header="{Binding FileContentInfo.Slides.Count, StringFormat='Slides ({0:D})', FallbackValue='Slides'}">
+            <view:SlidesInfoView DataContext="{Binding SlidesInfoViewModel}" />
+          </TabItem>
+          <TabItem Header="{Binding FileContentInfo.Parts.Count, StringFormat='Parts ({0:D})', FallbackValue='Parts'}">
+            <view:PartsInfoView DataContext="{Binding PartsInfoViewModel}" />
+          </TabItem>
+        </TabControl>
+      </Border>
+
+      <ProgressBar Grid.Row="1"
+                   Margin="16,0"
+                   VerticalAlignment="Bottom"
+                   Height="3"
+                   IsIndeterminate="true"
+                   IsVisible="{Binding IsBusy}" />
     </Grid>
 </UserControl>

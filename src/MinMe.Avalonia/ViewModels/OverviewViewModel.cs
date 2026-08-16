@@ -24,6 +24,17 @@ class OverviewViewModel : ViewModelBase
             .FileContentInfo.Select(GetThumbnail)
             .ToProperty(this, nameof(Thumbnail), defaultThumbnail, deferSubscription: true);
 
+        _hasFile = stateService
+            .FileContentInfo.Select(x => x is not null)
+            .ToProperty(this, nameof(HasFile), deferSubscription: true);
+
+        _slideCount = stateService
+            .FileContentInfo.Select(x => x?.Slides.Count ?? 0)
+            .ToProperty(this, nameof(SlideCount), deferSubscription: true);
+        _partCount = stateService
+            .FileContentInfo.Select(x => x?.Parts.Count ?? 0)
+            .ToProperty(this, nameof(PartCount), deferSubscription: true);
+
         Bitmap GetThumbnail(Analyzers.Model.FileContentInfo? x)
         {
             if (x is null)
@@ -57,6 +68,15 @@ class OverviewViewModel : ViewModelBase
 
     private readonly ObservableAsPropertyHelper<Bitmap> _thumbnail;
     public Bitmap Thumbnail => _thumbnail.Value;
+
+    private readonly ObservableAsPropertyHelper<bool> _hasFile;
+    public bool HasFile => _hasFile.Value;
+
+    private readonly ObservableAsPropertyHelper<int> _slideCount;
+    public int SlideCount => _slideCount.Value;
+
+    private readonly ObservableAsPropertyHelper<int> _partCount;
+    public int PartCount => _partCount.Value;
 
     private readonly ObservableAsPropertyHelper<string> _fileName;
     public string FileName => _fileName.Value;
