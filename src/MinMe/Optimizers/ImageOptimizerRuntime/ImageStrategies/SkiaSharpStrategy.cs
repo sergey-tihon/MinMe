@@ -52,22 +52,38 @@ public class SkiaSharpStrategy(
 
         using var pixmap = image.PeekPixels();
 
-        var newImageStream = StreamManager.GetStream();
-        Encode(newImageStream, w => pixmap.Encode(w, _pngOptions));
-
-        if (!HasTransparentPixels(image))
+        Stream? pngImageStream = null;
+        Stream? jpegImageStream = null;
+        try
         {
-            var jpegImageStream = StreamManager.GetStream();
-            Encode(jpegImageStream, w => pixmap.Encode(w, _jpegOptions));
-            if (jpegImageStream.Length < newImageStream.Length)
-            {
-                newImageStream.Dispose();
-                return jpegImageStream;
-            }
-            jpegImageStream.Dispose();
-        }
+            pngImageStream = StreamManager.GetStream();
+            Encode(pngImageStream, w => pixmap.Encode(w, _pngOptions));
 
-        return newImageStream;
+            if (HasTransparentPixels(image))
+            {
+                var transparentPng = pngImageStream;
+                pngImageStream = null;
+                return transparentPng;
+            }
+
+            jpegImageStream = StreamManager.GetStream();
+            Encode(jpegImageStream, w => pixmap.Encode(w, _jpegOptions));
+            if (jpegImageStream.Length < pngImageStream.Length)
+            {
+                var smallerJpeg = jpegImageStream;
+                jpegImageStream = null;
+                return smallerJpeg;
+            }
+
+            var pngResult = pngImageStream;
+            pngImageStream = null;
+            return pngResult;
+        }
+        finally
+        {
+            pngImageStream?.Dispose();
+            jpegImageStream?.Dispose();
+        }
     }
 
     private static SKBitmap? Crop(SKBitmap source, ImageCrop? crop, Size srcImageSize)

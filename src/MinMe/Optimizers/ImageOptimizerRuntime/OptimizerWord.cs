@@ -15,13 +15,17 @@ internal class OptimizerWord(RecyclableMemoryStreamManager manager, ImageOptimiz
 
     protected override IEnumerable<ImagePart> LoadAllImageParts(MainDocumentPart root) => root.ImageParts;
 
-    protected override double GetScaleRatio(MainDocumentPart root) =>
-        (root.RootElement?.Descendants<PageSize>() ?? [])
+    protected override double GetScaleRatio(MainDocumentPart root)
+    {
+        var minimumPageWidth = (root.RootElement?.Descendants<PageSize>() ?? [])
             .Select(size => size.Width?.Value)
             .OfType<uint>()
             .Select(width => Converters.TwipToPt((int)width))
             .Append(Options.ExpectedScreenSize.Width)
             .Min();
+
+        return Options.ExpectedScreenSize.Width / minimumPageWidth;
+    }
 
     protected override IEnumerable<ImageUsageInfo> GetImageUsageInfo(MainDocumentPart root)
     {
