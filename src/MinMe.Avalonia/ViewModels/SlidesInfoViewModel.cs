@@ -52,7 +52,7 @@ class SlidesInfoViewModel : ViewModelBase
         }
         else
         {
-            rows = new List<SlideInfoRow>();
+            rows = [];
         }
 
         return new DataGridCollectionView(rows);

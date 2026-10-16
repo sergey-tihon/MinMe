@@ -4,7 +4,6 @@ using System.Text.Json.Serialization;
 using Microsoft.IO;
 using MinMe.Optimizers;
 using MinMe.Optimizers.ImageOptimizerRuntime.ImageStrategies;
-using MinMe.Optimizers.ImageOptimizerRuntime.Utils;
 using TUnit.Assertions;
 using TUnit.Assertions.Extensions;
 using TUnit.Core;
@@ -19,7 +18,7 @@ public class BaselineTests
         _imageOptimizer = new ImageOptimizer(streamManager);
         _options = new ImageOptimizerOptions
         {
-            ImageStrategy = new ImageSharpStrategy(streamManager),
+            ImageStrategy = new SkiaSharpStrategy(streamManager),
         };
     }
 
@@ -66,52 +65,45 @@ public class BaselineTests
             }
         }
 
-        await GetAllPptx()
-            .ForEachAsync(
-                Environment.ProcessorCount,
-                async file =>
+        await Parallel.ForEachAsync(
+            GetAllPptx(),
+            new ParallelOptions { MaxDegreeOfParallelism = Environment.ProcessorCount },
+            async (file, _) =>
+            {
+                await using var srcStream = new FileStream(file, FileMode.Open, FileAccess.Read);
+
+                var fileName = GetPath(file);
+                var result = results.GetOrAdd(
+                    fileName,
+                    _ => new OptimizeResult
+                    {
+                        FileName = fileName,
+                        FileSizeBefore = srcStream.Length,
+                        FileSizeAfter = srcStream.Length,
+                    }
+                );
+                result.FileSizeAfter = srcStream.Length;
+
+                try
                 {
-                    await using var srcStream = new FileStream(
-                        file,
-                        FileMode.Open,
-                        FileAccess.Read
+                    await using var dstStream = _imageOptimizer.Transform(
+                        ".pptx",
+                        srcStream,
+                        out var diagnostic,
+                        _options
                     );
-
-                    var fileName = GetPath(file);
-                    var result = results.GetOrAdd(
-                        fileName,
-                        _ => new OptimizeResult
-                        {
-                            FileName = fileName,
-                            FileSizeBefore = srcStream.Length,
-                        }
-                    );
-
-                    try
-                    {
-                        await using var dstStream = _imageOptimizer.Transform(
-                            ".pptx",
-                            srcStream,
-                            out var diagnostic,
-                            _options
-                        );
-                        result.FileSizeAfter = dstStream.Length;
-
-                        if (diagnostic.Errors.Count > 0)
-                        {
-                            result.Errors = diagnostic
-                                .Errors.Select(x => x.ToString())
-                                .OrderBy(x => x)
-                                .ToList();
-                        }
-                    }
-                    catch (Exception e)
-                    {
-                        await Output.WriteLineAsync($"{e.Message} on file {file}");
-                    }
-                    ;
+                    result.FileSizeAfter = dstStream.Length;
+                    result.Errors = diagnostic.Errors.Count > 0
+                        ? diagnostic.Errors.Select(x => x.ToString()).OrderBy(x => x).ToList()
+                        : null;
                 }
-            );
+                catch (Exception e)
+                {
+                    result.Errors = [$"[{e.GetType().Name}] {e.Message}"];
+                    await Output.WriteLineAsync($"{e.Message} on file {file}");
+                }
+            }
+        );
 
         var data = results.Values.OrderBy(x => x.FileName).ToList();
 
@@ -162,48 +154,24 @@ public class BaselineTests
         var totalSizeBefore = results.Sum(x => x.FileSizeBefore);
         log.WriteLine($"Total size before {totalSizeBefore:0,0} bytes");
 
-        log.WriteLine("MacOS results");
-        {
-            var totalSizeAfter = results.Sum(x =>
-                x.FileSizeAfterOnOs.GetValueOrDefault("macOS", 0)
-            );
+        var totalSizeAfter = results.Sum(x => x.FileSizeAfter);
+        log.WriteLine(
+            $"Total size after {totalSizeAfter:0,0} bytes (-{totalSizeBefore - totalSizeAfter:0,0} bytes)"
+        );
+        var totalCompression = 100.0 * (totalSizeBefore - totalSizeAfter) / totalSizeBefore;
+        log.WriteLine($"Total compression {totalCompression:F2}%");
+
+        log.WriteLine("Top 10 docs by compression:");
+        foreach (var result in results.OrderByDescending(x => x.Compression).Take(10))
+            Print(result);
+
+        log.WriteLine("Top 10 docs by saved space:");
+        foreach (var result in results.OrderByDescending(x => x.FileSizeBefore - x.FileSizeAfter).Take(10))
+            Print(result);
+
+        void Print(OptimizeResult result) =>
             log.WriteLine(
-                $"\tTotal size after {totalSizeAfter:0,0} bytes (-{totalSizeBefore - totalSizeAfter:0,0} bytes)"
-            );
-
-            var totalCompression = 100.0 * (totalSizeBefore - totalSizeAfter) / totalSizeBefore;
-            log.WriteLine($"\tTotal compression {totalCompression:F2}%");
-        }
-        log.WriteLine("Windows results");
-        {
-            var totalSizeAfter = results.Sum(x => x.FileSizeAfterOnOs.GetValueOrDefault("win", 0));
-            log.WriteLine(
-                $"\tTotal size after {totalSizeAfter:0,0} bytes (-{totalSizeBefore - totalSizeAfter:0,0} bytes)"
-            );
-
-            var totalCompression = 100.0 * (totalSizeBefore - totalSizeAfter) / totalSizeBefore;
-            log.WriteLine($"\tTotal compression {totalCompression:F2}%");
-        }
-
-        log.WriteLine($"Top 10 docs by compression ({OptimizeResult.OsMoniker}):");
-        foreach (var x in results.OrderByDescending(x => x.Compression).Take(10))
-        {
-            Print(x);
-        }
-
-        log.WriteLine($"Top 10 docs by saved space: ({OptimizeResult.OsMoniker})");
-        foreach (
-            var x in results.OrderByDescending(x => x.FileSizeBefore - x.FileSizeAfter).Take(10)
-        )
-        {
-            Print(x);
-        }
-
-        return;
-
-        void Print(OptimizeResult x) =>
-            log.WriteLine(
-                $"\t[{x.Compression:0.00}%] {x.FileName} from {x.FileSizeBefore:0,0} to {x.FileSizeAfter:0,0} (optimized {x.FileSizeBefore - x.FileSizeAfter:0,0} bytes)"
+                $"\t[{result.Compression:0.00}%] {result.FileName} from {result.FileSizeBefore:0,0} to {result.FileSizeAfter:0,0} (optimized {result.FileSizeBefore - result.FileSizeAfter:0,0} bytes)"
             );
     }
 

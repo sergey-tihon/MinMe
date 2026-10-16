@@ -3,6 +3,7 @@ using MinMe.Optimizers.ImageOptimizerRuntime.ImageStrategies;
 
 namespace MinMe.Optimizers;
 
+/// <summary>Options controlling image and document optimization.</summary>
 public class ImageOptimizerOptions
 {
     public IImageStrategy? ImageStrategy { get; set; } = null;

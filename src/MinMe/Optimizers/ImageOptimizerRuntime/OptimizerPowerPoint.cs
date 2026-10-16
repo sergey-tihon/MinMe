@@ -7,22 +7,28 @@ using MinMe.Optimizers.ImageOptimizerRuntime.Utils;
 
 namespace MinMe.Optimizers.ImageOptimizerRuntime;
 
-internal class OptimizerPowerPoint : OptimizerBase<PresentationDocument>
+internal class OptimizerPowerPoint(RecyclableMemoryStreamManager manager, ImageOptimizerOptions options)
+    : OptimizerBase<PresentationPart>(manager, options)
 {
-    public OptimizerPowerPoint(RecyclableMemoryStreamManager manager, ImageOptimizerOptions options)
-        : base(manager, options) { }
+    private const int DefaultSlideCx = 9_144_000;
+    private const int DefaultSlideCy = 6_858_000;
 
-    protected override void RemoveUnusedPieces(PresentationDocument document)
+    protected override void RemoveUnusedPieces(PresentationPart presentationPart)
     {
-        var presentationPart = document.PresentationPart;
-        var usedLayoutUris = new HashSet<Uri>(
-            presentationPart.SlideParts.Select(slide => slide.SlideLayoutPart.Uri)
-        );
+        var usedLayoutUris = presentationPart
+            .SlideParts.Select(slide => slide.SlideLayoutPart?.Uri)
+            .OfType<Uri>()
+            .ToHashSet();
 
-        var slideMasterIdList = presentationPart.Presentation.SlideMasterIdList;
-        var slideMasterIds = slideMasterIdList
-            .ChildElements.Cast<SlideMasterId>()
-            .ToDictionary(x => x.RelationshipId.Value);
+        if (presentationPart.Presentation?.SlideMasterIdList is not { } slideMasterIdList)
+            return;
+
+        var slideMasterIds = new Dictionary<string, SlideMasterId>();
+        foreach (var slideMasterId in slideMasterIdList.Elements<SlideMasterId>())
+        {
+            if (slideMasterId.RelationshipId?.Value is { } relationshipId)
+                slideMasterIds.Add(relationshipId, slideMasterId);
+        }
 
         foreach (var masterPart in presentationPart.SlideMasterParts.ToList())
         {
@@ -31,40 +37,35 @@ internal class OptimizerPowerPoint : OptimizerBase<PresentationDocument>
                 continue;
 
             var id = presentationPart.GetIdOfPart(masterPart);
-            slideMasterIdList.RemoveChild(slideMasterIds[id]);
+            if (slideMasterIds.TryGetValue(id, out var slideMasterId))
+                slideMasterIdList.RemoveChild(slideMasterId);
             presentationPart.DeletePart(masterPart);
         }
     }
 
-    protected override IEnumerable<ImagePart> LoadAllImageParts(PresentationDocument document)
+    protected override IEnumerable<ImagePart> LoadAllImageParts(PresentationPart presentationPart)
     {
-        var imageParts = document
-            .PresentationPart.SlideParts.SelectMany(slide => slide.ImageParts)
-            .ToList();
+        var imageParts = presentationPart.SlideParts.SelectMany(slide => slide.ImageParts).ToList();
         imageParts.AddRange(
-            document.PresentationPart.SlideMasterParts.SelectMany(master => master.ImageParts)
+            presentationPart.SlideMasterParts.SelectMany(master => master.ImageParts)
         );
         return imageParts;
     }
 
-    protected override double GetScaleRatio(PresentationDocument document)
+    protected override double GetScaleRatio(PresentationPart presentationPart)
     {
-        var slideSize = document.PresentationPart.RootElement.GetFirstChild<SlideSize>();
+        var slideSize = GetSlideSize(presentationPart);
         return Math.Min(
-            Options.ExpectedScreenSize.Width / Converters.EmuToPt(slideSize.Cx.Value),
-            Options.ExpectedScreenSize.Height / Converters.EmuToPt(slideSize.Cy.Value)
+            Options.ExpectedScreenSize.Width / Converters.EmuToPt(slideSize.Width),
+            Options.ExpectedScreenSize.Height / Converters.EmuToPt(slideSize.Height)
         );
     }
 
-    protected override IEnumerable<ImageUsageInfo> GetImageUsageInfo(PresentationDocument document)
+    protected override IEnumerable<ImageUsageInfo> GetImageUsageInfo(
+        PresentationPart presentationPart
+    )
     {
-        var presentationPart = document.PresentationPart;
-        var slideSizeElement = presentationPart.RootElement.GetFirstChild<SlideSize>();
-        var slideSize = new Size
-        {
-            Width = slideSizeElement.Cx.Value,
-            Height = slideSizeElement.Cy.Value,
-        };
+        var slideSize = GetSlideSize(presentationPart);
 
         var result = new List<ImageUsageInfo>();
         foreach (var slide in presentationPart.SlideParts)
@@ -74,22 +75,35 @@ internal class OptimizerPowerPoint : OptimizerBase<PresentationDocument>
         return result;
     }
 
-    private IEnumerable<ImageUsageInfo> GetImageUsageFromPart(OpenXmlPart part, Size slideSize)
+    private static Size GetSlideSize(PresentationPart presentationPart)
     {
+        var slideSize = presentationPart.Presentation?.SlideSize;
+        return new Size
+        {
+            Width = slideSize?.Cx?.Value ?? DefaultSlideCx,
+            Height = slideSize?.Cy?.Value ?? DefaultSlideCy,
+        };
+    }
+
+    private static IEnumerable<ImageUsageInfo> GetImageUsageFromPart(OpenXmlPart part, Size slideSize)
+    {
+        if (part.RootElement is not { } root)
+            return [];
+
         // Analyze single and grouped images
-        var imageUsageInfos = part
-            .RootElement.Descendants<Picture>()
+        var imageUsageInfos = root
+            .Descendants<Picture>()
             .Select(pict => new ImageUsageInfo(
                 part,
-                pict?.BlipFill?.Blip,
-                pict?.ShapeProperties?.Transform2D,
-                pict?.BlipFill?.SourceRectangle
+                pict.BlipFill?.Blip,
+                pict.ShapeProperties?.Transform2D,
+                pict.BlipFill?.SourceRectangle
             ))
             .ToList();
 
         // Analyze background images
         imageUsageInfos.AddRange(
-            part.RootElement.Descendants<CommonSlideData>()
+            root.Descendants<CommonSlideData>()
                 .Select(commonSlideData => new ImageUsageInfo(part, commonSlideData, slideSize))
         );
 

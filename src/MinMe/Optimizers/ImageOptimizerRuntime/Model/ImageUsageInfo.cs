@@ -91,18 +91,13 @@ internal class ImageUsageInfo
         RelId = imageData?.RelationshipId;
 
         var attributes = new Dictionary<string, string>();
-        var enumerable = shape
-            ?.Style?.Value?.Split(new[] { ';' }, StringSplitOptions.RemoveEmptyEntries)
-            ?.ToList();
+        var enumerable = shape?.Style?.Value?.Split(';', StringSplitOptions.RemoveEmptyEntries);
         if (enumerable != null)
         {
             foreach (var pair in enumerable)
             {
                 var split = pair.Split(':');
-                if (attributes.ContainsKey(split[0]))
-                    attributes[split[0]] = split[1];
-                else
-                    attributes.Add(split[0], split[1]);
+                attributes[split[0]] = split[1];
             }
         }
 
@@ -141,20 +136,20 @@ internal class ImageUsageInfo
         return result.Left + result.Bottom + result.Right + result.Top == 0 ? null : result;
     }
 
-    private static long ParseStringInt(StringValue value)
+    private static long ParseStringInt(StringValue? value)
     {
-        if (value == null || !value.HasValue)
+        if (value?.Value is not { } text)
             return 0;
-        var x = value.Value.Trim('f', '%');
+        var x = text.Trim('f', '%');
         if (!long.TryParse(x, out var result))
             return 0;
 
-        if (value.Value.EndsWith("f"))
+        if (text.EndsWith("f"))
             return 100_000 * result / 65_536;
-        if (value.Value.EndsWith("%"))
+        if (text.EndsWith("%"))
             return 1000 * result;
 
-        throw new FormatException($"Unsupported vml crop format {value.Value}");
+        throw new FormatException($"Unsupported vml crop format {text}");
         //https://msdn.microsoft.com/en-us/library/documentformat.openxml.vml.imagedata(v=office.15).aspx
     }
 

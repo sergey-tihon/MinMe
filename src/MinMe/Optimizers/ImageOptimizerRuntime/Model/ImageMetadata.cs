@@ -3,24 +3,23 @@ using DocumentFormat.OpenXml.Packaging;
 
 namespace MinMe.Optimizers.ImageOptimizerRuntime.Model;
 
-internal class ImageMetadata
+internal class ImageMetadata(ImagePart imagePart)
 {
     /// <summary>
     /// OpenXML image part from Office document (contains image binary)
     /// </summary>
-    public ImagePart ImagePart { get; }
+    public ImagePart ImagePart { get; } = imagePart;
 
     /// <summary>
     /// Image sizes found in document markup
     /// </summary>
-    public List<Size> Sizes { get; } = new();
+    public List<Size> Sizes { get; } = [];
 
     /// <summary>
     /// Image crops found in document markup
     /// </summary>
-    public List<ImageCrop> Crops { get; } = new();
+    public List<ImageCrop> Crops { get; } = [];
 
-    public ImageMetadata(ImagePart imagePart) => ImagePart = imagePart;
 
     public bool IsCropped { get; set; }
 }

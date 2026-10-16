@@ -1,7 +1,7 @@
 ﻿using System.Collections.ObjectModel;
 using System.Drawing;
 using System.IO.Packaging;
-using System.Reactive;
+using RxVoid = ReactiveUI.Primitives.RxVoid;
 using System.Reactive.Linq;
 using Avalonia.Controls.Notifications;
 using Avalonia.Platform.Storage;
@@ -49,8 +49,8 @@ class ActionsPanelViewModel : ViewModelBase
         var moreThanOneSlide = _stateService.FileContentInfo.Select(x => x?.Slides.Count > 1);
         PublishCommand = ReactiveCommand.CreateFromTask(PublishSlides, moreThanOneSlide);
 
-        PublishModes = new ObservableCollection<PublishMode>
-        {
+        PublishModes =
+        [
             new(
                 "2160p (4K)",
                 new ImageOptimizerOptions
@@ -75,7 +75,7 @@ class ActionsPanelViewModel : ViewModelBase
                     DegreeOfParallelism = Environment.ProcessorCount,
                 }
             ),
-        };
+        ];
         _selectedMode = PublishModes[1];
     }
 
@@ -99,9 +99,9 @@ class ActionsPanelViewModel : ViewModelBase
         set => this.RaiseAndSetIfChanged(ref _selectedMode, value);
     }
 
-    public ReactiveCommand<Unit, Unit> OpenCommand { get; }
-    public ReactiveCommand<Unit, Unit> OptimizeCommand { get; }
-    public ReactiveCommand<Unit, Unit> PublishCommand { get; }
+    public ReactiveCommand<RxVoid, RxVoid> OpenCommand { get; }
+    public ReactiveCommand<RxVoid, RxVoid> OptimizeCommand { get; }
+    public ReactiveCommand<RxVoid, RxVoid> PublishCommand { get; }
 
     private async Task OpenFile()
     {

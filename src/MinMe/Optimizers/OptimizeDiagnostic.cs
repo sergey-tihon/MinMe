@@ -8,5 +8,5 @@ public class OptimizeDiagnostic
     /// <summary>
     /// List of all errors.
     /// </summary>
-    public IList<OptimizeError> Errors { get; set; } = new List<OptimizeError>();
+    public IList<OptimizeError> Errors { get; set; } = [];
 }

@@ -9,6 +9,7 @@ using Presentation = DocumentFormat.OpenXml.Presentation;
 
 namespace MinMe.Analyzers;
 
+/// <summary>Analyzes PowerPoint parts, image usages, and slide metadata.</summary>
 public sealed class PowerPointAnalyzer : IDisposable
 {
     public PowerPointAnalyzer(string fileName)
@@ -16,11 +17,19 @@ public sealed class PowerPointAnalyzer : IDisposable
         _fileName = fileName;
         _fileStream = File.Open(fileName, FileMode.Open);
         _document = OpenXmlFactory.OpenPowerPoint(_fileStream, false, true);
+        if (_document.PresentationPart is not { } presentationPart)
+        {
+            _document.Dispose();
+            _fileStream.Dispose();
+            throw new InvalidDataException("PresentationPart is missing.");
+        }
+        _presentationPart = presentationPart;
     }
 
     private readonly string _fileName;
     private readonly FileStream _fileStream;
     private readonly PresentationDocument _document;
+    private readonly PresentationPart _presentationPart;
 
     public void Dispose()
     {
@@ -59,9 +68,7 @@ public sealed class PowerPointAnalyzer : IDisposable
             if (!visitedParts.Add(key))
                 return;
 
-            result.Add(
-                new PartInfo(key, root.GetType().Name, root.ContentType, root.GetPartSize())
-            );
+            result.Add(new PartInfo(key, root.GetType().Name, root.ContentType, root.GetPartSize()));
 
             foreach (var refPart in root.DataPartReferenceRelationships)
             {
@@ -91,10 +98,10 @@ public sealed class PowerPointAnalyzer : IDisposable
             StringComparer.InvariantCultureIgnoreCase
         );
 
-        var presentation = _document.PresentationPart;
+        var presentation = _presentationPart;
 
         foreach (
-            var slideId in presentation.Presentation.SlideIdList.ChildElements.OfType<Presentation.SlideId>()
+            var slideId in presentation.Presentation?.SlideIdList?.Elements<Presentation.SlideId>() ?? []
         )
         {
             if (GetPart(slideId.RelationshipId) is not SlidePart slide)
@@ -127,14 +134,17 @@ public sealed class PowerPointAnalyzer : IDisposable
         }
 
         OpenXmlPart? GetPart(StringValue? relId) =>
-            relId?.HasValue == true ? presentation.GetPartById(relId.Value) : null;
+            relId?.Value is { } id ? presentation.GetPartById(id) : null;
 
         void ProcessImages(OpenXmlPart slide)
         {
+            if (slide.RootElement is not { } root)
+                return;
+
             // Analyze single and grouped images
-            foreach (var pic in slide.RootElement.Descendants<Picture>())
+            foreach (var pic in root.Descendants<Picture>())
             {
-                var relId = pic.BlipFill?.Blip.Embed?.Value;
+                var relId = pic.BlipFill?.Blip?.Embed?.Value;
                 if (relId is null)
                     continue;
                 var uri = slide.GetPartById(relId).Uri;
@@ -143,13 +153,11 @@ public sealed class PowerPointAnalyzer : IDisposable
             }
 
             // Analyze background images
-            foreach (
-                var commonSlideData in slide.RootElement.Descendants<Presentation.CommonSlideData>()
-            )
+            foreach (var commonSlideData in root.Descendants<Presentation.CommonSlideData>())
             {
                 var blipFill = commonSlideData
-                    ?.Background?.BackgroundProperties?.Descendants<Presentation.BlipFill>()
-                    ?.FirstOrDefault();
+                    .Background?.BackgroundProperties?.Descendants<Presentation.BlipFill>()
+                    .FirstOrDefault();
                 var srcRec = blipFill?.SourceRectangle;
                 var relId = blipFill?.Blip?.Embed?.Value;
                 if (relId is null || srcRec is null)
@@ -164,31 +172,33 @@ public sealed class PowerPointAnalyzer : IDisposable
         void ProcessEmbeddedParts(SlidePart slide)
         {
             foreach (var part in slide.EmbeddedPackageParts)
-            {
                 AddUsage(part.Uri, new Reference(slide.Uri));
-            }
         }
     }
 
     private IEnumerable<SlideInfo> GetSlidesData()
     {
-        var presentationPart = _document.PresentationPart;
-        var slideIdList = presentationPart.Presentation.SlideIdList;
-
-        var number = 1;
-        foreach (var slideId in slideIdList.Cast<Presentation.SlideId>())
+        var position = 1;
+        foreach (
+            var slideId in _presentationPart.Presentation?.SlideIdList?.Elements<Presentation.SlideId>() ?? []
+        )
         {
-            var part = presentationPart.GetPartById(slideId.RelationshipId);
-            var title = GetSlideTitle((SlidePart)part);
-            yield return new SlideInfo(number++, part.Uri.OriginalString, title);
+            var number = position++;
+            if (
+                slideId.RelationshipId?.Value is not { } relationshipId
+                || _presentationPart.GetPartById(relationshipId) is not SlidePart slidePart
+            )
+                continue;
+
+            var title = GetSlideTitle(slidePart);
+            yield return new SlideInfo(number, slidePart.Uri.OriginalString, title);
         }
     }
 
     // Code from Clippit
     private static string GetSlideTitle(SlidePart slidePart)
     {
-        var titleShapes = slidePart
-            .Slide.CommonSlideData.ShapeTree.Descendants<Presentation.Shape>()
+        var titleShapes = (slidePart.Slide?.CommonSlideData?.ShapeTree?.Descendants<Presentation.Shape>() ?? [])
             .Where(shape =>
             {
                 var value = shape
@@ -207,14 +217,10 @@ public sealed class PowerPointAnalyzer : IDisposable
         foreach (var shape in titleShapes)
         {
             // Get the text in each paragraph in this shape.
-            foreach (var paragraph in shape.TextBody.Descendants<Drawing.Paragraph>())
+            foreach (var paragraph in shape.TextBody?.Descendants<Drawing.Paragraph>() ?? [])
             {
                 foreach (var text in paragraph.Descendants<Drawing.Text>())
-                {
                     paragraphText.Append(text.Text);
-                }
-                //if (paragraphText.Length > 0)
-                //    paragraphText.Append(Environment.NewLine);
             }
         }
 

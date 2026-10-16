@@ -3,51 +3,23 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <ApplicationIcon>Assets/minme-logo.ico</ApplicationIcon>
-    <!-- <PublishReadyToRun>true</PublishReadyToRun>
-    <PublishSingleFile>true</PublishSingleFile> -->
   </PropertyGroup>
   <ItemGroup>
-    <Compile Update="**\*.xaml.cs">
-      <DependentUpon>%(Filename)</DependentUpon>
-    </Compile>
-    <AvaloniaResource Include="**\*.xaml">
-      <SubType>Designer</SubType>
-    </AvaloniaResource>
     <AvaloniaResource Include="Assets\**" />
-    <Compile Update="App.axaml.cs">
-      <DependentUpon>App.axaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\MainView.axaml.cs">
-      <DependentUpon>MainView.axaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\ActionsPanelView.axaml.cs">
-      <DependentUpon>ActionsPanelView.axaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\MainWindow.axaml.cs">
-      <DependentUpon>MainWindow.axaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\OverviewView.axaml.cs">
-      <DependentUpon>OverviewView.axaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\PartsInfoView.axaml.cs">
-      <DependentUpon>PartsInfoView.axaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\SlidesInfoView.axaml.cs">
-      <DependentUpon>SlidesInfoView.axaml</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MinMe\MinMe.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Avalonia" Version="12.1.1" />
-    <PackageReference Include="Avalonia.Desktop" Version="12.1.1" />
-    <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
-    <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.3.20" />
-    <PackageReference Include="Avalonia.ReactiveUI" Version="11.3.9" />
+    <PackageReference Include="Avalonia" Version="12.1.4" />
+    <PackageReference Include="Avalonia.Desktop" Version="12.1.4" />
+    <!-- Keeps the DevTools support package out of Release output. -->
+    <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="AvaloniaUI.DiagnosticsSupport" Version="2.2.3" />
+    <PackageReference Include="ReactiveUI.Avalonia" Version="12.1.6" />
+    <PackageReference Include="System.Reactive" Version="7.0.0" />
     <PackageReference Include="Avalonia.Controls.DataGrid" Version="12.1.2" />
-    <PackageReference Include="Devolutions.AvaloniaTheme.MacOS" Version="2026.8.10" />
-    <PackageReference Include="Clippit" Version="3.9.0" />
-    <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.11" />
+    <PackageReference Include="Devolutions.AvaloniaTheme.MacOS" Version="2026.10.13" />
+    <PackageReference Include="Clippit" Version="3.9.1" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.13" />
   </ItemGroup>
 </Project>
