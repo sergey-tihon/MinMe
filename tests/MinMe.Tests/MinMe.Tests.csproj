@@ -7,6 +7,6 @@
     <ProjectReference Include="..\..\src\MinMe\MinMe.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="TUnit" Version="1.19.11" />
+    <PackageReference Include="TUnit" Version="1.75.0" />
   </ItemGroup>
 </Project>

@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased]
+
+- Update the .NET SDK, Avalonia, ReactiveUI, and build dependencies.
+- Replace `ImageSharpStrategy` with `SkiaSharpStrategy`; unsupported formats such as TIFF remain unchanged and report an `OptimizeError`.
+- Keep Open XML part I/O serial while transforming independent image streams in parallel.
+- Store optimization regression sizes in one shared, non-platform-specific baseline.
+- Publish the macOS app for Apple silicon and treat compiler warnings as errors.
+
 ## [0.2.0] - 2025-12-26
 
 - Migration from .NET 6 to .NET 10

@@ -1,11 +1,8 @@
-#r "nuget: Fake.DotNet.AssemblyInfoFile, 6.0.0"
-#r "nuget: Fake.Core.Target, 6.0.0"
-#r "nuget: Fake.Tools.Git, 6.0.0"
-#r "nuget: Fun.Build, 1.0.5"
+#r "nuget: Fake.Tools.Git, 6.2.0"
+#r "nuget: Fun.Build, 1.2.0"
 
 open System.IO
 open Fun.Build
-open Fake.DotNet
 open Fake.Tools.Git
 
 let version =
@@ -15,6 +12,7 @@ let version =
 
 pipeline "build" {
     workingDir __SOURCE_DIRECTORY__
+    envVars [ ("Version", version.Version) ]
 
     runBeforeEachStage (fun ctx ->
         if ctx.GetStageLevel() = 0 then
@@ -29,15 +27,6 @@ pipeline "build" {
         run "mkdir bin"
     }
 
-    stage "AssemblyInfo" {
-        run (fun _ ->
-            [ AssemblyInfo.Title "MinMe"
-              AssemblyInfo.Product "MinMe"
-              AssemblyInfo.Description "MinMe helps Office documents to lose extra weight"
-              AssemblyInfo.Version version.Version
-              AssemblyInfo.FileVersion version.Version ]
-            |> AssemblyInfoFile.createCSharp "src/MinMe/Properties/AssemblyInfo.Generated.cs")
-    }
 
     stage "Build" { run "dotnet build MinMe.slnx -c Release" }
 
@@ -57,7 +46,7 @@ pipeline "build" {
 
     stage "Test" { run "dotnet test tests/MinMe.Tests -c Release" }
 
-    stage "NuGet" { run $"dotnet pack src/MinMe/MinMe.csproj -o bin/ -p:PackageVersion=%s{version.Version}" }
+    stage "NuGet" { run "dotnet pack src/MinMe/MinMe.csproj -o bin/" }
 
     stage "Publish Windows App" {
         run "dotnet publish src/MinMe.Avalonia -r win-x64 -c Release /p:PublishSingleFile=true"
@@ -65,9 +54,9 @@ pipeline "build" {
     }
 
     stage "Publish macOS App" {
-        run "dotnet publish src/MinMe.Avalonia -r osx-x64 -c Release --self-contained -p:UseAppHost=true"
+        run "dotnet publish src/MinMe.Avalonia -r osx-arm64 -c Release --self-contained -p:UseAppHost=true"
         run "mkdir -p bin/MinMe.app/Contents/MacOS/"
-        run "cp -r src/MinMe.Avalonia/bin/Release/net10.0/osx-x64/publish/ bin/MinMe.app/Contents/MacOS"
+        run "cp -r src/MinMe.Avalonia/bin/Release/net10.0/osx-arm64/publish/ bin/MinMe.app/Contents/MacOS"
         run "mkdir -p bin/MinMe.app/Contents/Resources/"
         run "cp src/MinMe.Avalonia/Assets/Info.plist bin/MinMe.app/Contents/"
         run "cp src/MinMe.Avalonia/Assets/AppIcon.icns bin/MinMe.app/Contents/Resources/"

@@ -5,6 +5,7 @@ using MinMe.Optimizers.ImageOptimizerRuntime;
 
 namespace MinMe.Optimizers;
 
+/// <summary>Transforms Office documents to reduce embedded image and package size.</summary>
 public class ImageOptimizer(RecyclableMemoryStreamManager? memoryStreamManager = null)
 {
     private readonly RecyclableMemoryStreamManager _memoryStreamManager =
@@ -15,18 +16,17 @@ public class ImageOptimizer(RecyclableMemoryStreamManager? memoryStreamManager =
         Stream stream,
         out OptimizeDiagnostic diagnostic,
         ImageOptimizerOptions? options = null,
-        CancellationToken? token = null
+        CancellationToken cancellationToken = default
     )
     {
         options ??= new ImageOptimizerOptions();
         diagnostic = new OptimizeDiagnostic();
-        var cancellationToken = token ?? CancellationToken.None;
 
         // Copy of the original stream that will be modified in-place
         var memoryStream = _memoryStreamManager.GetStream();
         stream.CopyTo(memoryStream);
 
-        switch (fileType.ToLower())
+        switch (fileType.ToLowerInvariant())
         {
             case ".pptx":
                 memoryStream.Position = 0;
@@ -63,10 +63,16 @@ public class ImageOptimizer(RecyclableMemoryStreamManager? memoryStreamManager =
     )
     {
         using var document = OpenXmlFactory.OpenWord(stream, true, options.OpenXmlUriAutoRecovery);
-        var transformation = new OptimizerWord(_memoryStreamManager, options);
-        transformation.Transform(document, diagnostic, token);
+        if (document.MainDocumentPart is not { } mainDocumentPart)
+        {
+            diagnostic.Errors.Add(new OptimizeError("/", "MainDocumentPart is missing."));
+            return;
+        }
 
-        foreach (var part in document.MainDocumentPart.EmbeddedPackageParts)
+        var transformation = new OptimizerWord(_memoryStreamManager, options);
+        transformation.Transform(mainDocumentPart, diagnostic, token);
+
+        foreach (var part in mainDocumentPart.EmbeddedPackageParts)
         {
             token.ThrowIfCancellationRequested();
             TransformEmbeddedPart(part, diagnostic, options, token);
@@ -85,10 +91,16 @@ public class ImageOptimizer(RecyclableMemoryStreamManager? memoryStreamManager =
             true,
             options.OpenXmlUriAutoRecovery
         );
-        var transformation = new OptimizerPowerPoint(_memoryStreamManager, options);
-        transformation.Transform(document, diagnostic, token);
+        if (document.PresentationPart is not { } presentationPart)
+        {
+            diagnostic.Errors.Add(new OptimizeError("/", "PresentationPart is missing."));
+            return;
+        }
 
-        foreach (var slide in document.PresentationPart.SlideParts)
+        var transformation = new OptimizerPowerPoint(_memoryStreamManager, options);
+        transformation.Transform(presentationPart, diagnostic, token);
+
+        foreach (var slide in presentationPart.SlideParts)
         {
             foreach (var part in slide.EmbeddedPackageParts)
             {

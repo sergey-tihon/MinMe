@@ -2,453 +2,435 @@
   {
     "FileName": "dl-tutorials/ppts/Week10a Neural Style.pptx",
     "FileSizeBefore": 12264320,
-    "FileSizeAfter": {
-      "macOS": 2292253,
-      "win": 2293467
-    }
+    "FileSizeAfter": 1787323
   },
   {
     "FileName": "dl-tutorials/ppts/Week10b Generative Adversarial Network.pptx",
     "FileSizeBefore": 46823904,
-    "FileSizeAfter": {
-      "macOS": 5984131,
-      "win": 5987918
-    }
+    "FileSizeAfter": 5663574
   },
   {
     "FileName": "dl-tutorials/ppts/Week10c Little More on GAN.pptx",
     "FileSizeBefore": 15696800,
-    "FileSizeAfter": {
-      "macOS": 1387085,
-      "win": 1387268
-    }
+    "FileSizeAfter": 1326177
   },
   {
     "FileName": "dl-tutorials/ppts/Week10c Neural Style Code.pptx",
     "FileSizeBefore": 7459914,
-    "FileSizeAfter": {
-      "macOS": 1226127,
-      "win": 1226289
-    }
+    "FileSizeAfter": 1154329
   },
   {
     "FileName": "dl-tutorials/ppts/Week10d CNN finetune with VGG (use_vgg, cnn_finetune_vgg).pptx",
     "FileSizeBefore": 13453042,
-    "FileSizeAfter": {
-      "macOS": 2409828,
-      "win": 2410276
-    }
+    "FileSizeAfter": 2391798,
+    "Errors": [
+      "[/ppt/media/image25.tiff] [NotSupportedException] Unsupported image format (Unimplemented)"
+    ]
   },
   {
     "FileName": "dl-tutorials/ppts/Week10e Implementing DCGAN.pptx",
     "FileSizeBefore": 899182,
-    "FileSizeAfter": {
-      "macOS": 334884,
-      "win": 335095
-    }
+    "FileSizeAfter": 315916
   },
   {
     "FileName": "dl-tutorials/ppts/Week1a Ubuntu in VirtualBox.pptx",
     "FileSizeBefore": 9737099,
-    "FileSizeAfter": {
-      "macOS": 1852337,
-      "win": 1853865
-    }
+    "FileSizeAfter": 1838419
   },
   {
     "FileName": "dl-tutorials/ppts/Week1b Course introduction.pptx",
     "FileSizeBefore": 14405355,
-    "FileSizeAfter": {
-      "macOS": 1776691,
-      "win": 1776978
-    }
+    "FileSizeAfter": 1895604,
+    "Errors": [
+      "[/ppt/media/image2.tiff] [NotSupportedException] Unsupported image format (Unimplemented)"
+    ]
   },
   {
     "FileName": "dl-tutorials/ppts/Week1c Brief Intro to deep learning and tools.pptx",
     "FileSizeBefore": 5417017,
-    "FileSizeAfter": {
-      "macOS": 742560,
-      "win": 742959
-    }
+    "FileSizeAfter": 536858
   },
   {
     "FileName": "dl-tutorials/ppts/Week1d What we will learn.pptx",
     "FileSizeBefore": 34904668,
-    "FileSizeAfter": {
-      "macOS": 6018580,
-      "win": 6018459
-    }
+    "FileSizeAfter": 5596243,
+    "Errors": [
+      "[/ppt/media/image11.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image13.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image14.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image15.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image27.tiff] [NotSupportedException] Unsupported image format (Unimplemented)"
+    ]
   },
   {
     "FileName": "dl-tutorials/ppts/Week1e Introduction to CNNs (AlexNet).pptx",
     "FileSizeBefore": 13438078,
-    "FileSizeAfter": {
-      "macOS": 4325821,
-      "win": 4326020
-    }
+    "FileSizeAfter": 3482930,
+    "Errors": [
+      "[/ppt/media/image68.tiff] [NotSupportedException] Unsupported image format (Unimplemented)"
+    ]
   },
   {
     "FileName": "dl-tutorials/ppts/Week1f Basics of Python (basic_python).pptx",
     "FileSizeBefore": 3525937,
-    "FileSizeAfter": {
-      "macOS": 1748604,
-      "win": 1749212
-    }
+    "FileSizeAfter": 1618758
   },
   {
     "FileName": "dl-tutorials/ppts/Week2a Terminologies.pptx",
     "FileSizeBefore": 12241195,
-    "FileSizeAfter": {
-      "macOS": 550610,
-      "win": 550993
-    }
+    "FileSizeAfter": 1706669,
+    "Errors": [
+      "[/ppt/media/image1.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image13.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image14.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image15.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image17.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image18.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image19.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image2.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image20.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image21.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image3.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image4.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image5.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image6.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image7.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image8.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image9.tiff] [NotSupportedException] Unsupported image format (Unimplemented)"
+    ]
   },
   {
     "FileName": "dl-tutorials/ppts/Week2b Modern CNNs.pptx",
     "FileSizeBefore": 13464491,
-    "FileSizeAfter": {
-      "macOS": 4312376,
-      "win": 4312568
-    }
+    "FileSizeAfter": 3470130,
+    "Errors": [
+      "[/ppt/media/image68.tiff] [NotSupportedException] Unsupported image format (Unimplemented)"
+    ]
   },
   {
     "FileName": "dl-tutorials/ppts/Week2c ImgHandling (basic_imgprocess).pptx",
     "FileSizeBefore": 6044277,
-    "FileSizeAfter": {
-      "macOS": 1027444,
-      "win": 1027727
-    }
+    "FileSizeAfter": 961913
   },
   {
     "FileName": "dl-tutorials/ppts/Week2d MNIST (basic_mnist).pptx",
     "FileSizeBefore": 1504241,
-    "FileSizeAfter": {
-      "macOS": 582578,
-      "win": 582683
-    }
+    "FileSizeAfter": 549878
   },
   {
     "FileName": "dl-tutorials/ppts/Week3a Regulaziation.pptx",
     "FileSizeBefore": 5261859,
-    "FileSizeAfter": {
-      "macOS": 1309050,
-      "win": 1309566
-    }
+    "FileSizeAfter": 1150787
   },
   {
     "FileName": "dl-tutorials/ppts/Week3b AlphaGo.pptx",
     "FileSizeBefore": 9079692,
-    "FileSizeAfter": {
-      "macOS": 4597292,
-      "win": 4599809
-    }
+    "FileSizeAfter": 4121057
   },
   {
     "FileName": "dl-tutorials/ppts/Week3c TensorFlow101 (basic_tensorflow).pptx",
     "FileSizeBefore": 1798747,
-    "FileSizeAfter": {
-      "macOS": 864902,
-      "win": 865023
-    }
+    "FileSizeAfter": 781694
   },
   {
     "FileName": "dl-tutorials/ppts/Week3d Logistic regression.pptx",
     "FileSizeBefore": 46105715,
-    "FileSizeAfter": {
-      "macOS": 1643263,
-      "win": 1643812
-    }
+    "FileSizeAfter": 4030909,
+    "Errors": [
+      "[/ppt/media/image10.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image11.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image12.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image13.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image14.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image15.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image16.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image17.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image18.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image19.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image20.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image21.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image22.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image23.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image8.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image9.tiff] [NotSupportedException] Unsupported image format (Unimplemented)"
+    ]
   },
   {
     "FileName": "dl-tutorials/ppts/Week4a Optimizaiton methods.pptx",
     "FileSizeBefore": 15002134,
-    "FileSizeAfter": {
-      "macOS": 1694387,
-      "win": 1694711
-    }
+    "FileSizeAfter": 1704648,
+    "Errors": [
+      "[/ppt/media/image32.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image33.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image34.tiff] [NotSupportedException] Unsupported image format (Unimplemented)"
+    ]
   },
   {
     "FileName": "dl-tutorials/ppts/Week4b Restricted Boltzmann machine.pptx",
     "FileSizeBefore": 5102255,
-    "FileSizeAfter": {
-      "macOS": 1287481,
-      "win": 1287871
-    }
+    "FileSizeAfter": 1306456,
+    "Errors": [
+      "[/ppt/media/image1.tiff] [NotSupportedException] Unsupported image format (Unimplemented)"
+    ]
   },
   {
     "FileName": "dl-tutorials/ppts/Week4c Multi-layer perceptron (mlp_mnist_simple).pptx",
     "FileSizeBefore": 28501201,
-    "FileSizeAfter": {
-      "macOS": 1403670,
-      "win": 1403844
-    }
+    "FileSizeAfter": 2694676,
+    "Errors": [
+      "[/ppt/media/image1.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image2.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image3.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image4.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image5.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image6.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image7.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image8.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image9.tiff] [NotSupportedException] Unsupported image format (Unimplemented)"
+    ]
   },
   {
     "FileName": "dl-tutorials/ppts/Week4d Generate your own dataset (basic_gendataset).pptx",
     "FileSizeBefore": 2650672,
-    "FileSizeAfter": {
-      "macOS": 725559,
-      "win": 725709
-    }
+    "FileSizeAfter": 700816
   },
   {
     "FileName": "dl-tutorials/ppts/Week5a Semantic segmentations.pptx",
     "FileSizeBefore": 19183176,
-    "FileSizeAfter": {
-      "macOS": 6406051,
-      "win": 6404956
-    }
+    "FileSizeAfter": 4348195
   },
   {
     "FileName": "dl-tutorials/ppts/Week5b Implementing CNN.pptx",
     "FileSizeBefore": 6329404,
-    "FileSizeAfter": {
-      "macOS": 3544440,
-      "win": 3543643
-    }
+    "FileSizeAfter": 2791406
   },
   {
     "FileName": "dl-tutorials/ppts/Week5c Using Custom Dataset.pptx",
     "FileSizeBefore": 4471101,
-    "FileSizeAfter": {
-      "macOS": 1591814,
-      "win": 1591772
-    }
+    "FileSizeAfter": 1482921
   },
   {
     "FileName": "dl-tutorials/ppts/Week5d Implementing Modern CNN.pptx",
     "FileSizeBefore": 2902020,
-    "FileSizeAfter": {
-      "macOS": 1344207,
-      "win": 1344180
-    }
+    "FileSizeAfter": 1269194
   },
   {
     "FileName": "dl-tutorials/ppts/Week6a Residual Networks and Analysis.pptx",
     "FileSizeBefore": 6259336,
-    "FileSizeAfter": {
-      "macOS": 1191881,
-      "win": 1192439
-    }
+    "FileSizeAfter": 1126266,
+    "Errors": [
+      "[/ppt/media/image6.tiff] [NotSupportedException] Unsupported image format (Unimplemented)"
+    ]
   },
   {
     "FileName": "dl-tutorials/ppts/Week6b Weakly supervised localization.pptx",
     "FileSizeBefore": 37566765,
-    "FileSizeAfter": {
-      "macOS": 24859308,
-      "win": 24840300
-    }
+    "FileSizeAfter": 31151542,
+    "Errors": [
+      "[/ppt/media/image11.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image12.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image13.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image14.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image15.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image16.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image17.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image19.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image20.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image22.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image23.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image24.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image25.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image26.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image27.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image28.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image29.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image30.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image31.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image32.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image33.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image34.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image35.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image36.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image37.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image38.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image39.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image41.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image7.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image9.tiff] [NotSupportedException] Unsupported image format (Unimplemented)"
+    ]
   },
   {
     "FileName": "dl-tutorials/ppts/Week6c Implementing DAE and DCAE.pptx",
     "FileSizeBefore": 14985598,
-    "FileSizeAfter": {
-      "macOS": 2225908,
-      "win": 2225374
-    }
+    "FileSizeAfter": 2673614,
+    "Errors": [
+      "[/ppt/media/image2.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image28.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image29.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image3.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image30.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image31.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image32.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image4.tiff] [NotSupportedException] Unsupported image format (Unimplemented)"
+    ]
   },
   {
     "FileName": "dl-tutorials/ppts/Week6d Implementing CAM.pptx",
     "FileSizeBefore": 5292150,
-    "FileSizeAfter": {
-      "macOS": 1475198,
-      "win": 1474683
-    }
+    "FileSizeAfter": 1455424
   },
   {
     "FileName": "dl-tutorials/ppts/Week7a Image detection (RCNN, SPPnet, FastRCNN, FasterRCNN).pptx",
     "FileSizeBefore": 26812277,
-    "FileSizeAfter": {
-      "macOS": 7770593,
-      "win": 7768626
-    }
+    "FileSizeAfter": 4770064
   },
   {
     "FileName": "dl-tutorials/ppts/Week7b Other dections (YOLO, SSD, AttentionNet).pptx",
     "FileSizeBefore": 48863069,
-    "FileSizeAfter": {
-      "macOS": 39207563,
-      "win": 39768820
-    }
+    "FileSizeAfter": 36610027
   },
   {
     "FileName": "dl-tutorials/ppts/Week7c Using a custom dataset (git@sjchoi86-face_recognition).pptx",
     "FileSizeBefore": 4784097,
-    "FileSizeAfter": {
-      "macOS": 2133903,
-      "win": 2133490
-    }
+    "FileSizeAfter": 2107013
   },
   {
     "FileName": "dl-tutorials/ppts/Week8a Visual QnA.pptx",
     "FileSizeBefore": 32803221,
-    "FileSizeAfter": {
-      "macOS": 6497160,
-      "win": 6499890
-    }
+    "FileSizeAfter": 5082311
   },
   {
     "FileName": "dl-tutorials/ppts/Week8b Deep reinforcement learning.pptx",
     "FileSizeBefore": 6267336,
-    "FileSizeAfter": {
-      "macOS": 5437266,
-      "win": 5436413
-    }
+    "FileSizeAfter": 2729093
   },
   {
     "FileName": "dl-tutorials/ppts/Week8c Implementing RNN (rnn_mnist_simple).pptx",
     "FileSizeBefore": 3179027,
-    "FileSizeAfter": {
-      "macOS": 1323732,
-      "win": 1323920
-    }
+    "FileSizeAfter": 1245026
   },
   {
     "FileName": "dl-tutorials/ppts/Week8d Implementing RNN in TF1-0-1.pptx",
     "FileSizeBefore": 10127631,
-    "FileSizeAfter": {
-      "macOS": 3869975,
-      "win": 3870246
-    }
+    "FileSizeAfter": 3661077
   },
   {
     "FileName": "dl-tutorials/ppts/Week9a Basics of RNN.pptx",
     "FileSizeBefore": 5777159,
-    "FileSizeAfter": {
-      "macOS": 1334511,
-      "win": 1334739
-    }
+    "FileSizeAfter": 1154930,
+    "Errors": [
+      "[/ppt/media/image17.tiff] [NotSupportedException] Unsupported image format (Unimplemented)"
+    ]
   },
   {
     "FileName": "dl-tutorials/ppts/Week9b Handwrting Generation.pptx",
     "FileSizeBefore": 1599564,
-    "FileSizeAfter": {
-      "macOS": 1175058,
-      "win": 1177761
-    }
+    "FileSizeAfter": 1171794
   },
   {
     "FileName": "dl-tutorials/ppts/Week9c Image Captioning.pptx",
     "FileSizeBefore": 37656746,
-    "FileSizeAfter": {
-      "macOS": 5005625,
-      "win": 5006339
-    }
+    "FileSizeAfter": 4599622
   },
   {
     "FileName": "dl-tutorials/ppts/Week9d Implementing Word2Vec 2.pptx",
     "FileSizeBefore": 4851777,
-    "FileSizeAfter": {
-      "macOS": 2748862,
-      "win": 2749389
-    }
+    "FileSizeAfter": 2552946
   },
   {
     "FileName": "dl-tutorials/ppts/Week9e Implementing Hangul-RNN.pptx",
     "FileSizeBefore": 5627040,
-    "FileSizeAfter": {
-      "macOS": 2572040,
-      "win": 2572348
-    }
+    "FileSizeAfter": 2335850
   },
   {
     "FileName": "dl-tutorials/ppts/Week9f Word2Vec.pptx",
     "FileSizeBefore": 2579901,
-    "FileSizeAfter": {
-      "macOS": 1176576,
-      "win": 1176527
-    }
+    "FileSizeAfter": 749192,
+    "Errors": [
+      "[/ppt/media/image1.tiff] [NotSupportedException] Unsupported image format (Unimplemented)"
+    ]
   },
   {
     "FileName": "dotNETConf/2018/Technical/Decks/.NET Core Microservice Development Made Easy with Azure Dev Spaces.pptx",
     "FileSizeBefore": 5507273,
-    "FileSizeAfter": {
-      "macOS": 1785397,
-      "win": 1798152
-    }
+    "FileSizeAfter": 1774695
   },
   {
     "FileName": "dotNETConf/2018/Technical/Decks/5 Azure Services Every .NET Developer Needs to Know.pptx",
     "FileSizeBefore": 2965201,
-    "FileSizeAfter": {
-      "macOS": 1508582,
-      "win": 1519854
-    }
+    "FileSizeAfter": 1508582
   },
   {
     "FileName": "dotNETConf/2018/Technical/Decks/A lap around docs.microsoft.com.pptx",
     "FileSizeBefore": 6436299,
-    "FileSizeAfter": {
-      "macOS": 2999771,
-      "win": 3012583
-    }
+    "FileSizeAfter": 2806273
   },
   {
     "FileName": "dotNETConf/2018/Technical/Decks/Artificial Intelligence and Machine Learning for Every .NET Developer.pptx",
     "FileSizeBefore": 23284287,
-    "FileSizeAfter": {
-      "macOS": 13480535,
-      "win": 13502077
-    }
+    "FileSizeAfter": 13308416
   },
   {
     "FileName": "dotNETConf/2018/Technical/Decks/Azure Durable Functions for Serverless .NET Orchestration.pptx",
     "FileSizeBefore": 11489689,
-    "FileSizeAfter": {
-      "macOS": 7936255,
-      "win": 7939816
-    }
+    "FileSizeAfter": 7607737,
+    "Errors": [
+      "[/ppt/media/image34.tiff] [NotSupportedException] Unsupported image format (Unimplemented)"
+    ]
   },
   {
     "FileName": "dotNETConf/2018/Technical/Decks/Blazor_Modern Web development with .NET and WebAssembly.pptx",
     "FileSizeBefore": 3186823,
-    "FileSizeAfter": {
-      "macOS": 1652527,
-      "win": 1663766
-    }
+    "FileSizeAfter": 1631940
   },
   {
     "FileName": "dotNETConf/2018/Technical/Decks/Build Great Libraries using .NET Standard.pptx",
     "FileSizeBefore": 3290616,
-    "FileSizeAfter": {
-      "macOS": 1789267,
-      "win": 1800811
-    }
+    "FileSizeAfter": 1773466
   },
   {
     "FileName": "dotNETConf/2018/Technical/Decks/Building resilient microservices with .NET on Azure Service Fabric.pptx",
     "FileSizeBefore": 3145185,
-    "FileSizeAfter": {
-      "macOS": 1598075,
-      "win": 1612525
-    }
+    "FileSizeAfter": 1591066
   },
   {
     "FileName": "dotNETConf/2018/Technical/Decks/Complete Awesomeness for Mobile .NET Developers.pptx",
     "FileSizeBefore": 16236376,
-    "FileSizeAfter": {
-      "macOS": 7894375,
-      "win": 7906470
-    },
+    "FileSizeAfter": 7959348,
     "Errors": [
-      "[/ppt/media/image42.png] Unsupported image crop L/T/R/B=1/46941/-1407/0"
+      "[/ppt/media/image42.png] Unsupported image crop L/T/R/B=1/46941/-1407/0",
+      "[/ppt/media/image49.tiff] [NotSupportedException] Unsupported image format (Unimplemented)"
     ]
   },
   {
     "FileName": "dotNETConf/2018/Technical/Decks/dotNETConf2018-KEYNOTE.pptx",
     "FileSizeBefore": 78164067,
-    "FileSizeAfter": {
-      "macOS": 8536392,
-      "win": 8550049
-    }
+    "FileSizeAfter": 8482802,
+    "Errors": [
+      "[/ppt/media/image40.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image41.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image42.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image45.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image55.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image56.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image57.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image58.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image59.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image60.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image61.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image62.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image63.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image64.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image66.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image67.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image70.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image71.tiff] [NotSupportedException] Unsupported image format (Unimplemented)"
+    ]
   },
   {
     "FileName": "dotNETConf/2018/Technical/Decks/DotNetDevOps.pptx",
     "FileSizeBefore": 14964636,
-    "FileSizeAfter": {
-      "macOS": 5914727,
-      "win": 5940850
-    },
+    "FileSizeAfter": 5791054,
     "Errors": [
       "[/ppt/media/image108.png] Unsupported image crop L/T/R/B=0/-1127/0/589"
     ]
@@ -456,589 +438,395 @@
   {
     "FileName": "dotNETConf/2018/Technical/Decks/Entity Framework Core 2.2 and beyond.pptx",
     "FileSizeBefore": 3031543,
-    "FileSizeAfter": {
-      "macOS": 1586349,
-      "win": 1597772
-    }
+    "FileSizeAfter": 1586344
   },
   {
     "FileName": "dotNETConf/2018/Technical/Decks/Latest Productivity Updates in VS 2017 Update 15.8.pptx",
     "FileSizeBefore": 44063513,
-    "FileSizeAfter": {
-      "macOS": 34607510,
-      "win": 34631099
-    }
+    "FileSizeAfter": 34606096
   },
   {
     "FileName": "dotNETConf/2018/Technical/Decks/Make Games with .NET using Visual Studio, Unity, and PlayFab.pptx",
     "FileSizeBefore": 3675360,
-    "FileSizeAfter": {
-      "macOS": 1784056,
-      "win": 1794884
-    }
+    "FileSizeAfter": 1730023
   },
   {
-    "FileName": "dotNETConf/2018/Technical/Decks/Visual Studio for Mac Tips \u0026 Tricks.pptx",
+    "FileName": "dotNETConf/2018/Technical/Decks/Visual Studio for Mac Tips & Tricks.pptx",
     "FileSizeBefore": 3635151,
-    "FileSizeAfter": {
-      "macOS": 1799870,
-      "win": 1810632
-    }
+    "FileSizeAfter": 1797177
   },
   {
-    "FileName": "dotNETConf/2018/Technical/Decks/What\u0027s new in ASP.NET Core.pptx",
+    "FileName": "dotNETConf/2018/Technical/Decks/What's new in ASP.NET Core.pptx",
     "FileSizeBefore": 3122390,
-    "FileSizeAfter": {
-      "macOS": 1637643,
-      "win": 1648904
-    },
+    "FileSizeAfter": 1631522,
     "Errors": [
       "[/ppt/media/image27.png] Unsupported image crop L/T/R/B=-1417/35427/1417/3437"
     ]
   },
   {
-    "FileName": "dotNETConf/2018/Technical/Decks/What\u0027s new with F# 4.5.pptx",
+    "FileName": "dotNETConf/2018/Technical/Decks/What's new with F# 4.5.pptx",
     "FileSizeBefore": 2963144,
-    "FileSizeAfter": {
-      "macOS": 1525028,
-      "win": 1536331
-    }
+    "FileSizeAfter": 1525028
   },
   {
     "FileName": "dotNETConf/2018/Technical/Decks/Whats Coming to Csharp.pptx",
     "FileSizeBefore": 3268850,
-    "FileSizeAfter": {
-      "macOS": 1729633,
-      "win": 1740726
-    }
+    "FileSizeAfter": 1694180
   },
   {
     "FileName": "dotNETConf/2018/Technical/DotnetConf2018_PresentationTemplate.pptx",
     "FileSizeBefore": 2993737,
-    "FileSizeAfter": {
-      "macOS": 1549120,
-      "win": 1560039
-    }
+    "FileSizeAfter": 1549120
   },
   {
     "FileName": "dotNETConf/2019/Technical/2019_09_23_DotnetConf2019_XamarinProductiveBeautiful.pptx",
     "FileSizeBefore": 90412517,
-    "FileSizeAfter": {
-      "macOS": 10217879,
-      "win": 10242281
-    }
+    "FileSizeAfter": 9753870,
+    "Errors": [
+      "[/ppt/media/image68.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image71.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image74.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image76.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image80.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image93.tiff] [NotSupportedException] Unsupported image format (Unimplemented)"
+    ]
   },
   {
     "FileName": "dotNETConf/2019/Technical/ABP.IO Open Source Web Application Framework for ASP.NET Core 3.0.pptx",
     "FileSizeBefore": 6060594,
-    "FileSizeAfter": {
-      "macOS": 2181544,
-      "win": 2193593
-    }
+    "FileSizeAfter": 2182168
   },
   {
     "FileName": "dotNETConf/2019/Technical/AppInsights-.NET Conf.pptx",
     "FileSizeBefore": 8797737,
-    "FileSizeAfter": {
-      "macOS": 2440172,
-      "win": 2452200
-    }
+    "FileSizeAfter": 2341917
   },
   {
     "FileName": "dotNETConf/2019/Technical/ASP.NET Core Health Checks.pptx",
     "FileSizeBefore": 3967395,
-    "FileSizeAfter": {
-      "macOS": 1740183,
-      "win": 1751619
-    }
+    "FileSizeAfter": 1746587
   },
   {
     "FileName": "dotNETConf/2019/Technical/Async Streams in the Real World.pptx",
     "FileSizeBefore": 2900902,
-    "FileSizeAfter": {
-      "macOS": 1452131,
-      "win": 1463805
-    }
+    "FileSizeAfter": 1437601
   },
   {
     "FileName": "dotNETConf/2019/Technical/Awesome games with .NET, Visual Studio 2019 and Unity 2019.pptx",
     "FileSizeBefore": 3538830,
-    "FileSizeAfter": {
-      "macOS": 1664401,
-      "win": 1675383
-    }
+    "FileSizeAfter": 1638938
   },
   {
     "FileName": "dotNETConf/2019/Technical/Azure Services Every .NET Developer Needs to Know.pptx",
     "FileSizeBefore": 4182563,
-    "FileSizeAfter": {
-      "macOS": 1738128,
-      "win": 1754234
-    }
+    "FileSizeAfter": 1740890
   },
   {
     "FileName": "dotNETConf/2019/Technical/Blazor and Azure Functions for Serverless Websites.pptx",
     "FileSizeBefore": 4338025,
-    "FileSizeAfter": {
-      "macOS": 2322869,
-      "win": 2334594
-    }
+    "FileSizeAfter": 2265179,
+    "Errors": [
+      "[/ppt/media/image20.tiff] [NotSupportedException] Unsupported image format (Unimplemented)"
+    ]
   },
   {
     "FileName": "dotNETConf/2019/Technical/Bringing Big Data Analytics through Apache Spark to .NET.pptx",
     "FileSizeBefore": 4916927,
-    "FileSizeAfter": {
-      "macOS": 1958728,
-      "win": 1970607
-    }
+    "FileSizeAfter": 1942721
   },
   {
     "FileName": "dotNETConf/2019/Technical/Build Amazing Cloud Connected Apps With Xamarin, Azure, and App Center.pptx",
     "FileSizeBefore": 6897512,
-    "FileSizeAfter": {
-      "macOS": 3704738,
-      "win": 3882591
-    }
+    "FileSizeAfter": 3611590,
+    "Errors": [
+      "[/ppt/media/image47.tiff] [NotSupportedException] Unsupported image format (Unimplemented)"
+    ]
   },
   {
     "FileName": "dotNETConf/2019/Technical/Building Cloud Native Apps with .NET Core 3.0 and Kubernetes.pptx",
     "FileSizeBefore": 2828920,
-    "FileSizeAfter": {
-      "macOS": 1407124,
-      "win": 1419006
-    }
+    "FileSizeAfter": 1407100
   },
   {
     "FileName": "dotNETConf/2019/Technical/Building Full-stack C# Web Apps with Blazor in .NET Core 3.0.pptx",
     "FileSizeBefore": 9177278,
-    "FileSizeAfter": {
-      "macOS": 5161930,
-      "win": 5175142
-    }
+    "FileSizeAfter": 5135685
   },
   {
     "FileName": "dotNETConf/2019/Technical/Cryptography 101 with .NET Core.pptx",
     "FileSizeBefore": 2821840,
-    "FileSizeAfter": {
-      "macOS": 1399512,
-      "win": 1411189
-    }
+    "FileSizeAfter": 1399512
   },
   {
     "FileName": "dotNETConf/2019/Technical/Death to SQL Server! Long live SQL Server! How containerized SQL Server makes development easier.pptx",
     "FileSizeBefore": 3249811,
-    "FileSizeAfter": {
-      "macOS": 1532663,
-      "win": 1544327
-    }
+    "FileSizeAfter": 1477580
   },
   {
     "FileName": "dotNETConf/2019/Technical/DevOps for the .NET Developer.pptx",
     "FileSizeBefore": 8369447,
-    "FileSizeAfter": {
-      "macOS": 3984849,
-      "win": 3998667
-    }
+    "FileSizeAfter": 2712968
   },
   {
     "FileName": "dotNETConf/2019/Technical/Diagnostics Improvements in .NET Core 3.0.pptx",
     "FileSizeBefore": 3066913,
-    "FileSizeAfter": {
-      "macOS": 1598379,
-      "win": 1610215
-    }
+    "FileSizeAfter": 1587478
   },
   {
     "FileName": "dotNETConf/2019/Technical/DotNet conf InnerSourcing and Opensourcing.pptx",
     "FileSizeBefore": 20836851,
-    "FileSizeAfter": {
-      "macOS": 10558901,
-      "win": 10538015
-    }
+    "FileSizeAfter": 9880559
   },
   {
     "FileName": "dotNETConf/2019/Technical/dotNETConf2019_Keynote.pptx",
     "FileSizeBefore": 5214663,
-    "FileSizeAfter": {
-      "macOS": 2832809,
-      "win": 2848097
-    }
+    "FileSizeAfter": 2657661
   },
   {
     "FileName": "dotNETConf/2019/Technical/DotnetConf2019_PresentationTemplate.pptx",
     "FileSizeBefore": 2760734,
-    "FileSizeAfter": {
-      "macOS": 1339875,
-      "win": 1351309
-    }
+    "FileSizeAfter": 1339875
   },
   {
-    "FileName": "dotNETConf/2019/Technical/Durable Functions 2.0 \u2013 Stateful functions and orchestrations.pptx",
+    "FileName": "dotNETConf/2019/Technical/Durable Functions 2.0 – Stateful functions and orchestrations.pptx",
     "FileSizeBefore": 7883865,
-    "FileSizeAfter": {
-      "macOS": 1648509,
-      "win": 1660296
-    }
+    "FileSizeAfter": 1624057,
+    "Errors": [
+      "[/ppt/media/image19.tiff] [NotSupportedException] Unsupported image format (Unimplemented)"
+    ]
   },
   {
     "FileName": "dotNETConf/2019/Technical/Entity Framework Core 3.0 and beyond.pptx",
     "FileSizeBefore": 2768483,
-    "FileSizeAfter": {
-      "macOS": 1347489,
-      "win": 1358952
-    }
+    "FileSizeAfter": 1347489
   },
   {
     "FileName": "dotNETConf/2019/Technical/Get Started with DevOps for .NET Windows Desktop Apps and Visual Studio App Center.pptx",
     "FileSizeBefore": 2673160,
-    "FileSizeAfter": {
-      "macOS": 1250486,
-      "win": 1262378
-    }
+    "FileSizeAfter": 1255297
   },
   {
     "FileName": "dotNETConf/2019/Technical/How To Integrate ML.NET with a Chat Bot.pptx",
     "FileSizeBefore": 3128672,
-    "FileSizeAfter": {
-      "macOS": 1518848,
-      "win": 1530303
-    }
+    "FileSizeAfter": 1503982
   },
   {
     "FileName": "dotNETConf/2019/Technical/Increase your .NET Productivity with Visual Studio 2019.pptx",
     "FileSizeBefore": 2663569,
-    "FileSizeAfter": {
-      "macOS": 1240700,
-      "win": 1252213
-    }
+    "FileSizeAfter": 1240495
   },
   {
     "FileName": "dotNETConf/2019/Technical/Indexing and searching NuGet.org with Azure Functions and Search.pptx",
     "FileSizeBefore": 3924559,
-    "FileSizeAfter": {
-      "macOS": 1767482,
-      "win": 1780103
-    }
+    "FileSizeAfter": 1751717
   },
   {
     "FileName": "dotNETConf/2019/Technical/Introduction to GraphQL with .NET Core.pptx",
     "FileSizeBefore": 2888665,
-    "FileSizeAfter": {
-      "macOS": 1416443,
-      "win": 1427990
-    }
+    "FileSizeAfter": 1406455
   },
   {
     "FileName": "dotNETConf/2019/Technical/Modernizing .NET Desktop Applications with .NET Core.pptx",
     "FileSizeBefore": 3094506,
-    "FileSizeAfter": {
-      "macOS": 1491117,
-      "win": 1502801
-    }
+    "FileSizeAfter": 1497264
   },
   {
     "FileName": "dotNETConf/2019/Technical/Modernizing with .NET Core - Beyond the Basics.pptx",
     "FileSizeBefore": 2789562,
-    "FileSizeAfter": {
-      "macOS": 1368394,
-      "win": 1379878
-    }
+    "FileSizeAfter": 1368394
   },
   {
     "FileName": "dotNETConf/2019/Technical/Move your Web Forms app to .NET Core without rewriting everything.pptx",
     "FileSizeBefore": 2788012,
-    "FileSizeAfter": {
-      "macOS": 1365241,
-      "win": 1376704
-    }
+    "FileSizeAfter": 1363958
   },
   {
     "FileName": "dotNETConf/2019/Technical/My House Runs .NET.pptx",
     "FileSizeBefore": 34745627,
-    "FileSizeAfter": {
-      "macOS": 19521113,
-      "win": 19539042
-    }
+    "FileSizeAfter": 18649257
   },
   {
     "FileName": "dotNETConf/2019/Technical/Orchard Core - DotNetConf.pptx",
     "FileSizeBefore": 2768039,
-    "FileSizeAfter": {
-      "macOS": 1350152,
-      "win": 1361603
-    }
+    "FileSizeAfter": 1350152
   },
   {
     "FileName": "dotNETConf/2019/Technical/Overview On Apriori Machine Learning Algorithm.pptx",
     "FileSizeBefore": 3870069,
-    "FileSizeAfter": {
-      "macOS": 2049396,
-      "win": 2059722
-    }
+    "FileSizeAfter": 2029840
   },
   {
-    "FileName": "dotNETConf/2019/Technical/PlayFab \u002B Azure Functions \u002B Visual Studio Code = Crazy Awesome Games!.pptx",
+    "FileName": "dotNETConf/2019/Technical/PlayFab + Azure Functions + Visual Studio Code = Crazy Awesome Games!.pptx",
     "FileSizeBefore": 2963316,
-    "FileSizeAfter": {
-      "macOS": 1453197,
-      "win": 1464659
-    }
+    "FileSizeAfter": 1452264
   },
   {
     "FileName": "dotNETConf/2019/Technical/Publish or perish - tricks to successfully ship your .NET Core 3 app.pptx",
     "FileSizeBefore": 2787217,
-    "FileSizeAfter": {
-      "macOS": 1369021,
-      "win": 1380554
-    }
+    "FileSizeAfter": 1369021
   },
   {
     "FileName": "dotNETConf/2019/Technical/The Future of Blazor on the Client.pptx",
     "FileSizeBefore": 4590470,
-    "FileSizeAfter": {
-      "macOS": 1453449,
-      "win": 1465556
-    }
+    "FileSizeAfter": 1451438
   },
   {
     "FileName": "dotNETConf/2019/Technical/Tips and Tricks for .NET Debugging in Visual Studio.pptx",
     "FileSizeBefore": 4618627,
-    "FileSizeAfter": {
-      "macOS": 1894488,
-      "win": 1906063
-    }
+    "FileSizeAfter": 1891005
   },
   {
     "FileName": "dotNETConf/2019/Technical/Tips for moving to Core.pptx",
     "FileSizeBefore": 2833285,
-    "FileSizeAfter": {
-      "macOS": 1410440,
-      "win": 1422374
-    }
+    "FileSizeAfter": 1410436
   },
   {
     "FileName": "dotNETConf/2019/Technical/Tour around XAML tools in VS 2019 for WPF and UWP.pptx",
     "FileSizeBefore": 3580318,
-    "FileSizeAfter": {
-      "macOS": 1634919,
-      "win": 1646980
-    }
+    "FileSizeAfter": 1640656
   },
   {
     "FileName": "dotNETConf/2019/Technical/Versioning-DotNetConf.pptx",
     "FileSizeBefore": 2783907,
-    "FileSizeAfter": {
-      "macOS": 1362662,
-      "win": 1374193
-    }
+    "FileSizeAfter": 1362662
   },
   {
-    "FileName": "dotNETConf/2019/Technical/What\u0027s new in C# 8 - Part 2.pptx",
+    "FileName": "dotNETConf/2019/Technical/What's new in C# 8 - Part 2.pptx",
     "FileSizeBefore": 2764655,
-    "FileSizeAfter": {
-      "macOS": 1346827,
-      "win": 1358292
-    }
+    "FileSizeAfter": 1346827
   },
   {
-    "FileName": "dotNETConf/2019/Technical/What\u0027s New in F#.pptx",
+    "FileName": "dotNETConf/2019/Technical/What's New in F#.pptx",
     "FileSizeBefore": 3630706,
-    "FileSizeAfter": {
-      "macOS": 1557380,
-      "win": 1568816
-    }
+    "FileSizeAfter": 1556317
   },
   {
-    "FileName": "dotNETConf/2019/Technical/What\u0027s New in SignalR with .NET Core 3.0.pptx",
+    "FileName": "dotNETConf/2019/Technical/What's New in SignalR with .NET Core 3.0.pptx",
     "FileSizeBefore": 3435372,
-    "FileSizeAfter": {
-      "macOS": 1926685,
-      "win": 1938164
-    }
+    "FileSizeAfter": 1921284
   },
   {
-    "FileName": "dotNETConf/2019/Technical/What\u2019s New in C#8.0  Part 1 Nullable Reference Types.pptx",
+    "FileName": "dotNETConf/2019/Technical/What’s New in C#8.0  Part 1 Nullable Reference Types.pptx",
     "FileSizeBefore": 12123320,
-    "FileSizeAfter": {
-      "macOS": 1859297,
-      "win": 1870712
-    }
+    "FileSizeAfter": 1866243
   },
   {
     "FileName": "dotNETConf/2019/Technical/Whats new in ML.NET (.NET Conf 2019).pptx",
     "FileSizeBefore": 18087375,
-    "FileSizeAfter": {
-      "macOS": 4595303,
-      "win": 4611547
-    }
+    "FileSizeAfter": 4480041
   },
   {
     "FileName": "dotNETConf/2019/Technical/Why you should create your next library using .NET Standard.pptx",
     "FileSizeBefore": 2923655,
-    "FileSizeAfter": {
-      "macOS": 1490150,
-      "win": 1501644
-    }
+    "FileSizeAfter": 1456723
   },
   {
     "FileName": "dotNETConf/2020/FocusOnBlazor/Technical/Fritz-BlazorForWebForms.pptx",
     "FileSizeBefore": 3397643,
-    "FileSizeAfter": {
-      "macOS": 1612890,
-      "win": 1626759
-    }
+    "FileSizeAfter": 1548323
   },
   {
     "FileName": "dotNETConf/2020/FocusOnBlazor/Technical/Roth-Welcome-to-Blazor.pptx",
     "FileSizeBefore": 8862827,
-    "FileSizeAfter": {
-      "macOS": 3209859,
-      "win": 3225635
-    }
+    "FileSizeAfter": 2927430
   },
   {
     "FileName": "dotNETConf/2020/FocusOnMicroservices/Technical/AddingDAPR-DotNETConf.pptx",
     "FileSizeBefore": 12993155,
-    "FileSizeAfter": {
-      "macOS": 1633871,
-      "win": 1644830
-    }
+    "FileSizeAfter": 1585014,
+    "Errors": [
+      "[/ppt/media/image34.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image46.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image47.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image49.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image60.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image85.tiff] [NotSupportedException] Unsupported image format (Unimplemented)"
+    ]
   },
   {
     "FileName": "dotNETConf/2020/FocusOnMicroservices/Technical/Beyond-REST-and-RPC-Asynchronous-Eventing-and-Messaging-Patterns.pptx",
     "FileSizeBefore": 3032537,
-    "FileSizeAfter": {
-      "macOS": 1221720,
-      "win": 1236636
-    }
+    "FileSizeAfter": 1208244
   },
   {
     "FileName": "dotNETConf/2020/FocusOnMicroservices/Technical/DevelopDebugMicroservices.pptx",
     "FileSizeBefore": 3220936,
-    "FileSizeAfter": {
-      "macOS": 1067837,
-      "win": 1085188
-    }
+    "FileSizeAfter": 1036744
   },
   {
     "FileName": "dotNETConf/2020/FocusOnMicroservices/Technical/dotNETMicroservices_Welcome.pptx",
     "FileSizeBefore": 18740236,
-    "FileSizeAfter": {
-      "macOS": 10672047,
-      "win": 10704158
-    }
+    "FileSizeAfter": 10528006
   },
   {
     "FileName": "dotNETConf/2020/FocusOnMicroservices/Technical/evolving-monoliths-dotnet5-kubernetes.pptx",
     "FileSizeBefore": 5061224,
-    "FileSizeAfter": {
-      "macOS": 4190931,
-      "win": 4199338
-    }
+    "FileSizeAfter": 4161181
   },
   {
     "FileName": "dotNETConf/2020/FocusOnMicroservices/Technical/TyeNetConfPresentation.pptx",
     "FileSizeBefore": 985582,
-    "FileSizeAfter": {
-      "macOS": 503798,
-      "win": 505870
-    }
+    "FileSizeAfter": 428796
   },
   {
     "FileName": "dotNETConf/2020/FocusOnMicroservices/Technical/WhyMicroservices.pptx",
     "FileSizeBefore": 8091592,
-    "FileSizeAfter": {
-      "macOS": 4092227,
-      "win": 4095422
-    }
+    "FileSizeAfter": 3577994
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Abdalla_Sanderson_blazor-in-net5.pptx",
     "FileSizeBefore": 2206799,
-    "FileSizeAfter": {
-      "macOS": 871292,
-      "win": 873492
-    }
+    "FileSizeAfter": 793728
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Achtman_dotnetconf2020-mlnet-in-real-world.pptx",
     "FileSizeBefore": 4820510,
-    "FileSizeAfter": {
-      "macOS": 3377521,
-      "win": 3379097
-    }
+    "FileSizeAfter": 3278932
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/adora_dotnetconf2020.pptx",
     "FileSizeBefore": 18904991,
-    "FileSizeAfter": {
-      "macOS": 11663940,
-      "win": 11666149
-    }
+    "FileSizeAfter": 11020430
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Ajaj_dotnetconf2020-building-react-apps-in-fsharp.pptx",
     "FileSizeBefore": 3442710,
-    "FileSizeAfter": {
-      "macOS": 3039885,
-      "win": 3041127
-    }
+    "FileSizeAfter": 3002210
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Bassi_Analyzing memory dumps of .NET applications.pptx",
     "FileSizeBefore": 8857043,
-    "FileSizeAfter": {
-      "macOS": 6537475,
-      "win": 6539165
-    }
+    "FileSizeAfter": 6495067
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Beltran_AI Enrichment with Azure Cognitive Search_NET Conf Latam 2020.pptx",
     "FileSizeBefore": 9115870,
-    "FileSizeAfter": {
-      "macOS": 6818514,
-      "win": 6823799
-    }
+    "FileSizeAfter": 6679964
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Brett-Parker-dotnetconf2020.pptx",
     "FileSizeBefore": 3459177,
-    "FileSizeAfter": {
-      "macOS": 3051221,
-      "win": 3052501
-    }
+    "FileSizeAfter": 3014587
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Condron_dotentConf2020_Tye.pptx",
     "FileSizeBefore": 5594329,
-    "FileSizeAfter": {
-      "macOS": 4653029,
-      "win": 4655773
-    }
+    "FileSizeAfter": 4587622
   },
   {
-    "FileName": "dotNETConf/2020/MainEvent/Technical/D\u0027Souza_healthcheck-clydedsouza-dotnetconf2020.pptx",
+    "FileName": "dotNETConf/2020/MainEvent/Technical/D'Souza_healthcheck-clydedsouza-dotnetconf2020.pptx",
     "FileSizeBefore": 4195338,
-    "FileSizeAfter": {
-      "macOS": 3447470,
-      "win": 3449743
-    }
+    "FileSizeAfter": 3323996
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/dotentConf2020_Tye.pptx",
     "FileSizeBefore": 9561637,
-    "FileSizeAfter": {
-      "macOS": 6184450,
-      "win": 6193145
-    }
+    "FileSizeAfter": 5601943
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/dotnetconf2020_FoundationUpdate.pptx",
     "FileSizeBefore": 17440021,
-    "FileSizeAfter": {
-      "macOS": 5779942,
-      "win": 5785836
-    },
+    "FileSizeAfter": 5323191,
     "Errors": [
       "[/ppt/media/image39.jpeg] Unsupported image crop L/T/R/B=-398/1/2/1"
     ]
@@ -1046,87 +834,60 @@
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/dotnetconf2020_immol_phcart_porting.pptx",
     "FileSizeBefore": 12599685,
-    "FileSizeAfter": {
-      "macOS": 9783132,
-      "win": 9793687
-    }
+    "FileSizeAfter": 9156440
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/dotnetconf2020-deck-Dobretsberger.pptx",
     "FileSizeBefore": 4265932,
-    "FileSizeAfter": {
-      "macOS": 3177184,
-      "win": 3178457
-    }
+    "FileSizeAfter": 3085040
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/dotNETConf2020-keynote.pptx",
     "FileSizeBefore": 20482629,
-    "FileSizeAfter": {}
+    "FileSizeAfter": 20482629,
+    "Errors": [
+      "[OpenXmlPackageException] The document cannot be opened because there is an invalid part with an unexpected content type. \r\n[Part Uri=/docMetadata/LabelInfo.xml], \r\n[Content Type=application/xml], \r\n[Expected Content Type=application/vnd.ms-office.classificationlabels+xml]."
+    ]
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Downie_dotnetConf_Effectively_diagnose_and_debug_.NET_in_Visual Studio.pptx",
     "FileSizeBefore": 3655806,
-    "FileSizeAfter": {
-      "macOS": 2906564,
-      "win": 2908810
-    }
+    "FileSizeAfter": 2824640
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Driscoll_dotnetconf2020-csharp-lsp.pptx",
     "FileSizeBefore": 5112096,
-    "FileSizeAfter": {
-      "macOS": 3925775,
-      "win": 3928757
-    }
+    "FileSizeAfter": 3812317
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Dumont_Havens_dotnetconf2020_Improve _Your_Productivity_with_Roslyn_Analyzers.pptx",
     "FileSizeBefore": 4444645,
-    "FileSizeAfter": {
-      "macOS": 3937330,
-      "win": 3938774
-    }
+    "FileSizeAfter": 3889285
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Felstead_Deck-NoNotes.pptx",
     "FileSizeBefore": 5601907,
-    "FileSizeAfter": {
-      "macOS": 3212584,
-      "win": 3213903
-    }
+    "FileSizeAfter": 3160852
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Franklin_Blazor_Session_State.pptx",
     "FileSizeBefore": 4954064,
-    "FileSizeAfter": {
-      "macOS": 3221013,
-      "win": 3222261
-    }
+    "FileSizeAfter": 3173554
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Fritz_IntroducingBlazorWebFormComponents.pptx",
     "FileSizeBefore": 5575179,
-    "FileSizeAfter": {
-      "macOS": 4135992,
-      "win": 4138598
-    }
+    "FileSizeAfter": 4099981
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/gaster-http-apis.pptx",
     "FileSizeBefore": 4175561,
-    "FileSizeAfter": {
-      "macOS": 3500931,
-      "win": 3503006
-    }
+    "FileSizeAfter": 3423995
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Gnelson_DotNetConf2020.pptx",
     "FileSizeBefore": 12212505,
-    "FileSizeAfter": {
-      "macOS": 8000674,
-      "win": 8012621
-    },
+    "FileSizeAfter": 7394133,
     "Errors": [
       "[/ppt/media/image14.png] Unsupported image crop L/T/R/B=2969/0/16050/-2"
     ]
@@ -1134,405 +895,262 @@
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Gujral_Build and run an Azure Static Web App with a backend API.pptx",
     "FileSizeBefore": 6417998,
-    "FileSizeAfter": {
-      "macOS": 4253450,
-      "win": 4255943
-    }
+    "FileSizeAfter": 4156534,
+    "Errors": [
+      "[/ppt/media/image18.tiff] [NotSupportedException] Unsupported image format (Unimplemented)"
+    ]
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Hawker_Pedri_MVVMToolkitDotNetConf.pptx",
     "FileSizeBefore": 10396293,
-    "FileSizeAfter": {
-      "macOS": 5727407,
-      "win": 5732254
-    }
+    "FileSizeAfter": 5614225
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Inusah_Buiding_native_android_apps_with.dotNET.pptx",
     "FileSizeBefore": 4916205,
-    "FileSizeAfter": {
-      "macOS": 4439823,
-      "win": 4441208
-    }
+    "FileSizeAfter": 4362830
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Jensen_DotNetConf_2020.pptx",
     "FileSizeBefore": 3439753,
-    "FileSizeAfter": {
-      "macOS": 2993695,
-      "win": 2994771
-    }
+    "FileSizeAfter": 2956020
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Juback_Building-Cross-Platform-Desktop-Apps-with-Electron-NET.pptx",
     "FileSizeBefore": 5432106,
-    "FileSizeAfter": {
-      "macOS": 3136857,
-      "win": 3138272
-    }
+    "FileSizeAfter": 3080881,
+    "Errors": [
+      "[/ppt/media/image5.tiff] [NotSupportedException] Unsupported image format (Unimplemented)"
+    ]
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Levin_Accelerate_.NET_to_Azure_with_GitHub_Actions.pptx",
     "FileSizeBefore": 10645969,
-    "FileSizeAfter": {
-      "macOS": 6363837,
-      "win": 6374150
-    }
+    "FileSizeAfter": 5752754
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Likness_dotnetconf-efcore5-next-gen.pptx",
     "FileSizeBefore": 5186856,
-    "FileSizeAfter": {
-      "macOS": 4345785,
-      "win": 4349438
-    }
+    "FileSizeAfter": 4296764
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Lipton_dotnetconf2020-mobile-blazor-bindings.pptx",
     "FileSizeBefore": 4423559,
-    "FileSizeAfter": {
-      "macOS": 3675293,
-      "win": 3676757
-    }
+    "FileSizeAfter": 3625100
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/lizzy-gallagher-dotnetconf2020-1.pptx",
     "FileSizeBefore": 4167868,
-    "FileSizeAfter": {
-      "macOS": 3242407,
-      "win": 3244732
-    }
+    "FileSizeAfter": 3160932
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Lyalin_dotnetconf2020-desktop-dmitry.pptx",
     "FileSizeBefore": 6264705,
-    "FileSizeAfter": {
-      "macOS": 5042396,
-      "win": 5045213
-    }
+    "FileSizeAfter": 4980493
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Matskas_Dandison_dotnetconf2020-Secure_Dev_Ops.pptx",
     "FileSizeBefore": 16796613,
-    "FileSizeAfter": {
-      "macOS": 14757931,
-      "win": 14754277
-    }
+    "FileSizeAfter": 14485499
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Miller_Hamed_dotnetconf-2020-UnityTools.pptx",
     "FileSizeBefore": 6400421,
-    "FileSizeAfter": {
-      "macOS": 3572398,
-      "win": 3576894
-    }
+    "FileSizeAfter": 3391530
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Newton-King_gRPC-dofnetconf-2020.pptx",
     "FileSizeBefore": 7615590,
-    "FileSizeAfter": {
-      "macOS": 4427420,
-      "win": 4436311
-    }
+    "FileSizeAfter": 4408058
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Nosenko_Asynchronous_Coroutines_with_C#.pptx",
     "FileSizeBefore": 2709439,
-    "FileSizeAfter": {
-      "macOS": 1759768,
-      "win": 1760315
-    }
+    "FileSizeAfter": 1536770
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Paez_test_readability_nicopaez.pptx",
     "FileSizeBefore": 906780,
-    "FileSizeAfter": {
-      "macOS": 506757,
-      "win": 508403
-    }
+    "FileSizeAfter": 439637
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Powell_2020-get-your-jam-on-dotnetconf.pptx",
     "FileSizeBefore": 10821422,
-    "FileSizeAfter": {
-      "macOS": 6536406,
-      "win": 6546886
-    }
+    "FileSizeAfter": 5880552
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Rappl_DNC20_Microfrontends-Blazor.pptx",
     "FileSizeBefore": 20065770,
-    "FileSizeAfter": {
-      "macOS": 8803811,
-      "win": 8812738
-    }
+    "FileSizeAfter": 9390059,
+    "Errors": [
+      "[/ppt/media/image14.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image24.tiff] [NotSupportedException] Unsupported image format (Unimplemented)"
+    ]
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Rian_dotnetconf2020_GitHub_Codespaces.pptx",
     "FileSizeBefore": 13475769,
-    "FileSizeAfter": {
-      "macOS": 9220884,
-      "win": 9232000
-    }
+    "FileSizeAfter": 8655653
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Richter_The_New_Improved_Azure_SDK_for_.NET.pptx",
     "FileSizeBefore": 7084465,
-    "FileSizeAfter": {
-      "macOS": 4571930,
-      "win": 4574084
-    }
+    "FileSizeAfter": 4521957
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Roth_modern-web-dev-with-blazor-and-dotnet5.pptx",
     "FileSizeBefore": 11629024,
-    "FileSizeAfter": {
-      "macOS": 7629266,
-      "win": 7640341
-    }
+    "FileSizeAfter": 7014235
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Rousos_dotnetconf-aks-diagnostics.pptx",
     "FileSizeBefore": 10029376,
-    "FileSizeAfter": {
-      "macOS": 6194614,
-      "win": 6204993
-    }
+    "FileSizeAfter": 5590205
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Shilkov_dotnetconf2020-pulumi.pptx",
     "FileSizeBefore": 12419482,
-    "FileSizeAfter": {
-      "macOS": 7682983,
-      "win": 7693429
-    }
+    "FileSizeAfter": 7058398
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Spencer_Lessons learned from YARP.pptx",
     "FileSizeBefore": 4336222,
-    "FileSizeAfter": {
-      "macOS": 3197341,
-      "win": 3200467
-    }
+    "FileSizeAfter": 3064289
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Turner_dotnetconf2020-levenshtein-distance.pptx",
     "FileSizeBefore": 5028198,
-    "FileSizeAfter": {
-      "macOS": 4078942,
-      "win": 4084692
-    }
+    "FileSizeAfter": 4062748
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Ukirade_Single file applications_HarishchandraUkirade.pptx",
     "FileSizeBefore": 4132759,
-    "FileSizeAfter": {
-      "macOS": 3144750,
-      "win": 3148362
-    }
+    "FileSizeAfter": 3010198
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Walker_Trailblazor.pptx",
     "FileSizeBefore": 7487437,
-    "FileSizeAfter": {
-      "macOS": 5458296,
-      "win": 5459257
-    }
+    "FileSizeAfter": 5302775
   },
   {
     "FileName": "dotNETConf/2020/MainEvent/Technical/Wengier_Source_generators.pptx",
     "FileSizeBefore": 625310,
-    "FileSizeAfter": {
-      "macOS": 373359,
-      "win": 374566
-    }
+    "FileSizeAfter": 346686
   },
   {
-    "FileName": "dotNETConf/2021/FocusOnFSharp/Technical/DNF\u002BFSSF-dotnetconf-session.pptx",
+    "FileName": "dotNETConf/2021/FocusOnFSharp/Technical/DNF+FSSF-dotnetconf-session.pptx",
     "FileSizeBefore": 13615010,
-    "FileSizeAfter": {
-      "macOS": 11260552,
-      "win": 11269203
-    },
-    "Errors": [
-      "[/ppt/media/image39.png] Unsupported image crop L/T/R/B=0/0/-684/0"
-    ]
+    "FileSizeAfter": 11208716
   },
   {
     "FileName": "dotNETConf/2021/FocusOnFSharp/Technical/fsharp-bonanza.pptx",
     "FileSizeBefore": 19712951,
-    "FileSizeAfter": {
-      "macOS": 2589410,
-      "win": 2591174
-    }
+    "FileSizeAfter": 1456142
   },
   {
     "FileName": "dotNETConf/2021/FocusOnWindows/Technical/An_Opinionated_Way_to_Deploy_Windows_Apps_using_GitHub_Actions.pptx",
     "FileSizeBefore": 12833708,
-    "FileSizeAfter": {
-      "macOS": 6487970,
-      "win": 6499267
-    }
+    "FileSizeAfter": 5862866
   },
   {
     "FileName": "dotNETConf/2021/FocusOnWindows/Technical/blazor-hybrid-apps.pptx",
     "FileSizeBefore": 14990563,
-    "FileSizeAfter": {
-      "macOS": 7543973,
-      "win": 7547433
-    }
+    "FileSizeAfter": 7470725
   },
   {
     "FileName": "dotNETConf/2021/FocusOnWindows/Technical/desktop-apps-aad-msgraph-b2c.pptx",
     "FileSizeBefore": 30875461,
-    "FileSizeAfter": {
-      "macOS": 15371422,
-      "win": 15376332
-    }
+    "FileSizeAfter": 15015623
   },
   {
     "FileName": "dotNETConf/2021/FocusOnWindows/Technical/dotnetconf-bringing-your-windows-forms-and-wpf-apps-to-arm-devices.pptx",
     "FileSizeBefore": 4476330,
-    "FileSizeAfter": {
-      "macOS": 3282509,
-      "win": 3284389
-    }
+    "FileSizeAfter": 3242862
   },
   {
     "FileName": "dotNETConf/2021/FocusOnWindows/Technical/dotnetconf-deploying-apps.pptx",
     "FileSizeBefore": 8265693,
-    "FileSizeAfter": {
-      "macOS": 5305715,
-      "win": 5309221
-    }
+    "FileSizeAfter": 5101449
   },
   {
     "FileName": "dotNETConf/2021/FocusOnWindows/Technical/dotnetconf-windows-apis-everywhere-deck.pptx",
     "FileSizeBefore": 11035289,
-    "FileSizeAfter": {
-      "macOS": 6370820,
-      "win": 6382030
-    }
+    "FileSizeAfter": 5742115
   },
   {
     "FileName": "dotNETConf/2021/FocusOnWindows/Technical/dotNETConf-Windows-keynote.pptx",
     "FileSizeBefore": 25055821,
-    "FileSizeAfter": {
-      "macOS": 15054375,
-      "win": 15084416
-    }
+    "FileSizeAfter": 14874540
   },
   {
     "FileName": "dotNETConf/2021/FocusOnWindows/Technical/dotNETConf-Windows-ReunionWinUI.pptx",
     "FileSizeBefore": 7880202,
-    "FileSizeAfter": {
-      "macOS": 6969995,
-      "win": 6972299
-    }
+    "FileSizeAfter": 6926520
   },
   {
     "FileName": "dotNETConf/2021/FocusOnWindows/Technical/WebView2DotNetConf.pptx",
     "FileSizeBefore": 13574820,
-    "FileSizeAfter": {
-      "macOS": 7822175,
-      "win": 7826531
-    }
+    "FileSizeAfter": 7814480
   },
   {
     "FileName": "dotNETConf/2021/MainEvent/Creative/dotnetconf2021-deck-template.pptx",
     "FileSizeBefore": 10577382,
-    "FileSizeAfter": {
-      "macOS": 6291169,
-      "win": 6302188
-    }
+    "FileSizeAfter": 5687442
   },
   {
     "FileName": "dotNETConf/2021/MainEvent/Technical/Abraham_Modern_Web_Applications_with_SAFE_Stack.pptx",
     "FileSizeBefore": 5401217,
-    "FileSizeAfter": {
-      "macOS": 4454676,
-      "win": 4456865
-    }
+    "FileSizeAfter": 4432754
   },
   {
     "FileName": "dotNETConf/2021/MainEvent/Technical/Achtman-Quintanilla_ML.NET_Machine_learning.pptx",
     "FileSizeBefore": 4107996,
-    "FileSizeAfter": {
-      "macOS": 3235500,
-      "win": 3237523
-    }
+    "FileSizeAfter": 3195625
   },
   {
     "FileName": "dotNETConf/2021/MainEvent/Technical/Bond_Supercharging_your_cloud_applications_with_Orleans.pptx",
     "FileSizeBefore": 27663383,
-    "FileSizeAfter": {
-      "macOS": 6866923,
-      "win": 6869327
-    }
+    "FileSizeAfter": 6582260
   },
   {
     "FileName": "dotNETConf/2021/MainEvent/Technical/Carpenter-Houghton-Sullivan_Stories_from_interning_on_the_.NET_team.pptx",
     "FileSizeBefore": 16022893,
-    "FileSizeAfter": {
-      "macOS": 9536226,
-      "win": 9543296
-    }
+    "FileSizeAfter": 9443647
   },
   {
-    "FileName": "dotNETConf/2021/MainEvent/Technical/Charbeneau_Responsive_\u0026_Adaptive\u200B_Tactics_for_Blazor_Apps\u200B.pptx",
+    "FileName": "dotNETConf/2021/MainEvent/Technical/Charbeneau_Responsive_&_Adaptive​_Tactics_for_Blazor_Apps​.pptx",
     "FileSizeBefore": 6323795,
-    "FileSizeAfter": {
-      "macOS": 4684744,
-      "win": 4688437
-    }
+    "FileSizeAfter": 4629643
   },
   {
-    "FileName": "dotNETConf/2021/MainEvent/Technical/Chu-Cavalcante_Serverless_.NET_6\u200B_with_Azure_Functions.pptx",
+    "FileName": "dotNETConf/2021/MainEvent/Technical/Chu-Cavalcante_Serverless_.NET_6​_with_Azure_Functions.pptx",
     "FileSizeBefore": 11749040,
-    "FileSizeAfter": {
-      "macOS": 7121662,
-      "win": 7133372
-    }
+    "FileSizeAfter": 6519582
   },
   {
-    "FileName": "dotNETConf/2021/MainEvent/Technical/Chu-Cotin_Full-stack_.NET\u200B_with_Blazor_WebAssembly_\u200Band_Azure_Static_Web_Apps.pptx",
+    "FileName": "dotNETConf/2021/MainEvent/Technical/Chu-Cotin_Full-stack_.NET​_with_Blazor_WebAssembly_​and_Azure_Static_Web_Apps.pptx",
     "FileSizeBefore": 11595018,
-    "FileSizeAfter": {
-      "macOS": 6936047,
-      "win": 6947184
-    }
+    "FileSizeAfter": 6325596
   },
   {
     "FileName": "dotNETConf/2021/MainEvent/Technical/Columbie_Host,_deploy_and_scale_ASP.NET_Core_Blazor_Server.pptx",
     "FileSizeBefore": 6972434,
-    "FileSizeAfter": {
-      "macOS": 4782652,
-      "win": 4785060
-    }
+    "FileSizeAfter": 4721857
   },
   {
     "FileName": "dotNETConf/2021/MainEvent/Technical/Dera_30_minutes_of_Testing_in_.NET.pptx",
     "FileSizeBefore": 4041657,
-    "FileSizeAfter": {
-      "macOS": 3185584,
-      "win": 3187573
-    }
+    "FileSizeAfter": 3148579
   },
   {
     "FileName": "dotNETConf/2021/MainEvent/Technical/Dollard-Syme_Whats_new_in_FSharp_6.pptx",
     "FileSizeBefore": 5970149,
-    "FileSizeAfter": {
-      "macOS": 5172791,
-      "win": 5174873
-    }
+    "FileSizeAfter": 5134390
   },
   {
     "FileName": "dotNETConf/2021/MainEvent/Technical/dotnetconf2021-Keynote.pptx",
     "FileSizeBefore": 21235029,
-    "FileSizeAfter": {
-      "macOS": 10374845,
-      "win": 10386762
-    },
+    "FileSizeAfter": 10088329,
     "Errors": [
       "[/ppt/media/image37.png] Unsupported image crop L/T/R/B=196/-865/29016/20618",
       "[/ppt/media/image81.jpeg] Unsupported image crop L/T/R/B=-203/-689/-811/0"
@@ -1541,70 +1159,46 @@
   {
     "FileName": "dotNETConf/2021/MainEvent/Technical/Eini_Performance_Architecture.pptx",
     "FileSizeBefore": 4249206,
-    "FileSizeAfter": {
-      "macOS": 2860395,
-      "win": 2861010
-    }
+    "FileSizeAfter": 2638595
   },
   {
     "FileName": "dotNETConf/2021/MainEvent/Technical/EngstromJess__Practical_tips_to_elevate_your_UX_and_accessibility.pptx",
     "FileSizeBefore": 10790947,
-    "FileSizeAfter": {
-      "macOS": 6484066,
-      "win": 6485970
-    }
+    "FileSizeAfter": 5670114
   },
   {
     "FileName": "dotNETConf/2021/MainEvent/Technical/Galloway-Wenzel_Create_a_web_UI_with_ASP.NET_Core_-_v2.pptx",
     "FileSizeBefore": 4881494,
-    "FileSizeAfter": {
-      "macOS": 2779563,
-      "win": 2783154
-    },
+    "FileSizeAfter": 2491432,
     "Errors": [
       "[/ppt/media/image57.jpeg] Unsupported image crop L/T/R/B=10650/-950/15221/950",
       "[/ppt/media/image58.jpeg] Unsupported image crop L/T/R/B=6364/313/16562/-313"
     ]
   },
   {
-    "FileName": "dotNETConf/2021/MainEvent/Technical/Hansen_What\u2019s_new_in_bUnit_for_.NET_6\u200B.pptx",
+    "FileName": "dotNETConf/2021/MainEvent/Technical/Hansen_What’s_new_in_bUnit_for_.NET_6​.pptx",
     "FileSizeBefore": 10778247,
-    "FileSizeAfter": {
-      "macOS": 6394468,
-      "win": 6405635
-    }
+    "FileSizeAfter": 5767703
   },
   {
     "FileName": "dotNETConf/2021/MainEvent/Technical/Hari_Feature_Management.pptx",
     "FileSizeBefore": 6720626,
-    "FileSizeAfter": {
-      "macOS": 5621087,
-      "win": 5623251
-    }
+    "FileSizeAfter": 5084887
   },
   {
-    "FileName": "dotNETConf/2021/MainEvent/Technical/Harris_Not_Thinking_Small_-_My_Journey_to_Learning_.NET\u200B.pptx",
+    "FileName": "dotNETConf/2021/MainEvent/Technical/Harris_Not_Thinking_Small_-_My_Journey_to_Learning_.NET​.pptx",
     "FileSizeBefore": 1267135,
-    "FileSizeAfter": {
-      "macOS": 791575,
-      "win": 792106
-    }
+    "FileSizeAfter": 754576
   },
   {
     "FileName": "dotNETConf/2021/MainEvent/Technical/Hartono_WindowsAppSDKSessionOutro.pptx",
     "FileSizeBefore": 41296,
-    "FileSizeAfter": {
-      "macOS": 39990,
-      "win": 40108
-    }
+    "FileSizeAfter": 39990
   },
   {
     "FileName": "dotNETConf/2021/MainEvent/Technical/Houghton_.NET_Internet_of_Things.pptx",
     "FileSizeBefore": 37666611,
-    "FileSizeAfter": {
-      "macOS": 14922553,
-      "win": 14926095
-    },
+    "FileSizeAfter": 8875189,
     "Errors": [
       "[/ppt/media/image63.png] Unsupported image crop L/T/R/B=1887/408/36246/-408",
       "[/ppt/media/image68.png] Unsupported image crop L/T/R/B=0/3/317/-4"
@@ -1613,362 +1207,248 @@
   {
     "FileName": "dotNETConf/2021/MainEvent/Technical/Kolesnikova_Machine_Learning_for_.NET_developers.pptx",
     "FileSizeBefore": 7259858,
-    "FileSizeAfter": {
-      "macOS": 6199932,
-      "win": 6202291
-    }
+    "FileSizeAfter": 6140294
   },
   {
-    "FileName": "dotNETConf/2021/MainEvent/Technical/Laban_OSS_NuGet_Package_Explorer_From_WPF_to_WinUI_\u200B_and_running_in_Browser.pptx",
+    "FileName": "dotNETConf/2021/MainEvent/Technical/Laban_OSS_NuGet_Package_Explorer_From_WPF_to_WinUI_​_and_running_in_Browser.pptx",
     "FileSizeBefore": 6075579,
-    "FileSizeAfter": {
-      "macOS": 4451747,
-      "win": 4456586
-    }
+    "FileSizeAfter": 4332255
   },
   {
     "FileName": "dotNETConf/2021/MainEvent/Technical/Levin_Accelerate_.NET_to_Azure_with_GitHub_Actions_-_Again.pptx",
     "FileSizeBefore": 23664985,
-    "FileSizeAfter": {
-      "macOS": 3359443,
-      "win": 3361052
-    }
+    "FileSizeAfter": 3277169
   },
   {
-    "FileName": "dotNETConf/2021/MainEvent/Technical/Likness_Modern_Data_APIs_with_EF_Core_and_GraphQL\u200B.pptx",
+    "FileName": "dotNETConf/2021/MainEvent/Technical/Likness_Modern_Data_APIs_with_EF_Core_and_GraphQL​.pptx",
     "FileSizeBefore": 4093043,
-    "FileSizeAfter": {
-      "macOS": 3166602,
-      "win": 3168569
-    }
+    "FileSizeAfter": 3129596
   },
   {
-    "FileName": "dotNETConf/2021/MainEvent/Technical/Likness-Vickers_What\u2019s_New_in_EF_Core_6\u200B.pptx",
+    "FileName": "dotNETConf/2021/MainEvent/Technical/Likness-Vickers_What’s_New_in_EF_Core_6​.pptx",
     "FileSizeBefore": 6472488,
-    "FileSizeAfter": {
-      "macOS": 5055423,
-      "win": 5058634
-    }
+    "FileSizeAfter": 4948282
   },
   {
-    "FileName": "dotNETConf/2021/MainEvent/Technical/Nayar_Blazor_\u0026_GraphQL.pptx",
+    "FileName": "dotNETConf/2021/MainEvent/Technical/Nayar_Blazor_&_GraphQL.pptx",
     "FileSizeBefore": 7903750,
-    "FileSizeAfter": {
-      "macOS": 6222004,
-      "win": 6225987
-    }
+    "FileSizeAfter": 6008192
   },
   {
     "FileName": "dotNETConf/2021/MainEvent/Technical/Nelson_Whats_new_for_SPAs_in_.NET_6.0_2.pptx",
     "FileSizeBefore": 10599384,
-    "FileSizeAfter": {
-      "macOS": 6312861,
-      "win": 6323992
-    }
+    "FileSizeAfter": 5709134
   },
   {
-    "FileName": "dotNETConf/2021/MainEvent/Technical/Newton-King_High-performance_services_with_gRPC\u200B_What\u2019s_new_in_.NET_6.pptx",
+    "FileName": "dotNETConf/2021/MainEvent/Technical/Newton-King_High-performance_services_with_gRPC​_What’s_new_in_.NET_6.pptx",
     "FileSizeBefore": 5258582,
-    "FileSizeAfter": {
-      "macOS": 3593479,
-      "win": 3595995
-    }
+    "FileSizeAfter": 3544218
   },
   {
-    "FileName": "dotNETConf/2021/MainEvent/Technical/Palmer-Noskowski\u200B_Enhance_your_.NET_apps_with_Azure_Communication_Services.pptx",
+    "FileName": "dotNETConf/2021/MainEvent/Technical/Palmer-Noskowski​_Enhance_your_.NET_apps_with_Azure_Communication_Services.pptx",
     "FileSizeBefore": 15798683,
-    "FileSizeAfter": {
-      "macOS": 4202044,
-      "win": 4213206
-    }
+    "FileSizeAfter": 3488274
   },
   {
     "FileName": "dotNETConf/2021/MainEvent/Technical/Patterson_Modern_.NET_Messaging_using_MassTransit.pptx",
     "FileSizeBefore": 10577892,
-    "FileSizeAfter": {
-      "macOS": 6289625,
-      "win": 6300636
-    }
+    "FileSizeAfter": 5685898
   },
   {
     "FileName": "dotNETConf/2021/MainEvent/Technical/Peirce_Building_A_Production_Ready_Blazor_WASM_App.pptx",
     "FileSizeBefore": 4606116,
-    "FileSizeAfter": {
-      "macOS": 3430565,
-      "win": 3433504
-    }
+    "FileSizeAfter": 3343093
   },
   {
     "FileName": "dotNETConf/2021/MainEvent/Technical/Perez_Creating_NFT_with_.NET.pptx",
     "FileSizeBefore": 5195263,
-    "FileSizeAfter": {
-      "macOS": 4004416,
-      "win": 4007815
-    }
+    "FileSizeAfter": 3883232
   },
   {
-    "FileName": "dotNETConf/2021/MainEvent/Technical/Quintanilla-Naggaga_Build_.NET_Applications\u200B_with_Visual_Studio_Code\u200B.pptx",
+    "FileName": "dotNETConf/2021/MainEvent/Technical/Quintanilla-Naggaga_Build_.NET_Applications​_with_Visual_Studio_Code​.pptx",
     "FileSizeBefore": 14082427,
-    "FileSizeAfter": {
-      "macOS": 8996563,
-      "win": 9008929
-    }
+    "FileSizeAfter": 8398804
   },
   {
-    "FileName": "dotNETConf/2021/MainEvent/Technical/Rebai_Deploy_an_application_for_Azure_Container_Registry\u200B.pptx",
+    "FileName": "dotNETConf/2021/MainEvent/Technical/Rebai_Deploy_an_application_for_Azure_Container_Registry​.pptx",
     "FileSizeBefore": 8062522,
-    "FileSizeAfter": {
-      "macOS": 5750768,
-      "win": 5754500
-    }
+    "FileSizeAfter": 5664549
   },
   {
-    "FileName": "dotNETConf/2021/MainEvent/Technical/Ros_Benchmarking_ASP.NET_Applications_with_\u200B_.NET_Crank\u200B.pptx",
+    "FileName": "dotNETConf/2021/MainEvent/Technical/Ros_Benchmarking_ASP.NET_Applications_with_​_.NET_Crank​.pptx",
     "FileSizeBefore": 10882407,
-    "FileSizeAfter": {
-      "macOS": 6324073,
-      "win": 6335105
-    }
+    "FileSizeAfter": 5705280
   },
   {
     "FileName": "dotNETConf/2021/MainEvent/Technical/Roth_ASP.NET_Core_MVC_Razor_Pages_in_.NET6.pptx",
     "FileSizeBefore": 10693752,
-    "FileSizeAfter": {
-      "macOS": 6400366,
-      "win": 6411505
-    }
+    "FileSizeAfter": 5798819
   },
   {
     "FileName": "dotNETConf/2021/MainEvent/Technical/Roth_Enterprise-grade_Blazor_apps_with_.NET6.pptx",
     "FileSizeBefore": 19634991,
-    "FileSizeAfter": {
-      "macOS": 11567162,
-      "win": 11588751
-    }
+    "FileSizeAfter": 10713242
   },
   {
     "FileName": "dotNETConf/2021/MainEvent/Technical/Roth_Next-generation_Blazor_components_with_.NET6.pptx",
     "FileSizeBefore": 14700142,
-    "FileSizeAfter": {
-      "macOS": 10181964,
-      "win": 10194267
-    }
+    "FileSizeAfter": 9528077
   },
   {
-    "FileName": "dotNETConf/2021/MainEvent/Technical/Sanderson_New_Blazor_WebAssembly_capabilities_in_.NET_6\u200B.pptx",
+    "FileName": "dotNETConf/2021/MainEvent/Technical/Sanderson_New_Blazor_WebAssembly_capabilities_in_.NET_6​.pptx",
     "FileSizeBefore": 12522122,
-    "FileSizeAfter": {
-      "macOS": 7995032,
-      "win": 8005720
-    }
+    "FileSizeAfter": 7386694
   },
   {
     "FileName": "dotNETConf/2021/MainEvent/Technical/Seth-Halfdane_Azure_Migrate_Migrating_Web_Apps_to_Azure_App_Services.pptx",
     "FileSizeBefore": 5151494,
-    "FileSizeAfter": {
-      "macOS": 4212403,
-      "win": 4224737
-    }
+    "FileSizeAfter": 4169840
   },
   {
-    "FileName": "dotNETConf/2021/MainEvent/Technical/Sinclair_Bringing_your_Apps_to_Windows_11_on_ARM_\u200B.pptx",
+    "FileName": "dotNETConf/2021/MainEvent/Technical/Sinclair_Bringing_your_Apps_to_Windows_11_on_ARM_​.pptx",
     "FileSizeBefore": 5818532,
-    "FileSizeAfter": {
-      "macOS": 3462775,
-      "win": 3464698
-    }
+    "FileSizeAfter": 3428444
   },
   {
     "FileName": "dotNETConf/2021/MainEvent/Technical/Smith_CleanArchAspNetCore.pptx",
     "FileSizeBefore": 16175218,
-    "FileSizeAfter": {
-      "macOS": 6861340,
-      "win": 6872114
-    }
+    "FileSizeAfter": 6299539
   },
   {
-    "FileName": "dotNETConf/2021/MainEvent/Technical/Soucoup_Power_Up_You_Development_with_Power_Apps_and\u200B_Power_Automate.pptx",
+    "FileName": "dotNETConf/2021/MainEvent/Technical/Soucoup_Power_Up_You_Development_with_Power_Apps_and​_Power_Automate.pptx",
     "FileSizeBefore": 9135647,
-    "FileSizeAfter": {
-      "macOS": 3736171,
-      "win": 3739394
-    }
+    "FileSizeAfter": 3560074
   },
   {
     "FileName": "dotNETConf/2021/MainEvent/Technical/Stannard_High_Performance_Systems_with_Akka.Streams.pptx",
     "FileSizeBefore": 4198810,
-    "FileSizeAfter": {
-      "macOS": 3337666,
-      "win": 3339286
-    }
+    "FileSizeAfter": 3300661
   },
   {
     "FileName": "dotNETConf/2021/MainEvent/Technical/Tardif_6_ways_to_get_started_with_.NET_6_and_App_Service.pptx",
     "FileSizeBefore": 4006144,
-    "FileSizeAfter": {
-      "macOS": 3148378,
-      "win": 3150298
-    }
+    "FileSizeAfter": 3111373
   },
   {
     "FileName": "dotNETConf/2021/MainEvent/Technical/Tosato-Minerva_OpenTelemetry_with_ASP.NET_Core_Minimal_APIs.pptx",
     "FileSizeBefore": 4276067,
-    "FileSizeAfter": {
-      "macOS": 3249183,
-      "win": 3251899
-    }
+    "FileSizeAfter": 3212171
   },
   {
-    "FileName": "dotNETConf/2021/MainEvent/Technical/Versluis-Jesus_Welcome_to_Maui_Community_Toolkit\u200B.pptx",
+    "FileName": "dotNETConf/2021/MainEvent/Technical/Versluis-Jesus_Welcome_to_Maui_Community_Toolkit​.pptx",
     "FileSizeBefore": 12065655,
-    "FileSizeAfter": {
-      "macOS": 7479242,
-      "win": 7490860
-    }
+    "FileSizeAfter": 6863709
   },
   {
-    "FileName": "dotNETConf/2021/MainEvent/Technical/Walker_Creating_Database-Agnostic\u200B_Applications_with_EF_Core.pptx",
+    "FileName": "dotNETConf/2021/MainEvent/Technical/Walker_Creating_Database-Agnostic​_Applications_with_EF_Core.pptx",
     "FileSizeBefore": 6015990,
-    "FileSizeAfter": {
-      "macOS": 3888361,
-      "win": 3890431
-    }
+    "FileSizeAfter": 3828958
   },
   {
     "FileName": "dotNETConf/2021/MainEvent/Technical/Washington_Blazor_Azure_B2C_Authentication_and_Authorization.pptx",
     "FileSizeBefore": 11391672,
-    "FileSizeAfter": {
-      "macOS": 7189423,
-      "win": 7193700
-    }
+    "FileSizeAfter": 6995795
   },
   {
-    "FileName": "dotNETConf/2021/MainEvent/Technical/Wildermuth_Real_World_\u200BMinimal_APIs.pptx",
+    "FileName": "dotNETConf/2021/MainEvent/Technical/Wildermuth_Real_World_​Minimal_APIs.pptx",
     "FileSizeBefore": 5301498,
-    "FileSizeAfter": {
-      "macOS": 3898193,
-      "win": 3901029
-    }
+    "FileSizeAfter": 3850509
   },
   {
-    "FileName": "dotNETConf/2021/MainEvent/Technical/Yoo_Brand_New!\u200B_Azure_Functions_OpenAPI_Extension_on_.NET_6\u200B.pptx",
+    "FileName": "dotNETConf/2021/MainEvent/Technical/Yoo_Brand_New!​_Azure_Functions_OpenAPI_Extension_on_.NET_6​.pptx",
     "FileSizeBefore": 12279186,
-    "FileSizeAfter": {
-      "macOS": 4334791,
-      "win": 4337955
-    }
+    "FileSizeAfter": 4236074
   },
   {
     "FileName": "dotNETConf/2021/MainEvent/Technical/Yuknewicz.dapr.pptx",
     "FileSizeBefore": 22451926,
-    "FileSizeAfter": {
-      "macOS": 12966470,
-      "win": 12982742
-    }
+    "FileSizeAfter": 12299868,
+    "Errors": [
+      "[/ppt/media/image93.tiff] [NotSupportedException] Unsupported image format (Unimplemented)"
+    ]
   },
   {
     "FileName": "dotNETConf/2022/FocusOnMAUI/Technical/AuthenticateUsers - Call backend.pptx",
     "FileSizeBefore": 4817696,
-    "FileSizeAfter": {
-      "macOS": 3816555,
-      "win": 3818341
-    }
+    "FileSizeAfter": 3752392
   },
   {
     "FileName": "dotNETConf/2022/FocusOnMAUI/Technical/CodeReuseMAUI.pptx",
     "FileSizeBefore": 16045133,
-    "FileSizeAfter": {
-      "macOS": 8816321,
-      "win": 8816935
-    }
+    "FileSizeAfter": 8889412,
+    "Errors": [
+      "[/ppt/media/image55.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image59.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image60.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image61.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image63.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image64.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image86.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image87.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image88.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image89.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image92.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image95.tiff] [NotSupportedException] Unsupported image format (Unimplemented)"
+    ]
   },
   {
     "FileName": "dotNETConf/2022/FocusOnMAUI/Technical/dotnetconf--Lottie-Skottie - UnoPlatform - MAUI.pptx",
     "FileSizeBefore": 10087295,
-    "FileSizeAfter": {
-      "macOS": 4226179,
-      "win": 4227779
-    }
+    "FileSizeAfter": 4184758
   },
   {
     "FileName": "dotNETConf/2022/FocusOnMAUI/Technical/dotnetconf-DevOps.pptx",
     "FileSizeBefore": 6212713,
-    "FileSizeAfter": {
-      "macOS": 4875159,
-      "win": 4878458
-    }
+    "FileSizeAfter": 4803468
   },
   {
     "FileName": "dotNETConf/2022/FocusOnMAUI/Technical/dotnetconf-MAUI-Keynote.pptx",
     "FileSizeBefore": 23156559,
-    "FileSizeAfter": {
-      "macOS": 11790187,
-      "win": 11751668
-    }
+    "FileSizeAfter": 10720475
   },
   {
     "FileName": "dotNETConf/2022/FocusOnMAUI/Technical/shaun-lawrence-building-real-time-games-with-dotnet-maui.pptx",
     "FileSizeBefore": 5276118,
-    "FileSizeAfter": {
-      "macOS": 3754972,
-      "win": 3757638
-    }
+    "FileSizeAfter": 3670310
   },
   {
     "FileName": "dotNETConf/2022/FocusOnMAUI/Technical/Zero to Mobile Database Hero - Learn to create online offline data storage capable cross-platform apps in 30 minutes - Without Slide Notes.pptx",
     "FileSizeBefore": 8526599,
-    "FileSizeAfter": {
-      "macOS": 4465941,
-      "win": 4469924
-    }
+    "FileSizeAfter": 4345346
   },
   {
     "FileName": "dotNETConf/2022/FocusOnMAUI/Technical/ZUMO-dotnetconf-aug2022.pptx",
     "FileSizeBefore": 5302169,
-    "FileSizeAfter": {
-      "macOS": 4011302,
-      "win": 4013605
-    }
+    "FileSizeAfter": 3947644
   },
   {
     "FileName": "dotNETConf/2022/MainEvent/Creative/DotNet_PPT_Template.pptx",
     "FileSizeBefore": 15338661,
-    "FileSizeAfter": {
-      "macOS": 10923211,
-      "win": 10925120
-    }
+    "FileSizeAfter": 11214680
   },
   {
     "FileName": "dotNETConf/2022/MainEvent/Technical/Anthony_Chu_Chu_Azure_Container_Apps_with_.NET.pptx",
     "FileSizeBefore": 24038402,
-    "FileSizeAfter": {
-      "macOS": 8470092,
-      "win": 8474211
-    }
+    "FileSizeAfter": 8770637,
+    "Errors": [
+      "[/ppt/media/image52.tiff] [NotSupportedException] Unsupported image format (Unimplemented)",
+      "[/ppt/media/image57.tiff] [NotSupportedException] Unsupported image format (Unimplemented)"
+    ]
   },
   {
     "FileName": "dotNETConf/2022/MainEvent/Technical/Ayca_Bas_Bas_Miller_Building_Microsoft_Teams_Bots_using_NET_and_Teams Toolkit.pptx",
     "FileSizeBefore": 16821607,
-    "FileSizeAfter": {
-      "macOS": 11686436,
-      "win": 11688615
-    }
+    "FileSizeAfter": 11970853
   },
   {
     "FileName": "dotNETConf/2022/MainEvent/Technical/brady_gaster_Gaster_Petit_Bond_Orleans_7.pptx",
     "FileSizeBefore": 18385985,
-    "FileSizeAfter": {
-      "macOS": 11781025,
-      "win": 11790978
-    }
+    "FileSizeAfter": 11929469
   },
   {
     "FileName": "dotNETConf/2022/MainEvent/Technical/Daniel_Roth_Roth_.NET_loves_WebAssembly.pptx",
     "FileSizeBefore": 20412699,
-    "FileSizeAfter": {
-      "macOS": 15741756,
-      "win": 15739918
-    },
+    "FileSizeAfter": 14486198,
     "Errors": [
       "[/ppt/media/image34.png] Unsupported image crop L/T/R/B=-22479/-36460/-22543/-36460"
     ]
@@ -1976,109 +1456,67 @@
   {
     "FileName": "dotNETConf/2022/MainEvent/Technical/Daniel_Roth_Roth_State_of_ASP.NET_Core.pptx",
     "FileSizeBefore": 22322502,
-    "FileSizeAfter": {
-      "macOS": 13391358,
-      "win": 13393676
-    }
+    "FileSizeAfter": 12667145
   },
   {
     "FileName": "dotNETConf/2022/MainEvent/Technical/David_Ortinau_Maddy_Montaquila_State_Of_MAUI.pptx",
     "FileSizeBefore": 29778449,
-    "FileSizeAfter": {
-      "macOS": 14897723,
-      "win": 14901809
-    }
+    "FileSizeAfter": 14399054
   },
   {
     "FileName": "dotNETConf/2022/MainEvent/Technical/dotNETConf2022-keynote.pptx",
     "FileSizeBefore": 19670022,
-    "FileSizeAfter": {
-      "macOS": 10569050,
-      "win": 10577110
-    },
-    "Errors": [
-      "[/ppt/media/image18.png] Unsupported image crop L/T/R/B=-8334/-8334/-8334/-8334"
-    ]
+    "FileSizeAfter": 9486997
   },
   {
     "FileName": "dotNETConf/2022/MainEvent/Technical/Jonathan_Peppers_Peppers-Performance-Improvements-in-NET-MAUI.pptx",
     "FileSizeBefore": 17315963,
-    "FileSizeAfter": {
-      "macOS": 12083209,
-      "win": 12085576
-    }
+    "FileSizeAfter": 12330822
   },
   {
     "FileName": "dotNETConf/2022/MainEvent/Technical/Maira_Wenzel_Galloway_Wenzel_Using_dotnet_to_build_the_dotnet_website.pptx",
     "FileSizeBefore": 21840444,
-    "FileSizeAfter": {
-      "macOS": 12535816,
-      "win": 12538356
-    }
+    "FileSizeAfter": 12358897
   },
   {
     "FileName": "dotNETConf/2022/MainEvent/Technical/Marwa_El-Dafrawy_ElDafrawy_Teams_Backend_Services_powered_by_net_core.pptx",
     "FileSizeBefore": 17406157,
-    "FileSizeAfter": {
-      "macOS": 11545191,
-      "win": 11548721
-    }
+    "FileSizeAfter": 11825630
   },
   {
     "FileName": "dotNETConf/2022/MainEvent/Technical/Matt_Soucoup_Soucoup_Whirlwind_tour_Azure.pptx",
     "FileSizeBefore": 15458291,
-    "FileSizeAfter": {
-      "macOS": 11023151,
-      "win": 11025871
-    }
+    "FileSizeAfter": 11313590
   },
   {
     "FileName": "dotNETConf/2022/MainEvent/Technical/Melony_Qin_QIN_CAVALCANTE_.NET Conf22.pptx",
     "FileSizeBefore": 8974216,
-    "FileSizeAfter": {
-      "macOS": 7778851,
-      "win": 7781519
-    }
+    "FileSizeAfter": 7732843
   },
   {
     "FileName": "dotNETConf/2022/MainEvent/Technical/Michael_Hawker_Hawker_Accelerate_Your_WinUI3_App_with_the_Windows_Community_Toolkit.pptx",
     "FileSizeBefore": 18581924,
-    "FileSizeAfter": {
-      "macOS": 11968450,
-      "win": 11971531
-    }
+    "FileSizeAfter": 12188331
   },
   {
     "FileName": "dotNETConf/2022/MainEvent/Technical/Mike_Rousos_Gavrysh_Rousos_Southwick_Upgrading_From_Net_Framework_To_Net_7.pptx",
     "FileSizeBefore": 20066872,
-    "FileSizeAfter": {
-      "macOS": 13574793,
-      "win": 13588055
-    }
+    "FileSizeAfter": 13844127
   },
   {
     "FileName": "dotNETConf/2022/MainEvent/Technical/Sam_Spencer_Connew_Spencer_Using CoreWCF to unblock modernization of WCF apps.pptx",
     "FileSizeBefore": 15355670,
-    "FileSizeAfter": {
-      "macOS": 10940210,
-      "win": 10942402
-    }
+    "FileSizeAfter": 11231668
   },
   {
     "FileName": "dotNETConf/2022/MainEvent/Technical/Sebastien_Ros_Ros_Building_modern_high-performance_services_with_ASP.NET_Core_and_.NET_7.pptx",
     "FileSizeBefore": 15585088,
-    "FileSizeAfter": {
-      "macOS": 11213692,
-      "win": 11215876
-    }
+    "FileSizeAfter": 11458823
   },
   {
     "FileName": "dotNETConf/2022/MainEvent/Technical/Shane_Neuville_Shane_Neuville_Whats_new_in_NET_MAUI_for_Desktop_App_Development.pptx",
     "FileSizeBefore": 21326690,
-    "FileSizeAfter": {
-      "macOS": 12297428,
-      "win": 12296277
-    },
+    "FileSizeAfter": 12388745,
     "Errors": [
       "[/ppt/media/image15.png] Unsupported image crop L/T/R/B=0/0/-2/0"
     ]
@@ -2086,462 +1524,293 @@
   {
     "FileName": "dotNETConf/2022/MainEvent/Technical/Stephen_Halter_dotnet-conf-minimal-2022.pptx",
     "FileSizeBefore": 15335388,
-    "FileSizeAfter": {
-      "macOS": 10919985,
-      "win": 10921890
-    }
+    "FileSizeAfter": 11211454
   },
   {
     "FileName": "dotNETConf/2022/MainEvent/Technical/Stephen_Toub_Toub_Performance_Improvements_In_NET_7.pptx",
     "FileSizeBefore": 18028897,
-    "FileSizeAfter": {
-      "macOS": 11643013,
-      "win": 11646833
-    }
+    "FileSizeAfter": 11849286
   },
   {
     "FileName": "dotNETConf/2022/MainEvent/Technical/Steve_Sanderson_Sanderson_Build_an_Audio_Browser_app_with_Blazor.pptx",
     "FileSizeBefore": 15717085,
-    "FileSizeAfter": {
-      "macOS": 11017519,
-      "win": 11019732
-    }
+    "FileSizeAfter": 11321485
   },
   {
     "FileName": "dotNETConf/2022/MainEvent/Technical/Steve_Sanderson_Sanderson_Whats_new_for_Blazor_in_.NET_7.pptx",
     "FileSizeBefore": 15387053,
-    "FileSizeAfter": {
-      "macOS": 10993727,
-      "win": 10995770
-    }
+    "FileSizeAfter": 11305870
   },
   {
     "FileName": "dotNETConf/2023/Creative/DotNetConf-2023-Template.pptx",
     "FileSizeBefore": 12388456,
-    "FileSizeAfter": {
-      "macOS": 7988588,
-      "win": 7988637
-    }
+    "FileSizeAfter": 8124089
   },
   {
     "FileName": "dotNETConf/2023/Technical/.NET App modernization and cloud migration - Cross Platform Enterprise focus/.NET App modernization and cloud migration - Cross Platform Enterprise focus.pptx",
     "FileSizeBefore": 360692,
-    "FileSizeAfter": {
-      "macOS": 356610,
-      "win": 357660
-    }
+    "FileSizeAfter": 304422
   },
   {
     "FileName": "dotNETConf/2023/Technical/.NET Configuration In Depth/DotNET Configuration In Depth.pptx",
     "FileSizeBefore": 13396258,
-    "FileSizeAfter": {
-      "macOS": 1130540,
-      "win": 1131167
-    }
+    "FileSizeAfter": 1125363
   },
   {
     "FileName": "dotNETConf/2023/Technical/.NET is the best backend for your JavaScript frontend/.NET is the best backend for your JavaScript frontend.pptx",
     "FileSizeBefore": 6742566,
-    "FileSizeAfter": {
-      "macOS": 2366605,
-      "win": 2366498
-    }
+    "FileSizeAfter": 2484004
   },
   {
     "FileName": "dotNETConf/2023/Technical/AI and .NET with Semantic Kernel/AI and .NET with Semantic Kernel.pptx",
     "FileSizeBefore": 8829494,
-    "FileSizeAfter": {
-      "macOS": 2860023,
-      "win": 2857903
-    }
+    "FileSizeAfter": 2705798
   },
   {
     "FileName": "dotNETConf/2023/Technical/All About C# Source Generators/All About C# Source Generators.pptx",
     "FileSizeBefore": 2090073,
-    "FileSizeAfter": {
-      "macOS": 1894087,
-      "win": 1892015
-    }
+    "FileSizeAfter": 1850742
   },
   {
     "FileName": "dotNETConf/2023/Technical/App Service the best place to host your .NET 8 Web Apps/App Service the best place to host your .NET 8 Web Apps.pptx",
     "FileSizeBefore": 9417625,
-    "FileSizeAfter": {
-      "macOS": 5901217,
-      "win": 5901362
-    }
+    "FileSizeAfter": 6052322
   },
   {
-    "FileName": "dotNETConf/2023/Technical/Azure API Center and ASP.NET Web API Integration - A Developer\u0027s Guide/Azure API Center and ASP.NET Web API Integration - A Developer\u0027s Guide.pptx",
+    "FileName": "dotNETConf/2023/Technical/Azure API Center and ASP.NET Web API Integration - A Developer's Guide/Azure API Center and ASP.NET Web API Integration - A Developer's Guide.pptx",
     "FileSizeBefore": 5173049,
-    "FileSizeAfter": {
-      "macOS": 3953936,
-      "win": 3954528
-    }
+    "FileSizeAfter": 3914027
   },
   {
     "FileName": "dotNETConf/2023/Technical/Best Practices for Cross-Platform .NET 8 Applications/Best Practices for Cross-Platform .NET 8 Applications.pptx",
     "FileSizeBefore": 3437077,
-    "FileSizeAfter": {
-      "macOS": 1812626,
-      "win": 1812282
-    }
+    "FileSizeAfter": 1783318
   },
   {
     "FileName": "dotNETConf/2023/Technical/Build 3D Apps with .Net MAUI and Evergine/Build 3D Apps with .Net MAUI and Evergine.pptx",
     "FileSizeBefore": 21126906,
-    "FileSizeAfter": {
-      "macOS": 16026643,
-      "win": 16024028
-    }
+    "FileSizeAfter": 15924686
   },
   {
     "FileName": "dotNETConf/2023/Technical/Build an Azure OpenAI powered .NET 8 Chat Bot on your data from scratch/Build an Azure OpenAI powered .NET 8 Chat Bot on your data from scratch.pptx",
     "FileSizeBefore": 2294073,
-    "FileSizeAfter": {
-      "macOS": 1853514,
-      "win": 1853792
-    }
+    "FileSizeAfter": 1820901
   },
   {
     "FileName": "dotNETConf/2023/Technical/Build hybrid apps with .NET MAUI/HybridMAUIApps.pptx",
     "FileSizeBefore": 1300790,
-    "FileSizeAfter": {
-      "macOS": 765294,
-      "win": 765546
-    }
+    "FileSizeAfter": 732979
   },
   {
     "FileName": "dotNETConf/2023/Technical/Building beautiful Blazor apps with Tailwind CSS/Building beautiful Blazor apps with Tailwind CSS.pptx",
     "FileSizeBefore": 2778070,
-    "FileSizeAfter": {
-      "macOS": 2533084,
-      "win": 2532154
-    }
+    "FileSizeAfter": 2517963
   },
   {
     "FileName": "dotNETConf/2023/Technical/Building Cloud Native apps with .NET 8/Building Cloud Native apps with .NET 8.pptx",
     "FileSizeBefore": 7729563,
-    "FileSizeAfter": {
-      "macOS": 5556375,
-      "win": 5560617
-    }
+    "FileSizeAfter": 5479134
   },
   {
     "FileName": "dotNETConf/2023/Technical/Building Generative AI Powered Bot with Teams Toolkit/Building Generative AI Powered Bot with Teams Toolkit.pptx",
     "FileSizeBefore": 10823003,
-    "FileSizeAfter": {
-      "macOS": 6513864,
-      "win": 6513835
-    }
+    "FileSizeAfter": 6623134
   },
   {
     "FileName": "dotNETConf/2023/Technical/Building Multi-Tenant ASP.NET Core Applications and ABP Framework/Building Multi-Tenant ASP.NET Core Applications and ABP Framework.pptx",
     "FileSizeBefore": 4889174,
-    "FileSizeAfter": {
-      "macOS": 3910906,
-      "win": 3912426
-    }
+    "FileSizeAfter": 3891510
   },
   {
     "FileName": "dotNETConf/2023/Technical/Building planet scale .NET apps with Azure Cosmos DB/Building planet scale .NET apps with Azure Cosmos DB.pptx",
     "FileSizeBefore": 3489231,
-    "FileSizeAfter": {
-      "macOS": 3284061,
-      "win": 3284227
-    }
+    "FileSizeAfter": 3219723
   },
   {
     "FileName": "dotNETConf/2023/Technical/Bye ASP.NET WebForm, Welcome Blazor- Transform your ASP.NET WebForm Chatbot in no time, and beyond/Bye ASP.NET WebForm, Welcome Blazor.pptx",
     "FileSizeBefore": 6550730,
-    "FileSizeAfter": {
-      "macOS": 4989555,
-      "win": 4986996
-    }
+    "FileSizeAfter": 3939694
   },
   {
     "FileName": "dotNETConf/2023/Technical/Clean Architecture with ASP.NET Core 8/Clean Architecture with ASP.NET Core 8.pptx",
     "FileSizeBefore": 1408258,
-    "FileSizeAfter": {
-      "macOS": 1127941,
-      "win": 1128519
-    }
+    "FileSizeAfter": 1073113
   },
   {
     "FileName": "dotNETConf/2023/Technical/COM Source Generation- An evolution of COM interop in .Net/COM Source Generation An Evolution of COM interop in .NET.pptx",
     "FileSizeBefore": 8841593,
-    "FileSizeAfter": {
-      "macOS": 5280982,
-      "win": 5281379
-    }
+    "FileSizeAfter": 5432047
   },
   {
     "FileName": "dotNETConf/2023/Technical/Community Toolkit Roundup/CommunityToolkitRoundup2023.pptx",
     "FileSizeBefore": 5149481,
-    "FileSizeAfter": {
-      "macOS": 4590360,
-      "win": 4590686
-    }
+    "FileSizeAfter": 4538867
   },
   {
     "FileName": "dotNETConf/2023/Technical/Concurrent Hosted Service in Net 8/Concurrent_Hosted_Services_In_.NET8.pptx",
     "FileSizeBefore": 5674624,
-    "FileSizeAfter": {
-      "macOS": 5234124,
-      "win": 5234815
-    }
+    "FileSizeAfter": 5183232
   },
   {
     "FileName": "dotNETConf/2023/Technical/CoreWCF - Its not just for modernizing old WCF apps/CoreWCF Its Not Just for Modernizing old WCF apps.pptx",
     "FileSizeBefore": 7974672,
-    "FileSizeAfter": {
-      "macOS": 4408417,
-      "win": 4408727
-    }
+    "FileSizeAfter": 4559522
   },
   {
-    "FileName": "dotNETConf/2023/Technical/CQRS with Event Sourcing using the \u201CCritter Stack\u201D/CQRS_with_Event_Sourcing_using_CritterStack.pptx",
+    "FileName": "dotNETConf/2023/Technical/CQRS with Event Sourcing using the “Critter Stack”/CQRS_with_Event_Sourcing_using_CritterStack.pptx",
     "FileSizeBefore": 4285318,
-    "FileSizeAfter": {
-      "macOS": 3956674,
-      "win": 3956480
-    }
+    "FileSizeAfter": 3954763
   },
   {
     "FileName": "dotNETConf/2023/Technical/Create an enterprise Copilot extension for Visual Studio Code through Semantic Kernel/Create_an_enterprise_Copilot_extension_for_VisualStudioCode_through_SemanticKernel.pptx",
     "FileSizeBefore": 3360479,
-    "FileSizeAfter": {
-      "macOS": 2161075,
-      "win": 2162782
-    }
+    "FileSizeAfter": 2098409
   },
   {
     "FileName": "dotNETConf/2023/Technical/Design UI agnostic cross-platform applications with .NET/Design UI agnostic cross-platform applications with .NET DanCiprianArdelean.pptx",
     "FileSizeBefore": 3029872,
-    "FileSizeAfter": {
-      "macOS": 2791780,
-      "win": 2792292
-    }
+    "FileSizeAfter": 2774734
   },
   {
     "FileName": "dotNETConf/2023/Technical/dotNETConf2023-keynote.pptx",
     "FileSizeBefore": 23450586,
-    "FileSizeAfter": {
-      "macOS": 8053417,
-      "win": 8076677
-    },
+    "FileSizeAfter": 7857442,
     "Errors": [
-      "[/ppt/media/image23.png] Unsupported image crop L/T/R/B=12391/-5140/13826/0",
       "[/ppt/media/image91.png] Unsupported image crop L/T/R/B=-12161/15475/-12161/20359"
     ]
   },
   {
     "FileName": "dotNETConf/2023/Technical/Dynamic PGO/DynamicPGO .pptx",
     "FileSizeBefore": 8571405,
-    "FileSizeAfter": {
-      "macOS": 6730340,
-      "win": 6732966
-    }
+    "FileSizeAfter": 6535349
   },
   {
     "FileName": "dotNETConf/2023/Technical/EF Core database model first - take it to the next level with Power Tools CLI/EFCore_database_model_first_take_it_to_the_next_level_with_PowerToolsCLIPowerTools.pptx",
     "FileSizeBefore": 8616008,
-    "FileSizeAfter": {
-      "macOS": 5071894,
-      "win": 5071718
-    }
+    "FileSizeAfter": 5222999
   },
   {
     "FileName": "dotNETConf/2023/Technical/Everyday C# - A blend of modern and time tested features/DotNetConf-2023-Everyday-Csharp.pptx",
     "FileSizeBefore": 8662721,
-    "FileSizeAfter": {
-      "macOS": 4373955,
-      "win": 4374181
-    }
+    "FileSizeAfter": 4509694
   },
   {
-    "FileName": "dotNETConf/2023/Technical/Experimental C# Interceptors AOT \u0026 Performance for free/Experimental_CSharp_Interceptors_AOT_and_Performance_for_free.pptx",
+    "FileName": "dotNETConf/2023/Technical/Experimental C# Interceptors AOT & Performance for free/Experimental_CSharp_Interceptors_AOT_and_Performance_for_free.pptx",
     "FileSizeBefore": 1973095,
-    "FileSizeAfter": {
-      "macOS": 1829111,
-      "win": 1829499
-    }
+    "FileSizeAfter": 1794531
   },
   {
     "FileName": "dotNETConf/2023/Technical/From databases to API in Azure/From databases to API an efficient solution both on-premises and in Azure.pptx",
     "FileSizeBefore": 6879437,
-    "FileSizeAfter": {
-      "macOS": 6351205,
-      "win": 6351555
-    }
+    "FileSizeAfter": 6265094
   },
   {
     "FileName": "dotNETConf/2023/Technical/From Zero to Hero -Quickly Migrate Web Apps with Azure App Service/From Zero to Hero Quickly Migrate Web Apps with Azure App Service.pptx",
     "FileSizeBefore": 7808240,
-    "FileSizeAfter": {
-      "macOS": 7391222,
-      "win": 7389828
-    }
+    "FileSizeAfter": 7349769
   },
   {
     "FileName": "dotNETConf/2023/Technical/From Zero to Million - How Amateur Developers and Infrastructure Engineers Built a Million-Dollar App/From Zero to Million.pptx",
     "FileSizeBefore": 18364373,
-    "FileSizeAfter": {
-      "macOS": 13510210,
-      "win": 13515384
-    }
+    "FileSizeAfter": 13493766
   },
   {
     "FileName": "dotNETConf/2023/Technical/Full stack web UI with Blazor in .NET 8/Full stack web UI with Blazor in .NET 8.pptx",
     "FileSizeBefore": 17349757,
-    "FileSizeAfter": {
-      "macOS": 7557730,
-      "win": 7564885
-    }
+    "FileSizeAfter": 7848121
   },
   {
     "FileName": "dotNETConf/2023/Technical/Generative AI for the .NET Developer/Generative AI for the .NET Developer.pptx",
     "FileSizeBefore": 7839472,
-    "FileSizeAfter": {
-      "macOS": 6654574,
-      "win": 6655004
-    }
+    "FileSizeAfter": 6611892
   },
   {
     "FileName": "dotNETConf/2023/Technical/Hardware Intrinsics in .NET/Hardware-Intrinsics-in-dotnet.pptx",
     "FileSizeBefore": 7829344,
-    "FileSizeAfter": {
-      "macOS": 4285696,
-      "win": 4285993
-    }
+    "FileSizeAfter": 4436801
   },
   {
     "FileName": "dotNETConf/2023/Technical/How to Achieve Optimistic Updates with Blazor and EF Core/How to Achieve Optimistic Updates with Blazor and EF Core.pptx",
     "FileSizeBefore": 6733087,
-    "FileSizeAfter": {
-      "macOS": 6213834,
-      "win": 6212018
-    }
+    "FileSizeAfter": 6134420,
+    "Errors": [
+      "[/ppt/media/image13.tiff] [NotSupportedException] Unsupported image format (Unimplemented)"
+    ]
   },
   {
     "FileName": "dotNETConf/2023/Technical/How to build a story generator application for children with .NET MAUI and Microsoft Azure/How to build a story generator application for children with .NET MAUI and Microsoft Azure.pptx",
     "FileSizeBefore": 9140724,
-    "FileSizeAfter": {
-      "macOS": 5265141,
-      "win": 5264032
-    }
+    "FileSizeAfter": 5412315
   },
   {
     "FileName": "dotNETConf/2023/Technical/Improve your ASP.NET core web app performance using Azure Cache for Redis/Improve your ASP.NET core web app performance using Azure Cache for Redis.pptx",
     "FileSizeBefore": 2316324,
-    "FileSizeAfter": {
-      "macOS": 1121933,
-      "win": 1122352
-    }
+    "FileSizeAfter": 1067054
   },
   {
     "FileName": "dotNETConf/2023/Technical/Improving your application telemetry using .NET 8 and Open Telemetry/Improving your application telemetry using .NET 8 and Open Telemetry.pptx",
     "FileSizeBefore": 4534304,
-    "FileSizeAfter": {
-      "macOS": 4384895,
-      "win": 4385904
-    }
+    "FileSizeAfter": 4371545
   },
   {
     "FileName": "dotNETConf/2023/Technical/Integrating Blazor with existing .NET web apps/Integrating Blazor with existing .NET web apps.pptx",
     "FileSizeBefore": 20308544,
-    "FileSizeAfter": {
-      "macOS": 11902567,
-      "win": 11903714
-    }
+    "FileSizeAfter": 11942778
   },
   {
     "FileName": "dotNETConf/2023/Technical/Introducing project Kiota a client generator for OpenAPI/Introducing project Kiota a client generator for OpenAPI.pptx",
     "FileSizeBefore": 5039310,
-    "FileSizeAfter": {
-      "macOS": 4606083,
-      "win": 4607124
-    }
+    "FileSizeAfter": 4570057
   },
   {
-    "FileName": "dotNETConf/2023/Technical/It\u0027s C# All The Way Down! Using .NET for home automation with IoT devices/Its C# All the Way Down! Using .NET for home automation with IoT devices.pptx",
+    "FileName": "dotNETConf/2023/Technical/It's C# All The Way Down! Using .NET for home automation with IoT devices/Its C# All the Way Down! Using .NET for home automation with IoT devices.pptx",
     "FileSizeBefore": 3673683,
-    "FileSizeAfter": {
-      "macOS": 3123976,
-      "win": 3125013
-    }
+    "FileSizeAfter": 3067978
   },
   {
     "FileName": "dotNETConf/2023/Technical/Learn how to improve .NET application performance, leveraging Azure Code Optimizations/Learn how to improve .NET application performance leveraging Azure Code Optimizations.pptx",
     "FileSizeBefore": 5283681,
-    "FileSizeAfter": {
-      "macOS": 4923952,
-      "win": 4924280
-    }
+    "FileSizeAfter": 4901929
   },
   {
     "FileName": "dotNETConf/2023/Technical/Lessons from a data science startup using F# and dotnet in a developing country/Lessons from a data science startup using F# and dotnet in a developing country.pptx",
     "FileSizeBefore": 4590653,
-    "FileSizeAfter": {
-      "macOS": 527058,
-      "win": 527414
-    }
+    "FileSizeAfter": 662545
   },
   {
-    "FileName": "dotNETConf/2023/Technical/Let\u2019s catch up with C#! Exciting new features in C# 9, 10, 11 and 12!/Let\u2019s catch up with C#! Exciting new features in C# 9, 10, 11 and 12.pptx",
+    "FileName": "dotNETConf/2023/Technical/Let’s catch up with C#! Exciting new features in C# 9, 10, 11 and 12!/Let’s catch up with C#! Exciting new features in C# 9, 10, 11 and 12.pptx",
     "FileSizeBefore": 6533780,
-    "FileSizeAfter": {
-      "macOS": 6111459,
-      "win": 6109903
-    }
+    "FileSizeAfter": 6073480
   },
   {
     "FileName": "dotNETConf/2023/Technical/Make a template for your template/Make a Template for Your Template.pptx",
     "FileSizeBefore": 1091334,
-    "FileSizeAfter": {
-      "macOS": 809447,
-      "win": 809505
-    }
+    "FileSizeAfter": 785087
   },
   {
     "FileName": "dotNETConf/2023/Technical/Migrating .NET applications to Azure/Migrating .NET applications to Azure - Gavrysh, Rousos.pptx",
     "FileSizeBefore": 2689301,
-    "FileSizeAfter": {
-      "macOS": 1060825,
-      "win": 1061540
-    }
+    "FileSizeAfter": 1028121
   },
   {
     "FileName": "dotNETConf/2023/Technical/Packing light with VS Code and the C# Dev Kit/Packing light with VS Code and the C# Dev Kit.pptx",
     "FileSizeBefore": 5006855,
-    "FileSizeAfter": {
-      "macOS": 2932461,
-      "win": 2929892
-    }
+    "FileSizeAfter": 2894137
   },
   {
     "FileName": "dotNETConf/2023/Technical/Performance Improvements in .NET 8, ASP.NET Core, and .NET MAUI/Performance Improvements in .NET 8, ASP.NET Core, and .NET MAUI.pptx",
     "FileSizeBefore": 4126867,
-    "FileSizeAfter": {
-      "macOS": 3657481,
-      "win": 3657904
-    }
+    "FileSizeAfter": 3614296
   },
   {
     "FileName": "dotNETConf/2023/Technical/Tiny, fast ASP.NET Core APIs with native AOT/Tiny, fast ASP.NET Core APIs with native AOT.pptx",
     "FileSizeBefore": 9935038,
-    "FileSizeAfter": {
-      "macOS": 5645793,
-      "win": 5645957
-    }
+    "FileSizeAfter": 5781532
   },
   {
     "FileName": "dotNETConf/2023/Technical/Visual Studio Updates for .NET Devs/Visual Studio Updates for .NET Devs.pptx",
     "FileSizeBefore": 25275717,
-    "FileSizeAfter": {
-      "macOS": 11104834,
-      "win": 11104840
-    },
+    "FileSizeAfter": 10793429,
     "Errors": [
       "[/ppt/media/image102.png] Unsupported image crop L/T/R/B=0/0/-3/-27",
       "[/ppt/media/image38.png] Unsupported image crop L/T/R/B=-5272/0/0/0",
@@ -2549,36 +1818,24 @@
     ]
   },
   {
-    "FileName": "dotNETConf/2023/Technical/What\u0027s new in System.Text.Json/What\u0027s new in System.Text.Json.pptx",
+    "FileName": "dotNETConf/2023/Technical/What's new in System.Text.Json/What's new in System.Text.Json.pptx",
     "FileSizeBefore": 6972910,
-    "FileSizeAfter": {
-      "macOS": 4483461,
-      "win": 4479417
-    }
+    "FileSizeAfter": 4422182
   },
   {
-    "FileName": "dotNETConf/2023/Technical/What\u0027s new with WinForms/What\u0027s new with WinForms.pptx",
+    "FileName": "dotNETConf/2023/Technical/What's new with WinForms/What's new with WinForms.pptx",
     "FileSizeBefore": 10580921,
-    "FileSizeAfter": {
-      "macOS": 4471632,
-      "win": 4471918
-    }
+    "FileSizeAfter": 4417884
   },
   {
     "FileName": "dsyme-fsharp/2007-03-23-epfl-apats/apats-epfl.pptx",
     "FileSizeBefore": 155276,
-    "FileSizeAfter": {
-      "macOS": 133237,
-      "win": 133966
-    }
+    "FileSizeAfter": 133237
   },
   {
     "FileName": "dsyme-fsharp/2007-07-06-dublin/APGAdCenter.pptx",
     "FileSizeBefore": 1457603,
-    "FileSizeAfter": {
-      "macOS": 974360,
-      "win": 971669
-    },
+    "FileSizeAfter": 974360,
     "Errors": [
       "[/ppt/media/image8.png] Unsupported image crop L/T/R/B=-849/-21872/-849/-21872"
     ]
@@ -2586,10 +1843,7 @@
   {
     "FileName": "dsyme-fsharp/2007-07-06-dublin/fsharp-at-dublin.pptx",
     "FileSizeBefore": 2514702,
-    "FileSizeAfter": {
-      "macOS": 1315086,
-      "win": 1313918
-    },
+    "FileSizeAfter": 1315086,
     "Errors": [
       "[/ppt/media/image16.png] Unsupported image crop L/T/R/B=-849/-21872/-849/-21872"
     ]
@@ -2597,66 +1851,42 @@
   {
     "FileName": "dsyme-fsharp/2007-09-18-nextgen/fsharp-v2.pptx",
     "FileSizeBefore": 2004288,
-    "FileSizeAfter": {
-      "macOS": 1319840,
-      "win": 1317697
-    }
+    "FileSizeAfter": 1319840
   },
   {
     "FileName": "dsyme-fsharp/2007-10-01-icfp/apats-icfp-v3.pptx",
     "FileSizeBefore": 149800,
-    "FileSizeAfter": {
-      "macOS": 127638,
-      "win": 128285
-    }
+    "FileSizeAfter": 127638
   },
   {
     "FileName": "dsyme-fsharp/2007-11-09-teched/TLA405_Parallel and Asynchronous Functional Programming on NET with FSharp-v4.pptx",
     "FileSizeBefore": 1994248,
-    "FileSizeAfter": {
-      "macOS": 1640316,
-      "win": 1641719
-    }
+    "FileSizeAfter": 1640316
   },
   {
     "FileName": "dsyme-fsharp/2008-01-leon-bambrick/fsharp_leonb.pptx",
     "FileSizeBefore": 2881539,
-    "FileSizeAfter": {
-      "macOS": 718617,
-      "win": 719355
-    }
+    "FileSizeAfter": 718617
   },
   {
     "FileName": "dsyme-fsharp/2008-05-28-jaoo-brisbane/FSharp Async Parallel.pptx",
     "FileSizeBefore": 427272,
-    "FileSizeAfter": {
-      "macOS": 348214,
-      "win": 349176
-    }
+    "FileSizeAfter": 348214
   },
   {
     "FileName": "dsyme-fsharp/2008-05-28-jaoo-brisbane/FSharp Intro v2 redist.pptx",
     "FileSizeBefore": 1084996,
-    "FileSizeAfter": {
-      "macOS": 901899,
-      "win": 903404
-    }
+    "FileSizeAfter": 901899
   },
   {
     "FileName": "dsyme-fsharp/2008-06-18-wg28/talk-v4.pptx",
     "FileSizeBefore": 302106,
-    "FileSizeAfter": {
-      "macOS": 238617,
-      "win": 239625
-    }
+    "FileSizeAfter": 238617
   },
   {
     "FileName": "dsyme-fsharp/2009-03-24-chalmers/FSharp Impromptu.pptx",
     "FileSizeBefore": 1554201,
-    "FileSizeAfter": {
-      "macOS": 924416,
-      "win": 925928
-    },
+    "FileSizeAfter": 924416,
     "Errors": [
       "[/ppt/media/image6.png] Unsupported image crop L/T/R/B=0/0/0/-26666"
     ]
@@ -2664,10 +1894,7 @@
   {
     "FileName": "dsyme-fsharp/2009-03-24-sdc2009/FSharp Intro v1.pptx",
     "FileSizeBefore": 2120087,
-    "FileSizeAfter": {
-      "macOS": 1223303,
-      "win": 1225280
-    },
+    "FileSizeAfter": 1223303,
     "Errors": [
       "[/ppt/media/image6.png] Unsupported image crop L/T/R/B=0/0/0/-26666"
     ]
@@ -2675,10 +1902,7 @@
   {
     "FileName": "dsyme-fsharp/2009-03-25-aarhus/FSharp Overview.pptx",
     "FileSizeBefore": 2175338,
-    "FileSizeAfter": {
-      "macOS": 1333984,
-      "win": 1336281
-    },
+    "FileSizeAfter": 1333984,
     "Errors": [
       "[/ppt/media/image5.png] Unsupported image crop L/T/R/B=0/0/0/-26666"
     ]
@@ -2686,10 +1910,7 @@
   {
     "FileName": "dsyme-fsharp/2009-03-25-mdcc/FSharp Intro v1.pptx",
     "FileSizeBefore": 2113776,
-    "FileSizeAfter": {
-      "macOS": 1217923,
-      "win": 1219754
-    },
+    "FileSizeAfter": 1217923,
     "Errors": [
       "[/ppt/media/image6.png] Unsupported image crop L/T/R/B=0/0/0/-26666"
     ]
@@ -2697,34 +1918,22 @@
   {
     "FileName": "dsyme-fsharp/2009-03-28-york/FSharp-LOP-v2.pptx",
     "FileSizeBefore": 1663680,
-    "FileSizeAfter": {
-      "macOS": 1202751,
-      "win": 1205236
-    }
+    "FileSizeAfter": 1202751
   },
   {
     "FileName": "dsyme-fsharp/2009-10-05-jaoo-session/FSharp Intro redist.pptx",
     "FileSizeBefore": 765184,
-    "FileSizeAfter": {
-      "macOS": 510610,
-      "win": 512067
-    }
+    "FileSizeAfter": 510610
   },
   {
     "FileName": "dsyme-fsharp/2009-11-11-teched-europe/DEV306_TechEd09_Europe-given-redist.pptx",
     "FileSizeBefore": 736641,
-    "FileSizeAfter": {
-      "macOS": 477298,
-      "win": 478343
-    }
+    "FileSizeAfter": 477298
   },
   {
     "FileName": "dsyme-fsharp/2009-11-18-edinburgh/FSharp-DL.pptx",
     "FileSizeBefore": 2053302,
-    "FileSizeAfter": {
-      "macOS": 966801,
-      "win": 968576
-    },
+    "FileSizeAfter": 966801,
     "Errors": [
       "[/ppt/media/image10.png] Unsupported image crop L/T/R/B=0/0/0/-26666"
     ]
@@ -2732,90 +1941,57 @@
   {
     "FileName": "dsyme-fsharp/2010-01-26-berkeley/FSharp-berkeley-redist.pptx",
     "FileSizeBefore": 518970,
-    "FileSizeAfter": {
-      "macOS": 329282,
-      "win": 330637
-    }
+    "FileSizeAfter": 329282
   },
   {
     "FileName": "dsyme-fsharp/2010-02-24-imperial/FSharp-imperial-redist.pptx",
     "FileSizeBefore": 886399,
-    "FileSizeAfter": {
-      "macOS": 547807,
-      "win": 549217
-    }
+    "FileSizeAfter": 547807
   },
   {
     "FileName": "dsyme-fsharp/2010-03-04-csharp-design/EST-Intro.pptx",
     "FileSizeBefore": 291783,
-    "FileSizeAfter": {
-      "macOS": 266086,
-      "win": 266635
-    }
+    "FileSizeAfter": 266086
   },
   {
     "FileName": "dsyme-fsharp/2010-03-10-qcon-london/FSharp-qcon-redist.pptx",
     "FileSizeBefore": 2126841,
-    "FileSizeAfter": {
-      "macOS": 945733,
-      "win": 946613
-    }
+    "FileSizeAfter": 945733
   },
   {
     "FileName": "dsyme-fsharp/2010-03-17-sdc-sweden/FSharp-sdc.pptx",
     "FileSizeBefore": 2153077,
-    "FileSizeAfter": {
-      "macOS": 1256052,
-      "win": 1257310
-    }
+    "FileSizeAfter": 1256052
   },
   {
     "FileName": "dsyme-fsharp/2010-06-07-msrc-tab-async/AsyncRecap-v3.pptx",
     "FileSizeBefore": 2739821,
-    "FileSizeAfter": {
-      "macOS": 1378175,
-      "win": 1379183
-    }
+    "FileSizeAfter": 1378175
   },
   {
     "FileName": "dsyme-fsharp/2010-06-10-erlang-factory/FSharp-ef.pptx",
     "FileSizeBefore": 1928149,
-    "FileSizeAfter": {
-      "macOS": 1158829,
-      "win": 1160169
-    }
+    "FileSizeAfter": 1158829
   },
   {
     "FileName": "dsyme-fsharp/2010-06-21-lqg/FSharp-lqg.pptx",
     "FileSizeBefore": 2200670,
-    "FileSizeAfter": {
-      "macOS": 1214558,
-      "win": 1215388
-    }
+    "FileSizeAfter": 1214558
   },
   {
     "FileName": "dsyme-fsharp/2010-09-09-meetup/FSharp-meetup-2010-redist.pptx",
     "FileSizeBefore": 4087384,
-    "FileSizeAfter": {
-      "macOS": 2307103,
-      "win": 2309049
-    }
+    "FileSizeAfter": 2307103
   },
   {
     "FileName": "dsyme-fsharp/2010-10-20-splash/FSharp-splash-redist.pptx",
     "FileSizeBefore": 3566321,
-    "FileSizeAfter": {
-      "macOS": 1371958,
-      "win": 1373248
-    }
+    "FileSizeAfter": 1371958
   },
   {
     "FileName": "dsyme-fsharp/2010-10-29-pdc10/PDC_FT_55_Syme_TypeProviders-v2.pptx",
     "FileSizeBefore": 5085649,
-    "FileSizeAfter": {
-      "macOS": 2590883,
-      "win": 2592618
-    },
+    "FileSizeAfter": 2590883,
     "Errors": [
       "[/ppt/media/image13.png] Unsupported image crop L/T/R/B=0/9382/-6081/38738"
     ]
@@ -2823,10 +1999,7 @@
   {
     "FileName": "dsyme-fsharp/2010-10-29-pdc10/type-providers-one-minute.pptx",
     "FileSizeBefore": 3779702,
-    "FileSizeAfter": {
-      "macOS": 1800607,
-      "win": 1801715
-    },
+    "FileSizeAfter": 1800607,
     "Errors": [
       "[/ppt/media/image12.png] Unsupported image crop L/T/R/B=0/9382/-6081/38738"
     ]
@@ -2834,50 +2007,32 @@
   {
     "FileName": "dsyme-fsharp/2010-11-09-berlin/DEV304_Syme.pptx",
     "FileSizeBefore": 9354449,
-    "FileSizeAfter": {
-      "macOS": 7479430,
-      "win": 7470392
-    }
+    "FileSizeAfter": 7479430
   },
   {
     "FileName": "dsyme-fsharp/2011-01-25-padl-async/Async-v3.pptx",
     "FileSizeBefore": 7062852,
-    "FileSizeAfter": {
-      "macOS": 1872121,
-      "win": 1875568
-    }
+    "FileSizeAfter": 1872121
   },
   {
     "FileName": "dsyme-fsharp/2011-03-10-sigcse/fsharp-sigcse.pptx",
     "FileSizeBefore": 3395905,
-    "FileSizeAfter": {
-      "macOS": 265342,
-      "win": 265953
-    }
+    "FileSizeAfter": 265342
   },
   {
     "FileName": "dsyme-fsharp/2011-03-29-techdays-sweden/fsharp-techdays-sweden-don-dsyme-redist.pptx",
     "FileSizeBefore": 8803045,
-    "FileSizeAfter": {
-      "macOS": 7100287,
-      "win": 7091358
-    }
+    "FileSizeAfter": 7100287
   },
   {
     "FileName": "dsyme-fsharp/2011-06-28-ucl-algo/fsharp-ucl-algo-redist-v2.pptx",
     "FileSizeBefore": 4503099,
-    "FileSizeAfter": {
-      "macOS": 3026065,
-      "win": 3024900
-    }
+    "FileSizeAfter": 3026065
   },
   {
     "FileName": "dsyme-fsharp/2011-08-20-jackhu/DEV217.pptx",
     "FileSizeBefore": 8317344,
-    "FileSizeAfter": {
-      "macOS": 4916046,
-      "win": 4915601
-    },
+    "FileSizeAfter": 4916046,
     "Errors": [
       "[/ppt/embeddings/Microsoft_Excel_Worksheet1.xlsx] Unsupported embedding type application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
     ]
@@ -2885,34 +2040,22 @@
   {
     "FileName": "dsyme-fsharp/2011-09-15-build/SAC-904T_Syme.pptx",
     "FileSizeBefore": 2885593,
-    "FileSizeAfter": {
-      "macOS": 1320742,
-      "win": 1318443
-    }
+    "FileSizeAfter": 1320742
   },
   {
     "FileName": "dsyme-fsharp/2011-10-14-fpday/fsharp-fpday-4.pptx",
     "FileSizeBefore": 3704987,
-    "FileSizeAfter": {
-      "macOS": 2413725,
-      "win": 2412859
-    }
+    "FileSizeAfter": 2413725
   },
   {
     "FileName": "dsyme-fsharp/2011-10-25-iswc/iswc-v1.pptx",
     "FileSizeBefore": 2909145,
-    "FileSizeAfter": {
-      "macOS": 2048173,
-      "win": 2047246
-    }
+    "FileSizeAfter": 2048173
   },
   {
     "FileName": "dsyme-fsharp/2011-11-15-dutch-ict/dutch-ict-v2.pptx",
     "FileSizeBefore": 4168627,
-    "FileSizeAfter": {
-      "macOS": 2214054,
-      "win": 2213624
-    },
+    "FileSizeAfter": 2214054,
     "Errors": [
       "[/ppt/media/image23.png] Unsupported image crop L/T/R/B=0/9382/-6081/38738"
     ]
@@ -2920,490 +2063,307 @@
   {
     "FileName": "dsyme-fsharp/2012-03-23-nicta/nicta-v4-redist.pptx",
     "FileSizeBefore": 6128062,
-    "FileSizeAfter": {
-      "macOS": 5046613,
-      "win": 5047978
-    }
+    "FileSizeAfter": 5046613
   },
   {
     "FileName": "dsyme-fsharp/2012-04-22-quant-workshop/fp-success-v2-redist.pptx",
     "FileSizeBefore": 6800604,
-    "FileSizeAfter": {
-      "macOS": 5158605,
-      "win": 5149165
-    }
+    "FileSizeAfter": 5158605
   },
   {
     "FileName": "dsyme-fsharp/2012-05-03-inf-rich-workshop/inf-rich-workshop-dsyme-redist.pptx",
     "FileSizeBefore": 5528816,
-    "FileSizeAfter": {
-      "macOS": 4723879,
-      "win": 4725199
-    }
+    "FileSizeAfter": 4723879
   },
   {
     "FileName": "dsyme-fsharp/2012-05-28-net-tutorials/fp-success-v3.pptx",
     "FileSizeBefore": 8363180,
-    "FileSizeAfter": {
-      "macOS": 6576887,
-      "win": 6567818
-    }
+    "FileSizeAfter": 6576887
   },
   {
     "FileName": "dsyme-fsharp/2012-06-05-new-york/fp-success-v3-redist.pptx",
     "FileSizeBefore": 7668394,
-    "FileSizeAfter": {
-      "macOS": 5458826,
-      "win": 5449612
-    }
+    "FileSizeAfter": 5458826
   },
   {
     "FileName": "dsyme-fsharp/2012-06-26-screencasts/screencast-2.pptx",
     "FileSizeBefore": 5302888,
-    "FileSizeAfter": {
-      "macOS": 4581895,
-      "win": 4571950
-    }
+    "FileSizeAfter": 4581895
   },
   {
     "FileName": "dsyme-fsharp/2012-06-28-pisa/fp-success-v3-redist.pptx",
     "FileSizeBefore": 8791968,
-    "FileSizeAfter": {
-      "macOS": 7038273,
-      "win": 7029144
-    }
+    "FileSizeAfter": 7038273
   },
   {
     "FileName": "dsyme-fsharp/2012-07-16-faculty-summit/slides-v1.pptx",
     "FileSizeBefore": 6272979,
-    "FileSizeAfter": {
-      "macOS": 5164784,
-      "win": 5166109
-    }
+    "FileSizeAfter": 5164784
   },
   {
     "FileName": "dsyme-fsharp/2012-10-02-sap-research/sap-v2-redist.pptx",
     "FileSizeBefore": 6401651,
-    "FileSizeAfter": {
-      "macOS": 5171317,
-      "win": 5173106
-    }
+    "FileSizeAfter": 5171317
   },
   {
     "FileName": "dsyme-fsharp/2012-10-18-boston-fsug/slides-v1.pptx",
     "FileSizeBefore": 5527476,
-    "FileSizeAfter": {
-      "macOS": 4755895,
-      "win": 4757166
-    }
+    "FileSizeAfter": 4755895
   },
   {
     "FileName": "dsyme-fsharp/2012-10-18-monkeyspace/fsharp-3.0-information-rich.pptx",
     "FileSizeBefore": 8811811,
-    "FileSizeAfter": {
-      "macOS": 7241718,
-      "win": 7234258
-    }
+    "FileSizeAfter": 7241718
   },
   {
     "FileName": "dsyme-fsharp/2012-11-01-prog-fsharp/fp-success-v3.pptx",
     "FileSizeBefore": 7149934,
-    "FileSizeAfter": {
-      "macOS": 5372693,
-      "win": 5363492
-    }
+    "FileSizeAfter": 5372693
   },
   {
     "FileName": "dsyme-fsharp/2012-11-13-msr-svc/slides-v1.pptx",
     "FileSizeBefore": 5527476,
-    "FileSizeAfter": {
-      "macOS": 4755895,
-      "win": 4757166
-    }
+    "FileSizeAfter": 4755895
   },
   {
     "FileName": "dsyme-fsharp/2012-11-15-facebook/fsharp-3.0-information-rich.pptx",
     "FileSizeBefore": 8681708,
-    "FileSizeAfter": {
-      "macOS": 7213622,
-      "win": 7206105
-    }
+    "FileSizeAfter": 7213622
   },
   {
     "FileName": "dsyme-fsharp/2012-11-16-google/fsharp-3.0-information-rich.pptx",
     "FileSizeBefore": 8670463,
-    "FileSizeAfter": {
-      "macOS": 7209730,
-      "win": 7202220
-    }
+    "FileSizeAfter": 7209730
   },
   {
     "FileName": "dsyme-fsharp/2013-01-22-ddfp/themes-and-meditations.pptx",
     "FileSizeBefore": 5408476,
-    "FileSizeAfter": {
-      "macOS": 4738302,
-      "win": 4739460
-    }
+    "FileSizeAfter": 4738302
   },
   {
     "FileName": "dsyme-fsharp/2013-03-15-fp-exchange/fsharp-open-source-world-given.pptx",
     "FileSizeBefore": 10088853,
-    "FileSizeAfter": {
-      "macOS": 8461711,
-      "win": 8463899
-    }
+    "FileSizeAfter": 8461711
   },
   {
     "FileName": "dsyme-fsharp/2013-04-13-data-hackathon/fsharp-data-science-given.pptx",
     "FileSizeBefore": 9786378,
-    "FileSizeAfter": {
-      "macOS": 8256603,
-      "win": 8258577
-    }
+    "FileSizeAfter": 8256603
   },
   {
     "FileName": "dsyme-fsharp/2013-04-13-data-hackathon/fsharp-data-science-redist.pptx",
     "FileSizeBefore": 9782131,
-    "FileSizeAfter": {
-      "macOS": 8251572,
-      "win": 8253532
-    }
+    "FileSizeAfter": 8251572
   },
   {
     "FileName": "dsyme-fsharp/2013-05-15-ucam-seminar/ucam-strongly-typed-scalable-information.pptx",
     "FileSizeBefore": 10847797,
-    "FileSizeAfter": {
-      "macOS": 9324487,
-      "win": 9326812
-    }
+    "FileSizeAfter": 9324487
   },
   {
     "FileName": "dsyme-fsharp/2013-06-12-ndc-oslo/fp-success-v3.pptx",
     "FileSizeBefore": 12534114,
-    "FileSizeAfter": {
-      "macOS": 10303654,
-      "win": 10295545
-    }
+    "FileSizeAfter": 10303654
   },
   {
     "FileName": "dsyme-fsharp/2013-06-12-ndc-oslo/fsharp-open-source-world-given.pptx",
     "FileSizeBefore": 10088853,
-    "FileSizeAfter": {
-      "macOS": 8461711,
-      "win": 8463899
-    }
+    "FileSizeAfter": 8461711
   },
   {
     "FileName": "dsyme-fsharp/2013-09-18-nyc-tutorials/fsharp-compiler-tutorial.pptx",
     "FileSizeBefore": 2041827,
-    "FileSizeAfter": {
-      "macOS": 1926210,
-      "win": 1926971
-    }
+    "FileSizeAfter": 1926210
   },
   {
     "FileName": "dsyme-fsharp/2013-09-18-nyc-tutorials/fsharp-open-source-world.pptx",
     "FileSizeBefore": 10497668,
-    "FileSizeAfter": {
-      "macOS": 8792077,
-      "win": 8794717
-    }
+    "FileSizeAfter": 8792077
   },
   {
     "FileName": "dsyme-fsharp/2013-09-22-ml-workshop/fsharp-open-source-world.pptx",
     "FileSizeBefore": 9943230,
-    "FileSizeAfter": {
-      "macOS": 8494660,
-      "win": 8496657
-    }
+    "FileSizeAfter": 8494660
   },
   {
     "FileName": "dsyme-fsharp/2013-10-16-wg28/wg28-strongly-typed-scalable-information-given.pptx",
     "FileSizeBefore": 4011440,
-    "FileSizeAfter": {
-      "macOS": 3279241,
-      "win": 3280100
-    }
+    "FileSizeAfter": 3279241
   },
   {
     "FileName": "dsyme-fsharp/2013-10-16-wg28/wg28-strongly-typed-scalable-information.pptx",
     "FileSizeBefore": 10903424,
-    "FileSizeAfter": {
-      "macOS": 9369045,
-      "win": 9371343
-    }
+    "FileSizeAfter": 9369045
   },
   {
     "FileName": "dsyme-fsharp/2013-11-25-fsharp-in-finance/fp-success-v4-redist.pptx",
     "FileSizeBefore": 7873384,
-    "FileSizeAfter": {
-      "macOS": 6589938,
-      "win": 6590943
-    }
+    "FileSizeAfter": 6589938
   },
   {
     "FileName": "dsyme-fsharp/2013-11-25-fsharp-in-finance/fp-success-v4.pptx",
     "FileSizeBefore": 8562783,
-    "FileSizeAfter": {
-      "macOS": 6797614,
-      "win": 6799548
-    }
+    "FileSizeAfter": 6797614
   },
   {
     "FileName": "dsyme-fsharp/2013-12-04-ndclondon/data-type-providers-fsharp.pptx",
     "FileSizeBefore": 12315191,
-    "FileSizeAfter": {
-      "macOS": 10368820,
-      "win": 10371423
-    }
+    "FileSizeAfter": 10368820
   },
   {
     "FileName": "dsyme-fsharp/2013-12-11-fsharp-in-finance/fp-success-v4-redist.pptx",
     "FileSizeBefore": 9874133,
-    "FileSizeAfter": {
-      "macOS": 7720190,
-      "win": 7721239
-    }
+    "FileSizeAfter": 7720190
   },
   {
     "FileName": "dsyme-fsharp/2014-01-29-ucl/finance-data-v2-redist.pptx",
     "FileSizeBefore": 12220054,
-    "FileSizeAfter": {
-      "macOS": 9651257,
-      "win": 9654339
-    }
+    "FileSizeAfter": 9651257
   },
   {
     "FileName": "dsyme-fsharp/2014-01-29-ucl/finance-data-v2.pptx",
     "FileSizeBefore": 14750484,
-    "FileSizeAfter": {
-      "macOS": 11095424,
-      "win": 11100018
-    }
+    "FileSizeAfter": 11095424
   },
   {
     "FileName": "dsyme-fsharp/2014-03-18-royalh/rh-strongly-typed-scalable-information-v2.pptx",
     "FileSizeBefore": 6830211,
-    "FileSizeAfter": {
-      "macOS": 5075699,
-      "win": 5076911
-    }
+    "FileSizeAfter": 5075699
   },
   {
     "FileName": "dsyme-fsharp/2014-03-18-royalh/rh-strongly-typed-scalable-information.pptx",
     "FileSizeBefore": 12620420,
-    "FileSizeAfter": {
-      "macOS": 9954581,
-      "win": 9956873
-    }
+    "FileSizeAfter": 9954581
   },
   {
     "FileName": "dsyme-fsharp/2014-03-23-ucl-fp-workshop/workshop-fp-v1-redist.pptx",
     "FileSizeBefore": 9776681,
-    "FileSizeAfter": {
-      "macOS": 8595023,
-      "win": 8596820
-    }
+    "FileSizeAfter": 8595023
   },
   {
     "FileName": "dsyme-fsharp/2014-03-23-ucl-fp-workshop/workshop-fp-v1.pptx",
     "FileSizeBefore": 9779735,
-    "FileSizeAfter": {
-      "macOS": 8598074,
-      "win": 8599920
-    }
+    "FileSizeAfter": 8598074
   },
   {
     "FileName": "dsyme-fsharp/2014-03-28-CIFEr/finance-data-v2-redist.pptx",
     "FileSizeBefore": 14949605,
-    "FileSizeAfter": {
-      "macOS": 11263793,
-      "win": 11267168
-    }
+    "FileSizeAfter": 11263793
   },
   {
     "FileName": "dsyme-fsharp/2014-03-28-CIFEr/finance-data-v2.pptx",
     "FileSizeBefore": 16236340,
-    "FileSizeAfter": {
-      "macOS": 12332852,
-      "win": 12337837
-    }
+    "FileSizeAfter": 12332852
   },
   {
     "FileName": "dsyme-fsharp/2014-04-29-copenhagen/fp-success-v4-given.pptx",
     "FileSizeBefore": 11653074,
-    "FileSizeAfter": {
-      "macOS": 8199926,
-      "win": 8201306
-    }
+    "FileSizeAfter": 8199926
   },
   {
     "FileName": "dsyme-fsharp/2014-04-29-copenhagen/fp-success-v4.pptx",
     "FileSizeBefore": 11660793,
-    "FileSizeAfter": {
-      "macOS": 8207606,
-      "win": 8209048
-    }
+    "FileSizeAfter": 8207606
   },
   {
     "FileName": "dsyme-fsharp/2014-07-09-iverson/iverson-strongly-typed-scalable-information-v2.pptx",
     "FileSizeBefore": 12368169,
-    "FileSizeAfter": {
-      "macOS": 10577126,
-      "win": 10578842
-    }
+    "FileSizeAfter": 10577126
   },
   {
     "FileName": "dsyme-fsharp/2014-11-25-cph-campus-days/fsharp-magic-v1.pptx",
     "FileSizeBefore": 13354132,
-    "FileSizeAfter": {
-      "macOS": 11771111,
-      "win": 11774675
-    }
+    "FileSizeAfter": 11771111
   },
   {
     "FileName": "dsyme-fsharp/2014-12-01-codemesh/fsharp-relaxation.pptx",
     "FileSizeBefore": 12570532,
-    "FileSizeAfter": {
-      "macOS": 11183332,
-      "win": 11186394
-    }
+    "FileSizeAfter": 11183332
   },
   {
     "FileName": "dsyme-fsharp/2015-01-06-sydney/fsharp-relaxation.pptx",
     "FileSizeBefore": 12570532,
-    "FileSizeAfter": {
-      "macOS": 11183332,
-      "win": 11186394
-    }
+    "FileSizeAfter": 11183332
   },
   {
     "FileName": "dsyme-fsharp/2015-03-11-scale/fsharp-scale-out.pptx",
     "FileSizeBefore": 8811834,
-    "FileSizeAfter": {
-      "macOS": 8506222,
-      "win": 8507330
-    }
+    "FileSizeAfter": 8506222
   },
   {
     "FileName": "dsyme-fsharp/2015-03-13-thessolonika/fp-success-v4-given.pptx",
     "FileSizeBefore": 6379900,
-    "FileSizeAfter": {
-      "macOS": 5755926,
-      "win": 5756901
-    }
+    "FileSizeAfter": 5755926
   },
   {
     "FileName": "dsyme-fsharp/2015-03-18-dotnetconf/fsharp-data-nirvana.pptx",
     "FileSizeBefore": 8803962,
-    "FileSizeAfter": {
-      "macOS": 8547768,
-      "win": 8549168
-    }
+    "FileSizeAfter": 8547768
   },
   {
     "FileName": "dsyme-fsharp/2015-03-25-azure-net-sdk/fsharp-scale-out.pptx",
     "FileSizeBefore": 8816465,
-    "FileSizeAfter": {
-      "macOS": 8510798,
-      "win": 8511931
-    }
+    "FileSizeAfter": 8510798
   },
   {
     "FileName": "dsyme-fsharp/2015-03-26-fsharp-meetup-redmond/fsharp.pptx",
     "FileSizeBefore": 8901000,
-    "FileSizeAfter": {
-      "macOS": 8585213,
-      "win": 8586581
-    }
+    "FileSizeAfter": 8585213
   },
   {
     "FileName": "dsyme-fsharp/2015-04-12-plang-workshop/fsharp-relaxation-trim-given.pptx",
     "FileSizeBefore": 14454745,
-    "FileSizeAfter": {
-      "macOS": 12749288,
-      "win": 12752255
-    }
+    "FileSizeAfter": 12749288
   },
   {
     "FileName": "dsyme-fsharp/2015-06-19-keynote/fsharp-relaxation-given.pptx",
     "FileSizeBefore": 8204485,
-    "FileSizeAfter": {
-      "macOS": 6872560,
-      "win": 6875427
-    }
+    "FileSizeAfter": 6872560
   },
   {
     "FileName": "dsyme-fsharp/2015-06-22-pisa-seminar/fsharp-relaxation-given.pptx",
     "FileSizeBefore": 8203820,
-    "FileSizeAfter": {
-      "macOS": 6871897,
-      "win": 6874761
-    }
+    "FileSizeAfter": 6871897
   },
   {
     "FileName": "dsyme-fsharp/2015-07-08-summer-school/summer-school-1.pptx",
     "FileSizeBefore": 12093165,
-    "FileSizeAfter": {
-      "macOS": 11408270,
-      "win": 11410336
-    }
+    "FileSizeAfter": 11408270
   },
   {
     "FileName": "dsyme-fsharp/2015-07-08-summer-school/summer-school-2.pptx",
     "FileSizeBefore": 8722561,
-    "FileSizeAfter": {
-      "macOS": 8527982,
-      "win": 8529103
-    }
+    "FileSizeAfter": 8527982
   },
   {
     "FileName": "dsyme-fsharp/2015-07-22-prez/azure-programmability-thoughts-given.pptx",
     "FileSizeBefore": 9926544,
-    "FileSizeAfter": {
-      "macOS": 8939610,
-      "win": 8940871
-    }
+    "FileSizeAfter": 8939610
   },
   {
     "FileName": "dsyme-fsharp/2015-11-11-future-decoded/fsharp-community-cloud-v3.pptx",
     "FileSizeBefore": 16772724,
-    "FileSizeAfter": {
-      "macOS": 12088240,
-      "win": 12082989
-    }
+    "FileSizeAfter": 12088240
   },
   {
     "FileName": "dsyme-fsharp/2016-01-14-ndclondon/fsharp-community-cloud-v3.pptx",
     "FileSizeBefore": 17662180,
-    "FileSizeAfter": {
-      "macOS": 12317019,
-      "win": 12312607
-    }
+    "FileSizeAfter": 12317019
   },
   {
     "FileName": "dsyme-fsharp/2016-03-04-fsharpconf/fsharpconf-intro-mini.pptx",
     "FileSizeBefore": 9970020,
-    "FileSizeAfter": {
-      "macOS": 8795606,
-      "win": 8796817
-    }
+    "FileSizeAfter": 8795606
   },
   {
     "FileName": "dsyme-fsharp/2016-07-11-fringe/fsharp-relaxation-given.pptx",
     "FileSizeBefore": 19646522,
-    "FileSizeAfter": {
-      "macOS": 12555518,
-      "win": 12550535
-    }
+    "FileSizeAfter": 12555518
   },
   {
     "FileName": "dsyme-fsharp/2016-12-11-ctos/data-programming-cloud-nirvana-v1.pptx",
     "FileSizeBefore": 15626170,
-    "FileSizeAfter": {
-      "macOS": 13040493,
-      "win": 13044098
-    },
+    "FileSizeAfter": 13040493,
     "Errors": [
       "[/ppt/media/image51.jpeg] Unsupported image crop L/T/R/B=52125/0/180/-114"
     ]
@@ -3411,18 +2371,12 @@
   {
     "FileName": "dsyme-fsharp/2017-10-oxford/fsharp-relaxation-given.pptx",
     "FileSizeBefore": 8904158,
-    "FileSizeAfter": {
-      "macOS": 7088248,
-      "win": 7090850
-    }
+    "FileSizeAfter": 7088248
   },
   {
     "FileName": "dsyme-fsharp/2018-04-05-fsharpx/fsharp-code-i-love-given.pptx",
     "FileSizeBefore": 11602818,
-    "FileSizeAfter": {
-      "macOS": 10568039,
-      "win": 10570367
-    },
+    "FileSizeAfter": 10568039,
     "Errors": [
       "[/ppt/media/image26.png] Unsupported image crop L/T/R/B=0/0/-397/45958",
       "[/ppt/media/image29.png] Unsupported image crop L/T/R/B=-541/61940/0/0"
@@ -3431,10 +2385,7 @@
   {
     "FileName": "dsyme-fsharp/2018-05-05-code-i-love/fsharp-code-i-love.pptx",
     "FileSizeBefore": 11902632,
-    "FileSizeAfter": {
-      "macOS": 10905784,
-      "win": 10908300
-    },
+    "FileSizeAfter": 10905784,
     "Errors": [
       "[/ppt/media/image34.png] Unsupported image crop L/T/R/B=0/0/-397/45958",
       "[/ppt/media/image37.png] Unsupported image crop L/T/R/B=-541/61940/0/0"
@@ -3443,10 +2394,7 @@
   {
     "FileName": "dsyme-fsharp/2018-05-25-malaga/fsharp-relaxation.pptx",
     "FileSizeBefore": 12611044,
-    "FileSizeAfter": {
-      "macOS": 9035227,
-      "win": 9038290
-    },
+    "FileSizeAfter": 9035227,
     "Errors": [
       "[/ppt/media/image31.png] Unsupported image crop L/T/R/B=0/0/-397/45958"
     ]
@@ -3454,18 +2402,12 @@
   {
     "FileName": "dsyme-fsharp/2018-09-05-exf-meetup/exf-meetup.pptx",
     "FileSizeBefore": 6500551,
-    "FileSizeAfter": {
-      "macOS": 589030,
-      "win": 589423
-    }
+    "FileSizeAfter": 589030
   },
   {
     "FileName": "dsyme-fsharp/2018-09-27-openfsharp-code-I-love/fsharp-code-i-love-openfsharp.pptx",
     "FileSizeBefore": 17174317,
-    "FileSizeAfter": {
-      "macOS": 10791632,
-      "win": 10794553
-    },
+    "FileSizeAfter": 10791632,
     "Errors": [
       "[/ppt/media/image33.png] Unsupported image crop L/T/R/B=0/0/-397/45958",
       "[/ppt/media/image36.png] Unsupported image crop L/T/R/B=-541/61940/0/0"
@@ -3474,10 +2416,7 @@
   {
     "FileName": "dsyme-fsharp/2018-09-27-openfsharp-code-I-love/fsharp-code-i-love.pptx",
     "FileSizeBefore": 11781485,
-    "FileSizeAfter": {
-      "macOS": 10665187,
-      "win": 10667975
-    },
+    "FileSizeAfter": 10665187,
     "Errors": [
       "[/ppt/media/image26.png] Unsupported image crop L/T/R/B=0/0/-397/45958",
       "[/ppt/media/image29.png] Unsupported image crop L/T/R/B=-541/61940/0/0"
@@ -3486,10 +2425,7 @@
   {
     "FileName": "dsyme-fsharp/2018-11-08-codemesh/fsharp-code-i-love-codemesh.pptx",
     "FileSizeBefore": 17649477,
-    "FileSizeAfter": {
-      "macOS": 10964960,
-      "win": 10967420
-    },
+    "FileSizeAfter": 10964960,
     "Errors": [
       "[/ppt/media/image41.png] Unsupported image crop L/T/R/B=0/0/-397/45958",
       "[/ppt/media/image44.png] Unsupported image crop L/T/R/B=-541/61940/0/0"
@@ -3498,10 +2434,7 @@
   {
     "FileName": "dsyme-fsharp/2018-11-29-imperial/fsharp-relaxation.pptx",
     "FileSizeBefore": 12653084,
-    "FileSizeAfter": {
-      "macOS": 9057643,
-      "win": 9060744
-    },
+    "FileSizeAfter": 9057643,
     "Errors": [
       "[/ppt/media/image54.png] Unsupported image crop L/T/R/B=0/0/-397/45958"
     ]
@@ -3509,10 +2442,7 @@
   {
     "FileName": "dsyme-fsharp/2019-02-20-lambdadays/fsharp-code-i-love-lambdadays-given.pptx",
     "FileSizeBefore": 18705563,
-    "FileSizeAfter": {
-      "macOS": 11467524,
-      "win": 11469610
-    },
+    "FileSizeAfter": 11467524,
     "Errors": [
       "[/ppt/media/image41.png] Unsupported image crop L/T/R/B=0/0/-397/45958",
       "[/ppt/media/image45.png] Unsupported image crop L/T/R/B=-541/61940/0/0"
@@ -3521,50 +2451,32 @@
   {
     "FileName": "dsyme-fsharp/2019-04-05-fsharp-exchange/fsharp-exchange.pptx",
     "FileSizeBefore": 13148123,
-    "FileSizeAfter": {
-      "macOS": 5644649,
-      "win": 5647869
-    }
+    "FileSizeAfter": 5644649
   },
   {
     "FileName": "dsyme-fsharp/2019-06-20-ndc-oslo-fabulous/fabulous.pptx",
     "FileSizeBefore": 55710731,
-    "FileSizeAfter": {
-      "macOS": 2885010,
-      "win": 2883852
-    }
+    "FileSizeAfter": 2885010
   },
   {
     "FileName": "dsyme-fsharp/2019-07-16-curryon-fabulous/fabulous.pptx",
     "FileSizeBefore": 36903619,
-    "FileSizeAfter": {
-      "macOS": 2476599,
-      "win": 2475708
-    }
+    "FileSizeAfter": 2476599
   },
   {
     "FileName": "dsyme-fsharp/2019-09-27-openfsharp/lightning.pptx",
     "FileSizeBefore": 2018509,
-    "FileSizeAfter": {
-      "macOS": 159350,
-      "win": 159509
-    }
+    "FileSizeAfter": 159350
   },
   {
     "FileName": "dsyme-fsharp/2019-10-15-girl-geek-sydney/fsharp-community.pptx",
     "FileSizeBefore": 4591276,
-    "FileSizeAfter": {
-      "macOS": 740862,
-      "win": 741615
-    }
+    "FileSizeAfter": 740862
   },
   {
     "FileName": "dsyme-fsharp/2019-10-18-ndc-sydney/fsharp-code-i-love-ndc-sydney.pptx",
     "FileSizeBefore": 18283001,
-    "FileSizeAfter": {
-      "macOS": 11036050,
-      "win": 11038522
-    },
+    "FileSizeAfter": 11036050,
     "Errors": [
       "[/ppt/media/image44.png] Unsupported image crop L/T/R/B=0/0/-397/45958",
       "[/ppt/media/image47.png] Unsupported image crop L/T/R/B=-541/61940/0/0"
@@ -3573,42 +2485,27 @@
   {
     "FileName": "dsyme-fsharp/2019-11-13-buildstuff-functional-uis/functional-uis.pptx",
     "FileSizeBefore": 38308330,
-    "FileSizeAfter": {
-      "macOS": 2573050,
-      "win": 2572231
-    }
+    "FileSizeAfter": 2573050
   },
   {
     "FileName": "dsyme-fsharp/2019-11-19-buildstuff-kiev/functional-uis.pptx",
     "FileSizeBefore": 38227296,
-    "FileSizeAfter": {
-      "macOS": 2559629,
-      "win": 2558819
-    }
+    "FileSizeAfter": 2559629
   },
   {
     "FileName": "dsyme-fsharp/2020-06-04-fsharpconf/on-independence.pptx",
     "FileSizeBefore": 2465927,
-    "FileSizeAfter": {
-      "macOS": 745263,
-      "win": 746157
-    }
+    "FileSizeAfter": 745263
   },
   {
     "FileName": "dsyme-fsharp/2020-06-10-ndc-oslo/functional-data-changing.pptx",
     "FileSizeBefore": 7411137,
-    "FileSizeAfter": {
-      "macOS": 1050098,
-      "win": 1048929
-    }
+    "FileSizeAfter": 1050098
   },
   {
     "FileName": "dsyme-fsharp/2021-05-04-yow-lambda-aust/fsharp-code-i-love-yow-australia.pptx",
     "FileSizeBefore": 11897493,
-    "FileSizeAfter": {
-      "macOS": 10843738,
-      "win": 10846251
-    },
+    "FileSizeAfter": 10843738,
     "Errors": [
       "[/ppt/media/image42.png] Unsupported image crop L/T/R/B=0/0/-397/45958",
       "[/ppt/media/image45.png] Unsupported image crop L/T/R/B=-541/61940/0/0"
@@ -3617,34 +2514,22 @@
   {
     "FileName": "dsyme-fsharp/2021-05-29-siberia-codefest/fsharp-relaxation.pptx",
     "FileSizeBefore": 8317999,
-    "FileSizeAfter": {
-      "macOS": 6830969,
-      "win": 6832708
-    }
+    "FileSizeAfter": 6830969
   },
   {
     "FileName": "dsyme-fsharp/2021-06-21-hopl/The Early History of FSharp.pptx",
     "FileSizeBefore": 5161379,
-    "FileSizeAfter": {
-      "macOS": 2079195,
-      "win": 2081859
-    }
+    "FileSizeAfter": 2079195
   },
   {
     "FileName": "dsyme-fsharp/2021-06-21-hopl/the-early-history-of-fsharp-given.pptx",
     "FileSizeBefore": 4471969,
-    "FileSizeAfter": {
-      "macOS": 1835385,
-      "win": 1837472
-    }
+    "FileSizeAfter": 1835385
   },
   {
     "FileName": "dsyme-fsharp/2021-07-22-net-show-functional-first/functional-first.pptx",
     "FileSizeBefore": 16808002,
-    "FileSizeAfter": {
-      "macOS": 10680762,
-      "win": 10682535
-    },
+    "FileSizeAfter": 10680762,
     "Errors": [
       "[/ppt/media/image44.png] Unsupported image crop L/T/R/B=-541/61940/0/0"
     ]
@@ -3652,57 +2537,36 @@
   {
     "FileName": "dsyme-fsharp/2021-08-07-fwdays-kiev/fsharp-relaxation.pptx",
     "FileSizeBefore": 14119020,
-    "FileSizeAfter": {
-      "macOS": 7003340,
-      "win": 7005118
-    }
+    "FileSizeAfter": 7003340
   },
   {
     "FileName": "dsyme-fsharp/2021-08-26-ml-workshop/the-early-history-of-fsharp.pptx",
     "FileSizeBefore": 12324393,
-    "FileSizeAfter": {
-      "macOS": 8070056,
-      "win": 8072853
-    }
+    "FileSizeAfter": 8070056
   },
   {
     "FileName": "dsyme-fsharp/2021-10-18-rebase-static-dynamic/perspectives-on-static-dynamic.pptx",
     "FileSizeBefore": 6572052,
-    "FileSizeAfter": {
-      "macOS": 6084972,
-      "win": 6086285
-    }
+    "FileSizeAfter": 6084972
   },
   {
     "FileName": "dsyme-fsharp/2021-11-09-dotnet-conf/dotnetconf2021-deck-fsharp-6.pptx",
     "FileSizeBefore": 10587167,
-    "FileSizeAfter": {
-      "macOS": 6298762,
-      "win": 6309797
-    }
+    "FileSizeAfter": 6298762
   },
   {
     "FileName": "dsyme-fsharp/2021-11-10-codemotion/fsharp-relaxation.pptx",
     "FileSizeBefore": 8645334,
-    "FileSizeAfter": {
-      "macOS": 6801520,
-      "win": 6803413
-    }
+    "FileSizeAfter": 6801520
   },
   {
     "FileName": "dsyme-fsharp/2021-11-17-fsharp-london/whats-new-fsharp-5-6.pptx",
     "FileSizeBefore": 8891015,
-    "FileSizeAfter": {
-      "macOS": 7371648,
-      "win": 7373680
-    }
+    "FileSizeAfter": 7371648
   },
   {
     "FileName": "dsyme-fsharp/2021-12-01-ndc-oslo/whats-new-fsharp-5-6.pptx",
     "FileSizeBefore": 8902278,
-    "FileSizeAfter": {
-      "macOS": 7382765,
-      "win": 7384895
-    }
+    "FileSizeAfter": 7382765
   }
 ]

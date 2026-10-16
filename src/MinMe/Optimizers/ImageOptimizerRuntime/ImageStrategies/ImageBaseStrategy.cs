@@ -5,12 +5,10 @@ using MinMe.Optimizers.ImageOptimizerRuntime.Utils;
 
 namespace MinMe.Optimizers.ImageOptimizerRuntime.ImageStrategies;
 
-public abstract class ImageBaseStrategy : IImageStrategy
+/// <summary>Provides shared image-transforming behavior for image strategies.</summary>
+public abstract class ImageBaseStrategy(RecyclableMemoryStreamManager streamManager) : IImageStrategy
 {
-    protected readonly RecyclableMemoryStreamManager StreamManager;
-
-    protected ImageBaseStrategy(RecyclableMemoryStreamManager streamManager) =>
-        StreamManager = streamManager;
+    protected RecyclableMemoryStreamManager StreamManager { get; } = streamManager;
 
     public abstract Stream? Transform(Stream imageStream, ImageCrop? crop, Size? size);
 

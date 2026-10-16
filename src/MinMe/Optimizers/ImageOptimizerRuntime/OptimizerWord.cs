@@ -9,44 +9,39 @@ using Picture = DocumentFormat.OpenXml.Drawing.Pictures.Picture;
 namespace MinMe.Optimizers.ImageOptimizerRuntime;
 
 internal class OptimizerWord(RecyclableMemoryStreamManager manager, ImageOptimizerOptions options)
-    : OptimizerBase<WordprocessingDocument>(manager, options)
+    : OptimizerBase<MainDocumentPart>(manager, options)
 {
-    protected override void RemoveUnusedPieces(WordprocessingDocument document) { }
+    protected override void RemoveUnusedPieces(MainDocumentPart root) { }
 
-    protected override IEnumerable<ImagePart> LoadAllImageParts(WordprocessingDocument document) =>
-        document.MainDocumentPart.ImageParts;
+    protected override IEnumerable<ImagePart> LoadAllImageParts(MainDocumentPart root) => root.ImageParts;
 
-    protected override double GetScaleRatio(WordprocessingDocument document)
-    {
-        var width = document
-            .MainDocumentPart.RootElement.Descendants<PageSize>()
-            .Select(size => Converters.TwipToPt((int)size.Width.Value))
-            .Concat(new double[] { Options.ExpectedScreenSize.Width })
+    protected override double GetScaleRatio(MainDocumentPart root) =>
+        (root.RootElement?.Descendants<PageSize>() ?? [])
+            .Select(size => size.Width?.Value)
+            .OfType<uint>()
+            .Select(width => Converters.TwipToPt((int)width))
+            .Append(Options.ExpectedScreenSize.Width)
             .Min();
 
-        return Options.ExpectedScreenSize.Width / width;
-    }
-
-    protected override IEnumerable<ImageUsageInfo> GetImageUsageInfo(
-        WordprocessingDocument document
-    )
+    protected override IEnumerable<ImageUsageInfo> GetImageUsageInfo(MainDocumentPart root)
     {
-        var part = document.MainDocumentPart;
+        if (root.RootElement is not { } rootElement)
+            return [];
 
         // Analyze single images
-        var imageUsageInfos = part
-            .RootElement.Descendants<Picture>()
-            .Select(pict => new ImageUsageInfo(
-                part,
-                pict.BlipFill?.Blip,
-                pict.ShapeProperties?.Transform2D,
-                pict.BlipFill?.SourceRectangle
+        var imageUsageInfos = rootElement
+            .Descendants<Picture>()
+            .Select(picture => new ImageUsageInfo(
+                root,
+                picture.BlipFill?.Blip,
+                picture.ShapeProperties?.Transform2D,
+                picture.BlipFill?.SourceRectangle
             ))
             .ToList();
 
         // Analyze grouped images
         imageUsageInfos.AddRange(
-            part.RootElement.Descendants<Shape>().Select(shape => new ImageUsageInfo(part, shape))
+            rootElement.Descendants<Shape>().Select(shape => new ImageUsageInfo(root, shape))
         );
 
         return imageUsageInfos;

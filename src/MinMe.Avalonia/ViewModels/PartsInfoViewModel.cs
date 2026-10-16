@@ -54,7 +54,7 @@ class PartsInfoViewModel : ViewModelBase
         }
         else
         {
-            rows = new List<PartInfoRow>();
+            rows = [];
         }
 
         var view = new DataGridCollectionView(rows);

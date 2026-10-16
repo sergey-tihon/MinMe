@@ -11,8 +11,8 @@ public class ImageUsageInfo(long width, long height, ImageCrop? crop)
     public static ImageUsageInfo FromPict(Picture pict)
     {
         var crop = ImageCrop.FromSourceRect(pict.BlipFill?.SourceRectangle);
-        if (pict.ShapeProperties?.Transform2D is { } transform)
-            return new ImageUsageInfo(transform.Extents.Cx.Value, transform.Extents.Cy.Value, crop);
+        if (pict.ShapeProperties?.Transform2D?.Extents is { Cx: { } cx, Cy: { } cy })
+            return new ImageUsageInfo(cx.Value, cy.Value, crop);
         return new ImageUsageInfo(0, 0, crop);
     }
 }

@@ -5,6 +5,7 @@ using DocumentFormat.OpenXml.Packaging;
 
 namespace MinMe;
 
+/// <summary>Opens Open XML Office documents with optional hyperlink recovery.</summary>
 public static class OpenXmlFactory
 {
     public static PresentationDocument OpenPowerPoint(
